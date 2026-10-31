@@ -1,4 +1,4 @@
-# EfficientGPT V2 (industry showcase) — release report, 2026-10-31
+# EfficientGPT V2 — release report, 2026-10-31
 
 ## Declaration
 **V2 COMPLETE — all mandatory release checks passed.**
@@ -14,7 +14,7 @@ model, llama.cpp Q8_0 is faster than EfficientGPT's int8 path, and that result i
 | 4 | Reproducible measurements + correctness | PASS | Phase 5 headline reproduced in fresh processes (48/48 WIN); R1/R2 round-level CIs; per-process idle checks; one perturbed round identified and reported |
 | 5 | Independent review + regression | PASS | 6 independent reviews (KA-02, KA-06, V1 pre-release, R1 code, R1 benchmark, R2 fairness), findings fixed or stated; final regression **144/144 OK, 0 skipped** on the final code (`runs/20261031_v4/v2_final2/`) |
 | 6 | README, architecture, portfolio | PASS | `README.md` (results, architecture diagrams, methodology, map), `BENCHMARK_REPORT.md`, `CAREER_VALUE_REPORT.md`, `REPRODUCE.md` |
-| 7 | Honest limitations + original contributions | PASS | `README.md` §Limitations; `reports/EFFICIENTGPT_INDUSTRY_RESEARCH_REPORT.md` §3, §5; this report |
+| 7 | Honest limitations + original contributions | PASS | `README.md` §Limitations; `reports/EFFICIENTGPT_TECHNICAL_REPORT.md` §3, §5; this report |
 
 ## What a reviewer should know
 - **Established techniques, verified implementations:** CUDA-Graph decode, split-K attention, weight-only int8. The
@@ -26,9 +26,8 @@ model, llama.cpp Q8_0 is faster than EfficientGPT's int8 path, and that result i
 - **Measurement incidents, disclosed:** a `git push` overlapped one benchmark process (round 0 of the max-autotune run; shown
   both with and without it); torchao's max-autotune speed varies 79–89 tok/s across processes.
 - **Not verified:** other GPUs, Linux, larger models, vLLM / TensorRT-LLM. No external users.
-- **Publication state:** pushed only to the owner's private repository `<private-repository>`, branch
-  `efficientgpt-v2` (no force; `main` untouched). Nothing public.
+- **Publication state (at the time):** private development repository only; published later as part of the public release.
 
 ## Deferred (outside V2)
-Closing the gap to llama.cpp (better int8 GEMV, int8 prefill), distillation / QLoRA (owner rule: no training GPU time without
-demonstrated portfolio value; resumable), cold-L2 kernel timing, other hardware, upstream contributions (need owner approval).
+Closing the gap to llama.cpp (better int8 GEMV, int8 prefill), distillation / QLoRA (no training GPU time without a demonstrated
+benefit), cold-L2 kernel timing, other hardware, upstream contributions.

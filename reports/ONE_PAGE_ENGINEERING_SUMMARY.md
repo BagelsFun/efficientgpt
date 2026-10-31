@@ -1,7 +1,7 @@
 # EfficientGPT: one-page engineering summary
 
 **What it is.** A PyTorch/Triton LLM inference stack and a verification-first GPU-kernel search tool (KernelAgent-Ada),
-built on nanoGPT and applied to Qwen3-1.7B on a consumer RTX 4060 (8 GB). Personal project; private repository.
+built on nanoGPT and applied to Qwen3-1.7B on a consumer RTX 4060 (8 GB). Single-author open-source project (MIT).
 
 **Headline result (verified).** Batch-1 greedy decoding of Qwen3-1.7B, 4 fresh-process rounds, 95% CIs over rounds:
 
@@ -27,7 +27,7 @@ p50 / p95 8.49 / 8.55 ms (llama.cpp 8.57 / 8.93 ms, per streamed chunk).
    against HF `generate()`).
 3. **End-to-end kernel selection:** the microbenchmark winner (split-K) was 8% slower inside the model, so the shipped
    config was chosen end to end.
-4. **Adaptive KV-cache buckets:** they fixed a 1.9× slowdown caused by a fixed-size static cache.
+4. **Adaptive KV-cache buckets:** they fixed a 2× slowdown caused by a fixed-size static cache.
 
 Path: 91.3 → 96.8 → 105.1 → 111.9 tok/s.
 
@@ -40,7 +40,7 @@ established. The contribution is engineering:
   finding fixed or disclosed.
 
 **Evidence quality.**
-- **Tests:** 149 tests pass from a pristine `git worktree` (0 skipped).
+- **Tests:** 156 tests pass from a pristine `git worktree` and in the public tree (0 skipped; 47 need a GPU).
 - **Raw evidence:** per-process JSON for every number, including contaminated and invalid runs, kept and labelled.
 - **Integrity:** checkpoints are SHA-256 verified, with no secrets or model files in history.
 

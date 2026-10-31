@@ -14,10 +14,13 @@ import argparse
 import sys
 import time
 
+from ..console import utf8_stdout
+
 MODEL, REVISION = 'Qwen/Qwen3-1.7B', '70d244cc86ccca08cf5af4e1e306ecf908b1ad5e'
 
 
 def main():
+    utf8_stdout()
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--prompt', default='Explain in three short paragraphs why LLM decoding on a GPU is memory-bandwidth bound.')
     ap.add_argument('--tokens', type=int, default=200)

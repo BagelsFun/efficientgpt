@@ -70,6 +70,17 @@ class TestRedaction(unittest.TestCase):
             (Path(d) / 'a.json').write_text(text, encoding='utf-8')
             self.assertIn('a.json: private commit id', ' | '.join(scan(Path(d), set(), '', (), prefixes)))
 
+    def test_redirected_output_is_utf8(self):
+        """Demos piped to a file or recorder crashed on Windows (cp1252 cannot encode the report's Δ)."""
+        import os
+        import subprocess
+        import sys
+        env = {k: v for k, v in os.environ.items() if k not in ('PYTHONIOENCODING', 'PYTHONUTF8')}
+        p = subprocess.run([sys.executable, '-c', 'from research.console import utf8_stdout; utf8_stdout(); print("\\u0394 \\u00b5s")'],
+                           capture_output=True, env=env, cwd=Path(__file__).resolve().parents[2])
+        self.assertEqual(p.returncode, 0, p.stderr.decode(errors='replace'))
+        self.assertEqual(p.stdout.decode('utf-8').strip(), 'Δ µs')
+
     def test_scan_finds_leftovers(self):
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)

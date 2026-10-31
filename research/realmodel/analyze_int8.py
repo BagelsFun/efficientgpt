@@ -18,6 +18,7 @@ import statistics
 from pathlib import Path
 
 from .bench_int8 import MODEL, REVISION
+from ..console import utf8_stdout
 
 
 def rounds(d, mode):
@@ -128,6 +129,7 @@ def quality_table(d):
 
 
 def main():
+    utf8_stdout()
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--dir', type=Path, required=True)
     args = ap.parse_args()

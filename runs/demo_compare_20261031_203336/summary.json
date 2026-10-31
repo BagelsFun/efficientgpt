@@ -1,0 +1,56 @@
+{
+ "int8_graph": {
+  "decode_tok_s_median": 111.15,
+  "per_round_medians": [
+   111.14541848110191
+  ],
+  "ttft_ms_median": 54.371199919842184,
+  "peak_mib": 2342.4,
+  "load_s": 5.23,
+  "first_call_s": 5.47,
+  "any_contended": false,
+  "speedup_vs_bf16_static": {
+   "ratio": 1.8643072794364308,
+   "ci": [
+    1.8445674044265594,
+    1.8944868532654793
+   ]
+  }
+ },
+ "llamacpp_q8": {
+  "decode_tok_s_median": 109.83,
+  "per_round_medians": [
+   109.83319826052787
+  ],
+  "ttft_ms_median": 37.689699907787144,
+  "peak_mib": 2300.3,
+  "load_s": null,
+  "first_call_s": 6.97,
+  "any_contended": false,
+  "speedup_vs_bf16_static": {
+   "ratio": 1.8421670580342167,
+   "ci": [
+    1.835680751173709,
+    1.8661577608142494
+   ]
+  }
+ },
+ "bf16_static": {
+  "decode_tok_s_median": 59.62,
+  "per_round_medians": [
+   59.616434872518234
+  ],
+  "ttft_ms_median": 44.81729993131012,
+  "peak_mib": 3345.9,
+  "load_s": 5.06,
+  "first_call_s": 5.68,
+  "any_contended": false,
+  "speedup_vs_bf16_static": {
+   "ratio": 1.0,
+   "ci": [
+    0.9884305835010061,
+    1.011704834605598
+   ]
+  }
+ }
+}

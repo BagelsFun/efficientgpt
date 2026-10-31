@@ -1,0 +1,19 @@
+Loading Qwen/Qwen3-1.7B -> weight-only int8 + CUDA-graph decoder ...
+W1031 20:45:15.744000 47440 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 38/311 [00:00<00:00, 339.19it/s]Loading weights:  25%|██▌       | 78/311 [00:00<00:00, 354.25it/s]Loading weights:  37%|███▋      | 114/311 [00:00<00:00, 281.75it/s]Loading weights:  51%|█████     | 159/311 [00:00<00:00, 332.48it/s]Loading weights:  62%|██████▏   | 194/311 [00:00<00:00, 330.46it/s]Loading weights:  74%|███████▎  | 229/311 [00:00<00:00, 304.86it/s]Loading weights:  84%|████████▍ | 261/311 [00:00<00:00, 272.66it/s]Loading weights:  93%|█████████▎| 290/311 [00:01<00:00, 254.19it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 299.20it/s]
+loaded in 6.4 s; capturing the decode graph on the first request ...
+
+> Explain in three short paragraphs why LLM decoding on a GPU is memory-bandwidth bound.
+
+LLM decoding on a GPU is memory-bandwidth bound because the vast amount of data required for decoding—such as token sequences, attention weights, and model parameters—exceeds the GPU's memory capacity. GPUs, while powerful in parallelism, have limited memory, which can lead to frequent memory accesses and data transfers, slowing down the decoding process.
+
+The high memory bandwidth requirements of LLM decoding further exacerbate this issue. Decoding often involves large matrix operations, such as attention mechanisms, which require continuous data flow between memory and the GPU's memory interface. This constant data movement can bottleneck the GPU, especially when the data size exceeds the available memory.
+
+Additionally, the need for frequent memory accesses during decoding, such as loading and storing token sequences or attention weights, increases the overall latency. This results in a memory-bandwidth bottleneck, where the GPU struggles to keep up with the data throughput required for efficient decoding.
+
+[int8 + graph] 185 tokens, TTFT 59 ms, decode 108.6 tok/s, GPU memory 3.35 GiB peak (incl. load)
+
+Checking against bf16 (Hugging Face generate, static cache) ...
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   8%|▊         | 26/311 [00:00<00:01, 226.45it/s]Loading weights:  18%|█▊        | 55/311 [00:00<00:01, 253.57it/s]Loading weights:  32%|███▏      | 101/311 [00:00<00:00, 337.43it/s]Loading weights:  44%|████▍     | 138/311 [00:00<00:00, 349.68it/s]Loading weights:  56%|█████▌    | 174/311 [00:00<00:00, 339.15it/s]Loading weights:  67%|██████▋   | 209/311 [00:00<00:00, 278.87it/s]Loading weights:  77%|███████▋  | 239/311 [00:00<00:00, 241.28it/s]Loading weights:  85%|████████▌ | 265/311 [00:00<00:00, 232.23it/s]Loading weights:  94%|█████████▎| 291/311 [00:01<00:00, 237.41it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 269.46it/s]
+[bf16 reference] first 46 of 172 tokens identical to int8 (diverges later; int8 is approximate)
+rc=0

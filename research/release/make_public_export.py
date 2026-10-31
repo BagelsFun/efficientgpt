@@ -40,6 +40,8 @@ from pathlib import Path
 INTERNAL = [  # written for the owner (planning, career strategy); not part of a technical release by default
     'MISSION_STATUS.md', 'NEXT_STEPS.md', 'RESEARCH_BACKLOG.md', 'CAREER_VALUE_REPORT.md',
     'reports/CAREER_AND_COMMERCIAL_VALUE.md', 'reports/PUBLIC_RELEASE_READINESS.md', 'reports/PUBLIC_RELEASE_CHECKLIST.md',
+    'reports/INDUSTRY_AUDIT.md', 'docs/ROADMAP.md',  # audit of the private repository; personal priorities
+    'reports/ANNOUNCEMENT_DRAFT.md', 'reports/INDUSTRY_RECOGNITION_REVIEW.md',  # drafts for the owner to post / review
 ]
 _NAME = r'[^\\/\s"\'<>|:*?%]+'
 # 'users' / 'home' are assembled from pieces so that the export does not redact this file's own patterns

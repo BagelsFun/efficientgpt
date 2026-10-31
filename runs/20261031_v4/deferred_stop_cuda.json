@@ -1,0 +1,266 @@
+{
+ "model": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+ "torch": "2.11.0+cu128",
+ "transformers": "5.21.0",
+ "gpu": "NVIDIA GeForce RTX 4060",
+ "patch": "DeferredStopCheck.is_supported: device.type != \"mps\"  ->  device.type not in (\"mps\", \"cuda\")",
+ "gpu_util_at_start_pct": 1.0,
+ "regimes": {
+  "eager_dynamic": {
+   "correctness": {
+    "prompt0_eos": {
+     "identical": true,
+     "new_tokens": [
+      160
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "prompt1_eos": {
+     "identical": true,
+     "new_tokens": [
+      20
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "prompt2_eos": {
+     "identical": true,
+     "new_tokens": [
+      4
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "prompt3_eos": {
+     "identical": true,
+     "new_tokens": [
+      160
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "max_new_tokens_cutoff": {
+     "identical": true,
+     "new_tokens": [
+      6
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "left_padded_batch3": {
+     "identical": true,
+     "new_tokens": [
+      160,
+      20,
+      4
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "streamer": {
+     "identical_across_variants": true,
+     "stream_matches_returned": {
+      "default": true,
+      "proposed": true
+     },
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "return_dict_scores": {
+     "identical": true,
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    }
+   },
+   "timing": {
+    "gpu_util_before_pct": 0.0,
+    "ms_per_token": {
+     "default": [
+      36.97806679701898,
+      36.82633476546471,
+      37.016564062469115,
+      37.1303175779758,
+      36.77096679666647,
+      37.03567421916887,
+      36.827633984557906,
+      37.00164531210248,
+      36.834812499819236,
+      36.64744921843521,
+      36.70960703129822,
+      36.79969804670691
+     ],
+     "proposed": [
+      35.08431523459876,
+      34.85118867183701,
+      34.93157812499703,
+      34.98230468721886,
+      35.03290234357337,
+      34.92429062498559,
+      35.18095156277923,
+      35.070926562639215,
+      34.995028515368176,
+      34.81326484370584,
+      35.08988320345452,
+      35.0426097656964
+     ]
+    },
+    "median_ms_per_token": {
+     "default": 36.83122324218857,
+     "proposed": 35.01396542947077
+    },
+    "speedup_proposed_over_default": 1.0519009426789527,
+    "speedup_ci95": [
+     1.0496894050319088,
+     1.057962278787551
+    ],
+    "gpu_util_after_pct": 0.0,
+    "contended": false
+   }
+  },
+  "compiled_static": {
+   "correctness": {
+    "prompt0_eos": {
+     "identical": true,
+     "new_tokens": [
+      160
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "prompt1_eos": {
+     "identical": true,
+     "new_tokens": [
+      20
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "prompt2_eos": {
+     "identical": true,
+     "new_tokens": [
+      4
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "prompt3_eos": {
+     "identical": true,
+     "new_tokens": [
+      160
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "max_new_tokens_cutoff": {
+     "identical": true,
+     "new_tokens": [
+      6
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "left_padded_batch3": {
+     "identical": true,
+     "new_tokens": [
+      160,
+      20,
+      4
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "streamer": {
+     "identical_across_variants": true,
+     "stream_matches_returned": {
+      "default": true,
+      "proposed": true
+     },
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "return_dict_scores": {
+     "identical": true,
+     "deferred_engaged": {
+      "default": false,
+      "proposed": false
+     }
+    }
+   },
+   "timing": {
+    "gpu_util_before_pct": 0.0,
+    "ms_per_token": {
+     "default": [
+      16.7949441406563,
+      16.960981640750106,
+      17.026214453380817,
+      16.886032421552954,
+      16.955171484369203,
+      17.03323007814106,
+      16.77442226537096,
+      16.90638203126582,
+      17.008610937409685,
+      16.93338554696311,
+      16.912477343794308,
+      17.042550000041956
+     ],
+     "proposed": [
+      16.185677343855787,
+      16.095829687856167,
+      16.050036328124406,
+      16.144540234108717,
+      16.10049296868965,
+      15.9922199218272,
+      16.141599609454715,
+      16.083219140909932,
+      15.937654296976689,
+      16.128839453358523,
+      16.146645312346664,
+      15.953357812577451
+     ]
+    },
+    "median_ms_per_token": {
+     "default": 16.944278515666156,
+     "proposed": 16.09816132827291
+    },
+    "speedup_proposed_over_default": 1.0525598650764685,
+    "speedup_ci95": [
+     1.0477663276110474,
+     1.058636875452493
+    ],
+    "gpu_util_after_pct": 0.0,
+    "contended": false
+   }
+  }
+ }
+}

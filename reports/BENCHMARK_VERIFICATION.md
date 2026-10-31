@@ -14,7 +14,7 @@
 | Model | `Qwen/Qwen3-1.7B` revision `70d244cc86ccca08cf5af4e1e306ecf908b1ad5e` (HF); `qwen3:1.7b-q8_0` digest 29b6a7a420a4 (Ollama 0.40.12; modelfile: repeat_penalty 1, our requests set temperature 0) |
 | EfficientGPT quantisation | per-output-channel symmetric int8 for every linear incl. lm_head (untied), bf16 embedding; Triton `dot16` BLOCK_N 32, BLOCK_K 128, 4 warps (`research/realmodel/int8_linear.py` DEFAULT) |
 | torchao quantisation | `quantize_(model, Int8WeightOnlyConfig())` after untying lm_head (same layer set), Inductor max-autotune |
-| Code | V3 results at tag `v3` (<private-commit>); this verification on branch `showcase` |
+| Code | V3 code of the private development history (commit shown as <private-commit>); this verification on the code published here |
 
 ## Workload and controls
 Qwen3-1.7B chat prompt (~61 tokens, unique `[request <uuid>]` prefix per request), greedy (temperature 0, no sampling), batch 1,
@@ -46,7 +46,7 @@ code in `runs/20261031_v4/v3_verify/` (3 rounds).
 | torchao int8 (max-autotune) 84.4 tok/s; ratio 1.33 | **VERIFIED** (process medians 78.9–89.4 tok/s across the R2 / V3 runs; autotuning picks differ per process) | `v3_final/`, `int8_vs_autotune/` |
 | HF bf16 + compile 59.3 tok/s; ratio 1.89 | **VERIFIED** (1.90 on the final code) | same |
 | TTFT 54 vs 33 ms | **VERIFIED** | same |
-| 149/149 tests, 0 skipped | VERIFIED at V3; re-run for this release in `FINAL_CODE_REVIEW.md` | `runs/20261031_v4/v3_clean_checkout_final.json` |
+| 149/149 tests at V3; 156/156 now, 0 skipped | VERIFIED | `runs/20261031_v4/v3_clean_checkout_final.json`, `runs/20261031_v4/recognition_clean_checkout.json`, `runs/20261031_v4/test_gpu_census.json` |
 | Quality (quality-v1 39/52 = bf16, ΔNLL −0.15%) | **VERIFIED** | `v3_final/` (quality rows) |
 
 ## Additional metrics (showcase run)

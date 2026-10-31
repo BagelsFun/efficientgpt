@@ -20,8 +20,11 @@ import json
 import time
 from pathlib import Path
 
+from ..console import utf8_stdout
+
 
 def main():
+    utf8_stdout()
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--budget', type=int, default=6)
     ap.add_argument('--out', type=Path, default=Path('runs') / f"demo_kernelagent_{time.strftime('%Y%m%d_%H%M%S')}")

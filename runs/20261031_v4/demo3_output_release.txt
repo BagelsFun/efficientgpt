@@ -1,0 +1,33 @@
+1. Task int8_gemv: y = x @ (W_int8 * s).T, shapes (M, K, N)
+   dev (search):      [(1, 2048, 6144), (1, 6144, 2048), (1, 2048, 1024), (4, 2048, 6144)]
+   held-out (final):  [(1, 2048, 2048), (1, 2048, 151936), (4, 6144, 2048), (2, 2048, 1024), (8, 2048, 6144)]
+
+2. Safety screen on an unsafe candidate -> ['import os']
+
+3. Correctness (fp64 truth, edge cases, isolated subprocess)
+   default dot16 candidate: correct (16/16 cases)
+   mutated candidate (scale dropped): incorrect (error 5.77e+05 > bound 179)
+
+4. Search: strategy=local, budget=6 (CUDA-graph timing, contention-checked) ...
+   dot16          {"BLOCK_N": 64, "BLOCK_K": 128, "WARPS": 4}             correct      16.72 us
+   dot16_splitk   {"BLOCK_N": 64, "BLOCK_K": 128, "SPLITK": 4, "WARPS": 4} correct      13.80 us
+   dot16_splitk   {"BLOCK_N": 64, "BLOCK_K": 128, "SPLITK": 2, "WARPS": 4} correct      14.54 us
+   dot16_splitk   {"BLOCK_N": 32, "BLOCK_K": 128, "SPLITK": 4, "WARPS": 4} correct      15.60 us
+   dot16_splitk   {"BLOCK_N": 64, "BLOCK_K": 256, "SPLITK": 4, "WARPS": 4} correct      16.89 us
+   dot16_splitk   {"BLOCK_N": 64, "BLOCK_K": 64, "SPLITK": 4, "WARPS": 4} correct      14.19 us
+   selected: dot16_splitk {'BLOCK_N': 64, 'BLOCK_K': 128, 'SPLITK': 4, 'WARPS': 4} (13.80 us geometric mean over dev shapes)
+
+5. Held-out evaluation of the selected candidate ...
+   status: correct (20/20 cases)
+   1x2048x2048        8.0 us  vs dense bf16 cuBLAS 4.33x (WIN)
+   1x2048x151936   1360.6 us  dense bf16 baseline did not fit
+   4x6144x2048       21.8 us  vs dense bf16 cuBLAS 2.13x (WIN)
+   2x2048x1024        5.3 us  vs dense bf16 cuBLAS 1.85x (WIN)
+   8x2048x6144       20.7 us  vs dense bf16 cuBLAS 1.95x (WIN)
+
+6. Caveat: these are warm-L2 microbenchmarks. The config shipped in research/realmodel/int8_linear.py was chosen
+   end to end (research/realmodel/sweep_configs.py): split-K won here but was slower inside the model.
+
+History: runs\demo_kernelagent_20261031_203020\history.jsonl
+Result:  runs\demo_kernelagent_20261031_203020\demo_result.json
+rc=0

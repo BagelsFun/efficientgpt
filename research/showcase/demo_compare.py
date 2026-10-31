@@ -17,8 +17,11 @@ import sys
 import time
 from pathlib import Path
 
+from ..console import utf8_stdout
+
 
 def main():
+    utf8_stdout()
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--rounds', type=int, default=1)
     ap.add_argument('--with-torchao', action='store_true')

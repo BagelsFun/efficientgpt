@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use EfficientGPT's code, benchmark harness or measurements, please cite it as below."
+title: "EfficientGPT: verified batch-1 LLM decoding and verification-first Triton kernel search on a consumer GPU"
+authors:
+  - alias: BagelsFun
+repository-code: "https://github.com/BagelsFun/efficientgpt"
+license: MIT
+date-released: 2026-10-31
+keywords:
+  - llm-inference
+  - cuda-graphs
+  - triton
+  - int8
+  - quantization
+  - benchmarking
+references:
+  - type: software
+    title: nanoGPT
+    authors:
+      - family-names: Karpathy
+        given-names: Andrej
+    repository-code: "https://github.com/karpathy/nanoGPT"
+    license: MIT

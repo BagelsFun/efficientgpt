@@ -1,4 +1,4 @@
-# Reproducing EfficientGPT V1
+# Reproducing EfficientGPT
 
 Environment: `docs/ENVIRONMENT.md` (Windows 11, RTX 4060 8 GB, Python 3.11 `.venv`, torch 2.11.0+cu128,
 triton-windows 3.7.1). All commands run from the repository root with `.\.venv\Scripts\python.exe` (written `python` below).
@@ -21,10 +21,11 @@ python -m unittest research.kernelagent.test_evaluate research.kernelagent.test_
 python -m unittest assistant.test_assistant assistant.bench.test_quality_suite assistant.train.test_train
 python -m unittest research.release.test_release
 ```
-All four suites (154 tests) from a pristine `git worktree`, with the hash-checked private inputs:
+All four suites (156 tests) from a pristine `git worktree`, with the hash-checked private inputs:
 `python -m research.release.clean_checkout --ref HEAD --out runs/<stamp>/clean_checkout.json` (add `--no-inputs` to
-simulate an external reproducer; tests needing the private TinyStories checkpoint then skip). Latest results:
-`runs/20261031_v4/release_clean_checkout_full.json`; which tests need a GPU: `runs/20261031_v4/test_gpu_census.json`.
+simulate an external reproducer; tests needing the private TinyStories checkpoint then skip). Latest results (private inputs present):
+`runs/20261031_v4/recognition_clean_checkout.json` (156/156); which tests need a GPU: `runs/20261031_v4/test_gpu_census.json`
+(recorded at 154 tests; the two release tests added since are CPU-only).
 
 ## 2. Phase 5 decoder benchmark (12.19M TinyStories GPT)
 ```

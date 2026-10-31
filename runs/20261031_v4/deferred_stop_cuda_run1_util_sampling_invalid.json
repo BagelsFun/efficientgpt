@@ -1,0 +1,247 @@
+{
+ "model": "Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+ "torch": "2.11.0+cu128",
+ "transformers": "5.21.0",
+ "gpu": "NVIDIA GeForce RTX 4060",
+ "patch": "DeferredStopCheck.is_supported: device.type != \"mps\"  ->  device.type not in (\"mps\", \"cuda\")",
+ "regimes": {
+  "eager_dynamic": {
+   "correctness": {
+    "prompt0_eos": {
+     "identical": true,
+     "new_tokens": [
+      160
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "prompt1_eos": {
+     "identical": true,
+     "new_tokens": [
+      20
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "prompt2_eos": {
+     "identical": true,
+     "new_tokens": [
+      4
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "prompt3_eos": {
+     "identical": true,
+     "new_tokens": [
+      160
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "max_new_tokens_cutoff": {
+     "identical": true,
+     "new_tokens": [
+      6
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "left_padded_batch3": {
+     "identical": true,
+     "new_tokens": [
+      160,
+      20,
+      4
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "streamer": {
+     "identical_across_variants": true,
+     "stream_matches_returned": {
+      "default": true,
+      "proposed": true
+     },
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "return_dict_scores": {
+     "identical": true,
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    }
+   },
+   "timing": {
+    "gpu_util_before_pct": 60.0,
+    "ms_per_token": {
+     "default": [
+      38.69073671876322,
+      37.65291718764274,
+      38.38963085945579,
+      37.649507421974704,
+      37.320183203064516,
+      36.660200000369514,
+      36.6995847657563,
+      36.5609277346266
+     ],
+     "proposed": [
+      36.144303906439745,
+      36.68985624972265,
+      35.8704621094148,
+      36.45708046860818,
+      35.14391406224604,
+      34.68356914072501,
+      34.76052539099328,
+      34.58803398461896
+     ]
+    },
+    "median_ms_per_token": {
+     "default": 37.48484531251961,
+     "proposed": 35.50718808583042
+    },
+    "speedup_proposed_over_default": 1.0556973765962165,
+    "speedup_ci95": [
+     1.0153628870749292,
+     1.0890059981978992
+    ],
+    "contended": true
+   }
+  },
+  "compiled_static": {
+   "correctness": {
+    "prompt0_eos": {
+     "identical": true,
+     "new_tokens": [
+      160
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "prompt1_eos": {
+     "identical": true,
+     "new_tokens": [
+      20
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "prompt2_eos": {
+     "identical": true,
+     "new_tokens": [
+      4
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "prompt3_eos": {
+     "identical": true,
+     "new_tokens": [
+      160
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "max_new_tokens_cutoff": {
+     "identical": true,
+     "new_tokens": [
+      6
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "left_padded_batch3": {
+     "identical": true,
+     "new_tokens": [
+      160,
+      20,
+      4
+     ],
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "streamer": {
+     "identical_across_variants": true,
+     "stream_matches_returned": {
+      "default": true,
+      "proposed": true
+     },
+     "deferred_engaged": {
+      "default": false,
+      "proposed": true
+     }
+    },
+    "return_dict_scores": {
+     "identical": true,
+     "deferred_engaged": {
+      "default": false,
+      "proposed": false
+     }
+    }
+   },
+   "timing": {
+    "gpu_util_before_pct": 99.0,
+    "ms_per_token": {
+     "default": [
+      16.793723046703235,
+      20.688260156020988,
+      17.047776562321815,
+      16.971139453289652,
+      17.002823437451298,
+      16.849969530994713,
+      16.933223437263223,
+      17.03727265658017
+     ],
+     "proposed": [
+      16.122758984238317,
+      16.120530077841977,
+      16.24525664055909,
+      16.13474414079974,
+      15.995813671906944,
+      16.142382812176947,
+      16.144816406267637,
+      15.966982422014553
+     ]
+    },
+    "median_ms_per_token": {
+     "default": 16.986981445370475,
+     "proposed": 16.128751562519028
+    },
+    "speedup_proposed_over_default": 1.0532111787775227,
+    "speedup_ci95": [
+     1.0451768427564738,
+     1.0619641984955286
+    ],
+    "contended": true
+   }
+  }
+ }
+}

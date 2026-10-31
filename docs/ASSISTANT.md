@@ -28,7 +28,7 @@ bench/  quality_v1.py (52 graded items) · grading.py · run.py (speed/memory/qu
 - Ollama 0.40.12 running, with `qwen3.5:4b` (4.2B, Q4_K_M, tools/thinking/vision, 262k context) and `nomic-embed-text` (137M,
   768-d) already pulled by the owner.
 - `.venv`: torch 2.11.0+cu128, transformers 5.21.0, tokenizers, safetensors, datasets present.
-- Installed with owner approval: `Qwen/Qwen3-1.7B` (Apache-2.0, revision `70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`, 3.80 GiB,
+- Installed: `Qwen/Qwen3-1.7B` (Apache-2.0, revision `70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`, 3.80 GiB,
   HF cache) and peft 0.21.2, accelerate 1.15.0, bitsandbytes 0.50.2, psutil 7.2.2 (dry run first; torch unchanged; freezes
   in `results/assistant/`).
 - About 2.9 GB of the 8 GB of VRAM is used by other processes on this machine, so the assistant has about 5 GB.

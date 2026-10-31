@@ -1,42 +1,86 @@
 # EfficientGPT
 
-EfficientGPT is a personal GPU inference-engineering project on a single RTX 4060 8 GB (Windows 11): a verified CUDA-Graph
-decoder with adaptive KV buckets, KernelAgent-Ada (a template-based Triton kernel search with a strict verification protocol),
-and a weight-only int8 decode path for a real open-weight model (Qwen3-1.7B) built from KernelAgent-Ada's kernel.
-It is a fork of [karpathy/nanoGPT](https://github.com/karpathy/nanoGPT) and uses the nanoGPT model code as its starting point.
+**Batch-1 LLM decoding in plain PyTorch + Triton that matches llama.cpp on a consumer GPU, with every number backed by raw
+evidence.** It combines a weight-only int8 Triton GEMV with a sync-free CUDA-graph decoder for Hugging Face models. On
+Qwen3-1.7B, an RTX 4060 (8 GB) decodes at **111.9 tok/s**:
+- at parity with llama.cpp Q8_0 (1.02×, 95% CI [1.015, 1.051], below the 5% bar this project uses to claim a win);
+- **1.33×** torchao int8;
+- **1.89×** Hugging Face bf16 with a compiled static cache.
 
-> Every number below is taken from `BENCHMARK_REPORT.md` or the report named beside it, each with raw evidence in the repo.
-> No company has expressed interest in or endorsed this work, and no upstream contribution has been submitted.
+The repository also contains **KernelAgent-Ada**, a template-based Triton kernel search built around verification. It
+checks candidates against fp64 ground truth, mutation-tests its own evaluator, keeps held-out shapes aside and confirms
+results end to end. That end-to-end check is what showed its 1.1–1.6× attention-kernel win was worth only about 1% of the
+whole decode step.
 
-**Start here (reviewers):**
+Fork of [karpathy/nanoGPT](https://github.com/karpathy/nanoGPT). MIT licence.
+
+| Qwen3-1.7B, batch 1, greedy, 256 new tokens | tok/s | EfficientGPT vs it [95% CI] | TTFT | GPU memory |
+|---|---|---|---|---|
+| **EfficientGPT (int8 + CUDA-graph decoder)** | **111.9** | — | 54 ms | 2474 MiB |
+| llama.cpp Q8_0 (via Ollama 0.40.12 defaults) | 109.9 | 1.02 [1.015, 1.051]: **parity** | **33 ms** | 2425 MiB |
+| torchao int8 weight-only (max-autotune) | 84.4 | 1.33 | 66 ms | 3432 MiB |
+| Hugging Face bf16 + static cache / torch.compile | 59.3 | 1.89 | 46 ms | 3426 MiB |
+
+The table comes from 4 fresh-process rounds per engine on one RTX 4060 running Windows 11 (`BENCHMARK_REPORT.md` §1a; raw
+JSON in `runs/20261031_v4/`).
+- **Quality:** 39/52 on the project's task suite, the same as bf16; ΔNLL −0.15%.
+- **Parity band:** two further runs gave ratios of 1.011 and 1.029 (`reports/BENCHMARK_VERIFICATION.md`).
+- **TTFT:** time to first token is worse than llama.cpp's.
+- **Not run:** vLLM and TensorRT-LLM.
+
+## Quickstart
+
+Requirements:
+- **GPU:** NVIDIA, compute capability ≥ 8.0, ≥ 8 GB.
+- **Software:** Python 3.11; torch 2.11 (CUDA 12.8); transformers 5.21; ≈ 10 GB of disk.
+- **Tested on:** only an RTX 4060 under Windows 11. Linux and other GPUs are untested; please report results.
+
+```bash
+git clone https://github.com/BagelsFun/efficientgpt && cd efficientgpt
+python3.11 -m venv .venv && source .venv/bin/activate          # Windows: .venv\Scripts\activate
+pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+pip install "transformers==5.21.0" "torchao==0.18.0" numpy tiktoken   # Windows also: triton-windows==3.7.1.post27
+python -m research.realmodel.demo                 # Qwen3-1.7B int8 + graph decoder, streamed (downloads ≈ 4 GB once)
+python -m research.showcase.demo_kernelagent      # KernelAgent-Ada rejecting unsafe and wrong kernels, then searching
+```
+
+**Tests:** 156 tests in four suites, all passing from a clean checkout. 109 run on CPU only; 47 need a GPU and skip without
+one (`runs/20261031_v4/test_gpu_census.json`). 8 Phase 5 tests also need the TinyStories checkpoint, which is not
+distributed; they skip without it (`REPRODUCE.md` explains how to retrain it).
+
+## Documentation
 - [`reports/ONE_PAGE_ENGINEERING_SUMMARY.md`](reports/ONE_PAGE_ENGINEERING_SUMMARY.md): the work in one page.
-- [`reports/EFFICIENTGPT_INDUSTRY_RESEARCH_REPORT.md`](reports/EFFICIENTGPT_INDUSTRY_RESEARCH_REPORT.md): the full report.
+- [`reports/EFFICIENTGPT_TECHNICAL_REPORT.md`](reports/EFFICIENTGPT_TECHNICAL_REPORT.md): the full technical
+  report (problem, prior work, design, methodology, results, limitations).
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md): how the pipeline works.
-- [`docs/DEMO.md`](docs/DEMO.md): four runnable demos.
+- [`docs/DEMO.md`](docs/DEMO.md): runnable demos and a recording script.
 - [`reports/BENCHMARK_VERIFICATION.md`](reports/BENCHMARK_VERIFICATION.md) and
-  [`reports/BENCHMARK_LIMITATIONS.md`](reports/BENCHMARK_LIMITATIONS.md): evidence and limits.
-- [`REPRODUCE.md`](REPRODUCE.md): every command;
-  [`docs/REPRODUCE_ON_ANOTHER_MACHINE.md`](docs/REPRODUCE_ON_ANOTHER_MACHINE.md): independent reproduction on another GPU / Linux.
-- [`docs/UPSTREAM_CONTRIBUTION_CANDIDATES.md`](docs/UPSTREAM_CONTRIBUTION_CANDIDATES.md): measured upstream candidates (none submitted).
-- [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md): upstream and dependency licences.
+  [`reports/BENCHMARK_LIMITATIONS.md`](reports/BENCHMARK_LIMITATIONS.md): what is verified and what is not.
+- [`docs/REPRODUCE_ON_ANOTHER_MACHINE.md`](docs/REPRODUCE_ON_ANOTHER_MACHINE.md): reproduce the benchmark on your GPU;
+  [`REPRODUCE.md`](REPRODUCE.md): every command.
+- [`docs/UPSTREAM_CONTRIBUTION_CANDIDATES.md`](docs/UPSTREAM_CONTRIBUTION_CANDIDATES.md): measured findings that may be
+  useful upstream (none submitted yet).
+- [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md): upstream, dependency, model and dataset licences.
 
-## Results at a glance
+## Secondary results
 
-Hardware for all rows: one RTX 4060 8 GB, torch 2.11.0+cu128, triton-windows 3.7.1. Not compared with vLLM or TensorRT-LLM.
+These rows come from the earlier phases of the project. The 12.19M-parameter TinyStories model is a research test bed,
+not a general-purpose LLM.
 
 | Result | Contract | Evidence |
 |---|---|---|
-| **Qwen3-1.7B batch-1 decode (V3): EfficientGPT int8 + sync-free CUDA-graph decoder 111.9 tok/s = parity with llama.cpp Q8_0 (1.02x [1.015, 1.051]), 1.33x torchao int8 (max-autotune), 1.89x HF bf16 + static cache/torch.compile; device memory 2474 MiB; quality-v1 39/52 = bf16** | approximate (dNLL -0.15%) | `reports/EFFICIENTGPT_V3_RESEARCH_REPORT.md`; `BENCHMARK_REPORT.md` s1a |
-| Eager prefix SDPA to `adaptive_graph` (CUDA Graph, adaptive KV buckets), B16 prompt 64, 64 new tokens: 131.9 ms to 52.8-56.2 ms | exact (bit-identical tokens and logits) | `BENCHMARK_REPORT.md` s1; `reports/PHASE5_REPORT.md` s1 |
-| `adaptive_graph` to `compiled_triton_full_graph`: 1.29-1.74x (95% CI, all 12 workloads); 33.5 ms at B16 | near-tie | `reports/PHASE5_REPORT.md` s1, s5 |
-| `compiled_triton_full_graph` to fp16 weights: 1.39-1.80x; 20.4 ms at B16; dNLL -4e-6 | approximate | `research/phase5/ci_runs/20261030_212013_precision/` |
-| KernelAgent-Ada task winners vs `torch.compile`: 19/19 held-out shapes won (1.07-9.3x), warm-L2 microbenchmarks | correct vs fp64 truth | `runs/20261031_v4/ka_study_evalv2/heldout_*.json`; `reports/KERNELAGENT_ADA_REPORT.md` |
-| Decode attention vs the existing Phase 5 Triton kernel (held-out): 3 WIN (1.16-1.58x), 1 SLOWER (0.83x); end to end only 0.999-1.015x at batch 16 (about 1%, below the 5% bar) | near-tie | `reports/KERNELAGENT_ADA_REPORT.md` (KA-04); `research/phase5/ci_runs/20261031_dispatch_inprocess/` |
-| HF Qwen3-1.7B bf16 batch-1 decode: 26.8 to 57.7 tok/s with a static cache (2.15x, CI [2.14, 2.16]), about 93% of measured DRAM bandwidth | speed only; outputs 40/52 identical, equal quality | `docs/ASSISTANT.md`; `runs/20261031_v4/assistant_speed_idle/` |
-| Local assistant, repo questions with tools (20 audited items): qwen3.5:4b 20/20, Qwen3-1.7B nf4 17/20 | graded against fixed answers | `BENCHMARK_REPORT.md` s3 (ASSIST-05) |
+| TinyStories decoder, batch 16, prompt 64, 64 new tokens: eager prefix-SDPA baseline 131.9 ms → CUDA-graph decoder with adaptive KV buckets 52.8–56.2 ms | exact (bit-identical tokens and logits) | `BENCHMARK_REPORT.md` §1; `reports/PHASE5_REPORT.md` §1 |
+| Same decoder with an Inductor-compiled step + Triton attention: a further 1.29–1.74× (95% CI, all 12 workloads); 33.5 ms at batch 16 | near-tie | `reports/PHASE5_REPORT.md` §1, §5 |
+| fp16 weights on top: 1.39–1.80×; 20.4 ms at batch 16; ΔNLL −4e-6 | approximate | `research/phase5/ci_runs/20261030_212013_precision/` |
+| KernelAgent-Ada task winners vs `torch.compile`: 19/19 held-out shapes won (1.07–9.3×, warm-L2 microbenchmarks) | correct vs fp64 truth | `runs/20261031_v4/ka_study_evalv2/heldout_*.json`; `reports/KERNELAGENT_ADA_REPORT.md` |
+| KernelAgent-Ada decode attention vs the existing Triton kernel: 3 wins (1.16–1.58×), 1 slower (0.83×) on held-out shapes; end to end only 0.999–1.015× at batch 16 (below the 5% bar) | near-tie | `reports/KERNELAGENT_ADA_REPORT.md` (KA-04) |
+| HF Qwen3-1.7B bf16, a different prompt and harness from the table above: 26.8 → 57.7 tok/s with a static cache (2.15×, CI [2.14, 2.16]) | speed only; equal quality | `docs/ASSISTANT.md`; `runs/20261031_v4/assistant_speed_idle/` |
+| Local assistant answering repository questions with tools (20 audited items): qwen3.5:4b 20/20, Qwen3-1.7B nf4 17/20 | graded against fixed answers | `BENCHMARK_REPORT.md` §3 (ASSIST-05) |
 
-Bottleneck on the 12.19M TinyStories model: GEMMs are about 65% of the B16 step at 78-83% of the measured 211 GB/s DRAM
-bandwidth, so fewer weight bytes (fp16) is the lever (`BENCHMARK_REPORT.md` s1).
+A "win" in this repository means a ratio ≥ 1.05 whose 95% CI excludes 1, reproduced in fresh processes.
+
+On the TinyStories model the GEMMs take about 65% of the batch-16 step, at 78–83% of the measured 211 GB/s DRAM bandwidth.
+Fewer weight bytes (fp16) is therefore the lever there (`BENCHMARK_REPORT.md` §1).
 
 ## Architecture
 
@@ -87,10 +131,10 @@ held-out shapes, evaluated once  ->  end-to-end check (Amdahl) in the decoder
 
 Established (reimplemented and verified here, not new): CUDA-Graph decode with static KV, split-K decode attention
 (FlashDecoding family), fp16 weights, template search in the spirit of Triton autotune. Positioning against vLLM,
-TensorRT-LLM, gpt-fast, FlashInfer, transformers' `DeferredStopCheck` and LLM kernel agents is in `reports/EFFICIENTGPT_INDUSTRY_RESEARCH_REPORT.md` §3: the systems here are not
+TensorRT-LLM, gpt-fast, FlashInfer, transformers' `DeferredStopCheck` and LLM kernel agents is in `reports/EFFICIENTGPT_TECHNICAL_REPORT.md` §3: the systems here are not
 claimed to be faster than those (not compared).
 
-Modest original contributions (`reports/EFFICIENTGPT_INDUSTRY_RESEARCH_REPORT.md` §5):
+Modest original contributions (`reports/EFFICIENTGPT_TECHNICAL_REPORT.md` §5):
 - The verification protocol around automated kernel search: fp64-truth contracts by task kind, mutation testing of the
   evaluator itself, input-mutation guards, contention-aware timing, held-out selection, and an end-to-end check that
   correctly reduced a 1.1-1.6x kernel win to about 1% of the system.
@@ -109,12 +153,13 @@ Modest original contributions (`reports/EFFICIENTGPT_INDUSTRY_RESEARCH_REPORT.md
 - **Contention detection:** timing requires an idle GPU; the harnesses flag or refuse contended runs. The KernelAgent-Ada
   study had 138 evaluations, 0 contended, 138/138 correct (`reports/KERNELAGENT_ADA_REPORT.md`).
 - **Mutation tests:** 12/12 deliberately wrong candidates rejected; 12 GPU + 10 CPU kernel-search tests (`BENCHMARK_REPORT.md` s2).
-- **Independent reviews and self-caught errors:** four independent code reviews by a separate agent (KA-02, KA-06, the V1
-  pre-release audit, and the R1 int8 review), every finding fixed with a regression test or stated as a limitation. Errors kept on record: benchmark answer leakage (ASSIST-02),
+- **Reviews and self-caught errors:** each milestone was reviewed by a separate AI code reviewer (for example KA-02, KA-06,
+  the V1 pre-release audit, the R1 int8 review and the release review); every finding was fixed with a regression test or
+  stated as a limitation. Errors kept on record: benchmark answer leakage (ASSIST-02),
   launch-bound microbenchmarks (KA-03; eval-v1 discarded), contention artifacts (ASSIST-04), classifier mislabels
   (ASSIST-05, KA-06). See `docs/EXPERIMENT_LOG.md`.
-- **Test counts:** final run 144/144 OK, 0 skipped (Phase 5 86, KernelAgent-Ada + int8 27, assistant 31; `runs/20261031_v4/v2_final/`; pre-release run 140/140,
-  `runs/20261031_v4/v1_release/`); the Phase 5 headline benchmark was re-run in fresh processes and reproduced (48/48 WIN,
+- **Test counts:** 156/156 pass from a clean checkout (Phase 5 86, KernelAgent-Ada + real model 30, assistant 33,
+  release 7; `runs/20261031_v4/recognition_clean_checkout.json`); the Phase 5 headline benchmark was re-run in fresh processes and reproduced (48/48 WIN,
   `research/phase5/ci_runs/20261031_v1_repro/`).
 
 ## Repository map
@@ -128,9 +173,9 @@ Modest original contributions (`reports/EFFICIENTGPT_INDUSTRY_RESEARCH_REPORT.md
 | `research/release/` | `clean_checkout.py` (every test suite from a pristine `git worktree`, hash-checked inputs), `gpu_census.py` (which tests need the GPU), `make_public_export.py` (the sanitiser that produced this public tree) |
 | `assistant/` | Local assistant (Ollama / Hugging Face backends, retrieval, permissioned tools) and its benchmarks |
 | `reports/` | Research report, one-page summary, benchmark verification and limitations, `PHASE5_REPORT.md`, `KERNELAGENT_ADA_REPORT.md`, V2/V3 release records |
-| `docs/` | `ASSISTANT.md`, `PHASE5_CONTRACT.md`, `ENVIRONMENT.md`, `EXPERIMENT_LOG.md` (append-only), `ROADMAP.md`, checkpoint checksums |
+| `docs/` | Architecture, demos, reproduction, contracts, environment; `EXPERIMENT_LOG.md` is the append-only development log |
 | `runs/` | Evidence directories (for example `runs/20261031_v4/`) |
-| `model.py`, `train.py`, `sample.py`, ... | nanoGPT lineage and early benchmark scripts |
+| `model.py`, `train.py`, `sample.py`, root `benchmark_*.py` / `compare_*.py` | nanoGPT lineage and early (pre-`research/`) experiments |
 
 ## Reproduce
 
@@ -167,7 +212,8 @@ python -m assistant.demo
 
 ## Status
 
-V3 complete (`reports/V3_RELEASE.md`). This repository is a single-commit, sanitised snapshot of the private research
+Development ran in milestones V1 (TinyStories decoder and KernelAgent-Ada), V2 (int8 on Qwen3-1.7B) and V3 (graph decoder
+and llama.cpp parity); `reports/V2_RELEASE.md` and `reports/V3_RELEASE.md` are their release records. This repository is a single-commit, sanitised snapshot of the private research
 repository: its development history, the `v2` / `v3` tags and the private TinyStories checkpoint are not included (local
 paths in logs are shown as `<HOME>`, and commit ids of the private history as `<private-commit>`). The evidence files
 referenced throughout are included.
@@ -176,6 +222,11 @@ referenced throughout are included.
 
 Built on [nanoGPT](https://github.com/karpathy/nanoGPT) by Andrej Karpathy (MIT); the original README is preserved in
 `docs/NANOGPT_README.md`. Uses PyTorch, Triton (triton-windows), Hugging Face transformers, Ollama, and Qwen models (Apache-2.0).
+Development used an AI coding assistant (Claude); design decisions, measurements and every reported number are checked
+against the raw evidence in this repository.
+
+Issues with results from other GPUs are welcome, including results that contradict these; attach the raw run directory
+(`docs/REPRODUCE_ON_ANOTHER_MACHINE.md` §5). Citation metadata: `CITATION.cff`.
 
 ## Licence
 

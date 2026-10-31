@@ -90,7 +90,7 @@ step implementations:
 | + sampling (`SampledGraphDecoder`) | token-exact given uniforms; distribution = declared transforms | opt-in | `test_sampling` (incl. chi-square), `TestSampledGraphPool` |
 | ragged (`RaggedGraphDecoder`) | == own eager engine exactly; equal lengths == uniform path; per-row near-tie vs batch 1 | opt-in | `test_ragged`, `TestRaggedGraphPool` |
 | `compiled_*`, `triton_*`, `compiled_triton_*` | near-tie: equal, or first divergence at reference top-2 margin < 1e-2 | opt-in | `test_near_tie`, `TestCompiledBaseline`, `TestDecodeAttention` |
-| `fp16_*`, `bf16_*` | **none** (approximate); quality characterized in §5.4 | opt-in, owner decision | `test_low_precision_inputs`, `precision_study.py` |
+| `fp16_*`, `bf16_*` | **none** (approximate); quality characterized in §5.4 | opt-in, by decision | `test_low_precision_inputs`, `precision_study.py` |
 
 Full suite: **74 tests OK** (`research/phase5/ci_runs/20261030_212013_precision/diagnostics/regression.log`). GPU tests skip
 without CUDA, Triton or the checkpoint.
@@ -143,7 +143,7 @@ match the adaptive ones with 2 graphs instead of 8.
 | **fp16** | −4.1e-6 [−1.2e-5, +3.3e-6] | 99.88% | 105/128 | 23/23 (46/46 incl. benchmark/random prompts) | **1.386–1.802×** |
 | bf16 | +1.12e-4 [+5.2e-5, +1.7e-4] | 99.04% | 30/128 | 28/98 | 1.380–1.769× (≤ fp16) |
 
-fp16 dominates bf16 on quality and speed. **Owner decision:** both stay opt-in approximate modes, not under the near-tie
+fp16 dominates bf16 on quality and speed. **Decision:** both stay opt-in approximate modes, not under the near-tie
 contract and not default. fp16's largest margin at a divergence was 7.8e-3, close to the 1e-2 threshold, and overflow was
 not observed but is not excluded.
 

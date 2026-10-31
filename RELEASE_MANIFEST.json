@@ -7,10 +7,14 @@
   "CAREER_VALUE_REPORT.md",
   "reports/CAREER_AND_COMMERCIAL_VALUE.md",
   "reports/PUBLIC_RELEASE_READINESS.md",
-  "reports/PUBLIC_RELEASE_CHECKLIST.md"
+  "reports/PUBLIC_RELEASE_CHECKLIST.md",
+  "reports/INDUSTRY_AUDIT.md",
+  "docs/ROADMAP.md",
+  "reports/ANNOUNCEMENT_DRAFT.md",
+  "reports/INDUSTRY_RECOGNITION_REVIEW.md"
  ],
- "redacted_files": 162,
- "redactions_total": 4694,
+ "redacted_files": 161,
+ "redactions_total": 4697,
  "redactions_per_file": {
   "assistant/bench/runs/20261030_224206/download_qwen3_1.7b.log": 5,
   "assistant/bench/runs/20261030_224206/environment.txt": 1,
@@ -20,9 +24,6 @@
   "docs/EXPERIMENT_LOG.md": 7,
   "reports/BENCHMARK_VERIFICATION.md": 1,
   "reports/FINAL_CODE_REVIEW.md": 6,
-  "reports/INDUSTRY_AUDIT.md": 5,
-  "reports/V2_RELEASE.md": 1,
-  "reports/V3_RELEASE.md": 1,
   "research/phase4/decode_full_run.txt": 1,
   "research/phase4/memory_run.txt": 1,
   "research/phase5/ci_runs/20261030_184148/environment_before.txt": 1,
@@ -72,6 +73,7 @@
   "runs/20261031_v4/ka_smoke_postreview_history.jsonl": 14,
   "runs/20261031_v4/ka_timing_smoke_CONTENDED.json": 1,
   "runs/20261031_v4/ka_timing_smoke_history.jsonl": 1,
+  "runs/20261031_v4/recognition_clean_checkout.json": 4,
   "runs/20261031_v4/release_clean_checkout_external.json": 6,
   "runs/20261031_v4/release_clean_checkout_full.json": 6,
   "runs/20261031_v4/showcase_clean_checkout.json": 6,
@@ -173,7 +175,8 @@
   "runs/20261031_v4/v2_final2/commit.txt": 1,
   "runs/20261031_v4/v2_final2/tests_assistant.txt": 4,
   "runs/20261031_v4/v2_final2/tests_kernelagent.txt": 2,
-  "runs/20261031_v4/v2_final2/tests_phase5.txt": 1
+  "runs/20261031_v4/v2_final2/tests_phase5.txt": 1,
+  "runs/demo_kernelagent_20261031_203020/history.jsonl": 6
  },
  "scan_problems": [],
  "history": "fresh repository, one commit; the private repository and its history are unchanged",
@@ -196,7 +199,7 @@
   },
   "release": {
    "returncode": 0,
-   "ran": 6,
+   "ran": 7,
    "skipped": 0
   }
  }

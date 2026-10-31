@@ -1,9 +1,16 @@
-# Upstream contribution candidates (none submitted; each needs the owner's approval)
+# Upstream contribution candidates (none submitted yet)
 
 Ranked by evidence strength. Each item links to the measurement in this repository. Drafts are written so that they could be
 filed after review. Nothing here has been sent.
 
 ## 1. transformers: enable `DeferredStopCheck` on CUDA (strongest; measured)
+**Update (2026-10-31): prepared package in [`upstream/transformers-deferred-stop-cuda/`](upstream/transformers-deferred-stop-cuda/README.md).**
+- Still relevant: transformers `main` (b41ca9c) is still MPS-only.
+- The patch applies cleanly.
+- The stronger re-measurement uses upstream's exact gating with only the device check widened, 12 interleaved reps on an
+  idle GPU: +5.2% in eager mode [1.050, 1.058] and +5.3% with a compiled static cache [1.048, 1.059].
+- Outputs were identical across EOS stops, a `max_new_tokens` cut-off, a padded batch, streaming and returned scores.
+- The original measurement below used a cruder gate and one regime.
 **Finding.** transformers 5.21 already has `DeferredStopCheck` (`generation/utils.py`). It reads the stop flag one step
 late through pinned memory and an event, so the host never waits on the device. It is enabled only for MPS:
 `is_supported` returns False unless `device.type == "mps"`, with the comment *"we should enable it for cuda if we observe

@@ -1,6 +1,6 @@
 # EfficientGPT: verified small-batch LLM decoding on a consumer GPU
 
-*Engineering research report, 2026-10-31. Single author's personal project; private repository. All numbers are measured
+*Engineering research report, 2026-10-31. Single-author open-source project (MIT). All numbers are measured
 on one NVIDIA RTX 4060 8 GB (Windows 11) and link to raw evidence in the repository.*
 
 ## 1. Abstract
@@ -153,8 +153,8 @@ Full list: `reports/BENCHMARK_LIMITATIONS.md`.
 
 ## 11. Reproducibility
 - **Commands:** `REPRODUCE.md` and `docs/DEMO.md`.
-- **Clean checkout:** a fresh `git worktree` with hash-checked inputs passed 149/149 tests at V3 (re-run for this report in
-  `reports/FINAL_CODE_REVIEW.md`).
+- **Clean checkout:** a fresh `git worktree` with hash-checked inputs passed 149/149 tests at V3 and 156/156 at the public
+  release (`runs/20261031_v4/test_gpu_census.json` lists which need a GPU).
 - **Evidence:** raw per-process JSON is committed for every result, and so are the contaminated and invalid runs, labelled.
 
 ## 12. Future research directions
@@ -164,8 +164,8 @@ Full list: `reports/BENCHMARK_LIMITATIONS.md`.
    model).
 3. Batched decoding with per-row positions (Phase 5 ragged batches), and int4 weight-only.
 4. Same-model comparisons against a tuned llama.cpp build, vLLM and TensorRT-LLM on Linux.
-5. Upstreaming measured findings (candidates with evidence in `docs/UPSTREAM_CONTRIBUTION_CANDIDATES.md`; owner approval
-   required).
+5. Upstreaming measured findings (candidates with evidence in `docs/UPSTREAM_CONTRIBUTION_CANDIDATES.md`; none submitted
+   yet).
 
 ## 13. References and acknowledgments
 nanoGPT (A. Karpathy, MIT); PyTorch (BSD-3) and TorchInductor; Triton (MIT; triton-windows build); Hugging Face
