@@ -1,0 +1,80 @@
+{
+  "backend": "ollama:qwen3.5:4b",
+  "quant": "na",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "think": false,
+  "protocol": "assistant-quality-v1",
+  "decoding": "greedy (temperature 0)",
+  "gpu_used_before_load_mib": 2847.0,
+  "ollama_options": {
+    "presence_penalty": 0.0
+  },
+  "speed": {
+    "short": {
+      "prompt_tokens": 63,
+      "completion_tokens": [
+        256,
+        256,
+        256
+      ],
+      "ttft_s_median": 0.16671050002332777,
+      "decode_tok_s_median": 26.07883877450647,
+      "decode_tok_s_all": [
+        26.08,
+        26.08,
+        27.44
+      ],
+      "prompt_tok_s_median": 466.59062967516405,
+      "prompt_tokens_per_ttft_s_median": 371.9021896720624,
+      "total_s_median": 9.980553600005805,
+      "timing_source": "client ttft + ollama server counts"
+    },
+    "medium": {
+      "prompt_tokens": 712,
+      "completion_tokens": [
+        256,
+        256,
+        256
+      ],
+      "ttft_s_median": 0.6165139999939129,
+      "decode_tok_s_median": 26.926365855685198,
+      "decode_tok_s_all": [
+        26.53,
+        26.95,
+        26.93
+      ],
+      "prompt_tok_s_median": 1259.9927390248938,
+      "prompt_tokens_per_ttft_s_median": 1148.3924128357028,
+      "total_s_median": 10.12383019994013,
+      "timing_source": "client ttft + ollama server counts"
+    },
+    "long": {
+      "prompt_tokens": 2228,
+      "completion_tokens": [
+        256,
+        256,
+        256
+      ],
+      "ttft_s_median": 1.6946595000335947,
+      "decode_tok_s_median": 26.65421137580918,
+      "decode_tok_s_all": [
+        26.68,
+        26.63,
+        26.65
+      ],
+      "prompt_tok_s_median": 1377.3355357513774,
+      "prompt_tokens_per_ttft_s_median": 1314.1282953630816,
+      "total_s_median": 11.30649650003761,
+      "timing_source": "client ttft + ollama server counts"
+    }
+  },
+  "gpu_used_after_mib": 7025.0,
+  "ollama_ps": [
+    {
+      "name": "qwen3.5:4b",
+      "size": 3364911840,
+      "size_vram": 3364911840,
+      "context_length": 8192
+    }
+  ]
+}

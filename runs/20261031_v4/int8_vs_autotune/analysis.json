@@ -1,0 +1,148 @@
+{
+ "speed": [
+  {
+   "mode": "bf16_static",
+   "rounds": 3,
+   "tok_s_round_medians": [
+    58.99,
+    62.75,
+    62.71
+   ],
+   "tok_s": 62.71,
+   "ratio": 1.0,
+   "ci": [
+    0.9400796812749004,
+    1.0637396168842177
+   ],
+   "paired_min_max": [
+    1.0,
+    1.0
+   ],
+   "ttft_ms": 44.065100024454296,
+   "serving_peak_mib": 3346.0,
+   "device_used_mib": 3442.0,
+   "weights_mib": 3282.3,
+   "load_peak_mib": 3282.3,
+   "first_call_s": 6.75,
+   "contended": false,
+   "all_256_tokens": true
+  },
+  {
+   "mode": "bf16_static_at",
+   "rounds": 3,
+   "tok_s_round_medians": [
+    59.36,
+    63.06,
+    63.13
+   ],
+   "tok_s": 63.06,
+   "ratio": 1.0055812470100463,
+   "ci": [
+    0.9459760956175298,
+    1.0701813866757077
+   ],
+   "paired_min_max": [
+    1.0049402390438247,
+    1.0066974964120554
+   ],
+   "ttft_ms": 43.78559999167919,
+   "serving_peak_mib": 3351.8,
+   "device_used_mib": 3470.0,
+   "weights_mib": 3282.3,
+   "load_peak_mib": 3282.3,
+   "first_call_s": 23.88,
+   "contended": false,
+   "all_256_tokens": true
+  },
+  {
+   "mode": "int8_static",
+   "rounds": 3,
+   "tok_s_round_medians": [
+    87.54,
+    97.05,
+    97.19
+   ],
+   "tok_s": 97.05,
+   "ratio": 1.5476000637856802,
+   "ci": [
+    1.3950597609561755,
+    1.647567384302424
+   ],
+   "paired_min_max": [
+    1.4839803356501102,
+    1.5498325625896985
+   ],
+   "ttft_ms": 64.80529997497797,
+   "serving_peak_mib": 2357.6,
+   "device_used_mib": 2490.0,
+   "weights_mib": 2237.8,
+   "load_peak_mib": 3426.3,
+   "first_call_s": 6.39,
+   "contended": false,
+   "all_256_tokens": true
+  },
+  {
+   "mode": "torchao_int8_static_at",
+   "rounds": 3,
+   "tok_s_round_medians": [
+    88.55,
+    86.83,
+    89.41
+   ],
+   "tok_s": 88.55,
+   "ratio": 1.4120554935416998,
+   "ci": [
+    1.3837450199203187,
+    1.5156806238345482
+   ],
+   "paired_min_max": [
+    1.3837450199203187,
+    1.50110188167486
+   ],
+   "ttft_ms": 65.80700003542006,
+   "serving_peak_mib": 2875.4,
+   "device_used_mib": 3438.0,
+   "weights_mib": 2238.5,
+   "load_peak_mib": 4911.7,
+   "first_call_s": 359.18,
+   "contended": false,
+   "all_256_tokens": true
+  }
+ ],
+ "quality": {},
+ "pairs": {
+  "bf16_static": {
+   "ratio": 1.5476000637856802,
+   "ci": [
+    1.3950597609561755,
+    1.647567384302424
+   ],
+   "paired": [
+    1.4839803356501102,
+    1.5498325625896985
+   ]
+  },
+  "bf16_static_at": {
+   "ratio": 1.539010466222645,
+   "ci": [
+    1.3866624425788057,
+    1.6372978436657681
+   ],
+   "paired": [
+    1.4747304582210243,
+    1.5395216220497385
+   ]
+  },
+  "torchao_int8_static_at": {
+   "ratio": 1.095990965556183,
+   "ci": [
+    0.9790851135219775,
+    1.1193136012898768
+   ],
+   "paired": [
+    0.9885940146809713,
+    1.1177012553265
+   ]
+  }
+ }
+}

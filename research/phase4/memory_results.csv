@@ -1,0 +1,7 @@
+mode,batch_size,prompt_tokens,generated_tokens,output_correct,baseline_allocated_mib,baseline_reserved_mib,peak_allocated_mib,peak_reserved_mib,incremental_peak_allocated_mib,capture_ms
+dynamic_kv_eager,1,8,64,True,55.021,66.0,57.572,68.0,2.551,0.0
+static_kv_eager,1,8,64,True,55.021,66.0,59.878,70.0,4.857,0.0
+static_kv_graph,1,8,64,True,55.021,66.0,76.129,114.0,21.108,2.482
+dynamic_kv_eager,16,128,64,True,71.332,106.0,179.183,258.0,107.852,0.0
+static_kv_eager,16,128,64,True,71.332,106.0,233.367,298.0,162.035,0.0
+static_kv_graph,16,128,64,True,71.332,106.0,241.493,412.0,170.161,4.8284

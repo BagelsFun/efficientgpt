@@ -1,0 +1,404 @@
+{
+ "protocol": "kernelagent-ada/eval-v1",
+ "task": "decode_attention",
+ "split": "heldout",
+ "first_pass_s": 0.537,
+ "import_s": 0.066,
+ "correctness": [
+  {
+   "shape": [
+    8,
+    192
+   ],
+   "seed": 0,
+   "edge": null,
+   "ok": true,
+   "err_candidate": 1.5156027788343351e-07,
+   "err_eager_fp32": 4.474270623999743e-07,
+   "bound": 2.789708249599897e-06
+  },
+  {
+   "shape": [
+    8,
+    192
+   ],
+   "seed": 1,
+   "edge": null,
+   "ok": true,
+   "err_candidate": 1.6908149541583484e-07,
+   "err_eager_fp32": 5.773915394691187e-07,
+   "bound": 3.3095661578764745e-06
+  },
+  {
+   "shape": [
+    8,
+    192
+   ],
+   "seed": 0,
+   "edge": "len1",
+   "ok": true,
+   "err_candidate": 0.0,
+   "err_eager_fp32": 4.76837158203125e-07,
+   "bound": 2.9073486328124997e-06
+  },
+  {
+   "shape": [
+    8,
+    192
+   ],
+   "seed": 0,
+   "edge": "full",
+   "ok": true,
+   "err_candidate": 1.05156480356694e-07,
+   "err_eager_fp32": 4.1282891105609565e-07,
+   "bound": 2.6513156442243823e-06
+  },
+  {
+   "shape": [
+    8,
+    192
+   ],
+   "seed": 0,
+   "edge": "large",
+   "ok": true,
+   "err_candidate": 9.02469259789207e-06,
+   "err_eager_fp32": 2.0094576023588218e-05,
+   "bound": 8.137830409435287e-05
+  },
+  {
+   "shape": [
+    4,
+    256
+   ],
+   "seed": 0,
+   "edge": null,
+   "ok": true,
+   "err_candidate": 1.6867637647743905e-07,
+   "err_eager_fp32": 4.814981070522251e-07,
+   "bound": 2.9259924282089e-06
+  },
+  {
+   "shape": [
+    4,
+    256
+   ],
+   "seed": 1,
+   "edge": null,
+   "ok": true,
+   "err_candidate": 1.7807370999989303e-07,
+   "err_eager_fp32": 4.968758715584443e-07,
+   "bound": 2.9875034862337768e-06
+  },
+  {
+   "shape": [
+    4,
+    256
+   ],
+   "seed": 0,
+   "edge": "len1",
+   "ok": true,
+   "err_candidate": 0.0,
+   "err_eager_fp32": 4.76837158203125e-07,
+   "bound": 2.9073486328124997e-06
+  },
+  {
+   "shape": [
+    4,
+    256
+   ],
+   "seed": 0,
+   "edge": "full",
+   "ok": true,
+   "err_candidate": 8.555121233655427e-08,
+   "err_eager_fp32": 2.8590952988460927e-07,
+   "bound": 2.143638119538437e-06
+  },
+  {
+   "shape": [
+    4,
+    256
+   ],
+   "seed": 0,
+   "edge": "large",
+   "ok": true,
+   "err_candidate": 6.500238301176964e-06,
+   "err_eager_fp32": 1.4808422206025185e-05,
+   "bound": 6.0233688824100736e-05
+  },
+  {
+   "shape": [
+    2,
+    80
+   ],
+   "seed": 0,
+   "edge": null,
+   "ok": true,
+   "err_candidate": 1.4015616944806908e-07,
+   "err_eager_fp32": 9.441973159995953e-07,
+   "bound": 4.776789263998381e-06
+  },
+  {
+   "shape": [
+    2,
+    80
+   ],
+   "seed": 1,
+   "edge": null,
+   "ok": true,
+   "err_candidate": 1.0076421252946943e-07,
+   "err_eager_fp32": 6.006113741907626e-07,
+   "bound": 3.40244549676305e-06
+  },
+  {
+   "shape": [
+    2,
+    80
+   ],
+   "seed": 0,
+   "edge": "len1",
+   "ok": true,
+   "err_candidate": 0.0,
+   "err_eager_fp32": 4.76837158203125e-07,
+   "bound": 2.9073486328124997e-06
+  },
+  {
+   "shape": [
+    2,
+    80
+   ],
+   "seed": 0,
+   "edge": "full",
+   "ok": true,
+   "err_candidate": 7.875799840073583e-08,
+   "err_eager_fp32": 4.993733710989545e-07,
+   "bound": 2.997493484395818e-06
+  },
+  {
+   "shape": [
+    2,
+    80
+   ],
+   "seed": 0,
+   "edge": "large",
+   "ok": true,
+   "err_candidate": 2.1156358576135403e-07,
+   "err_eager_fp32": 5.152052073853497e-07,
+   "bound": 3.0608208295413985e-06
+  },
+  {
+   "shape": [
+    16,
+    64
+   ],
+   "seed": 0,
+   "edge": null,
+   "ok": true,
+   "err_candidate": 3.258301544128983e-07,
+   "err_eager_fp32": 7.951797421634765e-07,
+   "bound": 4.180718968653906e-06
+  },
+  {
+   "shape": [
+    16,
+    64
+   ],
+   "seed": 1,
+   "edge": null,
+   "ok": true,
+   "err_candidate": 3.4201737997285875e-07,
+   "err_eager_fp32": 1.2392451332887688e-06,
+   "bound": 5.956980533155075e-06
+  },
+  {
+   "shape": [
+    16,
+    64
+   ],
+   "seed": 0,
+   "edge": "len1",
+   "ok": true,
+   "err_candidate": 0.0,
+   "err_eager_fp32": 4.76837158203125e-07,
+   "bound": 2.9073486328124997e-06
+  },
+  {
+   "shape": [
+    16,
+    64
+   ],
+   "seed": 0,
+   "edge": "full",
+   "ok": true,
+   "err_candidate": 1.796410091792211e-07,
+   "err_eager_fp32": 9.152537421286411e-07,
+   "bound": 4.661014968514564e-06
+  },
+  {
+   "shape": [
+    16,
+    64
+   ],
+   "seed": 0,
+   "edge": "large",
+   "ok": true,
+   "err_candidate": 1.6283741233358295e-05,
+   "err_eager_fp32": 2.5567624471145578e-05,
+   "bound": 0.00010327049788458231
+  }
+ ],
+ "launch_metadata": [
+  {
+   "n_regs": 56,
+   "n_spills": 0,
+   "shared_bytes": 512,
+   "num_warps": 2
+  },
+  {
+   "n_regs": 56,
+   "n_spills": 0,
+   "shared_bytes": 512,
+   "num_warps": 2
+  },
+  {
+   "n_regs": 56,
+   "n_spills": 0,
+   "shared_bytes": 512,
+   "num_warps": 2
+  },
+  {
+   "n_regs": 56,
+   "n_spills": 0,
+   "shared_bytes": 512,
+   "num_warps": 2
+  }
+ ],
+ "status": "correct",
+ "gpu_before": {
+  "util_pct": 0.0,
+  "mem_used_mib": 1148.0
+ },
+ "contended": false,
+ "performance": {
+  "8x192": {
+   "failed": {},
+   "median_ms": {
+    "candidate": 0.009645119905471802,
+    "eager": 0.04655104160308838,
+    "inductor": 0.042319037914276124,
+    "best_existing": 0.00954047977924347
+   },
+   "roofline_fraction": 1.658932889573901,
+   "speedup_vs_eager": {
+    "ratio": 4.8263828816352365,
+    "ci_low": 4.485206171263778,
+    "ci_high": 5.209607060157237,
+    "class": "WIN"
+   },
+   "speedup_vs_inductor": {
+    "ratio": 4.387611385760791,
+    "ci_low": 4.075659164422744,
+    "ci_high": 4.796074291067666,
+    "class": "WIN"
+   },
+   "speedup_vs_best_existing": {
+    "ratio": 0.989150977151775,
+    "ci_low": 0.9253429508036582,
+    "ci_high": 1.082164436194766,
+    "class": "INCONCLUSIVE"
+   }
+  },
+  "4x256": {
+   "failed": {},
+   "median_ms": {
+    "candidate": 0.008799359798431397,
+    "eager": 0.03927040100097656,
+    "inductor": 0.03581279993057251,
+    "best_existing": 0.008785600066184998
+   },
+   "roofline_fraction": 0.9828203155190189,
+   "speedup_vs_eager": {
+    "ratio": 4.46287024289847,
+    "ci_low": 4.144523058614838,
+    "ci_high": 4.83203836933094,
+    "class": "WIN"
+   },
+   "speedup_vs_inductor": {
+    "ratio": 4.069932444057648,
+    "ci_low": 3.7748684510018458,
+    "ci_high": 4.1960480651367895,
+    "class": "WIN"
+   },
+   "speedup_vs_best_existing": {
+    "ratio": 0.9984362803020224,
+    "ci_low": 0.921866228819623,
+    "ci_high": 1.0799107343935908,
+    "class": "INCONCLUSIVE"
+   }
+  },
+  "2x80": {
+   "failed": {},
+   "median_ms": {
+    "candidate": 0.008264640271663667,
+    "eager": 0.021135358810424804,
+    "inductor": 0.01759167969226837,
+    "best_existing": 0.00822048008441925
+   },
+   "roofline_fraction": 0.1056978251509333,
+   "speedup_vs_eager": {
+    "ratio": 2.5573235029829395,
+    "ci_low": 2.3318283433731692,
+    "ci_high": 2.691028828103456,
+    "class": "WIN"
+   },
+   "speedup_vs_inductor": {
+    "ratio": 2.1285475367371527,
+    "ci_low": 1.9444305674321907,
+    "ci_high": 2.2441558940284914,
+    "class": "WIN"
+   },
+   "speedup_vs_best_existing": {
+    "ratio": 0.9946567320787298,
+    "ci_low": 0.8939779935869869,
+    "ci_high": 1.0641603459499969,
+    "class": "INCONCLUSIVE"
+   }
+  },
+  "16x64": {
+   "failed": {},
+   "median_ms": {
+    "candidate": 0.00879967987537384,
+    "eager": 0.03221184015274048,
+    "inductor": 0.028240959644317627,
+    "best_existing": 0.009223999977111817
+   },
+   "roofline_fraction": 0.9149492683294986,
+   "speedup_vs_eager": {
+    "ratio": 3.660569544454253,
+    "ci_low": 3.467715257165845,
+    "ci_high": 3.79714738799899,
+    "class": "WIN"
+   },
+   "speedup_vs_inductor": {
+    "ratio": 3.2093167074578215,
+    "ci_low": 3.043412334094705,
+    "ci_high": 3.319110561745211,
+    "class": "WIN"
+   },
+   "speedup_vs_best_existing": {
+    "ratio": 1.0482199475148464,
+    "ci_low": 0.9699664828775758,
+    "ci_high": 1.0943103425096654,
+    "class": "INCONCLUSIVE"
+   }
+  }
+ },
+ "id": "e56d62bc48035b41",
+ "wall_s": 7.5,
+ "family": "split_k",
+ "params": {
+  "SPLIT": 64,
+  "BLOCK_N": 32,
+  "WARPS": 2
+ },
+ "chosen_by": "local"
+}

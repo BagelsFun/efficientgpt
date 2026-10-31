@@ -1,0 +1,48 @@
+{
+ "task": "add_layernorm",
+ "strategy": "single_shot",
+ "budget": 12,
+ "evaluated": 2,
+ "unused_budget": 10,
+ "statuses": {
+  "correct": 2
+ },
+ "trace": [
+  {
+   "key": "row_per_program{\"WARPS\": 4}",
+   "family": "row_per_program",
+   "params": {
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.0012004189290611385,
+   "from_history": false
+  },
+  {
+   "key": "rows_per_program{\"ROWS\": 4, \"WARPS\": 4}",
+   "family": "rows_per_program",
+   "params": {
+    "ROWS": 4,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.0014990467608588709,
+   "from_history": false
+  }
+ ],
+ "best": {
+  "score_ms": 0.0012004189290611385,
+  "family": "row_per_program",
+  "params": {
+   "WARPS": 4
+  }
+ },
+ "env": {
+  "torch": "2.11.0+cu128",
+  "triton": "3.7.1",
+  "gpu": "NVIDIA GeForce RTX 4060",
+  "python": "3.11.9",
+  "git": "<private-commit>+dirty"
+ },
+ "seed": 0
+}

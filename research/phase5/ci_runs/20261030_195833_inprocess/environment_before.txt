@@ -1,0 +1,3 @@
+commit <private-commit> + uncommitted: ModeRunner refactor, benchmark_inprocess.py, analyze_ci comparisons param
+cmd: python -m research.phase5.benchmark_inprocess --processes 3 --blocks 6 --requests 12 --modes full_graph adaptive_graph compiled_full_graph compiled_adaptive_graph
+NVIDIA GeForce RTX 4060, 617.14, 47, 2805 MHz, 2467 MiB

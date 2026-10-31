@@ -1,0 +1,37 @@
+ 1   8 16        full_graph -> adaptive_graph 1.182 [1.097, 1.255] WIN
+ 1   8 16 prefix_sdpa_eager -> full_graph     2.735 [2.637, 2.881] WIN
+ 1   8 16 prefix_sdpa_eager -> adaptive_graph 3.235 [3.056, 3.407] WIN
+ 1  64 16        full_graph -> adaptive_graph 1.207 [1.139, 1.250] WIN
+ 1  64 16 prefix_sdpa_eager -> full_graph     2.734 [2.599, 2.880] WIN
+ 1  64 16 prefix_sdpa_eager -> adaptive_graph 3.301 [3.096, 3.410] WIN
+ 1  64 64        full_graph -> adaptive_graph 1.202 [1.186, 1.224] WIN
+ 1  64 64 prefix_sdpa_eager -> full_graph     3.096 [2.983, 3.181] WIN
+ 1  64 64 prefix_sdpa_eager -> adaptive_graph 3.722 [3.594, 3.799] WIN
+ 1 128 32        full_graph -> adaptive_graph 1.094 [1.079, 1.114] WIN
+ 1 128 32 prefix_sdpa_eager -> full_graph     3.023 [2.917, 3.086] WIN
+ 1 128 32 prefix_sdpa_eager -> adaptive_graph 3.307 [3.185, 3.383] WIN
+ 1 128 64        full_graph -> adaptive_graph 1.089 [1.047, 1.139] WIN
+ 1 128 64 prefix_sdpa_eager -> full_graph     3.110 [3.035, 3.211] WIN
+ 1 128 64 prefix_sdpa_eager -> adaptive_graph 3.388 [3.262, 3.592] WIN
+ 1 192 32        full_graph -> adaptive_graph 0.982 [0.956, 1.023] AA_PASS
+ 1 192 32 prefix_sdpa_eager -> full_graph     3.019 [2.916, 3.094] WIN
+ 1 192 32 prefix_sdpa_eager -> adaptive_graph 2.965 [2.848, 3.124] WIN
+16   8 16        full_graph -> adaptive_graph 1.374 [1.308, 1.416] WIN
+16   8 16 prefix_sdpa_eager -> full_graph     1.675 [1.628, 1.739] WIN
+16   8 16 prefix_sdpa_eager -> adaptive_graph 2.300 [2.212, 2.359] WIN
+16  64 16        full_graph -> adaptive_graph 1.360 [1.296, 1.413] WIN
+16  64 16 prefix_sdpa_eager -> full_graph     1.614 [1.554, 1.671] WIN
+16  64 16 prefix_sdpa_eager -> adaptive_graph 2.195 [2.104, 2.275] WIN
+16  64 64        full_graph -> adaptive_graph 1.398 [1.368, 1.457] WIN
+16  64 64 prefix_sdpa_eager -> full_graph     1.709 [1.677, 1.768] WIN
+16  64 64 prefix_sdpa_eager -> adaptive_graph 2.391 [2.331, 2.493] WIN
+16 128 32        full_graph -> adaptive_graph 1.163 [1.137, 1.197] WIN
+16 128 32 prefix_sdpa_eager -> full_graph     1.537 [1.491, 1.578] WIN
+16 128 32 prefix_sdpa_eager -> adaptive_graph 1.788 [1.728, 1.839] WIN
+16 128 64        full_graph -> adaptive_graph 1.142 [1.112, 1.175] WIN
+16 128 64 prefix_sdpa_eager -> full_graph     1.674 [1.638, 1.722] WIN
+16 128 64 prefix_sdpa_eager -> adaptive_graph 1.912 [1.876, 1.958] WIN
+16 192 32        full_graph -> adaptive_graph 0.981 [0.960, 1.016] AA_PASS
+16 192 32 prefix_sdpa_eager -> full_graph     1.480 [1.408, 1.531] WIN
+16 192 32 prefix_sdpa_eager -> adaptive_graph 1.453 [1.420, 1.504] WIN
+Wrote research\phase5\ci_runs\20261030_184148\CI_REPORT.md and research\phase5\ci_runs\20261030_184148\CI_REPORT.json

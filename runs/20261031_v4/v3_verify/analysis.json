@@ -1,0 +1,110 @@
+{
+ "speed": [
+  {
+   "mode": "bf16_static",
+   "rounds": 3,
+   "tok_s_round_medians": [
+    57.44,
+    58.51,
+    58.74
+   ],
+   "tok_s": 58.51,
+   "ratio": 1.0,
+   "ci": [
+    0.9778685733741913,
+    1.0226323119777159
+   ],
+   "paired_min_max": [
+    1.0,
+    1.0
+   ],
+   "ttft_ms": 48.09029994066805,
+   "serving_peak_mib": 3346.0,
+   "device_used_mib": 3442.0,
+   "weights_mib": 3282.3,
+   "load_peak_mib": 3282.3,
+   "first_call_s": 7.2,
+   "contended": false,
+   "all_256_tokens": true
+  },
+  {
+   "mode": "int8_graph",
+   "rounds": 3,
+   "tok_s_round_medians": [
+    115.58,
+    110.55,
+    111.1
+   ],
+   "tok_s": 111.1,
+   "ratio": 1.8988207144077935,
+   "ci": [
+    1.8820224719101122,
+    2.0121866295264623
+   ],
+   "paired_min_max": [
+    1.8894206118612202,
+    2.0121866295264623
+   ],
+   "ttft_ms": 55.57900003623217,
+   "serving_peak_mib": 2342.4,
+   "device_used_mib": 2474.0,
+   "weights_mib": 2237.8,
+   "load_peak_mib": 3426.3,
+   "first_call_s": 5.85,
+   "contended": false,
+   "all_256_tokens": true
+  },
+  {
+   "mode": "llamacpp_q8",
+   "rounds": 3,
+   "tok_s_round_medians": [
+    107.93,
+    107.46,
+    109.18
+   ],
+   "tok_s": 107.93,
+   "ratio": 1.8446419415484534,
+   "ci": [
+    1.8294177732379977,
+    1.9007660167130922
+   ],
+   "paired_min_max": [
+    1.836609126645018,
+    1.8790041782729807
+   ],
+   "ttft_ms": 28.91340001951903,
+   "serving_peak_mib": 2300.3,
+   "device_used_mib": 2426.0,
+   "weights_mib": null,
+   "load_peak_mib": null,
+   "first_call_s": 4.57,
+   "contended": false,
+   "all_256_tokens": true
+  }
+ ],
+ "quality": {},
+ "pairs": {
+  "bf16_static": {
+   "ratio": 1.8988207144077935,
+   "ci": [
+    1.8820224719101122,
+    2.0121866295264623
+   ],
+   "paired": [
+    1.8894206118612202,
+    2.0121866295264623
+   ]
+  },
+  "llamacpp_q8": {
+   "ratio": 1.0293708885388677,
+   "ci": [
+    1.0125480857299871,
+    1.0755630001861158
+   ],
+   "paired": [
+    1.0175856383953104,
+    1.0708792736032613
+   ]
+  }
+ }
+}

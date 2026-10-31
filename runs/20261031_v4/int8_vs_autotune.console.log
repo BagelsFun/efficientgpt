@@ -1,0 +1,12 @@
+﻿bf16_static   r0 decode 59.0 tok/s  ttft 45 ms  peak 3346 MiB  util 0.0
+bf16_static_at r0 decode 59.4 tok/s  ttft 46 ms  peak 3352 MiB  util 0.0
+int8_static   r0 decode 87.5 tok/s  ttft 69 ms  peak 2358 MiB  util 1.0
+torchao_int8_static_at r0 decode 88.6 tok/s  ttft 66 ms  peak 2875 MiB  util 0.0
+torchao_int8_static_at r1 decode 86.8 tok/s  ttft 66 ms  peak 2875 MiB  util 0.0
+int8_static   r1 decode 97.0 tok/s  ttft 65 ms  peak 2357 MiB  util 0.0
+bf16_static_at r1 decode 63.1 tok/s  ttft 44 ms  peak 3350 MiB  util 0.0
+bf16_static   r1 decode 62.7 tok/s  ttft 44 ms  peak 3346 MiB  util 1.0
+bf16_static   r2 decode 62.7 tok/s  ttft 43 ms  peak 3346 MiB  util 0.0
+bf16_static_at r2 decode 63.1 tok/s  ttft 43 ms  peak 3350 MiB  util 0.0
+int8_static   r2 decode 97.2 tok/s  ttft 65 ms  peak 2358 MiB  util 0.0
+torchao_int8_static_at r2 decode 89.4 tok/s  ttft 66 ms  peak 2875 MiB  util 1.0

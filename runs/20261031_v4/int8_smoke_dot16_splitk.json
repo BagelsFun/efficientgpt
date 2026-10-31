@@ -1,0 +1,265 @@
+{
+ "env": {
+  "torch": "2.11.0+cu128",
+  "triton": "3.7.1",
+  "gpu": "NVIDIA GeForce RTX 4060",
+  "python": "3.11.9",
+  "git": "<private-commit>+dirty"
+ },
+ "results": [
+  {
+   "protocol": "kernelagent-ada/eval-v2",
+   "task": "int8_gemv",
+   "split": "dev",
+   "first_pass_s": 1.114,
+   "import_s": 0.071,
+   "correctness": [
+    {
+     "shape": [
+      1,
+      2048,
+      6144
+     ],
+     "seed": 0,
+     "edge": null,
+     "ok": true,
+     "err_candidate": 0.4972185967191649,
+     "err_eager_fp32": 0.933830030737596,
+     "bound": 3.7363201229503837
+    },
+    {
+     "shape": [
+      1,
+      2048,
+      6144
+     ],
+     "seed": 1,
+     "edge": null,
+     "ok": true,
+     "err_candidate": 0.4916692473508988,
+     "err_eager_fp32": 1.0153346930725036,
+     "bound": 4.062338772290015
+    },
+    {
+     "shape": [
+      1,
+      2048,
+      6144
+     ],
+     "seed": 0,
+     "edge": "large",
+     "ok": true,
+     "err_candidate": 15.501335222125817,
+     "err_eager_fp32": 29.361884624828235,
+     "bound": 117.44853849931295
+    },
+    {
+     "shape": [
+      1,
+      2048,
+      6144
+     ],
+     "seed": 0,
+     "edge": "extreme_w",
+     "ok": true,
+     "err_candidate": 0.9657681590191487,
+     "err_eager_fp32": 1.9192412161841617,
+     "bound": 7.677964864736647
+    },
+    {
+     "shape": [
+      1,
+      6144,
+      2048
+     ],
+     "seed": 0,
+     "edge": null,
+     "ok": true,
+     "err_candidate": 0.9214828459230944,
+     "err_eager_fp32": 1.81545710256853,
+     "bound": 7.26282841027412
+    },
+    {
+     "shape": [
+      1,
+      6144,
+      2048
+     ],
+     "seed": 1,
+     "edge": null,
+     "ok": true,
+     "err_candidate": 0.9892989193187987,
+     "err_eager_fp32": 1.104671204905344,
+     "bound": 4.419684819621376
+    },
+    {
+     "shape": [
+      1,
+      6144,
+      2048
+     ],
+     "seed": 0,
+     "edge": "large",
+     "ok": true,
+     "err_candidate": 30.505790506578705,
+     "err_eager_fp32": 44.794170314620715,
+     "bound": 179.17768125848286
+    },
+    {
+     "shape": [
+      1,
+      6144,
+      2048
+     ],
+     "seed": 0,
+     "edge": "extreme_w",
+     "ok": true,
+     "err_candidate": 1.918828727267396,
+     "err_eager_fp32": 2.612854130618132,
+     "bound": 10.452416522472527
+    },
+    {
+     "shape": [
+      1,
+      2048,
+      1024
+     ],
+     "seed": 0,
+     "edge": null,
+     "ok": true,
+     "err_candidate": 0.499344783532365,
+     "err_eager_fp32": 0.5702804313448553,
+     "bound": 2.282121725379421
+    },
+    {
+     "shape": [
+      1,
+      2048,
+      1024
+     ],
+     "seed": 1,
+     "edge": null,
+     "ok": true,
+     "err_candidate": 0.4927100422325452,
+     "err_eager_fp32": 0.8432597416588692,
+     "bound": 3.3740389666354766
+    },
+    {
+     "shape": [
+      1,
+      2048,
+      1024
+     ],
+     "seed": 0,
+     "edge": "large",
+     "ok": true,
+     "err_candidate": 13.643735799281785,
+     "err_eager_fp32": 22.34567088330914,
+     "bound": 89.38368353323656
+    },
+    {
+     "shape": [
+      1,
+      2048,
+      1024
+     ],
+     "seed": 0,
+     "edge": "extreme_w",
+     "ok": true,
+     "err_candidate": 0.9931855825801676,
+     "err_eager_fp32": 1.2928918537280651,
+     "bound": 5.172567414912261
+    },
+    {
+     "shape": [
+      4,
+      2048,
+      6144
+     ],
+     "seed": 0,
+     "edge": null,
+     "ok": true,
+     "err_candidate": 0.49937601034207546,
+     "err_eager_fp32": 1.0130451476264852,
+     "bound": 4.053180590505941
+    },
+    {
+     "shape": [
+      4,
+      2048,
+      6144
+     ],
+     "seed": 1,
+     "edge": null,
+     "ok": true,
+     "err_candidate": 0.49696060740507164,
+     "err_eager_fp32": 1.079981847408419,
+     "bound": 4.320927389633677
+    },
+    {
+     "shape": [
+      4,
+      2048,
+      6144
+     ],
+     "seed": 0,
+     "edge": "large",
+     "ok": true,
+     "err_candidate": 15.892481385179963,
+     "err_eager_fp32": 32.38581556588724,
+     "bound": 129.54426226354897
+    },
+    {
+     "shape": [
+      4,
+      2048,
+      6144
+     ],
+     "seed": 0,
+     "edge": "extreme_w",
+     "ok": true,
+     "err_candidate": 0.992090743949575,
+     "err_eager_fp32": 2.285207090768722,
+     "bound": 9.141828363074888
+    }
+   ],
+   "launch_metadata": [
+    {
+     "n_regs": 72,
+     "n_spills": 0,
+     "shared_bytes": 24576,
+     "num_warps": 4
+    },
+    {
+     "n_regs": 72,
+     "n_spills": 0,
+     "shared_bytes": 24576,
+     "num_warps": 4
+    },
+    {
+     "n_regs": 72,
+     "n_spills": 0,
+     "shared_bytes": 24576,
+     "num_warps": 4
+    },
+    {
+     "n_regs": 72,
+     "n_spills": 0,
+     "shared_bytes": 24576,
+     "num_warps": 4
+    }
+   ],
+   "status": "correct",
+   "id": "b70bf293996d6a5a",
+   "trials": null,
+   "wall_s": 3.1,
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 128,
+    "SPLITK": 4,
+    "WARPS": 4
+   }
+  }
+ ]
+}

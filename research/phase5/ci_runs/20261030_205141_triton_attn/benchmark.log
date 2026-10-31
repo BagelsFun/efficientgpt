@@ -1,0 +1,68 @@
+Process 1/3: modes built in order ['full_graph', 'adaptive_graph', 'compiled_adaptive_graph', 'triton_full_graph', 'triton_adaptive_graph']
+  correctness=PASS near_ties={'full_graph': 0, 'adaptive_graph': 0, 'compiled_adaptive_graph': 3, 'triton_full_graph': 0, 'triton_adaptive_graph': 0}
+Process 2/3: modes built in order ['adaptive_graph', 'compiled_adaptive_graph', 'triton_full_graph', 'triton_adaptive_graph', 'full_graph']
+  correctness=PASS near_ties={'adaptive_graph': 0, 'compiled_adaptive_graph': 3, 'triton_full_graph': 0, 'triton_adaptive_graph': 0, 'full_graph': 0}
+Process 3/3: modes built in order ['compiled_adaptive_graph', 'triton_full_graph', 'triton_adaptive_graph', 'full_graph', 'adaptive_graph']
+  correctness=PASS near_ties={'compiled_adaptive_graph': 3, 'triton_full_graph': 0, 'triton_adaptive_graph': 0, 'full_graph': 0, 'adaptive_graph': 0}
+ 1   8 16              full_graph -> adaptive_graph          1.169 [1.148, 1.210] WIN
+ 1   8 16          adaptive_graph -> compiled_adaptive_graph 1.097 [1.069, 1.124] WIN
+ 1   8 16              full_graph -> compiled_adaptive_graph 1.283 [1.254, 1.330] WIN
+ 1   8 16              full_graph -> triton_full_graph       1.410 [1.384, 1.464] WIN
+ 1   8 16              full_graph -> triton_adaptive_graph   1.423 [1.387, 1.479] WIN
+ 1  64 16              full_graph -> adaptive_graph          1.168 [1.132, 1.200] WIN
+ 1  64 16          adaptive_graph -> compiled_adaptive_graph 1.104 [1.075, 1.136] WIN
+ 1  64 16              full_graph -> compiled_adaptive_graph 1.290 [1.252, 1.323] WIN
+ 1  64 16              full_graph -> triton_full_graph       1.435 [1.396, 1.475] WIN
+ 1  64 16              full_graph -> triton_adaptive_graph   1.448 [1.409, 1.484] WIN
+ 1  64 64              full_graph -> adaptive_graph          1.192 [1.180, 1.206] WIN
+ 1  64 64          adaptive_graph -> compiled_adaptive_graph 1.109 [1.094, 1.122] WIN
+ 1  64 64              full_graph -> compiled_adaptive_graph 1.322 [1.306, 1.335] WIN
+ 1  64 64              full_graph -> triton_full_graph       1.513 [1.496, 1.526] WIN
+ 1  64 64              full_graph -> triton_adaptive_graph   1.525 [1.497, 1.540] WIN
+ 1 128 32              full_graph -> adaptive_graph          1.073 [1.064, 1.083] WIN
+ 1 128 32          adaptive_graph -> compiled_adaptive_graph 1.098 [1.089, 1.107] WIN
+ 1 128 32              full_graph -> compiled_adaptive_graph 1.179 [1.168, 1.190] WIN
+ 1 128 32              full_graph -> triton_full_graph       1.445 [1.431, 1.470] WIN
+ 1 128 32              full_graph -> triton_adaptive_graph   1.448 [1.433, 1.465] WIN
+ 1 128 64              full_graph -> adaptive_graph          1.089 [1.079, 1.096] WIN
+ 1 128 64          adaptive_graph -> compiled_adaptive_graph 1.099 [1.091, 1.108] WIN
+ 1 128 64              full_graph -> compiled_adaptive_graph 1.197 [1.186, 1.206] WIN
+ 1 128 64              full_graph -> triton_full_graph       1.512 [1.495, 1.531] WIN
+ 1 128 64              full_graph -> triton_adaptive_graph   1.510 [1.490, 1.526] WIN
+ 1 192 32              full_graph -> adaptive_graph          0.992 [0.981, 1.003] AA_PASS
+ 1 192 32          adaptive_graph -> compiled_adaptive_graph 1.088 [1.079, 1.098] WIN
+ 1 192 32              full_graph -> compiled_adaptive_graph 1.079 [1.070, 1.091] WIN
+ 1 192 32              full_graph -> triton_full_graph       1.440 [1.422, 1.458] WIN
+ 1 192 32              full_graph -> triton_adaptive_graph   1.448 [1.428, 1.472] WIN
+16   8 16              full_graph -> adaptive_graph          1.369 [1.352, 1.382] WIN
+16   8 16          adaptive_graph -> compiled_adaptive_graph 1.089 [1.074, 1.108] WIN
+16   8 16              full_graph -> compiled_adaptive_graph 1.491 [1.470, 1.517] WIN
+16   8 16              full_graph -> triton_full_graph       2.120 [2.080, 2.190] WIN
+16   8 16              full_graph -> triton_adaptive_graph   2.202 [2.146, 2.245] WIN
+16  64 16              full_graph -> adaptive_graph          1.353 [1.336, 1.365] WIN
+16  64 16          adaptive_graph -> compiled_adaptive_graph 1.080 [1.069, 1.098] WIN
+16  64 16              full_graph -> compiled_adaptive_graph 1.462 [1.447, 1.482] WIN
+16  64 16              full_graph -> triton_full_graph       1.817 [1.788, 1.860] WIN
+16  64 16              full_graph -> triton_adaptive_graph   1.855 [1.827, 1.882] WIN
+16  64 64              full_graph -> adaptive_graph          1.386 [1.377, 1.399] WIN
+16  64 64          adaptive_graph -> compiled_adaptive_graph 1.097 [1.090, 1.106] WIN
+16  64 64              full_graph -> compiled_adaptive_graph 1.521 [1.513, 1.535] WIN
+16  64 64              full_graph -> triton_full_graph       1.974 [1.961, 1.994] WIN
+16  64 64              full_graph -> triton_adaptive_graph   1.987 [1.973, 2.010] WIN
+16 128 32              full_graph -> adaptive_graph          1.134 [1.126, 1.149] WIN
+16 128 32          adaptive_graph -> compiled_adaptive_graph 1.073 [1.067, 1.080] WIN
+16 128 32              full_graph -> compiled_adaptive_graph 1.217 [1.208, 1.234] WIN
+16 128 32              full_graph -> triton_full_graph       1.649 [1.629, 1.682] WIN
+16 128 32              full_graph -> triton_adaptive_graph   1.662 [1.641, 1.687] WIN
+16 128 64              full_graph -> adaptive_graph          1.155 [1.148, 1.163] WIN
+16 128 64          adaptive_graph -> compiled_adaptive_graph 1.078 [1.068, 1.085] WIN
+16 128 64              full_graph -> compiled_adaptive_graph 1.245 [1.235, 1.251] WIN
+16 128 64              full_graph -> triton_full_graph       1.684 [1.673, 1.698] WIN
+16 128 64              full_graph -> triton_adaptive_graph   1.685 [1.675, 1.700] WIN
+16 192 32              full_graph -> adaptive_graph          1.000 [0.991, 1.014] AA_PASS
+16 192 32          adaptive_graph -> compiled_adaptive_graph 1.066 [1.053, 1.076] WIN
+16 192 32              full_graph -> compiled_adaptive_graph 1.067 [1.056, 1.077] WIN
+16 192 32              full_graph -> triton_full_graph       1.442 [1.429, 1.462] WIN
+16 192 32              full_graph -> triton_adaptive_graph   1.444 [1.431, 1.461] WIN
+Wrote research\phase5\ci_runs\20261030_205141_triton_attn\benchmark_raw.csv, research\phase5\ci_runs\20261030_205141_triton_attn\CI_REPORT.md and research\phase5\ci_runs\20261030_205141_triton_attn\CI_REPORT.json
+rc=0 468s

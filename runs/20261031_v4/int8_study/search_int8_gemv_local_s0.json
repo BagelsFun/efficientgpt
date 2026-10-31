@@ -1,0 +1,185 @@
+{
+ "task": "int8_gemv",
+ "strategy": "local",
+ "budget": 12,
+ "evaluated": 12,
+ "unused_budget": 0,
+ "statuses": {
+  "correct": 12
+ },
+ "trace": [
+  {
+   "key": "dot16{\"BLOCK_K\": 128, \"BLOCK_N\": 64, \"WARPS\": 4}",
+   "family": "dot16",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 128,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.01744084188712601,
+   "from_history": true
+  },
+  {
+   "key": "dot16_splitk{\"BLOCK_K\": 128, \"BLOCK_N\": 64, \"SPLITK\": 4, \"WARPS\": 4}",
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 128,
+    "SPLITK": 4,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.014195249999771755,
+   "from_history": true
+  },
+  {
+   "key": "dot16_splitk{\"BLOCK_K\": 128, \"BLOCK_N\": 64, \"SPLITK\": 2, \"WARPS\": 4}",
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 128,
+    "SPLITK": 2,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.014532496016469163,
+   "from_history": false
+  },
+  {
+   "key": "dot16_splitk{\"BLOCK_K\": 128, \"BLOCK_N\": 32, \"SPLITK\": 4, \"WARPS\": 4}",
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 32,
+    "BLOCK_K": 128,
+    "SPLITK": 4,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.015253723392255758,
+   "from_history": false
+  },
+  {
+   "key": "dot16_splitk{\"BLOCK_K\": 256, \"BLOCK_N\": 64, \"SPLITK\": 4, \"WARPS\": 4}",
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 256,
+    "SPLITK": 4,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.016699124580182,
+   "from_history": true
+  },
+  {
+   "key": "dot16_splitk{\"BLOCK_K\": 64, \"BLOCK_N\": 64, \"SPLITK\": 4, \"WARPS\": 4}",
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 64,
+    "SPLITK": 4,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.013991657939357341,
+   "from_history": false
+  },
+  {
+   "key": "dot16_splitk{\"BLOCK_K\": 64, \"BLOCK_N\": 32, \"SPLITK\": 4, \"WARPS\": 4}",
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 32,
+    "BLOCK_K": 64,
+    "SPLITK": 4,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.015355077515156183,
+   "from_history": false
+  },
+  {
+   "key": "dot16_splitk{\"BLOCK_K\": 64, \"BLOCK_N\": 64, \"SPLITK\": 2, \"WARPS\": 4}",
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 64,
+    "SPLITK": 2,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.015122594127913686,
+   "from_history": false
+  },
+  {
+   "key": "dot16_splitk{\"BLOCK_K\": 64, \"BLOCK_N\": 128, \"SPLITK\": 4, \"WARPS\": 4}",
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 128,
+    "BLOCK_K": 64,
+    "SPLITK": 4,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.014848366285402101,
+   "from_history": false
+  },
+  {
+   "key": "dot16_splitk{\"BLOCK_K\": 64, \"BLOCK_N\": 64, \"SPLITK\": 8, \"WARPS\": 4}",
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 64,
+    "SPLITK": 8,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.013795518519171598,
+   "from_history": false
+  },
+  {
+   "key": "dot16_splitk{\"BLOCK_K\": 64, \"BLOCK_N\": 128, \"SPLITK\": 8, \"WARPS\": 4}",
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 128,
+    "BLOCK_K": 64,
+    "SPLITK": 8,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.01431182506195446,
+   "from_history": true
+  },
+  {
+   "key": "dot16_splitk{\"BLOCK_K\": 128, \"BLOCK_N\": 64, \"SPLITK\": 8, \"WARPS\": 4}",
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 128,
+    "SPLITK": 8,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.014152346939643963,
+   "from_history": false
+  }
+ ],
+ "best": {
+  "score_ms": 0.013795518519171598,
+  "family": "dot16_splitk",
+  "params": {
+   "BLOCK_N": 64,
+   "BLOCK_K": 64,
+   "SPLITK": 8,
+   "WARPS": 4
+  }
+ },
+ "env": {
+  "torch": "2.11.0+cu128",
+  "triton": "3.7.1",
+  "gpu": "NVIDIA GeForce RTX 4060",
+  "python": "3.11.9",
+  "git": "<private-commit>"
+ },
+ "seed": 0
+}

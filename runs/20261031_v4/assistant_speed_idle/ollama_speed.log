@@ -1,0 +1,25 @@
+﻿short {"prompt_tokens": 61, "completion_tokens": [256, 256, 256, 256, 256], "ttft_s_median": 0.084, "decode_tok_s_median": 71.203, "decode_tok_s_all": [71.2, 71.33, 71.18, 71.28, 71.18], "prompt_tok_s_median": 1152.681, "prompt_tokens_per_ttft_s_median": 726.652, "total_s_median": 3.677, "timing_source": "client ttft + ollama server counts"}
+medium {"prompt_tokens": 713, "completion_tokens": [256, 256, 256, 256, 256], "ttft_s_median": 0.253, "decode_tok_s_median": 70.637, "decode_tok_s_all": [70.64, 70.61, 70.64, 70.68, 70.64], "prompt_tok_s_median": 3209.912, "prompt_tokens_per_ttft_s_median": 2810.47, "total_s_median": 3.875, "timing_source": "client ttft + ollama server counts"}
+long {"prompt_tokens": 2229, "completion_tokens": [256, 256, 256, 256, 256], "ttft_s_median": 0.706, "decode_tok_s_median": 69.626, "decode_tok_s_all": [69.63, 69.44, 69.63, 69.62, 69.63], "prompt_tok_s_median": 3507.213, "prompt_tokens_per_ttft_s_median": 3156.693, "total_s_median": 4.386, "timing_source": "client ttft + ollama server counts"}
+{
+ "backend": "ollama:qwen3.5:4b",
+ "quant": "bf16",
+ "revision": null,
+ "adapter": null,
+ "think": false,
+ "protocol": "assistant-quality-v1",
+ "decoding": "greedy (temperature 0)",
+ "gpu_used_before_load_mib": 915.0,
+ "ollama_options": {
+  "presence_penalty": 0.0
+ },
+ "gpu_used_after_mib": 4867.0,
+ "ollama_ps": [
+  {
+   "name": "qwen3.5:4b",
+   "size": 3364911840,
+   "size_vram": 3364911840,
+   "context_length": 8192
+  }
+ ]
+}

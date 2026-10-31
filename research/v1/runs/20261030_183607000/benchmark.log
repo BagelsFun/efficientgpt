@@ -1,0 +1,28 @@
+Round 1/2: prefix_sdpa_eager
+  graphs=0 setup_peak_alloc=267.698MiB steady_peak_alloc=266.753MiB steady_peak_reserved=336.0MiB correctness=PASS
+Round 1/2: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS
+Round 1/2: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS
+Round 2/2: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS
+Round 2/2: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS
+Round 2/2: prefix_sdpa_eager
+  graphs=0 setup_peak_alloc=267.698MiB steady_peak_alloc=266.753MiB steady_peak_reserved=336.0MiB correctness=PASS
+
+AGGREGATED ACROSS PROCESS ROUNDS (same batch, prompt, generation)
+(1, 8, 16): SDPA prefix eager=33.183ms full graph=12.283ms adaptive graph=9.665ms; adaptive/eager speedup=3.433x
+(1, 64, 16): SDPA prefix eager=33.198ms full graph=12.206ms adaptive graph=10.107ms; adaptive/eager speedup=3.285x
+(1, 64, 64): SDPA prefix eager=134.537ms full graph=42.991ms adaptive graph=35.610ms; adaptive/eager speedup=3.778x
+(1, 128, 32): SDPA prefix eager=66.190ms full graph=21.579ms adaptive graph=20.650ms; adaptive/eager speedup=3.205x
+(1, 128, 64): SDPA prefix eager=136.404ms full graph=40.297ms adaptive graph=39.053ms; adaptive/eager speedup=3.493x
+(1, 192, 32): SDPA prefix eager=66.159ms full graph=21.669ms adaptive graph=22.016ms; adaptive/eager speedup=3.005x
+(16, 8, 16): SDPA prefix eager=35.299ms full graph=20.355ms adaptive graph=14.492ms; adaptive/eager speedup=2.436x
+(16, 64, 16): SDPA prefix eager=34.308ms full graph=20.945ms adaptive graph=14.915ms; adaptive/eager speedup=2.300x
+(16, 64, 64): SDPA prefix eager=133.772ms full graph=78.558ms adaptive graph=54.507ms; adaptive/eager speedup=2.454x
+(16, 128, 32): SDPA prefix eager=67.665ms full graph=41.464ms adaptive graph=36.907ms; adaptive/eager speedup=1.833x
+(16, 128, 64): SDPA prefix eager=134.603ms full graph=79.704ms adaptive graph=69.697ms; adaptive/eager speedup=1.931x
+(16, 192, 32): SDPA prefix eager=68.444ms full graph=45.764ms adaptive graph=44.571ms; adaptive/eager speedup=1.536x
+CSVs: research\v1\runs\20261030_183607000\benchmark.csv and research\v1\runs\20261030_183607000\benchmark_memory.csv
+LIMITATIONS: one GPU; synthetic prompts; no industrial engine comparison. PyTorch SDPA kernel selected automatically, and FP32 may not use FlashAttention. No EOS, network, serving queue or unpredictable output lengths. Initialization includes correctness validation; graph_capture_ms is separately recorded.

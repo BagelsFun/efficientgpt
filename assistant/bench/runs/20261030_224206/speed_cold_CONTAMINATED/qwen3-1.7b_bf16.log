@@ -1,0 +1,19 @@
+W1030 23:01:53.099000 35644 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   6%|6         | 19/311 [00:00<00:01, 164.48it/s]Loading weights:  13%|#2        | 39/311 [00:00<00:01, 167.95it/s]Loading weights:  18%|#8        | 56/311 [00:00<00:01, 159.82it/s]Loading weights:  26%|##6       | 81/311 [00:00<00:01, 191.31it/s]Loading weights:  32%|###2      | 101/311 [00:00<00:01, 144.71it/s]Loading weights:  38%|###7      | 117/311 [00:00<00:01, 117.95it/s]Loading weights:  42%|####2     | 131/311 [00:01<00:01, 104.58it/s]Loading weights:  46%|####5     | 143/311 [00:01<00:01, 90.88it/s] Loading weights:  50%|####9     | 154/311 [00:01<00:01, 82.24it/s]Loading weights:  55%|#####4    | 171/311 [00:01<00:01, 92.41it/s]Loading weights:  59%|#####8    | 182/311 [00:01<00:01, 95.93it/s]Loading weights:  62%|######2   | 194/311 [00:01<00:01, 97.04it/s]Loading weights: 100%|##########| 311/311 [00:01<00:00, 172.12it/s]
+short {"prompt_tokens": 57, "completion_tokens": [256, 256, 256], "ttft_s_median": 0.344, "decode_tok_s_median": 9.348, "decode_tok_s_all": [9.28, 9.37, 9.35], "prompt_tok_s_median": NaN, "prompt_tokens_per_ttft_s_median": 174.417, "total_s_median": 27.553, "timing_source": "client wall clock (streamer)"}
+medium {"prompt_tokens": 689, "completion_tokens": [256, 256, 256], "ttft_s_median": 0.494, "decode_tok_s_median": 9.816, "decode_tok_s_all": [9.77, 9.86, 9.82], "prompt_tok_s_median": NaN, "prompt_tokens_per_ttft_s_median": 1395.22, "total_s_median": 26.4, "timing_source": "client wall clock (streamer)"}
+long {"prompt_tokens": 2176, "completion_tokens": [256, 256, 256], "ttft_s_median": 2.22, "decode_tok_s_median": 8.002, "decode_tok_s_all": [8.0, 8.01, 8.0], "prompt_tok_s_median": NaN, "prompt_tokens_per_ttft_s_median": 979.362, "total_s_median": 34.074, "timing_source": "client wall clock (streamer)"}
+{
+ "backend": "hf:Qwen/Qwen3-1.7B",
+ "quant": "bf16",
+ "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+ "think": false,
+ "protocol": "assistant-quality-v1",
+ "decoding": "greedy (temperature 0)",
+ "gpu_used_before_load_mib": 2975.0,
+ "load_s": 6.99,
+ "gpu_used_after_mib": 7388.0,
+ "torch_peak_allocated_mib": 4320.6,
+ "torch_peak_reserved_mib": 4428.0,
+ "process_device_used_mib": 6007.0
+}

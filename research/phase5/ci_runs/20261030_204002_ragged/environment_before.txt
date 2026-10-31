@@ -1,0 +1,2 @@
+commit <private-commit> + uncommitted ragged changes
+NVIDIA GeForce RTX 4060, 617.14, 47, 2820 MHz, 2445 MiB

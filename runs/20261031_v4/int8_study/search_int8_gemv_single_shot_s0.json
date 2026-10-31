@@ -1,0 +1,55 @@
+{
+ "task": "int8_gemv",
+ "strategy": "single_shot",
+ "budget": 12,
+ "evaluated": 2,
+ "unused_budget": 10,
+ "statuses": {
+  "correct": 2
+ },
+ "trace": [
+  {
+   "key": "dot16{\"BLOCK_K\": 128, \"BLOCK_N\": 64, \"WARPS\": 4}",
+   "family": "dot16",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 128,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.01744084188712601,
+   "from_history": false
+  },
+  {
+   "key": "dot16_splitk{\"BLOCK_K\": 128, \"BLOCK_N\": 64, \"SPLITK\": 4, \"WARPS\": 4}",
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 128,
+    "SPLITK": 4,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.014195249999771755,
+   "from_history": false
+  }
+ ],
+ "best": {
+  "score_ms": 0.014195249999771755,
+  "family": "dot16_splitk",
+  "params": {
+   "BLOCK_N": 64,
+   "BLOCK_K": 128,
+   "SPLITK": 4,
+   "WARPS": 4
+  }
+ },
+ "env": {
+  "torch": "2.11.0+cu128",
+  "triton": "3.7.1",
+  "gpu": "NVIDIA GeForce RTX 4060",
+  "python": "3.11.9",
+  "git": "<private-commit>"
+ },
+ "seed": 0
+}

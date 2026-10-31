@@ -1,0 +1,15 @@
+Round 1/1: prefix_sdpa_eager
+  graphs=0 setup_peak_alloc=65.21MiB steady_peak_alloc=65.151MiB steady_peak_reserved=76.0MiB correctness=PASS rule=exact near_ties=0
+Round 1/1: full_graph
+  graphs=1 setup_peak_alloc=81.464MiB steady_peak_alloc=81.405MiB steady_peak_reserved=120.0MiB correctness=PASS rule=exact near_ties=0
+Round 1/1: compiled_static
+  graphs=0 setup_peak_alloc=65.214MiB steady_peak_alloc=65.155MiB steady_peak_reserved=76.0MiB correctness=PASS rule=near_tie<0.01 near_ties=0
+Round 1/1: compiled_adaptive_graph
+  graphs=3 setup_peak_alloc=100.253MiB steady_peak_alloc=100.194MiB steady_peak_reserved=168.0MiB correctness=PASS rule=near_tie<0.01 near_ties=0
+
+AGGREGATED ACROSS PROCESS ROUNDS (same batch, prompt, generation)
+(1, 8, 16): prefix_sdpa_eager=45.024ms full_graph=13.040ms compiled_static=28.011ms compiled_adaptive_graph=9.575ms
+(1, 64, 32): prefix_sdpa_eager=69.696ms full_graph=23.227ms compiled_static=55.956ms compiled_adaptive_graph=17.284ms
+(1, 128, 32): prefix_sdpa_eager=68.702ms full_graph=22.595ms compiled_static=57.662ms compiled_adaptive_graph=18.592ms
+CSVs: results\inproc\review_q.csv, results\inproc\review_q_memory.csv and results\inproc\review_q_raw.csv
+LIMITATIONS: one GPU; synthetic prompts; no industrial engine comparison. PyTorch SDPA kernel selected automatically, and FP32 may not use FlashAttention. No EOS, network, serving queue or unpredictable output lengths. Initialization includes correctness validation; graph_capture_ms is separately recorded.

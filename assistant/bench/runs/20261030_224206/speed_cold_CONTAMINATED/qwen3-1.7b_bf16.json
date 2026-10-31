@@ -1,0 +1,73 @@
+{
+  "backend": "hf:Qwen/Qwen3-1.7B",
+  "quant": "bf16",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "think": false,
+  "protocol": "assistant-quality-v1",
+  "decoding": "greedy (temperature 0)",
+  "gpu_used_before_load_mib": 2975.0,
+  "load_s": 6.99,
+  "speed": {
+    "short": {
+      "prompt_tokens": 57,
+      "completion_tokens": [
+        256,
+        256,
+        256
+      ],
+      "ttft_s_median": 0.3440040999557823,
+      "decode_tok_s_median": 9.347591418575094,
+      "decode_tok_s_all": [
+        9.28,
+        9.37,
+        9.35
+      ],
+      "prompt_tok_s_median": NaN,
+      "prompt_tokens_per_ttft_s_median": 174.41652587196577,
+      "total_s_median": 27.553264699992724,
+      "timing_source": "client wall clock (streamer)"
+    },
+    "medium": {
+      "prompt_tokens": 689,
+      "completion_tokens": [
+        256,
+        256,
+        256
+      ],
+      "ttft_s_median": 0.49382880004122853,
+      "decode_tok_s_median": 9.815696744153568,
+      "decode_tok_s_all": [
+        9.77,
+        9.86,
+        9.82
+      ],
+      "prompt_tok_s_median": NaN,
+      "prompt_tokens_per_ttft_s_median": 1395.2203677518953,
+      "total_s_median": 26.40025299997069,
+      "timing_source": "client wall clock (streamer)"
+    },
+    "long": {
+      "prompt_tokens": 2176,
+      "completion_tokens": [
+        256,
+        256,
+        256
+      ],
+      "ttft_s_median": 2.2198117999359965,
+      "decode_tok_s_median": 8.001659927078892,
+      "decode_tok_s_all": [
+        8.0,
+        8.01,
+        8.0
+      ],
+      "prompt_tok_s_median": NaN,
+      "prompt_tokens_per_ttft_s_median": 979.3623045263038,
+      "total_s_median": 34.073573599918745,
+      "timing_source": "client wall clock (streamer)"
+    }
+  },
+  "gpu_used_after_mib": 7388.0,
+  "torch_peak_allocated_mib": 4320.6,
+  "torch_peak_reserved_mib": 4428.0,
+  "process_device_used_mib": 6007.0
+}

@@ -1,0 +1,246 @@
+{
+ "protocol": "kernelagent-ada/eval-v1",
+ "task": "inverse_cdf_sample",
+ "split": "heldout",
+ "first_pass_s": 0.365,
+ "import_s": 0.065,
+ "correctness": [
+  {
+   "shape": [
+    4,
+    4096
+   ],
+   "seed": 0,
+   "edge": null,
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    4,
+    4096
+   ],
+   "seed": 1,
+   "edge": null,
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    4,
+    4096
+   ],
+   "seed": 0,
+   "edge": "sparse",
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    4,
+    4096
+   ],
+   "seed": 0,
+   "edge": "extreme_u",
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    64,
+    4096
+   ],
+   "seed": 0,
+   "edge": null,
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    64,
+    4096
+   ],
+   "seed": 1,
+   "edge": null,
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    64,
+    4096
+   ],
+   "seed": 0,
+   "edge": "sparse",
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    64,
+    4096
+   ],
+   "seed": 0,
+   "edge": "extreme_u",
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    16,
+    8192
+   ],
+   "seed": 0,
+   "edge": null,
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    16,
+    8192
+   ],
+   "seed": 1,
+   "edge": null,
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    16,
+    8192
+   ],
+   "seed": 0,
+   "edge": "sparse",
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    16,
+    8192
+   ],
+   "seed": 0,
+   "edge": "extreme_u",
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  }
+ ],
+ "launch_metadata": [
+  {
+   "n_regs": 125,
+   "n_spills": 0,
+   "shared_bytes": 0,
+   "num_warps": 1
+  },
+  {
+   "n_regs": 125,
+   "n_spills": 0,
+   "shared_bytes": 0,
+   "num_warps": 1
+  },
+  {
+   "n_regs": 125,
+   "n_spills": 0,
+   "shared_bytes": 0,
+   "num_warps": 1
+  },
+  {
+   "n_regs": 125,
+   "n_spills": 0,
+   "shared_bytes": 0,
+   "num_warps": 1
+  }
+ ],
+ "status": "correct",
+ "gpu_before": {
+  "util_pct": 0.0,
+  "mem_used_mib": 1140.0
+ },
+ "contended": false,
+ "performance": {
+  "4x4096": {
+   "failed": {},
+   "median_ms": {
+    "candidate": 0.0073900800943374634,
+    "eager": 0.0156876802444458,
+    "inductor": 0.008325760066509248
+   },
+   "roofline_fraction": 0.04202892965072119,
+   "speedup_vs_eager": {
+    "ratio": 2.1228024654923896,
+    "ci_low": 2.020602525326676,
+    "ci_high": 2.199998183668916,
+    "class": "WIN"
+   },
+   "speedup_vs_inductor": {
+    "ratio": 1.126612967684712,
+    "ci_low": 1.0650819166780658,
+    "ci_high": 1.1768486445225548,
+    "class": "WIN"
+   }
+  },
+  "64x4096": {
+   "failed": {},
+   "median_ms": {
+    "candidate": 0.007795840203762054,
+    "eager": 0.033873920440673826,
+    "inductor": 0.009756479859352112
+   },
+   "roofline_fraction": 0.6374623353582209,
+   "speedup_vs_eager": {
+    "ratio": 4.345127600784739,
+    "ci_low": 4.10972565103491,
+    "ci_high": 4.473741804261438,
+    "class": "WIN"
+   },
+   "speedup_vs_inductor": {
+    "ratio": 1.251498184203918,
+    "ci_low": 1.180568837726441,
+    "ci_high": 1.3079877835649723,
+    "class": "WIN"
+   }
+  },
+  "16x8192": {
+   "failed": {},
+   "median_ms": {
+    "candidate": 0.009050559997558594,
+    "eager": 0.021667840480804442,
+    "inductor": 0.009718079864978791
+   },
+   "roofline_fraction": 0.27454403394432025,
+   "speedup_vs_eager": {
+    "ratio": 2.394088375376704,
+    "ci_low": 2.2922424854565,
+    "ci_high": 2.57123207867354,
+    "class": "WIN"
+   },
+   "speedup_vs_inductor": {
+    "ratio": 1.0737545375756044,
+    "ci_low": 0.9806452012664485,
+    "ci_high": 1.173760230875606,
+    "class": "INCONCLUSIVE"
+   }
+  }
+ },
+ "id": "d4c2dafb4dae368e",
+ "wall_s": 6.3,
+ "family": "scan_chunked",
+ "params": {
+  "BLOCK": 2048,
+  "WARPS": 1
+ },
+ "chosen_by": "random"
+}

@@ -1,0 +1,29 @@
+{
+ "mode": "llamacpp_q8",
+ "quant": "ollama qwen3:1.7b-q8_0",
+ "static_cache": null,
+ "load_s": null,
+ "first_call_s": 20.92,
+ "decode_tok_s": [
+  106.81,
+  106.7,
+  106.64
+ ],
+ "decode_tok_s_median": 106.7031460285557,
+ "server_eval_tok_s": [
+  107.22,
+  107.12,
+  107.06
+ ],
+ "ttft_s_median": 0.03152330010198057,
+ "completion_tokens": [
+  256,
+  256,
+  256
+ ],
+ "ollama_size_vram_mib": 2300.3,
+ "torch_peak_allocated_mib": 2300.3,
+ "gpu_used_delta_mib": 2416.0,
+ "weights_allocated_mib": null,
+ "load_peak_allocated_mib": null
+}

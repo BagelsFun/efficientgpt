@@ -1,0 +1,19 @@
+proc  0: 1_192_32: gpu 21.888 wall 22.100 host 0.078 16_192_32: gpu 46.195 wall 46.318 host 0.090 | sm 2805.0 mem 8251.0 (min 8251.0) temp 52.333333333333336 ['P2'] ['0x0000000000000400']
+proc  1: 1_192_32: gpu 22.075 wall 22.151 host 0.070 16_192_32: gpu 45.918 wall 46.006 host 0.087 | sm 2805.0 mem 8251.0 (min 8251.0) temp 52.53333333333333 ['P2'] ['0x0000000000000400']
+proc  2: 1_192_32: gpu 21.964 wall 22.068 host 0.069 16_192_32: gpu 46.196 wall 46.279 host 0.084 | sm 2805.0 mem 8251.0 (min 8251.0) temp 53.9375 ['P2'] ['0x0000000000000400']
+proc  3: 1_192_32: gpu 22.563 wall 22.824 host 0.083 16_192_32: gpu 46.374 wall 46.457 host 0.086 | sm 2805.0 mem 8251.0 (min 8251.0) temp 53.8125 ['P2'] ['0x0000000000000400']
+proc  4: 1_192_32: gpu 22.798 wall 22.935 host 0.078 16_192_32: gpu 46.561 wall 46.703 host 0.087 | sm 2805.0 mem 8251.0 (min 8251.0) temp 53.75 ['P2'] ['0x0000000000000400']
+proc  5: 1_192_32: gpu 22.070 wall 22.147 host 0.072 16_192_32: gpu 46.133 wall 46.219 host 0.087 | sm 2805.0 mem 8251.0 (min 8251.0) temp 55.06666666666667 ['P2'] ['0x0000000000000400']
+proc  6: 1_192_32: gpu 21.755 wall 21.855 host 0.069 16_192_32: gpu 45.989 wall 46.099 host 0.085 | sm 2805.0 mem 8251.0 (min 8251.0) temp 54.733333333333334 ['P2'] ['0x0000000000000400']
+proc  7: 1_192_32: gpu 21.802 wall 21.963 host 0.067 16_192_32: gpu 44.969 wall 45.066 host 0.084 | sm 2805.0 mem 8251.0 (min 8251.0) temp 54.0 ['P2'] ['0x0000000000000400']
+proc  8: 1_192_32: gpu 22.264 wall 22.346 host 0.079 16_192_32: gpu 44.744 wall 44.827 host 0.085 | sm 2805.0 mem 8251.0 (min 8251.0) temp 54.333333333333336 ['P2'] ['0x0000000000000400']
+proc  9: 1_192_32: gpu 21.354 wall 21.424 host 0.076 16_192_32: gpu 44.620 wall 44.706 host 0.087 | sm 2805.0 mem 8251.0 (min 8251.0) temp 55.2 ['P2'] ['0x0000000000000400']
+proc 10: 1_192_32: gpu 21.402 wall 21.475 host 0.075 16_192_32: gpu 44.332 wall 44.481 host 0.084 | sm 2805.0 mem 8251.0 (min 8251.0) temp 54.6 ['P2'] ['0x0000000000000400']
+proc 11: 1_192_32: gpu 23.574 wall 23.688 host 0.090 16_192_32: gpu 48.341 wall 48.426 host 0.090 | sm 2805.0 mem 8251.0 (min 8251.0) temp 55.75 ['P2'] ['0x0000000000000400']
+proc 12: 1_192_32: gpu 22.271 wall 22.396 host 0.073 16_192_32: gpu 47.011 wall 47.110 host 0.084 | sm 2805.0 mem 8251.0 (min 8251.0) temp 56.4375 ['P2'] ['0x0000000000000400']
+proc 13: 1_192_32: gpu 22.773 wall 22.913 host 0.081 16_192_32: gpu 47.668 wall 47.755 host 0.087 | sm 2805.0 mem 8251.0 (min 8251.0) temp 56.625 ['P2'] ['0x0000000000000400']
+proc 14: 1_192_32: gpu 23.108 wall 23.325 host 0.083 16_192_32: gpu 48.850 wall 48.947 host 0.093 | sm 2805.0 mem 8251.0 (min 8251.0) temp 56.25 ['P2'] ['0x0000000000000400']
+proc 15: 1_192_32: gpu 23.226 wall 23.338 host 0.088 16_192_32: gpu 48.377 wall 48.460 host 0.088 | sm 2805.0 mem 8251.0 (min 8251.0) temp 56.25 ['P2'] ['0x0000000000000400']
+1_192_32 {"between_process_gpu_cv": 0.0281515367928369, "between_process_wall_cv": 0.02891155644829404, "gpu_min_max_ratio": 1.103951122847941, "wall_min_max_ratio": 1.1056882873161564, "within_process_gpu_cv_median": 0.04435729718260592, "host_overhead_ms_range": [0.0669263144955039, 0.08988863648846745], "corr_gpu_vs": {"sm_mhz_mean": null, "mem_mhz_mean": null, "temp_mean": 0.44878889771029357}, "corr_gpu_vs_key0_mod_2MiB": null, "corr_gpu_vs_process_index": 0.4439364152916812}
+16_192_32 {"between_process_gpu_cv": 0.02875946055740336, "between_process_wall_cv": 0.028579754178211014, "gpu_min_max_ratio": 1.1019298109444757, "wall_min_max_ratio": 1.1004143374116, "within_process_gpu_cv_median": 0.02729514013054845, "host_overhead_ms_range": [0.08368148002773523, 0.09274815861135721], "corr_gpu_vs": {"sm_mhz_mean": null, "mem_mhz_mean": null, "temp_mean": 0.5408101178961406}, "corr_gpu_vs_key0_mod_2MiB": null, "corr_gpu_vs_process_index": 0.46691324649098676}
+rc=0 110s

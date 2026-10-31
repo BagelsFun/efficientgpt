@@ -1,0 +1,55 @@
+Process 1/3: modes built in order ['adaptive_graph', 'compiled_triton_full_graph', 'prefix_sdpa_eager', 'fp16_compiled_triton_full_graph']
+  correctness=PASS near_ties (approx modes: rows differing from fp32)={'adaptive_graph': 0, 'compiled_triton_full_graph': 0, 'prefix_sdpa_eager': 0, 'fp16_compiled_triton_full_graph': 9}
+Process 2/3: modes built in order ['compiled_triton_full_graph', 'prefix_sdpa_eager', 'fp16_compiled_triton_full_graph', 'adaptive_graph']
+  correctness=PASS near_ties (approx modes: rows differing from fp32)={'compiled_triton_full_graph': 0, 'prefix_sdpa_eager': 0, 'fp16_compiled_triton_full_graph': 9, 'adaptive_graph': 0}
+Process 3/3: modes built in order ['prefix_sdpa_eager', 'fp16_compiled_triton_full_graph', 'adaptive_graph', 'compiled_triton_full_graph']
+  correctness=PASS near_ties (approx modes: rows differing from fp32)={'prefix_sdpa_eager': 0, 'fp16_compiled_triton_full_graph': 9, 'adaptive_graph': 0, 'compiled_triton_full_graph': 0}
+ 1   8 16       prefix_sdpa_eager -> adaptive_graph          3.495 [3.450, 3.541] WIN
+ 1   8 16          adaptive_graph -> compiled_triton_full_graph 1.269 [1.256, 1.280] WIN
+ 1   8 16 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.399 [1.373, 1.437] WIN
+ 1   8 16          adaptive_graph -> fp16_compiled_triton_full_graph 1.776 [1.743, 1.822] WIN
+ 1  64 16       prefix_sdpa_eager -> adaptive_graph          3.501 [3.456, 3.533] WIN
+ 1  64 16          adaptive_graph -> compiled_triton_full_graph 1.269 [1.260, 1.284] WIN
+ 1  64 16 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.380 [1.353, 1.409] WIN
+ 1  64 16          adaptive_graph -> fp16_compiled_triton_full_graph 1.751 [1.723, 1.789] WIN
+ 1  64 64       prefix_sdpa_eager -> adaptive_graph          4.064 [3.945, 4.130] WIN
+ 1  64 64          adaptive_graph -> compiled_triton_full_graph 1.380 [1.364, 1.400] WIN
+ 1  64 64 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.531 [1.515, 1.556] WIN
+ 1  64 64          adaptive_graph -> fp16_compiled_triton_full_graph 2.114 [2.092, 2.155] WIN
+ 1 128 32       prefix_sdpa_eager -> adaptive_graph          3.557 [3.487, 3.603] WIN
+ 1 128 32          adaptive_graph -> compiled_triton_full_graph 1.469 [1.448, 1.486] WIN
+ 1 128 32 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.451 [1.429, 1.468] WIN
+ 1 128 32          adaptive_graph -> fp16_compiled_triton_full_graph 2.131 [2.096, 2.151] WIN
+ 1 128 64       prefix_sdpa_eager -> adaptive_graph          3.667 [3.569, 3.763] WIN
+ 1 128 64          adaptive_graph -> compiled_triton_full_graph 1.514 [1.495, 1.535] WIN
+ 1 128 64 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.506 [1.486, 1.532] WIN
+ 1 128 64          adaptive_graph -> fp16_compiled_triton_full_graph 2.280 [2.251, 2.326] WIN
+ 1 192 32       prefix_sdpa_eager -> adaptive_graph          3.231 [3.161, 3.299] WIN
+ 1 192 32          adaptive_graph -> compiled_triton_full_graph 1.582 [1.560, 1.597] WIN
+ 1 192 32 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.459 [1.440, 1.485] WIN
+ 1 192 32          adaptive_graph -> fp16_compiled_triton_full_graph 2.309 [2.281, 2.348] WIN
+16   8 16       prefix_sdpa_eager -> adaptive_graph          2.587 [2.525, 2.637] WIN
+16   8 16          adaptive_graph -> compiled_triton_full_graph 1.689 [1.666, 1.717] WIN
+16   8 16 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.485 [1.454, 1.510] WIN
+16   8 16          adaptive_graph -> fp16_compiled_triton_full_graph 2.509 [2.461, 2.555] WIN
+16  64 16       prefix_sdpa_eager -> adaptive_graph          2.478 [2.430, 2.505] WIN
+16  64 16          adaptive_graph -> compiled_triton_full_graph 1.472 [1.462, 1.479] WIN
+16  64 16 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.523 [1.493, 1.537] WIN
+16  64 16          adaptive_graph -> fp16_compiled_triton_full_graph 2.242 [2.195, 2.264] WIN
+16  64 64       prefix_sdpa_eager -> adaptive_graph          2.653 [2.603, 2.693] WIN
+16  64 64          adaptive_graph -> compiled_triton_full_graph 1.580 [1.564, 1.591] WIN
+16  64 64 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.634 [1.618, 1.647] WIN
+16  64 64          adaptive_graph -> fp16_compiled_triton_full_graph 2.582 [2.555, 2.602] WIN
+16 128 32       prefix_sdpa_eager -> adaptive_graph          1.996 [1.943, 2.019] WIN
+16 128 32          adaptive_graph -> compiled_triton_full_graph 1.572 [1.566, 1.599] WIN
+16 128 32 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.747 [1.734, 1.754] WIN
+16 128 32          adaptive_graph -> fp16_compiled_triton_full_graph 2.746 [2.736, 2.794] WIN
+16 128 64       prefix_sdpa_eager -> adaptive_graph          2.106 [2.031, 2.161] WIN
+16 128 64          adaptive_graph -> compiled_triton_full_graph 1.582 [1.552, 1.614] WIN
+16 128 64 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.723 [1.711, 1.786] WIN
+16 128 64          adaptive_graph -> fp16_compiled_triton_full_graph 2.726 [2.700, 2.815] WIN
+16 192 32       prefix_sdpa_eager -> adaptive_graph          1.602 [1.581, 1.623] WIN
+16 192 32          adaptive_graph -> compiled_triton_full_graph 1.530 [1.525, 1.534] WIN
+16 192 32 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.834 [1.828, 1.842] WIN
+16 192 32          adaptive_graph -> fp16_compiled_triton_full_graph 2.807 [2.795, 2.817] WIN
+Wrote research\phase5\ci_runs\20261031_v1_repro\benchmark_raw.csv, research\phase5\ci_runs\20261031_v1_repro\CI_REPORT.md and research\phase5\ci_runs\20261031_v1_repro\CI_REPORT.json

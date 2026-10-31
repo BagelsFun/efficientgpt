@@ -1,0 +1,246 @@
+{
+ "protocol": "kernelagent-ada/eval-v2",
+ "task": "inverse_cdf_sample",
+ "split": "heldout",
+ "first_pass_s": 0.652,
+ "import_s": 0.066,
+ "correctness": [
+  {
+   "shape": [
+    4,
+    4096
+   ],
+   "seed": 0,
+   "edge": null,
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    4,
+    4096
+   ],
+   "seed": 1,
+   "edge": null,
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    4,
+    4096
+   ],
+   "seed": 0,
+   "edge": "sparse",
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    4,
+    4096
+   ],
+   "seed": 0,
+   "edge": "extreme_u",
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    64,
+    4096
+   ],
+   "seed": 0,
+   "edge": null,
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    64,
+    4096
+   ],
+   "seed": 1,
+   "edge": null,
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    64,
+    4096
+   ],
+   "seed": 0,
+   "edge": "sparse",
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    64,
+    4096
+   ],
+   "seed": 0,
+   "edge": "extreme_u",
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    16,
+    8192
+   ],
+   "seed": 0,
+   "edge": null,
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    16,
+    8192
+   ],
+   "seed": 1,
+   "edge": null,
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    16,
+    8192
+   ],
+   "seed": 0,
+   "edge": "sparse",
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  },
+  {
+   "shape": [
+    16,
+    8192
+   ],
+   "seed": 0,
+   "edge": "extreme_u",
+   "ok": true,
+   "bad_rows": 0,
+   "exact_vs_eager": 1.0
+  }
+ ],
+ "launch_metadata": [
+  {
+   "n_regs": 127,
+   "n_spills": 0,
+   "shared_bytes": 128,
+   "num_warps": 4
+  },
+  {
+   "n_regs": 127,
+   "n_spills": 0,
+   "shared_bytes": 128,
+   "num_warps": 4
+  },
+  {
+   "n_regs": 127,
+   "n_spills": 0,
+   "shared_bytes": 128,
+   "num_warps": 4
+  },
+  {
+   "n_regs": 127,
+   "n_spills": 0,
+   "shared_bytes": 128,
+   "num_warps": 4
+  }
+ ],
+ "status": "correct",
+ "gpu_before": {
+  "util_pct": 1.0,
+  "mem_used_mib": 1113.0
+ },
+ "contended": false,
+ "performance": {
+  "4x4096": {
+   "failed": {},
+   "median_ms": {
+    "candidate": 0.0016128000617027282,
+    "eager": 0.015032320022583007,
+    "inductor": 0.004075360000133515
+   },
+   "roofline_fraction": 0.19258255488295836,
+   "speedup_vs_eager": {
+    "ratio": 9.32063457804714,
+    "ci_low": 8.9470234543603,
+    "ci_high": 9.77906701068933,
+    "class": "WIN"
+   },
+   "speedup_vs_inductor": {
+    "ratio": 2.5268848240437918,
+    "ci_low": 2.516567285558828,
+    "ci_high": 2.533333308695171,
+    "class": "WIN"
+   }
+  },
+  "64x4096": {
+   "failed": {},
+   "median_ms": {
+    "candidate": 0.002602959871292114,
+    "eager": 0.03407360076904297,
+    "inductor": 0.00617927998304367
+   },
+   "roofline_fraction": 1.9091936672472678,
+   "speedup_vs_eager": {
+    "ratio": 13.090328877075148,
+    "ci_low": 12.9406611416198,
+    "ci_high": 13.147743896404604,
+    "class": "WIN"
+   },
+   "speedup_vs_inductor": {
+    "ratio": 2.3739436213345324,
+    "ci_low": 2.3461210880121324,
+    "ci_high": 2.382642912431112,
+    "class": "WIN"
+   }
+  },
+  "16x8192": {
+   "failed": {},
+   "median_ms": {
+    "candidate": 0.002216960042715073,
+    "eager": 0.02175487995147705,
+    "inductor": 0.005820879936218262
+   },
+   "roofline_fraction": 1.1208038048993298,
+   "speedup_vs_eager": {
+    "ratio": 9.81293281444722,
+    "ci_low": 9.458715482423356,
+    "ci_high": 9.867214693707067,
+    "class": "WIN"
+   },
+   "speedup_vs_inductor": {
+    "ratio": 2.625613373297216,
+    "ci_low": 2.6005425799685997,
+    "ci_high": 2.6429366693607634,
+    "class": "WIN"
+   }
+  }
+ },
+ "id": "cde05c7adc3f37f4",
+ "trials": 8,
+ "wall_s": 5.7,
+ "family": "scan_whole_row",
+ "params": {
+  "WARPS": 4
+ },
+ "chosen_by": "single_shot"
+}

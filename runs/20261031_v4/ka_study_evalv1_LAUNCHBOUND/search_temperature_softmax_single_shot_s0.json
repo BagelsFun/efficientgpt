@@ -1,0 +1,60 @@
+{
+ "task": "temperature_softmax",
+ "strategy": "single_shot",
+ "budget": 12,
+ "evaluated": 3,
+ "unused_budget": 9,
+ "statuses": {
+  "correct": 3
+ },
+ "trace": [
+  {
+   "key": "row_whole{\"WARPS\": 4}",
+   "family": "row_whole",
+   "params": {
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.008143423600861748,
+   "from_history": false
+  },
+  {
+   "key": "online_chunked{\"BLOCK\": 1024, \"WARPS\": 4}",
+   "family": "online_chunked",
+   "params": {
+    "BLOCK": 1024,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.007449520831742621,
+   "from_history": false
+  },
+  {
+   "key": "split_two_stage{\"SPLITS\": 8, \"WARPS\": 2}",
+   "family": "split_two_stage",
+   "params": {
+    "SPLITS": 8,
+    "WARPS": 2
+   },
+   "status": "correct",
+   "score_ms": 0.007836216920439776,
+   "from_history": false
+  }
+ ],
+ "best": {
+  "score_ms": 0.007449520831742621,
+  "family": "online_chunked",
+  "params": {
+   "BLOCK": 1024,
+   "WARPS": 4
+  }
+ },
+ "env": {
+  "torch": "2.11.0+cu128",
+  "triton": "3.7.1",
+  "gpu": "NVIDIA GeForce RTX 4060",
+  "python": "3.11.9",
+  "git": "<private-commit>"
+ },
+ "seed": 0
+}

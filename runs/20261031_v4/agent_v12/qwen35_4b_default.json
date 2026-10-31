@@ -1,0 +1,463 @@
+{
+  "protocol": "assistant-agent-v1.2",
+  "backend": "ollama:qwen3.5:4b",
+  "quant": "bf16",
+  "system": "default",
+  "configs": {
+    "model_only": {
+      "score": "1/20",
+      "correct": 1,
+      "abstained": 9,
+      "hallucinated": 10,
+      "rows": [
+        {
+          "question": "What is the value of NEAR_TIE_LOGIT_MARGIN in research/phase5/benchmark_review.py?",
+          "passed": false,
+          "verdict": "hallucinated",
+          "answer": "I cannot directly read files from your local filesystem. To find the value of `NEAR_TIE_LOGIT_MARGIN` in `research/phase5/benchmark_review.py`, please run the following command in your terminal:\n\n```bash\ngrep -n \"NEAR_TIE_LOGIT_MARGIN\" research/phase5/benchmark_review.py\n```\n\nThis will show you the line number and the context where the variable is defined or used.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 1.36
+        },
+        {
+          "question": "Which permission level does the run_unittests tool have in assistant/tools.py?",
+          "passed": false,
+          "verdict": "hallucinated",
+          "answer": "I cannot directly access or read files on your local system. To answer this accurately, please provide the content of `assistant/tools.py` or the specific section containing the `run_unittests` tool definition. Once you share the code, I can identify the permission level immediately.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 0.84
+        },
+        {
+          "question": "What is the default eos_id of EOSDecoder in research/phase5/eos.py?",
+          "passed": false,
+          "verdict": "abstained",
+          "answer": "I cannot directly read the file `research/phase5/eos.py` as I do not have access to your local file system.\n\nTo find the default `eos_id` in that specific file, please run the following command in your terminal:\n\n```bash\ngrep -n \"eos_id\" research/phase5/eos.py\n```\n\nOr, if you are using a Python environment, you can inspect the class definition directly:\n\n```python\nfrom research.phase5.eos import EOSDecoder\n# Check the __init__ method or class attributes for the default value\n```\n\nIf you can paste the relevant code snippet or the output of the grep command here, I can confirm the value for you ",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 2.14
+        },
+        {
+          "question": "What string is PROTOCOL set to in research/kernelagent/tasks.py?",
+          "passed": false,
+          "verdict": "hallucinated",
+          "answer": "I cannot directly read files or execute code in this environment. To find the value of `PROTOCOL` in `research/kernelagent/tasks.py`, please run the following command in your terminal:\n\n```bash\ngrep -n \"PROTOCOL\" research/kernelagent/tasks.py\n```\n\nThis will show you the line number and the context where `PROTOCOL` is defined or used.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 1.13
+        },
+        {
+          "question": "Which function in research/phase5/sampling.py implements inverse-CDF sampling from probabilities and uniforms?",
+          "passed": false,
+          "verdict": "hallucinated",
+          "answer": "The function is `inverse_cdf_sampling`.\n\nIt is located in `research/phase5/sampling.py` and takes two arguments:\n1.  `probs`: A list of probabilities.\n2.  `uniforms`: A list of random uniform values.\n\nIt returns the index corresponding to the inverse cumulative distribution function (quantile) for the given uniform values.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 1.2
+        },
+        {
+          "question": "Which triton-windows version is recorded in docs/ENVIRONMENT.md?",
+          "passed": false,
+          "verdict": "abstained",
+          "answer": "I cannot access your local file system to read `docs/ENVIRONMENT.md`. Please provide the content of that file or the specific version you are looking for.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 0.53
+        },
+        {
+          "question": "What achievable DRAM bandwidth in GB/s does the project use as its roofline (see docs/EXPERIMENT_LOG.md)?",
+          "passed": false,
+          "verdict": "abstained",
+          "answer": "I cannot access your local file system to read `docs/EXPERIMENT_LOG.md`.\n\nTo find the achievable DRAM bandwidth used as the roofline limit, please provide the content of that file or the specific section describing the roofline analysis. Once you share the text, I can extract the value for you.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 0.92
+        },
+        {
+          "question": "In research/phase5/decode_attention.py, what (SPLIT, BLOCK_N, num_warps) does default_config return when batch*heads >= 48?",
+          "passed": false,
+          "verdict": "abstained",
+          "answer": "I cannot access the file `research/phase5/decode_attention.py` directly as I do not have a file system or the ability to read your local project files.\n\nTo provide the exact values for `SPLIT`, `BLOCK_N`, and `num_warps` when `batch*heads >= 48`, please run the following snippet in your environment and share the output:\n\n```python\nfrom research.phase5.decode_attention import default_config\n\nconfig = default_config()\nbatch, heads = config.batch, config.heads\nif batch * heads >= 48:\n    print(f\"SPLIT: {config.split}, BLOCK_N: {config.block_n}, num_warps: {config.num_warps}\")\nelse:\n    print(\"Con",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 2.65
+        },
+        {
+          "question": "What is MEM_FRACTION in research/kernelagent/evaluate.py?",
+          "passed": false,
+          "verdict": "hallucinated",
+          "answer": "I cannot directly read files from your local filesystem. To provide the exact definition of `MEM_FRACTION` in `research/kernelagent/evaluate.py`, please share the relevant code snippet or the specific lines containing that variable.\n\nOnce you provide the context, I can explain its purpose and usage immediately.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 4.42
+        },
+        {
+          "question": "What is TOL_FACTOR in research/kernelagent/evaluate.py?",
+          "passed": false,
+          "verdict": "hallucinated",
+          "answer": "I cannot directly access or read files on your local filesystem. To find the definition of `TOL_FACTOR` in `research/kernelagent/evaluate.py`, please run the following command in your terminal:\n\n```bash\ngrep -n \"TOL_FACTOR\" research/kernelagent/evaluate.py\n```\n\nThis will show you the line number and the context where the variable is defined or used. If you paste the relevant code snippet here, I can explain its purpose immediately.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 13.59
+        },
+        {
+          "question": "How many back-to-back calls (INNER) does research/kernelagent/evaluate.py capture per CUDA graph?",
+          "passed": false,
+          "verdict": "hallucinated",
+          "answer": "I cannot directly read the source code of `research/kernelagent/evaluate.py` in this environment to give you the exact number.\n\nHowever, based on standard CUDA graph patterns used in research agents (like those in the DeepSpeed or similar kernel research projects):\n\n1.  **Typical Pattern**: Most `evaluate.py` scripts capture **1** back-to-back call per graph.\n    *   The graph is built once.\n    *   It is then replayed (executed) once to measure latency or throughput.\n    *   Replaying the same graph multiple times in a single `evaluate` run is usually done via a loop *outside* the graph captu",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 10.67
+        },
+        {
+          "question": "What is the default --budget of research/kernelagent/search.py?",
+          "passed": false,
+          "verdict": "abstained",
+          "answer": "I do not have access to the source code for `research/kernelagent/search.py` or any other local files on your system. To find the default `--budget` value, please run the following command in your terminal:\n\n```bash\ngrep -n \"budget\" research/kernelagent/search.py\n```\n\nThis will show you the line where the budget is defined and its default value.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 12.14
+        },
+        {
+          "question": "What is SINGLE_PASS_MIN_PROGRAMS in research/phase5/decode_attention.py?",
+          "passed": false,
+          "verdict": "hallucinated",
+          "answer": "I cannot directly access your local file system to read `research/phase5/decode_attention.py`.\n\nTo provide the exact definition and context for `SINGLE_PASS_MIN_PROGRAMS` in your specific codebase, please run the following command and paste the output here:\n\n```bash\ngrep -n \"SINGLE_PASS_MIN_PROGRAMS\" research/phase5/decode_attention.py\n```\n\nOnce you provide the lines containing the variable definition and usage, I can explain its purpose and how it is used.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 14.15
+        },
+        {
+          "question": "Which Qwen3-1.7B revision hash does assistant/train/train_qlora.py pin?",
+          "passed": false,
+          "verdict": "abstained",
+          "answer": "I do not have access to the specific source code of `assistant/train/train_qlora.py` in your local environment or the Qwen team's private repositories. The pinned revision hash depends on the specific branch, commit, or fork you are using (e.g., the official Qwen repository, a specific PR branch, or a local copy).\n\nTo find the exact hash:\n1.  Open the file `assistant/train/train_qlora.py` in your codebase.\n2.  Search for the line containing `--model_name_or_path` or `model_name_or_path`.\n3.  Look for a commit hash (e.g., `abc123def...`) specified in that argument or a `requirements.txt`/`pypro",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 8.48
+        },
+        {
+          "question": "What is the default LoRA --rank in assistant/train/train_qlora.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "In the standard `assistant/train/train_qlora.py` script (typically used with the QLoRA training setup for LLMs), the default value for the `--lora-r` (LoRA rank) parameter is **16**.\n\nThis is the standard value used in the original QLoRA paper and most default configurations to balance memory efficiency and model performance. You can verify this by checking the script's argument parser or running the script with `--help`.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 10.37
+        },
+        {
+          "question": "What default num_ctx does OllamaBackend use in assistant/backends.py?",
+          "passed": false,
+          "verdict": "hallucinated",
+          "answer": "In `assistant/backends.py`, the `OllamaBackend` class typically uses a default context length (`num_ctx`) of **2048**.\n\nThis value is often defined in the `__init__` method or a configuration constant within the file, unless overridden by specific model parameters or environment variables. If you need to verify the exact line or check for overrides in your specific codebase, I can read the file for you.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 13.98
+        },
+        {
+          "question": "What is VOCAB in research/kernelagent/tasks.py?",
+          "passed": false,
+          "verdict": "abstained",
+          "answer": "I cannot access your local files directly. To answer this accurately, please run the following command in your terminal and paste the output here:\n\n```bash\ngrep -n \"VOCAB\" kernelagent/tasks.py\n```\n\nThis will show you the exact line numbers and context where `VOCAB` is defined or used in that file.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 7.07
+        },
+        {
+          "question": "What is SAMPLE_TOL in research/kernelagent/evaluate.py?",
+          "passed": false,
+          "verdict": "hallucinated",
+          "answer": "I cannot directly access or read files on your local filesystem. To find the definition of `SAMPLE_TOL` in `research/kernelagent/evaluate.py`, please run the following command in your terminal:\n\n```bash\ngrep -n \"SAMPLE_TOL\" research/kernelagent/evaluate.py\n```\n\nThis will show you the line number and the context where `SAMPLE_TOL` is defined or used.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 1.21
+        },
+        {
+          "question": "What is DEFAULT_TIMEOUT (seconds) in research/kernelagent/evaluate.py?",
+          "passed": false,
+          "verdict": "abstained",
+          "answer": "I cannot access the file `research/kernelagent/evaluate.py` directly. To provide the correct value for `DEFAULT_TIMEOUT`, please upload the file content or the relevant code snippet here.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 5.45
+        },
+        {
+          "question": "According to reports/KERNELAGENT_ADA_REPORT.md, which template family won the decode-attention task?",
+          "passed": false,
+          "verdict": "abstained",
+          "answer": "I do not have access to external files or reports like `KERNELAGENT_ADA_REPORT.md` unless they are provided within this chat session or uploaded to the current context.\n\nTo answer your question accurately, please either:\n1. Upload the `KERNELAGENT_ADA_REPORT.md` file here.\n2. Paste the relevant section of the report containing the results.\n\nOnce you provide the content, I can immediately identify which template family won the decode-attention task.",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 8.64
+        }
+      ]
+    },
+    "rag_tools": {
+      "score": "20/20",
+      "correct": 20,
+      "abstained": 0,
+      "hallucinated": 0,
+      "rows": [
+        {
+          "question": "What is the value of NEAR_TIE_LOGIT_MARGIN in research/phase5/benchmark_review.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "The value of `NEAR_TIE_LOGIT_MARGIN` in `research/phase5/benchmark_review.py` is **1e-2** (0.01).\n\nThis constant is defined on line 46 and represents the threshold for determining whether a divergence between reference and generated logits is considered a \"near-tie\" (i.e., the reference top-1/top-2 logit margin is below this bound).",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 16.73
+        },
+        {
+          "question": "Which permission level does the run_unittests tool have in assistant/tools.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "The `run_unittests` tool has the permission level **`execute`**.\n\nThis is shown in line 42 of the file:\n```python\n'run_unittests': ('execute', self.run_unittests, 'Run a Python unittest module of this repo (needs user approval).',\n                  {'module': 'string'}, ['module']),\n```\n\nThe first element in the tuple is the permission level, which is `'execute'`. As you can see from line 71, tools with the `execute` level require user approval before they can be called.",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 13.0
+        },
+        {
+          "question": "What is the default eos_id of EOSDecoder in research/phase5/eos.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "The default `eos_id` of `EOSDecoder` in `research/phase5/eos.py` is **0**.\n\nThis is specified in the `__init__` method signature on line 36:\n```python\ndef __init__(self, decoder, eos_id=0, pad_id=None):\n```",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 13.03
+        },
+        {
+          "question": "What string is PROTOCOL set to in research/kernelagent/tasks.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "The `PROTOCOL` string in `research/kernelagent/tasks.py` is set to:\n\n```python\n'kernelagent-ada/tasks-v1'\n```",
+          "error": null,
+          "tool_calls": [
+            "read_file",
+            "read_file"
+          ],
+          "model_calls": 3,
+          "seconds": 30.99
+        },
+        {
+          "question": "Which function in research/phase5/sampling.py implements inverse-CDF sampling from probabilities and uniforms?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "The function that implements inverse-CDF sampling from probabilities and uniforms is:\n\n**`sample_from(probs, u)`** (lines 60-71)\n\nThis function:\n- Takes probabilities `[B, V]` and uniform samples `[B]` in `[0, 1)`\n- Computes the cumulative distribution function (CDF) from the probabilities\n- Uses `torch.searchsorted` to find the token index where `cdf[j-1] <= u * total < cdf[j]`\n- Returns the sampled token as an integer64 tensor `[B, 1]`\n\nThe function is documented as: \"Inverse CDF: token j with cdf[j-1] <= u * total < cdf[j]; never a zero-probability token.\"",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 21.32
+        },
+        {
+          "question": "Which triton-windows version is recorded in docs/ENVIRONMENT.md?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "The `docs/ENVIRONMENT.md` file records **`triton-windows==3.7.1.post27`** as the installed Triton version.",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 8.01
+        },
+        {
+          "question": "What achievable DRAM bandwidth in GB/s does the project use as its roofline (see docs/EXPERIMENT_LOG.md)?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "The project uses **211 GB/s** as its roofline for achievable DRAM bandwidth.\n\nThis is referenced in the `docs/ASSISTANT.md` file in the `roofline_fraction` function:\n```python\ndef roofline_fraction(bytes_moved, seconds, bandwidth_gbps=211.0):\n```\n\nThe comment notes that values > 1 indicate the working set was served from L2 (timing reuses the same inputs), making it an upper-bound indicator rather than actual DRAM utilization.",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 9.27
+        },
+        {
+          "question": "In research/phase5/decode_attention.py, what (SPLIT, BLOCK_N, num_warps) does default_config return when batch*heads >= 48?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "Looking at the `default_config` function in `research/phase5/decode_attention.py`:\n\n```python\ndef default_config(batch, heads, capacity):\n    \"\"\"(SPLIT, BLOCK_N, num_warps): more splits when few (row, head) pairs exist.\"\"\"\n    if batch * heads >= 48:\n        return 64, 32, 4\n    return 16, 16, 2\n```\n\nWhen `batch * heads >= 48`, the function returns:\n- **SPLIT**: 64\n- **BLOCK_N**: 32\n- **num_warps**: 4",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 11.08
+        },
+        {
+          "question": "What is MEM_FRACTION in research/kernelagent/evaluate.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "`MEM_FRACTION` is defined as `0.45` in `research/kernelagent/evaluate.py`.\n\nIt's used in the `worker()` function to set the per-process memory fraction for PyTorch CUDA operations:\n\n```python\ntorch.cuda.set_per_process_memory_fraction(MEM_FRACTION)\n```\n\nThis limits GPU memory usage to 45% of the available memory per process, preventing candidates from consuming excessive memory during evaluation.",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 19.39
+        },
+        {
+          "question": "What is TOL_FACTOR in research/kernelagent/evaluate.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "`TOL_FACTOR` is defined as `4.0` in `research/kernelagent/evaluate.py`.\n\nIt's used in the correctness check for `float` task kinds to determine if a candidate's output is within tolerance of the reference:\n\n```python\nfloat  : max |cand - truth| <= TOL_FACTOR * max |eager_fp32 - truth| + floor, and finite wherever truth is finite;\n```\n\nThis means the candidate's error must be at most 4 times the reference's error (plus a floor value).",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 13.73
+        },
+        {
+          "question": "How many back-to-back calls (INNER) does research/kernelagent/evaluate.py capture per CUDA graph?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "Based on the code in `research/kernelagent/evaluate.py`, the number of back-to-back calls captured per CUDA graph is defined by the constant `INNER`, which is set to **20**.\n\nThis is shown on line 33:\n```python\nINNER = 20\n```\n\nAnd it's used in the `_graphed` function (lines 129-168) where the graph replays the function `INNER` times:\n```python\nwith torch.cuda.graph(g):\n    for _ in range(inner):\n        fn(inp)\n```",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 21.86
+        },
+        {
+          "question": "What is the default --budget of research/kernelagent/search.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "There is no default `--budget` value in `research/kernelagent/search.py`. The `--budget` argument is required and must be specified by the user when running the script.\n\nThe example in the docstring shows:\n```\npython -m research.kernelagent.search --task temperature_softmax --strategy local --budget 12 --seed 0 \\\n    --history results/kernelagent/history.jsonl --out results/kernelagent/search_<task>_<strategy>_s0.json\n```\n\nThis uses `--budget 12`, but this is just an example value. The `Search` class constructor requires a `budget` parameter:\n\n```python\ndef __init__(self, task, evaluate_fn, bu",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 18.78
+        },
+        {
+          "question": "What is SINGLE_PASS_MIN_PROGRAMS in research/phase5/decode_attention.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "`SINGLE_PASS_MIN_PROGRAMS` is a constant defined in `research/phase5/decode_attention.py` with the value **48**.\n\nIt represents the minimum number of (row, head) programs that must exist to use the single-pass kernel instead of the split-K approach. The dispatch logic in `use_single_pass()` uses this threshold:\n\n```python\ndef use_single_pass(batch, heads, capacity):\n    return batch * heads >= SINGLE_PASS_MIN_PROGRAMS or capacity <= SINGLE_PASS_MAX_CAPACITY_FEW_PROGRAMS\n```\n\nSo when `batch * heads >= 48`, the single-pass kernel is used (assuming capacity isn't also small).",
+          "error": null,
+          "tool_calls": [
+            "read_file",
+            "read_file"
+          ],
+          "model_calls": 3,
+          "seconds": 26.76
+        },
+        {
+          "question": "Which Qwen3-1.7B revision hash does assistant/train/train_qlora.py pin?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "The `assistant/train/train_qlora.py` script pins the Qwen3-1.7B revision hash to:\n\n**`70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`**\n\nThis is defined on line 18 as:\n```python\nREVISION = '70d244cc86ccca08cf5af4e1e306ecf908b1ad5e'\n```\n\nAnd is used when loading the tokenizer and model on lines 58 and 63.",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 20.02
+        },
+        {
+          "question": "What is the default LoRA --rank in assistant/train/train_qlora.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "The default LoRA `--rank` in `assistant/train/train_qlora.py` is **16**.\n\nThis is defined in the argument parser as:\n```python\nap.add_argument('--rank', type=int, default=16)\n```",
+          "error": null,
+          "tool_calls": [],
+          "model_calls": 1,
+          "seconds": 12.14
+        },
+        {
+          "question": "What default num_ctx does OllamaBackend use in assistant/backends.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "The default `num_ctx` value in `OllamaBackend` is **8192**.\n\nThis is defined in the `__init__` method at line 59:\n```python\ndef __init__(self, model, host='http://127.0.0.1:11434', num_ctx=8192, keep_alive='10m', options=None):\n```",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 14.51
+        },
+        {
+          "question": "What is VOCAB in research/kernelagent/tasks.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "In `research/kernelagent/tasks.py`, `VOCAB` is defined as a constant with the value **4096**. It represents the vocabulary size used in the tasks, particularly for tasks like `decode_attention`, `temperature_softmax`, `topk_softmax`, `inverse_cdf_sample`, and `argmax`.",
+          "error": null,
+          "tool_calls": [
+            "read_file",
+            "read_file"
+          ],
+          "model_calls": 3,
+          "seconds": 31.45
+        },
+        {
+          "question": "What is SAMPLE_TOL in research/kernelagent/evaluate.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "`SAMPLE_TOL` is defined as `1e-5` in the file.\n\nFrom the docstring on line 12, it's used for the `sample` task kind:\n> the chosen token has p > 0 and its fp64 CDF interval contains u * total within SAMPLE_TOL * total\n\nThis means the tolerance for checking if the sampled token falls within the correct probability range is `1e-5 * total`.",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 26.84
+        },
+        {
+          "question": "What is DEFAULT_TIMEOUT (seconds) in research/kernelagent/evaluate.py?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "DEFAULT_TIMEOUT is **300 seconds**.",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 19.72
+        },
+        {
+          "question": "According to reports/KERNELAGENT_ADA_REPORT.md, which template family won the decode-attention task?",
+          "passed": true,
+          "verdict": "correct",
+          "answer": "According to `reports/KERNELAGENT_ADA_REPORT.md`, the **`single_pass`** template family won the decode-attention task.\n\nThe specific winning configuration was:\n*   **Family:** `single_pass`\n*   **Parameters:** `BLOCK_N 64`, `2 warps`\n\nThe report notes that while this kernel won the held-out evaluation (achieving a WIN ratio of 3/4 against the existing Phase 5 kernel), it was slower than the existing kernel at the specific shape `4x256`.",
+          "error": null,
+          "tool_calls": [
+            "read_file"
+          ],
+          "model_calls": 2,
+          "seconds": 15.7
+        }
+      ]
+    }
+  }
+}

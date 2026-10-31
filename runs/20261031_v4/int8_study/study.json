@@ -1,0 +1,115 @@
+[
+ {
+  "task": "int8_gemv",
+  "strategy": "single_shot",
+  "seed": 0,
+  "evaluated": 2,
+  "statuses": {
+   "correct": 2
+  },
+  "best": {
+   "score_ms": 0.014195249999771755,
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 128,
+    "SPLITK": 4,
+    "WARPS": 4
+   }
+  }
+ },
+ {
+  "task": "int8_gemv",
+  "strategy": "random",
+  "seed": 0,
+  "evaluated": 12,
+  "statuses": {
+   "correct": 12
+  },
+  "best": {
+   "score_ms": 0.014195249999771755,
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_K": 128,
+    "BLOCK_N": 64,
+    "SPLITK": 4,
+    "WARPS": 4
+   }
+  }
+ },
+ {
+  "task": "int8_gemv",
+  "strategy": "random",
+  "seed": 1,
+  "evaluated": 12,
+  "statuses": {
+   "correct": 12
+  },
+  "best": {
+   "score_ms": 0.015336988163331457,
+   "family": "dot16",
+   "params": {
+    "BLOCK_K": 256,
+    "BLOCK_N": 32,
+    "WARPS": 4
+   }
+  }
+ },
+ {
+  "task": "int8_gemv",
+  "strategy": "local",
+  "seed": 0,
+  "evaluated": 12,
+  "statuses": {
+   "correct": 12
+  },
+  "best": {
+   "score_ms": 0.013795518519171598,
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 64,
+    "SPLITK": 8,
+    "WARPS": 4
+   }
+  }
+ },
+ {
+  "task": "int8_gemv",
+  "strategy": "local",
+  "seed": 1,
+  "evaluated": 12,
+  "statuses": {
+   "correct": 12
+  },
+  "best": {
+   "score_ms": 0.013795518519171598,
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 64,
+    "SPLITK": 8,
+    "WARPS": 4
+   }
+  }
+ },
+ {
+  "task": "int8_gemv",
+  "strategy": "local_meta",
+  "seed": 0,
+  "evaluated": 12,
+  "statuses": {
+   "correct": 12
+  },
+  "best": {
+   "score_ms": 0.013795518519171598,
+   "family": "dot16_splitk",
+   "params": {
+    "BLOCK_N": 64,
+    "BLOCK_K": 64,
+    "SPLITK": 8,
+    "WARPS": 4
+   }
+  }
+ }
+]

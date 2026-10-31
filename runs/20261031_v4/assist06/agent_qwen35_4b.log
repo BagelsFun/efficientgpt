@@ -1,0 +1,2 @@
+model_only {"correct": 0, "abstained": 20, "unsupported": 0, "review": 0, "error": 0}
+rag_tools {"correct": 20, "abstained": 0, "unsupported": 0, "review": 0, "error": 0}

@@ -1,0 +1,1 @@
+CONTAMINATED: external GPU load during this run (idle-state utilization 72%, 71 C, SW power cap active at 23:14). Do not use these absolute speeds.

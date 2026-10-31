@@ -1,0 +1,21 @@
+10/80 requests, kept 2, 196s
+20/80 requests, kept 4, 332s
+30/80 requests, kept 5, 499s
+40/80 requests, kept 8, 662s
+50/80 requests, kept 9, 807s
+60/80 requests, kept 9, 974s
+70/80 requests, kept 9, 1149s
+80/80 requests, kept 11, 1296s
+{
+ "requests": 80,
+ "kept": 11,
+ "teacher": "qwen3.5:4b",
+ "seed": 0,
+ "outcomes": {
+  "invalid json": 30,
+  "kept": 11,
+  "solution failed its tests": 39
+ },
+ "seconds": 1295.7
+}
+distill rc=0 1296s

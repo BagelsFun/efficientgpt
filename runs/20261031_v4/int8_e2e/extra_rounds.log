@@ -1,0 +1,4 @@
+bf16_static   r2 decode 58.8 tok/s  ttft 45 ms  peak 3350 MiB  util 1.0
+int8_static   r2 decode 91.6 tok/s  ttft 65 ms  peak 2358 MiB  util 1.0
+int8_static   r3 decode 91.1 tok/s  ttft 65 ms  peak 2358 MiB  util 0.0
+bf16_static   r3 decode 58.9 tok/s  ttft 45 ms  peak 3346 MiB  util 0.0

@@ -1,0 +1,39 @@
+<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\profiler\profiler.py:224: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+number of parameters: 12.19M
+== eager_triton: kernels/step 100, GPU 0.482 ms
+   x19  0.2027 ms  _ZN7cutlass7Kernel2I50cutlass_80_tensorop_s1688gemm_64x64_16x6_tn_alig
+   x13  0.0264 ms  _ZN2at6native53_GLOBAL__N__87a90936_20_layer_norm_kernel_cu_3ff0b71f28
+   x12  0.0221 ms  _ZN2at6native24index_elementwise_kernelILi128ELi4EZNS0_22index_copy_ke
+   x12  0.0136 ms  _ZN8cublasLt19splitKreduce_kernelILi32ELi16EiffffLb0EfffLb1ELb0ELb0EEE
+   x12  0.0117 ms  _ZN2at6native29vectorized_elementwise_kernelILi4ENS0_15CUDAFunctor_add
+   x6   0.0943 ms  _split_kernel
+   x6   0.0065 ms  _combine_kernel
+   x6   0.0736 ms  _ZN7cutlass7Kernel2I50cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_alig
+   x6   0.0065 ms  _ZN2at6native29vectorized_elementwise_kernelILi4EZZZNS0_18GeluCUDAKern
+   x2   0.0065 ms  _ZN2at6native44_GLOBAL__N__516f300d_11_Indexing_cu_2a2c434e21indexSele
+   x1   0.0013 ms  _ZN2at6native18elementwise_kernelILi128ELi2EZNS0_22gpu_kernel_impl_noc
+   x1   0.0017 ms  _ZN2at6native18elementwise_kernelILi128ELi4EZNS0_22gpu_kernel_impl_noc
+   x1   0.0015 ms  _ZN2at6native24index_elementwise_kernelILi128ELi4EZNS0_22index_copy_ke
+   x1   0.0119 ms  _ZN2at6native13reduce_kernelILi512ELi1ENS0_8ReduceOpIfNS0_9ArgMaxOpsIf
+   x1   0.0009 ms  Memcpy DtoD (Device -> Device)
+   x1   0.0010 ms  _ZN2at6native29vectorized_elementwise_kernelILi2ENS0_21CUDAFunctorOnSe
+== compiled_triton: kernels/step 83, GPU 0.430 ms
+   x19  0.2042 ms  _ZN7cutlass7Kernel2I50cutlass_80_tensorop_s1688gemm_64x64_16x6_tn_alig
+   x12  0.0134 ms  _ZN8cublasLt19splitKreduce_kernelILi32ELi16EiffffLb0EfffLb1ELb0ELb0EEE
+   x6   0.0052 ms  triton_poi_fused__unsafe_view_index_copy_split_transpose_view_1
+   x6   0.0053 ms  triton_poi_fused__unsafe_view_index_copy_split_transpose_view_2
+   x6   0.0955 ms  _split_kernel
+   x6   0.0064 ms  _combine_kernel
+   x6   0.0741 ms  _ZN7cutlass7Kernel2I50cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_alig
+   x6   0.0062 ms  triton_poi_fused__unsafe_view_gelu_4
+   x3   0.0035 ms  triton_per_fused__unsafe_view_add_native_layer_norm_3
+   x3   0.0037 ms  triton_per_fused__unsafe_view_add_native_layer_norm_5
+   x3   0.0038 ms  triton_per_fused__unsafe_view_add_native_layer_norm_6
+   x1   0.0016 ms  triton_red_fused_add_embedding_native_layer_norm_0
+   x1   0.0013 ms  triton_per_fused__unsafe_view_add_native_layer_norm_7
+   x1   0.0013 ms  triton_per_fused__unsafe_view_add_native_layer_norm_8
+   x1   0.0013 ms  triton_per_fused__unsafe_view_add_native_layer_norm_9
+   x1   0.0010 ms  triton_poi_fused_index_copy_10
+   x1   0.0016 ms  triton_red_fused__unsafe_view_argmax_copy__11
+   x1   0.0009 ms  triton_poi_fused_add_copy__12

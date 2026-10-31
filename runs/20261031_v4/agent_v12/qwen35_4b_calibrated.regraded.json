@@ -1,0 +1,513 @@
+{
+ "protocol": "assistant-agent-v1.2",
+ "backend": "ollama:qwen3.5:4b",
+ "quant": "bf16",
+ "system": "calibrated",
+ "configs": {
+  "model_only": {
+   "score": "0/20",
+   "correct": 0,
+   "abstained": 20,
+   "rows": [
+    {
+     "question": "What is the value of NEAR_TIE_LOGIT_MARGIN in research/phase5/benchmark_review.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the value of `NEAR_TIE_LOGIT_MARGIN` in `research/phase5/benchmark_review.py`. Please read the file to find it.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 4.65,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "Which permission level does the run_unittests tool have in assistant/tools.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the specific permission level of the `run_unittests` tool in `assistant/tools.py` without reading the file. Please provide the file content or the relevant section of `assistant/tools.py` so I can check.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 8.89,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is the default eos_id of EOSDecoder in research/phase5/eos.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the default `eos_id` of `EOSDecoder` in `research/phase5/eos.py`. Please read the file to find the specific value.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 6.1,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What string is PROTOCOL set to in research/kernelagent/tasks.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the value of `PROTOCOL` in `research/kernelagent/tasks.py`. Please read the file `research/kernelagent/tasks.py` to find it.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 9.41,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "Which function in research/phase5/sampling.py implements inverse-CDF sampling from probabilities and uniforms?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the specific function name without reading the file. Please provide the file `research/phase5/sampling.py` so I can identify the function.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 13.22,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "Which triton-windows version is recorded in docs/ENVIRONMENT.md?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the specific version recorded in `docs/ENVIRONMENT.md`. Please provide the file path or upload the file so I can read it for you.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 6.95,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What achievable DRAM bandwidth in GB/s does the project use as its roofline (see docs/EXPERIMENT_LOG.md)?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the specific DRAM bandwidth value used as the roofline in the project. Please read the file `docs/EXPERIMENT_LOG.md` to find this information.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 10.15,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "In research/phase5/decode_attention.py, what (SPLIT, BLOCK_N, num_warps) does default_config return when batch*heads >= 48?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the specific values for `SPLIT`, `BLOCK_N`, and `num_warps` in `default_config` when `batch*heads >= 48` without reading the file. Please provide the path to `research/phase5/decode_attention.py` so I can read it and give you the exact values.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 11.12,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is MEM_FRACTION in research/kernelagent/evaluate.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the value or definition of `MEM_FRACTION` in `research/kernelagent/evaluate.py` without reading the file. Please provide the file path or upload the content of `research/kernelagent/evaluate.py` so I can check.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 13.54,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is TOL_FACTOR in research/kernelagent/evaluate.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the value of `TOL_FACTOR` in `research/kernelagent/evaluate.py`. Please read the file `research/kernelagent/evaluate.py` to find it.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 6.37,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "How many back-to-back calls (INNER) does research/kernelagent/evaluate.py capture per CUDA graph?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the specific number of back-to-back calls (INNER) captured per CUDA graph in `research/kernelagent/evaluate.py`.\n\nPlease read the file `research/kernelagent/evaluate.py` to find this value.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 6.75,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is the default --budget of research/kernelagent/search.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the default `--budget` value for `research/kernelagent/search.py`. Please read the file to find it.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 8.5,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is SINGLE_PASS_MIN_PROGRAMS in research/phase5/decode_attention.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the value of `SINGLE_PASS_MIN_PROGRAMS` in `research/phase5/decode_attention.py`. Please read the file to find it.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 3.73,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "Which Qwen3-1.7B revision hash does assistant/train/train_qlora.py pin?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the specific revision hash pinned in `assistant/train/train_qlora.py`. Please provide the file path or upload the file so I can read it and check the configuration.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 6.01,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is the default LoRA --rank in assistant/train/train_qlora.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the default `--rank` value in `assistant/train/train_qlora.py`. Please read the file to find it.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 7.09,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What default num_ctx does OllamaBackend use in assistant/backends.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the default `num_ctx` value used by `OllamaBackend` in `assistant/backends.py`. Please read the file `assistant/backends.py` to find the specific value.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 13.38,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is VOCAB in research/kernelagent/tasks.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the definition of VOCAB in `research/kernelagent/tasks.py`. Please read the file to find the specific value or context.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 7.01,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is SAMPLE_TOL in research/kernelagent/evaluate.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the value of `SAMPLE_TOL` in `research/kernelagent/evaluate.py`. Please read the file `research/kernelagent/evaluate.py` to find it.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 7.29,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is DEFAULT_TIMEOUT (seconds) in research/kernelagent/evaluate.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the value of `DEFAULT_TIMEOUT` in `research/kernelagent/evaluate.py`. Please read the file `research/kernelagent/evaluate.py` to find it.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 13.33,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "According to reports/KERNELAGENT_ADA_REPORT.md, which template family won the decode-attention task?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not know the answer. Please read the file `KERNELAGENT_ADA_REPORT.md` to find out which template family won the decode-attention task.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 6.34,
+     "verdict_prev": "abstained"
+    }
+   ],
+   "unsupported": 0,
+   "review": 0,
+   "error": 0
+  },
+  "rag_tools": {
+   "score": "20/20",
+   "correct": 20,
+   "abstained": 0,
+   "rows": [
+    {
+     "question": "What is the value of NEAR_TIE_LOGIT_MARGIN in research/phase5/benchmark_review.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The value of `NEAR_TIE_LOGIT_MARGIN` in `research/phase5/benchmark_review.py` is **1e-2** (0.01).\n\nThis is defined on line 46 and represents the threshold for determining if a logit difference is a \"near tie\" when comparing against the reference model.",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 19.74,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "Which permission level does the run_unittests tool have in assistant/tools.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The `run_unittests` tool has the permission level **`execute`**.\n\nThis is shown in line 42 of the file:\n```python\n'run_unittests': ('execute', self.run_unittests, 'Run a Python unittest module of this repo (needs user approval).',\n                  {'module': 'string'}, ['module']),\n```\n\nThe `'execute'` level requires user approval for every call, as described in the docstring at the top of the file.",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 17.94,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is the default eos_id of EOSDecoder in research/phase5/eos.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The default `eos_id` of `EOSDecoder` in `research/phase5/eos.py` is **0**.\n\nThis is specified in the `__init__` method signature on line 36:\n```python\ndef __init__(self, decoder, eos_id=0, pad_id=None):\n```",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 13.47,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What string is PROTOCOL set to in research/kernelagent/tasks.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The `PROTOCOL` string is set to `'kernelagent-ada/tasks-v1'` in `research/kernelagent/tasks.py`.",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 11.99,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "Which function in research/phase5/sampling.py implements inverse-CDF sampling from probabilities and uniforms?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The function that implements inverse-CDF sampling from probabilities and uniforms is:\n\n**`sample_from(probs, u)`** (lines 60-71)\n\nThis function:\n- Takes probabilities `[B, V]` and uniform samples `[B]` in `[0, 1)`\n- Computes the cumulative distribution function (CDF) from the probabilities\n- Uses `torch.searchsorted` to find the token index where `cdf[j-1] <= u * total < cdf[j]`\n- Returns the sampled token as an integer tensor `[B, 1]`\n\nThe function is documented as: \"Inverse CDF: token j with cdf[j-1] <= u * total < cdf[j]; never a zero-probability token.\"",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 17.55,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "Which triton-windows version is recorded in docs/ENVIRONMENT.md?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The `triton-windows` version recorded in `docs/ENVIRONMENT.md` is **3.7.1.post27**.",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 18.02,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What achievable DRAM bandwidth in GB/s does the project use as its roofline (see docs/EXPERIMENT_LOG.md)?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The project uses **211 GB/s** as its achievable DRAM bandwidth (roofline).\n\nThis value appears in the `roofline_fraction` function in `research/kernelagent/tasks.py`, which is referenced in the context as \"EXPERIMENT_LOG KERNEL-01\".",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 15.98,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "In research/phase5/decode_attention.py, what (SPLIT, BLOCK_N, num_warps) does default_config return when batch*heads >= 48?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "In `research/phase5/decode_attention.py`, the `default_config` function returns `(64, 32, 4)` when `batch * heads >= 48`.",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 26.45,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is MEM_FRACTION in research/kernelagent/evaluate.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "MEM_FRACTION is **0.45** in research/kernelagent/evaluate.py.\n\nIt's used to cap GPU memory usage per process:\n```python\ntorch.cuda.set_per_process_memory_fraction(MEM_FRACTION)\n```\n\nThis ensures that a candidate's evaluation cannot hang, crash, or cause illegal access by limiting memory to 45% of the GPU.",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 18.88,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is TOL_FACTOR in research/kernelagent/evaluate.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "TOL_FACTOR in research/kernelagent/evaluate.py is **4.0**.",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 19.57,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "How many back-to-back calls (INNER) does research/kernelagent/evaluate.py capture per CUDA graph?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The `research/kernelagent/evaluate.py` file captures **20** back-to-back calls per CUDA graph.\n\nThis is defined by the constant `INNER = 20` on line 33, which is used in the `_graphed` function (lines 129\u2013168) to execute the callable `fn(inp)` exactly 20 times within each CUDA graph.",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 20.93,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is the default --budget of research/kernelagent/search.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The default `--budget` value is **12**.\n\nThis is shown in the example command in the docstring on line 3:\n```\npython -m research.kernelagent.search --task temperature_softmax --strategy local --budget 12 --seed 0\n```",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 18.67,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is SINGLE_PASS_MIN_PROGRAMS in research/phase5/decode_attention.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "`SINGLE_PASS_MIN_PROGRAMS` in `research/phase5/decode_attention.py` is **48**.\n\nIt is the minimum number of (row, head) programs required to trigger the use of the single-pass kernel instead of the split-K approach. The dispatch logic in `use_single_pass()` returns `True` when:\n- `batch * heads >= 48` (enough programs to fill the GPU or cache), OR\n- `capacity <= 64` (the cache is short enough that split-K is not needed).",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file"
+     ],
+     "model_calls": 3,
+     "seconds": 29.73,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "Which Qwen3-1.7B revision hash does assistant/train/train_qlora.py pin?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The `assistant/train/train_qlora.py` script pins the Qwen3-1.7B revision hash to:\n\n**70d244cc86ccca08cf5af4e1e306ecf908b1ad5e**",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file"
+     ],
+     "model_calls": 3,
+     "seconds": 23.42,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is the default LoRA --rank in assistant/train/train_qlora.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The default LoRA `--rank` in `assistant/train/train_qlora.py` is **16**.",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 6.62,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What default num_ctx does OllamaBackend use in assistant/backends.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The default `num_ctx` is **8192**.\n\nThis is set in the `__init__` method of `OllamaBackend` (line 33-34 in the provided context):\n```python\ndef __init__(self, model, host='http://127.0.0.1:11434', num_ctx=8192, keep_alive='10m', options=None):\n```",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 5.52,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is VOCAB in research/kernelagent/tasks.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "VOCAB is defined as 4096 on line 14 of research/kernelagent/tasks.py.",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 10.85,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is SAMPLE_TOL in research/kernelagent/evaluate.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "`SAMPLE_TOL` in `research/kernelagent/evaluate.py` is `1e-5`.\n\nIt's used in the \"sample\" task kind to determine if the chosen token's fp64 CDF interval contains `u * total`, with a tolerance of `SAMPLE_TOL * total`.",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "search_code"
+     ],
+     "model_calls": 3,
+     "seconds": 29.06,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is DEFAULT_TIMEOUT (seconds) in research/kernelagent/evaluate.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "DEFAULT_TIMEOUT is **300** seconds.",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file"
+     ],
+     "model_calls": 3,
+     "seconds": 30.67,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "According to reports/KERNELAGENT_ADA_REPORT.md, which template family won the decode-attention task?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "According to `reports/KERNELAGENT_ADA_REPORT.md`, the **single_pass** template family won the decode-attention task.\n\nThe specific winning configuration was:\n*   **Family:** `single_pass`\n*   **Parameters:** `BLOCK_N 64`, `2 warps`\n\nThe report notes that while this kernel won the search (outperforming eager, Inductor, and the existing Phase 5 kernel in most cases), it was slower than the existing Phase 5 kernel for the specific shape `4x256`.",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "model_calls": 2,
+     "seconds": 16.86,
+     "verdict_prev": "correct"
+    }
+   ],
+   "unsupported": 0,
+   "review": 0,
+   "error": 0
+  }
+ },
+ "regraded": "classifier v3 (anchored numbers, review/error classes) + manual labels"
+}

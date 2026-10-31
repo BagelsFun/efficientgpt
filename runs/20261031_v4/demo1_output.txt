@@ -1,0 +1,19 @@
+Loading Qwen/Qwen3-1.7B -> weight-only int8 + CUDA-graph decoder ...
+W1031 18:27:31.413000 45336 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   5%|▌         | 17/311 [00:00<00:01, 166.33it/s]Loading weights:  11%|█         | 34/311 [00:00<00:01, 140.64it/s]Loading weights:  16%|█▌        | 49/311 [00:00<00:02, 114.57it/s]Loading weights:  20%|█▉        | 61/311 [00:00<00:02, 113.04it/s]Loading weights:  24%|██▍       | 74/311 [00:00<00:02, 117.39it/s]Loading weights:  28%|██▊       | 87/311 [00:00<00:02, 110.39it/s]Loading weights:  32%|███▏      | 101/311 [00:00<00:01, 116.57it/s]Loading weights:  36%|███▋      | 113/311 [00:00<00:01, 109.56it/s]Loading weights:  40%|████      | 125/311 [00:01<00:01, 104.44it/s]Loading weights:  46%|████▌     | 143/311 [00:01<00:01, 123.80it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 244.74it/s]
+loaded in 6.8 s; capturing the decode graph on the first request ...
+
+> Explain in three short paragraphs why LLM decoding on a GPU is memory-bandwidth bound.
+
+LLM decoding on a GPU is memory-bandwidth bound because the vast amount of data required for decoding—such as token sequences, attention weights, and model parameters—exceeds the GPU's memory capacity. GPUs, while powerful in parallelism, have limited memory, which can lead to frequent memory accesses and data transfers, slowing down the decoding process.
+
+The high memory bandwidth requirements of LLM decoding further exacerbate this issue. Decoding often involves large matrix operations, such as attention mechanisms, which require continuous data flow between memory and the GPU's memory interface. This constant data movement can bottleneck the GPU, especially when the data size exceeds the available memory.
+
+Additionally, the need for frequent memory accesses during decoding, such as loading and storing token sequences or attention weights, increases the overall latency. This results in a memory-bandwidth bottleneck, where the GPU struggles to keep up with the data throughput required for efficient decoding.
+
+[int8 + graph] 185 tokens, TTFT 57 ms, decode 108.3 tok/s, GPU memory 3.35 GiB peak (incl. load)
+
+Checking against bf16 (Hugging Face generate, static cache) ...
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   9%|▉         | 28/311 [00:00<00:01, 219.45it/s]Loading weights:  16%|█▌        | 50/311 [00:00<00:01, 182.38it/s]Loading weights:  32%|███▏      | 99/311 [00:00<00:00, 273.92it/s]Loading weights:  41%|████      | 128/311 [00:00<00:00, 260.61it/s]Loading weights:  51%|█████     | 159/311 [00:00<00:00, 273.25it/s]Loading weights:  60%|██████    | 187/311 [00:00<00:00, 251.32it/s]Loading weights:  69%|██████▉   | 214/311 [00:00<00:00, 256.31it/s]Loading weights:  79%|███████▉  | 245/311 [00:00<00:00, 253.08it/s]Loading weights:  87%|████████▋ | 272/311 [00:01<00:00, 257.37it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 267.17it/s]
+W1031 18:27:54.217000 45336 .venv\Lib\site-packages\torch\_inductor\utils.py:1731] [1/0] Not enough SMs to use max_autotune_gemm mode
+[bf16 reference] first 46 of 172 tokens identical to int8 (diverges later; int8 is approximate)

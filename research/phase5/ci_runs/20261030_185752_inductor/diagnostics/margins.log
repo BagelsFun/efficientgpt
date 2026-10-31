@@ -1,0 +1,6 @@
+W1030 18:54:53.864000 22828 Lib\site-packages\torch\_inductor\utils.py:1731] [1/0] Not enough SMs to use max_autotune_gemm mode
+number of parameters: 12.19M
+divergent sequences: 8/288
+ref top1-top2 margin at first divergence: ['1.7e-05', '1.9e-04', '2.4e-04', '3.1e-04', '3.5e-04', '3.7e-04', '4.3e-04', '9.7e-04']
+compiled-vs-eager max |logit diff| per batch: min 2.3e-03 max 6.1e-03
+typical last-position margins: p1 2.0e-02 median 1.3e+00

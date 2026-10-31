@@ -1,0 +1,27 @@
+test_against_fp64 (research.phase5.test_graph_gpu.TestDecodeAttention.test_against_fp64) ... ok
+test_compiled_triton_pool_within_near_tie_rule (research.phase5.test_graph_gpu.TestDecodeAttention.test_compiled_triton_pool_within_near_tie_rule)
+Inductor-compiled step with the Triton attention inside, captured in the CUDA graph. ... <HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\jit\_script.py:365: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+ok
+test_never_reads_past_position (research.phase5.test_graph_gpu.TestDecodeAttention.test_never_reads_past_position)
+NaN-poisoned slots after the position must not affect the output. ... ok
+test_triton_graph_pools_within_near_tie_rule (research.phase5.test_graph_gpu.TestDecodeAttention.test_triton_graph_pools_within_near_tie_rule) ... ok
+test_clear_speedup_is_win (research.phase5.test_analyze_ci.TestRatioCI.test_clear_speedup_is_win) ... ok
+test_deterministic_for_seed (research.phase5.test_analyze_ci.TestRatioCI.test_deterministic_for_seed) ... ok
+test_identical_distributions_inconclusive (research.phase5.test_analyze_ci.TestRatioCI.test_identical_distributions_inconclusive) ... ok
+test_raw_csv_round_trip_and_aa_label (research.phase5.test_analyze_ci.TestRatioCI.test_raw_csv_round_trip_and_aa_label) ... ok
+test_round_drift_widens_interval (research.phase5.test_analyze_ci.TestRatioCI.test_round_drift_widens_interval) ... ok
+test_slower_and_small_gain (research.phase5.test_analyze_ci.TestRatioCI.test_slower_and_small_gain) ... ok
+test_unequal_round_sizes_rejected (research.phase5.test_analyze_ci.TestRatioCI.test_unequal_round_sizes_rejected) ... ok
+test_comparisons_use_contract_direction_and_cover_first_mode (research.phase5.test_inprocess.TestInProcessHelpers.test_comparisons_use_contract_direction_and_cover_first_mode) ... ok
+test_rotation_balances_positions (research.phase5.test_inprocess.TestInProcessHelpers.test_rotation_balances_positions) ... ok
+test_rotation_two_modes_alternates (research.phase5.test_inprocess.TestInProcessHelpers.test_rotation_two_modes_alternates) ... ok
+test_unknown_pair_falls_back_to_first_mode_baseline (research.phase5.test_inprocess.TestInProcessHelpers.test_unknown_pair_falls_back_to_first_mode_baseline) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 7.031s
+
+OK
+number of parameters: 0.41M
+number of parameters: 0.41M
+number of parameters: 12.19M

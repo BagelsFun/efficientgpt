@@ -1,0 +1,89 @@
+{
+  "backend": "hf:Qwen/Qwen3-1.7B",
+  "quant": "bf16",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "think": false,
+  "protocol": "assistant-quality-v1",
+  "decoding": "greedy (temperature 0)",
+  "gpu_used_before_load_mib": 3094.0,
+  "load_s": 8.33,
+  "speed": {
+    "short": {
+      "prompt_tokens": 28,
+      "completion_tokens": [
+        256,
+        256,
+        256
+      ],
+      "ttft_s_median": 0.08724320004694164,
+      "decode_tok_s_median": 23.197985701478522,
+      "decode_tok_s_all": [
+        23.08,
+        23.2,
+        23.68
+      ],
+      "prompt_tok_s_median": NaN,
+      "total_s_median": 11.079115000087768,
+      "timing_source": "client wall clock (streamer)"
+    },
+    "medium": {
+      "prompt_tokens": 659,
+      "completion_tokens": [
+        256,
+        256,
+        256
+      ],
+      "ttft_s_median": 0.20057069999165833,
+      "decode_tok_s_median": 23.10177724422878,
+      "decode_tok_s_all": [
+        23.95,
+        23.1,
+        17.48
+      ],
+      "prompt_tok_s_median": NaN,
+      "total_s_median": 11.23868249997031,
+      "timing_source": "client wall clock (streamer)"
+    },
+    "long": {
+      "prompt_tokens": 2143,
+      "completion_tokens": [
+        256,
+        256,
+        256
+      ],
+      "ttft_s_median": 1.1911037000827491,
+      "decode_tok_s_median": 16.906013497457998,
+      "decode_tok_s_all": [
+        16.87,
+        16.91,
+        16.91
+      ],
+      "prompt_tok_s_median": NaN,
+      "total_s_median": 16.269489200087264,
+      "timing_source": "client wall clock (streamer)"
+    }
+  },
+  "quality_limits": {
+    "code": 768,
+    "math": 512,
+    "mcq": 48
+  },
+  "quality": {
+    "dev/code": "5/8",
+    "dev/math": "7/8",
+    "dev/mcq": "9/10",
+    "dev/all": "21/26",
+    "test/code": "4/8",
+    "test/math": "5/8",
+    "test/mcq": "8/10",
+    "test/all": "17/26",
+    "all/code": "9/16",
+    "all/math": "12/16",
+    "all/mcq": "17/20",
+    "all/all": "38/52"
+  },
+  "gpu_used_after_mib": 7528.0,
+  "torch_peak_allocated_mib": 4292.2,
+  "torch_peak_reserved_mib": 4422.0,
+  "process_device_used_mib": 4452.0
+}

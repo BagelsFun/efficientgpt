@@ -1,0 +1,234 @@
+{
+ "protocol": "kernelagent-ada/eval-v2",
+ "task": "argmax",
+ "split": "heldout",
+ "first_pass_s": 0.375,
+ "import_s": 0.064,
+ "correctness": [
+  {
+   "shape": [
+    4,
+    4096
+   ],
+   "seed": 0,
+   "edge": null,
+   "ok": true,
+   "mismatches": 0
+  },
+  {
+   "shape": [
+    4,
+    4096
+   ],
+   "seed": 1,
+   "edge": null,
+   "ok": true,
+   "mismatches": 0
+  },
+  {
+   "shape": [
+    4,
+    4096
+   ],
+   "seed": 0,
+   "edge": "dupmax",
+   "ok": true,
+   "mismatches": 0
+  },
+  {
+   "shape": [
+    4,
+    4096
+   ],
+   "seed": 0,
+   "edge": "large",
+   "ok": true,
+   "mismatches": 0
+  },
+  {
+   "shape": [
+    64,
+    4096
+   ],
+   "seed": 0,
+   "edge": null,
+   "ok": true,
+   "mismatches": 0
+  },
+  {
+   "shape": [
+    64,
+    4096
+   ],
+   "seed": 1,
+   "edge": null,
+   "ok": true,
+   "mismatches": 0
+  },
+  {
+   "shape": [
+    64,
+    4096
+   ],
+   "seed": 0,
+   "edge": "dupmax",
+   "ok": true,
+   "mismatches": 0
+  },
+  {
+   "shape": [
+    64,
+    4096
+   ],
+   "seed": 0,
+   "edge": "large",
+   "ok": true,
+   "mismatches": 0
+  },
+  {
+   "shape": [
+    16,
+    8192
+   ],
+   "seed": 0,
+   "edge": null,
+   "ok": true,
+   "mismatches": 0
+  },
+  {
+   "shape": [
+    16,
+    8192
+   ],
+   "seed": 1,
+   "edge": null,
+   "ok": true,
+   "mismatches": 0
+  },
+  {
+   "shape": [
+    16,
+    8192
+   ],
+   "seed": 0,
+   "edge": "dupmax",
+   "ok": true,
+   "mismatches": 0
+  },
+  {
+   "shape": [
+    16,
+    8192
+   ],
+   "seed": 0,
+   "edge": "large",
+   "ok": true,
+   "mismatches": 0
+  }
+ ],
+ "launch_metadata": [
+  {
+   "n_regs": 29,
+   "n_spills": 0,
+   "shared_bytes": 64,
+   "num_warps": 8
+  },
+  {
+   "n_regs": 29,
+   "n_spills": 0,
+   "shared_bytes": 64,
+   "num_warps": 8
+  },
+  {
+   "n_regs": 29,
+   "n_spills": 0,
+   "shared_bytes": 64,
+   "num_warps": 8
+  },
+  {
+   "n_regs": 29,
+   "n_spills": 0,
+   "shared_bytes": 64,
+   "num_warps": 8
+  }
+ ],
+ "status": "correct",
+ "gpu_before": {
+  "util_pct": 0.0,
+  "mem_used_mib": 1114.0
+ },
+ "contended": false,
+ "performance": {
+  "4x4096": {
+   "failed": {},
+   "median_ms": {
+    "candidate": 0.0011468800157308579,
+    "eager": 0.003998720049858093,
+    "inductor": 0.0014641599357128143
+   },
+   "roofline_fraction": 0.27081922445058376,
+   "speedup_vs_eager": {
+    "ratio": 3.4866071385068813,
+    "ci_low": 3.4821428188605554,
+    "ci_high": 3.5089284768828857,
+    "class": "WIN"
+   },
+   "speedup_vs_inductor": {
+    "ratio": 1.2766461317924067,
+    "ci_low": 1.2743095100478867,
+    "ci_high": 1.2767856742633077,
+    "class": "WIN"
+   }
+  },
+  "64x4096": {
+   "failed": {},
+   "median_ms": {
+    "candidate": 0.0019302399456501008,
+    "eager": 0.010484240055084228,
+    "inductor": 0.0026977598667144776
+   },
+   "roofline_fraction": 2.57457862353788,
+   "speedup_vs_eager": {
+    "ratio": 5.4315734573367545,
+    "ci_low": 5.3604794360866155,
+    "ci_high": 5.76259966228748,
+    "class": "WIN"
+   },
+   "speedup_vs_inductor": {
+    "ratio": 1.397629280646701,
+    "ci_low": 1.3860342487287012,
+    "ci_high": 1.4120524292010703,
+    "class": "WIN"
+   }
+  },
+  "16x8192": {
+   "failed": {},
+   "median_ms": {
+    "candidate": 0.001520639955997467,
+    "eager": 0.0030822399258613586,
+    "inductor": 0.0021587999910116194
+   },
+   "roofline_fraction": 1.634033908805809,
+   "speedup_vs_eager": {
+    "ratio": 2.0269360368342793,
+    "ci_low": 2.0265152561891697,
+    "ci_high": 2.0297831112269846,
+    "class": "WIN"
+   },
+   "speedup_vs_inductor": {
+    "ratio": 1.4196654392101318,
+    "ci_low": 1.4175084729386305,
+    "ci_high": 1.4343435204582295,
+    "class": "WIN"
+   }
+  }
+ },
+ "id": "9e2c5095e731b494",
+ "trials": 8,
+ "wall_s": 4.8,
+ "family": "row_whole",
+ "params": {
+  "WARPS": 8
+ },
+ "chosen_by": "local"
+}

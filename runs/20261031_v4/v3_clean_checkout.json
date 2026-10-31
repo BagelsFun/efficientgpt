@@ -1,0 +1,47 @@
+{
+ "commit": "<private-commit>",
+ "worktree": "<HOME>\\AppData\\Local\\Temp\\efficientgpt_clean_3wl4bal2",
+ "python": "<HOME>\\AI-Models\\nanoGPT\\.venv\\Scripts\\python.exe",
+ "inputs": {
+  "out-tinystories-v2/baseline-2500.pt": {
+   "sha256": "c37c1d3410bc96f76e554619290b3a7ec70181d72a8213ca2f0c69c8094ea3a0",
+   "policy": "manifest",
+   "ok": true
+  },
+  "data/tinystories_v2/tokenizer.json": {
+   "sha256": "210e7e96db26bff1abfa8a834ec7618ab83f71320b00fc4fd56fc8c58c0441e3",
+   "policy": "record",
+   "ok": true
+  }
+ },
+ "suites": {
+  "phase5": {
+   "returncode": 1,
+   "ran": 86,
+   "failures": 0,
+   "errors": 1,
+   "skipped": 0,
+   "seconds": 83.9,
+   "tail": "n test_ragged_eos_lengths_match_per_row\n    stories = story_starts('data/tinystories_v2/val.bin', 0, 64, 16)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<HOME>\\AppData\\Local\\Temp\\efficientgpt_clean_3wl4bal2\\research\\phase5\\ragged_study.py\", line 34, in story_starts\n    data = np.fromfile(path, dtype=np.uint16)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'data/tinystories_v2/val.bin'\n\n----------------------------------------------------------------------\nRan 86 tests in 80.931s\n\nFAILED (errors=1)\n"
+  },
+  "kernelagent_realmodel": {
+   "returncode": 0,
+   "ran": 30,
+   "failures": 0,
+   "errors": 0,
+   "skipped": 0,
+   "seconds": 59.3,
+   "tail": "d=True to a scalar may lead to unexpected behavior.\nConsider using tensor.detach() first. (Triggered internally at C:\\actions-runner\\_work\\pytorch\\pytorch\\pytorch\\torch\\csrc\\autograd\\generated\\python_variable_methods.cpp:837.)\n  self.assertLess(float((net(x).float() - ref).abs().max()), 0.05 * float(ref.abs().max()) + 1e-2)\n.W1031 16:25:54.160000 42912 Lib\\site-packages\\torch\\distributed\\elastic\\multiprocessing\\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.\n...\n----------------------------------------------------------------------\nRan 30 tests in 57.063s\n\nOK\n"
+  },
+  "assistant": {
+   "returncode": 0,
+   "ran": 32,
+   "failures": 0,
+   "errors": 0,
+   "skipped": 0,
+   "seconds": 12.1,
+   "tail": ".............................<HOME>\\AppData\\Local\\Temp\\efficientgpt_clean_3wl4bal2\\assistant\\bench\\distill_eval.py:21: ResourceWarning: unclosed file <_io.TextIOWrapper name='<HOME>\\\\AppData\\\\Local\\\\Temp\\\\tmp8jmy1xul\\\\data.jsonl' mode='r' encoding='utf-8'>\n  rows = [json.loads(l) for l in data.open(encoding='utf-8') if l.strip()]\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n...\n----------------------------------------------------------------------\nRan 32 tests in 11.658s\n\nOK\n"
+  }
+ },
+ "all_passed": false
+}

@@ -1,0 +1,172 @@
+{
+ "speed": [
+  {
+   "mode": "bf16_static",
+   "rounds": 4,
+   "tok_s_round_medians": [
+    62.75,
+    63.17,
+    63.13,
+    63.19
+   ],
+   "tok_s": 63.150000000000006,
+   "ratio": 1.0,
+   "ci": [
+    0.9936658749010292,
+    1.006374501992032
+   ],
+   "paired_min_max": [
+    1.0,
+    1.0
+   ],
+   "ttft_ms": 43.75449998769909,
+   "serving_peak_mib": 3346.0,
+   "device_used_mib": 3438.0,
+   "weights_mib": 3282.3,
+   "load_peak_mib": 3282.3,
+   "first_call_s": 5.5,
+   "contended": false,
+   "itl_ms_p50": 15.718350012321025,
+   "itl_ms_p95": 16.369899967685342,
+   "e2e_s": 4.081702800001949,
+   "reserved_mib": 3378.0,
+   "load_s": 4.93,
+   "all_256_tokens": true
+  },
+  {
+   "mode": "int8_graph",
+   "rounds": 4,
+   "tok_s_round_medians": [
+    117.09,
+    117.31,
+    117.32,
+    117.31
+   ],
+   "tok_s": 117.31,
+   "ratio": 1.8576405384006334,
+   "ci": [
+    1.8541567695961994,
+    1.8694820717131475
+   ],
+   "paired_min_max": [
+    1.8564646304795063,
+    1.86597609561753
+   ],
+   "ttft_ms": 52.886600082274526,
+   "serving_peak_mib": 2342.4,
+   "device_used_mib": 2474.0,
+   "weights_mib": 2237.8,
+   "load_peak_mib": 3426.3,
+   "first_call_s": 5.87,
+   "contended": false,
+   "itl_ms_p50": 8.487600018270314,
+   "itl_ms_p95": 8.546049997676164,
+   "e2e_s": 2.228008750011213,
+   "reserved_mib": 2424.0,
+   "load_s": 6.61,
+   "all_256_tokens": true
+  },
+  {
+   "mode": "torchao_int8_static_at",
+   "rounds": 4,
+   "tok_s_round_medians": [
+    90.41,
+    90.54,
+    89.11,
+    90.85
+   ],
+   "tok_s": 90.475,
+   "ratio": 1.4326999208234361,
+   "ci": [
+    1.4110847189231985,
+    1.4428685258964145
+   ],
+   "paired_min_max": [
+    1.411531759860605,
+    1.4407968127490038
+   ],
+   "ttft_ms": 65.55369996931404,
+   "serving_peak_mib": 2875.5,
+   "device_used_mib": 3430.0,
+   "weights_mib": 2238.5,
+   "load_peak_mib": 4911.7,
+   "first_call_s": 32.79,
+   "contended": false,
+   "itl_ms_p50": 10.847800062038004,
+   "itl_ms_p95": 12.02329999068752,
+   "e2e_s": 2.883666100038681,
+   "reserved_mib": 3360.0,
+   "load_s": 5.11,
+   "all_256_tokens": true
+  },
+  {
+   "mode": "llamacpp_q8",
+   "rounds": 4,
+   "tok_s_round_medians": [
+    115.83,
+    116.02,
+    116.1,
+    116.04
+   ],
+   "tok_s": 116.03,
+   "ratio": 1.837371338083927,
+   "ci": [
+    1.8342042755344417,
+    1.8490836653386455
+   ],
+   "paired_min_max": [
+    1.836366513688875,
+    1.8458964143426295
+   ],
+   "ttft_ms": 31.650800025090575,
+   "serving_peak_mib": 2300.3,
+   "device_used_mib": 2423.0,
+   "weights_mib": null,
+   "load_peak_mib": null,
+   "first_call_s": 7.21,
+   "contended": false,
+   "itl_ms_p50": 8.572800026740879,
+   "itl_ms_p95": 8.929750008974224,
+   "e2e_s": 2.228665450005792,
+   "reserved_mib": null,
+   "load_s": null,
+   "all_256_tokens": true
+  }
+ ],
+ "quality": {},
+ "pairs": {
+  "bf16_static": {
+   "ratio": 1.8576405384006334,
+   "ci": [
+    1.8541567695961994,
+    1.8694820717131475
+   ],
+   "paired": [
+    1.8564646304795063,
+    1.86597609561753
+   ]
+  },
+  "torchao_int8_static_at": {
+   "ratio": 1.2966012710693562,
+   "ci": [
+    1.2912493120528346,
+    1.3164627987880149
+   ],
+   "paired": [
+    1.2912493120528346,
+    1.3165750196386488
+   ]
+  },
+  "llamacpp_q8": {
+   "ratio": 1.0110316297509265,
+   "ci": [
+    1.009135568387486,
+    1.0127773461106795
+   ],
+   "paired": [
+    1.010508182601206,
+    1.0111187726254094
+   ]
+  }
+ }
+}

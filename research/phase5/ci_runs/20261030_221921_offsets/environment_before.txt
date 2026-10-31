@@ -1,0 +1,2 @@
+commit <private-commit> + uncommitted offset_study.py, startup_study.py
+NVIDIA GeForce RTX 4060, 617.14, 47, 2805 MHz, 8501 MHz, 2830 MiB

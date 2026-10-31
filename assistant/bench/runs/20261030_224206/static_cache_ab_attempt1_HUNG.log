@@ -1,0 +1,76 @@
+W1031 00:58:02.134000 38720 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   6%|5         | 18/311 [00:00<00:01, 156.60it/s]Loading weights:  11%|#         | 34/311 [00:00<00:02, 122.84it/s]Loading weights:  15%|#5        | 47/311 [00:00<00:02, 122.87it/s]Loading weights:  19%|#9        | 60/311 [00:00<00:02, 120.53it/s]Loading weights:  23%|##3       | 73/311 [00:00<00:02, 108.54it/s]Loading weights:  27%|##7       | 85/311 [00:00<00:02, 94.06it/s] Loading weights:  31%|###       | 95/311 [00:00<00:02, 85.30it/s]Loading weights:  33%|###3      | 104/311 [00:01<00:02, 83.69it/s]Loading weights:  36%|###6      | 113/311 [00:01<00:02, 85.29it/s]Loading weights:  40%|###9      | 123/311 [00:01<00:02, 85.13it/s]Loading weights:  42%|####2     | 132/311 [00:01<00:02, 85.75it/s]Loading weights:  45%|####5     | 141/311 [00:01<00:02, 79.08it/s]Loading weights:  49%|####9     | 153/311 [00:01<00:01, 82.96it/s]Loading weights:  54%|#####3    | 167/311 [00:01<00:01, 92.92it/s]Loading weights: 100%|##########| 311/311 [00:01<00:00, 172.89it/s]
+W1031 00:58:23.792000 38720 .venv\Lib\site-packages\torch\_inductor\utils.py:1731] [0/0] Not enough SMs to use max_autotune_gemm mode
+Exception in thread Thread-4 (work):
+Traceback (most recent call last):
+  File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "<HOME>\AI-Models\nanoGPT\assistant\backends.py", line 178, in work
+    out['seq'] = self.model.generate(**ids, **gen)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\transformers\generation\utils.py", line 3000, in generate
+    result = decoding_method(
+             ^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\transformers\generation\utils.py", line 3228, in _sample
+    outputs = model_forward(**model_inputs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_dynamo\eval_frame.py", line 1024, in compile_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\transformers\utils\generic.py", line 937, in wrapper
+    @wraps(func)
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_dynamo\eval_frame.py", line 1263, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_functorch\aot_autograd.py", line 1200, in forward
+    return compiled_fn(full_args)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_functorch\_aot_autograd\runtime_wrappers.py", line 580, in runtime_wrapper
+    all_outs = call_func_at_runtime_with_args(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_functorch\_aot_autograd\utils.py", line 138, in call_func_at_runtime_with_args
+    out = normalize_as_list(f(args))
+                            ^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_functorch\_aot_autograd\runtime_wrappers.py", line 2298, in __call__
+    return self.compiled_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_functorch\_aot_autograd\runtime_wrappers.py", line 783, in wrapper
+    return compiled_fn(runtime_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_functorch\_aot_autograd\runtime_wrappers.py", line 1011, in inner_fn
+    outs = compiled_fn(args)
+           ^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_inductor\output_code.py", line 656, in __call__
+    return self.current_callable(inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AppData\Local\Temp\torchinductor_<user>\6f\c6fyjdzikzelui2guvzplbt4im7ejggshnryzpbhfp7wiivkazp3.py", line 4746, in call
+    (buf772,) = self.partitions[0](partition0_args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_inductor\compile_fx.py", line 1875, in run
+    return compiled_fn(new_inputs)  # type: ignore[arg-type]
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_inductor\cudagraph_trees.py", line 436, in deferred_cudagraphify
+    fn, out = cudagraphify(model, inputs, new_static_input_idxs, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_inductor\cudagraph_trees.py", line 494, in cudagraphify
+    manager = get_container(device_index).get_tree_manager()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_inductor\cudagraph_trees.py", line 364, in get_container
+    container_dict = get_obj(local, "tree_manager_containers")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_inductor\cudagraph_trees.py", line 359, in get_obj
+    assert torch._C._is_key_in_tls(attr_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+static ab rc=124 3600s

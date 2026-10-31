@@ -1,0 +1,41 @@
+W1031 00:40:03.283000 10616 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<02:52,  1.80it/s]Loading weights:   1%|          | 2/311 [00:01<02:44,  1.88it/s]Loading weights:   1%|1         | 4/311 [00:01<01:12,  4.23it/s]Loading weights:   5%|5         | 16/311 [00:01<00:13, 22.67it/s]Loading weights:   9%|9         | 28/311 [00:01<00:07, 39.98it/s]Loading weights:  14%|#4        | 45/311 [00:01<00:03, 66.74it/s]Loading weights:  19%|#8        | 59/311 [00:01<00:03, 82.10it/s]Loading weights:  23%|##2       | 71/311 [00:01<00:02, 90.15it/s]Loading weights:  27%|##6       | 83/311 [00:01<00:02, 96.41it/s]Loading weights:  32%|###2      | 101/311 [00:01<00:01, 118.37it/s]Loading weights:  37%|###6      | 115/311 [00:02<00:01, 111.60it/s]Loading weights:  41%|####1     | 128/311 [00:02<00:01, 116.04it/s]Loading weights:  47%|####7     | 147/311 [00:02<00:01, 130.75it/s]Loading weights:  52%|#####1    | 161/311 [00:02<00:01, 125.21it/s]Loading weights:  57%|#####7    | 178/311 [00:02<00:00, 136.63it/s]Loading weights:  62%|######2   | 193/311 [00:02<00:00, 123.24it/s]Loading weights:  68%|######7   | 211/311 [00:02<00:00, 137.59it/s]Loading weights:  73%|#######2  | 226/311 [00:02<00:00, 122.66it/s]Loading weights:  78%|#######8  | 244/311 [00:03<00:00, 136.98it/s]Loading weights:  83%|########3 | 259/311 [00:03<00:00, 124.89it/s]Loading weights:  90%|########9 | 279/311 [00:03<00:00, 138.08it/s]Loading weights:  95%|#########4| 294/311 [00:03<00:00, 132.83it/s]Loading weights: 100%|##########| 311/311 [00:03<00:00, 89.06it/s] 
+train 9 val 2 trainable 17,432,576 steps 5 val_loss_before 0.6434
+[transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_dynamo\eval_frame.py:1263: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. Starting in PyTorch 2.9, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+<HOME>\AI-Models\nanoGPT\assistant\train\train_qlora.py:105: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:837.)
+  acc += float(loss)
+{"step": 1, "train_loss": 0.3396, "lr": 0.00016, "elapsed_s": 1.1}
+{"step": 2, "train_loss": 0.9617, "lr": 0.00012, "elapsed_s": 2.3}
+{"step": 3, "train_loss": 0.8796, "lr": 8e-05, "elapsed_s": 3.2}
+{"step": 4, "train_loss": 0.9794, "lr": 3.999999999999999e-05, "elapsed_s": 5.1}
+{"step": 5, "train_loss": 0.7305, "lr": 0.0, "elapsed_s": 7.0, "val_loss": 0.4044}
+{
+ "model": "Qwen/Qwen3-1.7B",
+ "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+ "data": "results\\assistant\\data\\distill_v1.jsonl",
+ "train_examples": 9,
+ "val_examples": 2,
+ "trainable_params": 17432576,
+ "args": {
+  "data": "results\\assistant\\data\\distill_v1.jsonl",
+  "out": "out-assistant\\SMOKE-qlora-v1data-20261031_003959",
+  "epochs": "2.0",
+  "lr": "0.0002",
+  "rank": "16",
+  "alpha": "32",
+  "accum": "2",
+  "max_len": "1024",
+  "val_frac": "0.2",
+  "seed": "0",
+  "max_steps": "5"
+ },
+ "val_loss_before": 0.6433886140584946,
+ "val_loss_after": 0.40435680747032166,
+ "peak_allocated_mib": 3435.7,
+ "peak_reserved_mib": 3816.0,
+ "train_seconds": 7.6
+}
+smoke rc=0 21s

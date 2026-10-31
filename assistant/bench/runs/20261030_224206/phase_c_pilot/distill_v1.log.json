@@ -1,0 +1,656 @@
+{
+  "summary": {
+    "requests": 80,
+    "kept": 11,
+    "teacher": "qwen3.5:4b",
+    "seed": 0,
+    "outcomes": {
+      "invalid json": 30,
+      "kept": 11,
+      "solution failed its tests": 39
+    },
+    "seconds": 1295.7
+  },
+  "log": [
+    {
+      "k": 0,
+      "topic": "string processing",
+      "difficulty": "hard",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 339
+    },
+    {
+      "k": 1,
+      "topic": "parsing and validation",
+      "difficulty": "hard",
+      "status": "kept",
+      "name": "validate_iso_date",
+      "teacher_tokens": 538
+    },
+    {
+      "k": 2,
+      "topic": "lists and dictionaries",
+      "difficulty": "easy",
+      "status": "kept",
+      "name": "unique_key_value_pairs",
+      "teacher_tokens": 382
+    },
+    {
+      "k": 3,
+      "topic": "sorting and searching",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 589
+    },
+    {
+      "k": 4,
+      "topic": "math and number theory",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "primes_to_powerset_generator",
+      "teacher_tokens": 604
+    },
+    {
+      "k": 5,
+      "topic": "numerics with floats (stability, rounding)",
+      "difficulty": "hard",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 612
+    },
+    {
+      "k": 6,
+      "topic": "dates and durations (pure arithmetic, no datetime import needed)",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 7,
+      "topic": "matrix and vector math on nested lists",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "compute_nested_vector_projection",
+      "teacher_tokens": 461
+    },
+    {
+      "k": 8,
+      "topic": "GPU performance arithmetic (bandwidth, FLOPs, occupancy, memory sizes)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "gpu_efficiency_analyzer",
+      "teacher_tokens": 648
+    },
+    {
+      "k": 9,
+      "topic": "transformer shape and memory arithmetic (parameters, KV cache, activations)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "transformer_layer_memory_footprint",
+      "teacher_tokens": 731
+    },
+    {
+      "k": 10,
+      "topic": "bit manipulation",
+      "difficulty": "medium",
+      "status": "solution failed its tests: ValueError: invalid literal for int() with base 2: '1b0'",
+      "name": "inverted_bits_reverse",
+      "teacher_tokens": 287
+    },
+    {
+      "k": 11,
+      "topic": "simple algorithms on graphs given as adjacency dicts",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 12,
+      "topic": "statistics (mean, median, percentiles, variance)",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 736
+    },
+    {
+      "k": 13,
+      "topic": "PyTorch tensor operations (the function receives and returns torch tensors; import torch inside the function)",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "tensor_gradient_trace",
+      "teacher_tokens": 410
+    },
+    {
+      "k": 14,
+      "topic": "string processing",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "word_reverse_map",
+      "teacher_tokens": 585
+    },
+    {
+      "k": 15,
+      "topic": "parsing and validation",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 842
+    },
+    {
+      "k": 16,
+      "topic": "lists and dictionaries",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "deduplicate_by_key",
+      "teacher_tokens": 604
+    },
+    {
+      "k": 17,
+      "topic": "sorting and searching",
+      "difficulty": "easy",
+      "status": "kept",
+      "name": "find_first_occurrence",
+      "teacher_tokens": 284
+    },
+    {
+      "k": 18,
+      "topic": "math and number theory",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "sum_of_coprime_divisors",
+      "teacher_tokens": 343
+    },
+    {
+      "k": 19,
+      "topic": "numerics with floats (stability, rounding)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "stable_sum_floats",
+      "teacher_tokens": 315
+    },
+    {
+      "k": 20,
+      "topic": "dates and durations (pure arithmetic, no datetime import needed)",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "day_of_week_from_offset",
+      "teacher_tokens": 898
+    },
+    {
+      "k": 21,
+      "topic": "matrix and vector math on nested lists",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "matrix_vector_dot_nested",
+      "teacher_tokens": 407
+    },
+    {
+      "k": 22,
+      "topic": "GPU performance arithmetic (bandwidth, FLOPs, occupancy, memory sizes)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "gpu_compute_metrics",
+      "teacher_tokens": 633
+    },
+    {
+      "k": 23,
+      "topic": "transformer shape and memory arithmetic (parameters, KV cache, activations)",
+      "difficulty": "hard",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 24,
+      "topic": "bit manipulation",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "rotate_left_bits",
+      "teacher_tokens": 520
+    },
+    {
+      "k": 25,
+      "topic": "simple algorithms on graphs given as adjacency dicts",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "bfs_pathfinder",
+      "teacher_tokens": 464
+    },
+    {
+      "k": 26,
+      "topic": "statistics (mean, median, percentiles, variance)",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "robust_quantile_estimator",
+      "teacher_tokens": 575
+    },
+    {
+      "k": 27,
+      "topic": "PyTorch tensor operations (the function receives and returns torch tensors; import torch inside the function)",
+      "difficulty": "hard",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 28,
+      "topic": "string processing",
+      "difficulty": "medium",
+      "status": "solution failed its tests: SyntaxError: unterminated string literal (detected at line 18)",
+      "name": "string_to_hex_digest",
+      "teacher_tokens": 338
+    },
+    {
+      "k": 29,
+      "topic": "parsing and validation",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "validate_phone_schema",
+      "teacher_tokens": 483
+    },
+    {
+      "k": 30,
+      "topic": "lists and dictionaries",
+      "difficulty": "easy",
+      "status": "kept",
+      "name": "aggregate_stats",
+      "teacher_tokens": 477
+    },
+    {
+      "k": 31,
+      "topic": "sorting and searching",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "staircase_index_finder",
+      "teacher_tokens": 392
+    },
+    {
+      "k": 32,
+      "topic": "math and number theory",
+      "difficulty": "hard",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 33,
+      "topic": "numerics with floats (stability, rounding)",
+      "difficulty": "easy",
+      "status": "kept",
+      "name": "safe_subtract_floats",
+      "teacher_tokens": 403
+    },
+    {
+      "k": 34,
+      "topic": "dates and durations (pure arithmetic, no datetime import needed)",
+      "difficulty": "hard",
+      "status": "kept",
+      "name": "leap_year_gap_sum",
+      "teacher_tokens": 827
+    },
+    {
+      "k": 35,
+      "topic": "matrix and vector math on nested lists",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "nested_vector_sum",
+      "teacher_tokens": 379
+    },
+    {
+      "k": 36,
+      "topic": "GPU performance arithmetic (bandwidth, FLOPs, occupancy, memory sizes)",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 37,
+      "topic": "transformer shape and memory arithmetic (parameters, KV cache, activations)",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 38,
+      "topic": "bit manipulation",
+      "difficulty": "easy",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 345
+    },
+    {
+      "k": 39,
+      "topic": "simple algorithms on graphs given as adjacency dicts",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 40,
+      "topic": "statistics (mean, median, percentiles, variance)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: ValueError: Data cannot be empty",
+      "name": "robust_sample_percentile",
+      "teacher_tokens": 507
+    },
+    {
+      "k": 41,
+      "topic": "PyTorch tensor operations (the function receives and returns torch tensors; import torch inside the function)",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 694
+    },
+    {
+      "k": 42,
+      "topic": "string processing",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "reversed_segment_reducer",
+      "teacher_tokens": 735
+    },
+    {
+      "k": 43,
+      "topic": "parsing and validation",
+      "difficulty": "hard",
+      "status": "solution failed its tests: refused: code uses a disallowed module or builtin",
+      "name": "parse_and_validate_complex_expression",
+      "teacher_tokens": 748
+    },
+    {
+      "k": 44,
+      "topic": "lists and dictionaries",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "unique_pair_counter",
+      "teacher_tokens": 334
+    },
+    {
+      "k": 45,
+      "topic": "sorting and searching",
+      "difficulty": "easy",
+      "status": "kept",
+      "name": "find_median_split",
+      "teacher_tokens": 244
+    },
+    {
+      "k": 46,
+      "topic": "math and number theory",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 47,
+      "topic": "numerics with floats (stability, rounding)",
+      "difficulty": "hard",
+      "status": "solution failed its tests: TypeError: unsupported operand type(s) for -: 'float' and 'decimal.Decimal'",
+      "name": "cumulative_drift_detector",
+      "teacher_tokens": 539
+    },
+    {
+      "k": 48,
+      "topic": "dates and durations (pure arithmetic, no datetime import needed)",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "add_months",
+      "teacher_tokens": 569
+    },
+    {
+      "k": 49,
+      "topic": "matrix and vector math on nested lists",
+      "difficulty": "medium",
+      "status": "solution failed its tests: SyntaxError: invalid syntax",
+      "name": "nested_dot_product",
+      "teacher_tokens": 505
+    },
+    {
+      "k": 50,
+      "topic": "GPU performance arithmetic (bandwidth, FLOPs, occupancy, memory sizes)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "gpu_compute_benchmark",
+      "teacher_tokens": 622
+    },
+    {
+      "k": 51,
+      "topic": "transformer shape and memory arithmetic (parameters, KV cache, activations)",
+      "difficulty": "easy",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 52,
+      "topic": "bit manipulation",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 53,
+      "topic": "simple algorithms on graphs given as adjacency dicts",
+      "difficulty": "medium",
+      "status": "solution failed its tests: SyntaxError: invalid syntax",
+      "name": "find_isolated_cycles",
+      "teacher_tokens": 453
+    },
+    {
+      "k": 54,
+      "topic": "statistics (mean, median, percentiles, variance)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: SyntaxError: unmatched '}'",
+      "name": "quantile_resistance_estimator",
+      "teacher_tokens": 563
+    },
+    {
+      "k": 55,
+      "topic": "PyTorch tensor operations (the function receives and returns torch tensors; import torch inside the function)",
+      "difficulty": "hard",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 657
+    },
+    {
+      "k": 56,
+      "topic": "string processing",
+      "difficulty": "easy",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 197
+    },
+    {
+      "k": 57,
+      "topic": "parsing and validation",
+      "difficulty": "hard",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 58,
+      "topic": "lists and dictionaries",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "inventory_audit",
+      "teacher_tokens": 526
+    },
+    {
+      "k": 59,
+      "topic": "sorting and searching",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "find_longest_palindromic_substring_start_end",
+      "teacher_tokens": 539
+    },
+    {
+      "k": 60,
+      "topic": "math and number theory",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 61,
+      "topic": "numerics with floats (stability, rounding)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "drift_buffer",
+      "teacher_tokens": 404
+    },
+    {
+      "k": 62,
+      "topic": "dates and durations (pure arithmetic, no datetime import needed)",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 63,
+      "topic": "matrix and vector math on nested lists",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 459
+    },
+    {
+      "k": 64,
+      "topic": "GPU performance arithmetic (bandwidth, FLOPs, occupancy, memory sizes)",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "compute_tensor_throughput",
+      "teacher_tokens": 524
+    },
+    {
+      "k": 65,
+      "topic": "transformer shape and memory arithmetic (parameters, KV cache, activations)",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 66,
+      "topic": "bit manipulation",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "rotate_and_mask",
+      "teacher_tokens": 671
+    },
+    {
+      "k": 67,
+      "topic": "simple algorithms on graphs given as adjacency dicts",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "find_cycle_in_undirected",
+      "teacher_tokens": 521
+    },
+    {
+      "k": 68,
+      "topic": "statistics (mean, median, percentiles, variance)",
+      "difficulty": "easy",
+      "status": "solution failed its tests: ImportError: cannot import name 'list' from 'typing' (<HOME>\\AppData\\Loc",
+      "name": "data_distribution_analyzer",
+      "teacher_tokens": 840
+    },
+    {
+      "k": 69,
+      "topic": "PyTorch tensor operations (the function receives and returns torch tensors; import torch inside the function)",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 70,
+      "topic": "string processing",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "reverse_adjacent_pairs",
+      "teacher_tokens": 399
+    },
+    {
+      "k": 71,
+      "topic": "parsing and validation",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "parse_csv_row",
+      "teacher_tokens": 422
+    },
+    {
+      "k": 72,
+      "topic": "lists and dictionaries",
+      "difficulty": "easy",
+      "status": "solution failed its tests: SyntaxError: invalid syntax",
+      "name": "build_contact_registry",
+      "teacher_tokens": 631
+    },
+    {
+      "k": 73,
+      "topic": "sorting and searching",
+      "difficulty": "hard",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 396
+    },
+    {
+      "k": 74,
+      "topic": "math and number theory",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "prime_digit_gap_sum",
+      "teacher_tokens": 435
+    },
+    {
+      "k": 75,
+      "topic": "numerics with floats (stability, rounding)",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "floating_point_sum_stability",
+      "teacher_tokens": 417
+    },
+    {
+      "k": 76,
+      "topic": "dates and durations (pure arithmetic, no datetime import needed)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "duration_arithmetic_solver",
+      "teacher_tokens": 530
+    },
+    {
+      "k": 77,
+      "topic": "matrix and vector math on nested lists",
+      "difficulty": "hard",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 884
+    },
+    {
+      "k": 78,
+      "topic": "GPU performance arithmetic (bandwidth, FLOPs, occupancy, memory sizes)",
+      "difficulty": "medium",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 79,
+      "topic": "transformer shape and memory arithmetic (parameters, KV cache, activations)",
+      "difficulty": "hard",
+      "status": "invalid json",
+      "name": null,
+      "teacher_tokens": 900
+    }
+  ]
+}

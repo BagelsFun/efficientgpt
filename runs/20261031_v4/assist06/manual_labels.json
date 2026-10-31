@@ -1,0 +1,3 @@
+{
+ "agent_qwen3_1.7b_nf4_calibrated|rag_tools|1": {"verdict": "abstained", "note": "says the permission level is not stated in the provided context and that the file must be checked; no fabricated value"}
+}

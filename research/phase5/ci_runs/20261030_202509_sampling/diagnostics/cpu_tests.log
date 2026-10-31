@@ -1,0 +1,26 @@
+test_gpt_generate_matches_same_distribution (research.phase5.test_sampling.TestDistribution.test_gpt_generate_matches_same_distribution)
+nanoGPT's multinomial sampler agrees with our transforms (temperature, top-k only). ... ok
+test_sampler_matches_exact_distribution (research.phase5.test_sampling.TestDistribution.test_sampler_matches_exact_distribution) ... ok
+test_engine_matches_reference (research.phase5.test_sampling.TestExactGivenUniforms.test_engine_matches_reference) ... ok
+test_greedy_limits (research.phase5.test_sampling.TestExactGivenUniforms.test_greedy_limits) ... ok
+test_mapping_skips_zero_mass (research.phase5.test_sampling.TestInverseCDF.test_mapping_skips_zero_mass) ... ok
+test_never_picks_zero_probability (research.phase5.test_sampling.TestInverseCDF.test_never_picks_zero_probability) ... ok
+test_invalid_configs (research.phase5.test_sampling.TestTransforms.test_invalid_configs) ... ok
+test_temperature_only_is_softmax (research.phase5.test_sampling.TestTransforms.test_temperature_only_is_softmax) ... ok
+test_top_k_matches_gpt_generate_masking (research.phase5.test_sampling.TestTransforms.test_top_k_matches_gpt_generate_masking) ... ok
+test_top_p_keeps_smallest_prefix (research.phase5.test_sampling.TestTransforms.test_top_p_keeps_smallest_prefix) ... ok
+test_matches_scatter_step_bitwise (research.phase5.test_compiled_step.TestStepIndexCopy.test_matches_scatter_step_bitwise) ... ok
+test_post_mask_equals_feed_pad_reference (research.phase5.test_eos.TestEOSDecoding.test_post_mask_equals_feed_pad_reference) ... ok
+test_wrapper_on_eager_decoders (research.phase5.test_eos.TestEOSDecoding.test_wrapper_on_eager_decoders) ... ok
+test_input_not_mutated (research.phase5.test_eos.TestMaskAfterEOS.test_input_not_mutated) ... ok
+test_semantics (research.phase5.test_eos.TestMaskAfterEOS.test_semantics) ... ok
+test_separate_pad_id (research.phase5.test_eos.TestMaskAfterEOS.test_separate_pad_id) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 2.207s
+
+OK
+number of parameters: 0.01M
+number of parameters: 0.01M
+number of parameters: 0.03M
+number of parameters: 0.03M

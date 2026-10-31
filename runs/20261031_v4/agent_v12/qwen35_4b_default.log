@@ -1,0 +1,2 @@
+model_only {"correct": 1, "abstained": 9, "hallucinated": 10}
+rag_tools {"correct": 20, "abstained": 0, "hallucinated": 0}

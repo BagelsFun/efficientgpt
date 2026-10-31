@@ -1,0 +1,3 @@
+mode,workloads,graphs_resident,total_capture_ms,total_graph_initialization_ms,baseline_allocated_mib,baseline_reserved_mib,peak_allocated_mib,peak_reserved_mib,total_steady_medians_ms,correctness
+full,12,2,6.2907,210.1069,47.046,66.0,292.033,402.0,428.1115,PASS
+adaptive,12,8,30.3216,391.6075,47.046,66.0,461.566,772.0,367.8168,PASS

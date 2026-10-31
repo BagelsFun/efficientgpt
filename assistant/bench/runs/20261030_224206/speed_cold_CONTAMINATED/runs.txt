@@ -1,0 +1,3 @@
+qwen3-1.7b_bf16 rc=0 288s
+qwen3.5-4b_q4km rc=0 108s
+qwen3-1.7b_nf4 rc=0 238s

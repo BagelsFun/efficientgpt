@@ -1,0 +1,30 @@
+{
+ "mode": "nf4_dynamic",
+ "quant": "nf4",
+ "static_cache": false,
+ "load_s": 5.99,
+ "load_peak_allocated_mib": 2178.7,
+ "weights_allocated_mib": 1288.5,
+ "first_call_s": 3.19,
+ "decode_tok_s": [
+  21.99,
+  21.98,
+  21.71,
+  22.0,
+  22.0
+ ],
+ "decode_tok_s_median": 21.98993530143168,
+ "ttft_s_median": 0.05632050009444356,
+ "completion_tokens": [
+  256,
+  256,
+  256,
+  256,
+  256
+ ],
+ "torch_peak_allocated_mib": 1342.4,
+ "process_device_used_mib": 1986.0,
+ "round": 1,
+ "gpu_util_before": 0.0,
+ "contended": false
+}

@@ -1,0 +1,22 @@
+10/80 requests, kept 3, 131s
+20/80 requests, kept 6, 251s
+30/80 requests, kept 6, 373s
+40/80 requests, kept 8, 532s
+50/80 requests, kept 11, 651s
+60/80 requests, kept 12, 791s
+70/80 requests, kept 16, 890s
+80/80 requests, kept 18, 1003s
+{
+ "requests": 80,
+ "kept": 18,
+ "teacher": "qwen3.5:4b",
+ "seed": 1,
+ "outcomes": {
+  "duplicate or held-out name": 1,
+  "kept": 18,
+  "solution failed its tests": 47,
+  "unparseable (format, or no docstring/body)": 14
+ },
+ "seconds": 1002.8
+}
+distill v2 rc=0 1003s

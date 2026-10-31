@@ -1,0 +1,7 @@
+round,mode,torch_version,python_version,gpu,model_parameters,context_limit,precision,graphs_resident,graph_capture_ms,initialization_and_correctness_ms,baseline_allocated_mib,baseline_reserved_mib,setup_peak_allocated_mib,setup_peak_reserved_mib,steady_peak_allocated_mib,steady_peak_reserved_mib,correctness
+1,prefix_sdpa_eager,2.11.0+cu128,3.11.9,NVIDIA GeForce RTX 4060,12292992,256,fp32_matmul_tf32,0,0.0,5850.3353,47.123,66.0,267.698,336.0,266.753,336.0,PASS
+1,full_graph,2.11.0+cu128,3.11.9,NVIDIA GeForce RTX 4060,12292992,256,fp32_matmul_tf32,2,6.8686,4263.8897,47.123,66.0,292.109,402.0,291.164,402.0,PASS
+1,adaptive_graph,2.11.0+cu128,3.11.9,NVIDIA GeForce RTX 4060,12292992,256,fp32_matmul_tf32,8,28.356,4320.4339,47.123,66.0,461.643,756.0,460.698,648.0,PASS
+2,adaptive_graph,2.11.0+cu128,3.11.9,NVIDIA GeForce RTX 4060,12292992,256,fp32_matmul_tf32,8,30.374,4334.3062,47.123,66.0,461.643,756.0,460.698,648.0,PASS
+2,full_graph,2.11.0+cu128,3.11.9,NVIDIA GeForce RTX 4060,12292992,256,fp32_matmul_tf32,2,6.5321,4303.5858,47.123,66.0,292.109,402.0,291.164,402.0,PASS
+2,prefix_sdpa_eager,2.11.0+cu128,3.11.9,NVIDIA GeForce RTX 4060,12292992,256,fp32_matmul_tf32,0,0.0,5678.1218,47.123,66.0,267.698,336.0,266.753,336.0,PASS

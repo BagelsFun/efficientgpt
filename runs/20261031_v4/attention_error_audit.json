@@ -1,0 +1,113 @@
+{
+ "kernel": {
+  "float32": {
+   "cases": 240,
+   "error": {
+    "sdpa": {
+     "median": 6.549980782755149e-06,
+     "p99": 7.066093961471953e-05,
+     "max": 0.00010865741356502756
+    },
+    "split": {
+     "median": 2.1086981110141068e-06,
+     "p99": 1.7991458690858053e-05,
+     "max": 2.750945756724299e-05
+    },
+    "single": {
+     "median": 2.1086981110141068e-06,
+     "p99": 1.8051063335633444e-05,
+     "max": 2.750945756724299e-05
+    }
+   },
+   "single_over_split": {
+    "median": 1.0,
+    "p99": 1.6868813275201173,
+    "max": 1.8980674648647895
+   },
+   "cases_over_2x_sdpa_rule": {
+    "split": 1,
+    "single": 1
+   }
+  },
+  "bfloat16": {
+   "cases": 240,
+   "error": {
+    "sdpa": {
+     "median": 0.007226785633695165,
+     "p99": 0.010062636672614644,
+     "max": 0.015639030314020808
+    },
+    "split": {
+     "median": 0.007226393376448925,
+     "p99": 0.007812453228988492,
+     "max": 0.015610969685979192
+    },
+    "single": {
+     "median": 0.007226393376448925,
+     "p99": 0.007812453228988492,
+     "max": 0.015610969685979192
+    }
+   },
+   "single_over_split": {
+    "median": 1.0,
+    "p99": 1.0,
+    "max": 1.0
+   },
+   "cases_over_2x_sdpa_rule": {
+    "split": 0,
+    "single": 0
+   }
+  },
+  "float16": {
+   "cases": 240,
+   "error": {
+    "sdpa": {
+     "median": 0.000918510906158021,
+     "p99": 0.0016481409371662537,
+     "max": 0.001752541632929372
+    },
+    "split": {
+     "median": 0.0009131662304036059,
+     "p99": 0.0016481409371662537,
+     "max": 0.001752541632929372
+    },
+    "single": {
+     "median": 0.0009131662304036059,
+     "p99": 0.0016481409371662537,
+     "max": 0.001752541632929372
+    }
+   },
+   "single_over_split": {
+    "median": 1.0,
+    "p99": 1.0,
+    "max": 1.0
+   },
+   "cases_over_2x_sdpa_rule": {
+    "split": 0,
+    "single": 0
+   }
+  }
+ },
+ "model": {
+  "row_steps": 17408,
+  "length": 256,
+  "sequences": 8,
+  "impls": {
+   "sdpa": {
+    "max_abs_dlogit": 1.6693008176638102e-05,
+    "argmax_disagree": 0,
+    "max_fp64_margin_at_disagree": null
+   },
+   "split": {
+    "max_abs_dlogit": 9.826282211022885e-06,
+    "argmax_disagree": 0,
+    "max_fp64_margin_at_disagree": null
+   },
+   "single": {
+    "max_abs_dlogit": 1.2959525749423051e-05,
+    "argmax_disagree": 0,
+    "max_fp64_margin_at_disagree": null
+   }
+  }
+ }
+}

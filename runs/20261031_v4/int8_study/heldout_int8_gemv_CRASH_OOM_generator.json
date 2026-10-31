@@ -1,0 +1,19 @@
+{
+ "protocol": "kernelagent-ada/eval-v2",
+ "task": "int8_gemv",
+ "split": "heldout",
+ "status": "crash",
+ "returncode": 1,
+ "stderr_tail": "sk['inputs'](shape, seed, edge)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<HOME>\\AI-Models\\nanoGPT\\research\\kernelagent\\tasks.py\", line 142, in _int8_inputs\n    w = torch.where(w >= 0, 127, -127)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.32 GiB. GPU 0 has a total capacity of 8.00 GiB of which 4.86 GiB is free. 3.60 GiB allowed; Of the allocated memory 2.04 GiB is allocated by PyTorch, and 15.66 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+ "id": "a9a9fe529cd88243",
+ "trials": 8,
+ "wall_s": 2.6,
+ "family": "dot16_splitk",
+ "params": {
+  "BLOCK_N": 64,
+  "BLOCK_K": 64,
+  "SPLITK": 8,
+  "WARPS": 4
+ },
+ "chosen_by": "local"
+}

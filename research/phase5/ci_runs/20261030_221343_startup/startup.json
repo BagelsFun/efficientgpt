@@ -1,0 +1,3062 @@
+[
+  {
+    "mode": "full_graph",
+    "cache": "prime",
+    "import_s": 2.211,
+    "cuda_init_s": 0.081,
+    "model_load_s": 0.175,
+    "build_all_12_workloads_s": 0.677,
+    "time_to_ready_s": 3.143,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 82.301,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 168.2,
+        "first_request_ms": 13.743
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 14.779
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 46.182
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 24.215
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 47.428
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.05,
+        "first_request_ms": 26.027
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 31.67,
+        "first_request_ms": 21.761
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 21.822
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 79.605
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 45.499
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 81.226
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 48.656
+      }
+    ],
+    "process_wall_s": 5.028
+  },
+  {
+    "mode": "full_graph",
+    "cache": "cold",
+    "import_s": 2.217,
+    "cuda_init_s": 0.076,
+    "model_load_s": 0.177,
+    "build_all_12_workloads_s": 0.644,
+    "time_to_ready_s": 3.114,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 78.691,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 164.64,
+        "first_request_ms": 10.943
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 13.666
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 44.212
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 22.559
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 43.297
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 22.884
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 24.41,
+        "first_request_ms": 19.664
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 21.646
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 78.084
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 43.099
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 81.288
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 48.291
+      }
+    ],
+    "process_wall_s": 4.889
+  },
+  {
+    "mode": "full_graph",
+    "cache": "warm",
+    "import_s": 2.171,
+    "cuda_init_s": 0.075,
+    "model_load_s": 0.176,
+    "build_all_12_workloads_s": 0.691,
+    "time_to_ready_s": 3.114,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 82.267,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 171.22,
+        "first_request_ms": 13.366
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.04,
+        "first_request_ms": 16.364
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 48.972
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 26.896
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 50.092
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 25.079
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 25.44,
+        "first_request_ms": 22.291
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 26.405
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 82.29
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 42.857
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 82.113
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.04,
+        "first_request_ms": 52.049
+      }
+    ],
+    "process_wall_s": 5.024
+  },
+  {
+    "mode": "full_graph",
+    "cache": "cold",
+    "import_s": 2.432,
+    "cuda_init_s": 0.086,
+    "model_load_s": 0.195,
+    "build_all_12_workloads_s": 0.675,
+    "time_to_ready_s": 3.389,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 78.828,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 175.16,
+        "first_request_ms": 13.239
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 16.318
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 45.99
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 24.345
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 47.41
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.04,
+        "first_request_ms": 22.917
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 28.3,
+        "first_request_ms": 21.191
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 22.663
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 80.425
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 42.679
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 80.857
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 47.824
+      }
+    ],
+    "process_wall_s": 5.243
+  },
+  {
+    "mode": "full_graph",
+    "cache": "warm",
+    "import_s": 2.26,
+    "cuda_init_s": 0.091,
+    "model_load_s": 0.184,
+    "build_all_12_workloads_s": 0.647,
+    "time_to_ready_s": 3.182,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 83.075,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 163.19,
+        "first_request_ms": 11.289
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 13.41
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 43.909
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 23.565
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 43.908
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 21.88
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 24.65,
+        "first_request_ms": 19.837
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 22.399
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 80.694
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 45.22
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 81.564
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 45.871
+      }
+    ],
+    "process_wall_s": 5.173
+  },
+  {
+    "mode": "adaptive_graph",
+    "cache": "prime",
+    "import_s": 2.403,
+    "cuda_init_s": 0.085,
+    "model_load_s": 0.189,
+    "build_all_12_workloads_s": 0.803,
+    "time_to_ready_s": 3.481,
+    "graphs": 8,
+    "steady_B16_64_64_median_ms": 55.381,
+    "peak_allocated_mib": 461.0,
+    "peak_reserved_mib": 770.0,
+    "process_device_used_mib_excl_context": 658.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 178.13,
+        "first_request_ms": 12.209
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 12.211
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 25.07,
+        "first_request_ms": 35.317
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 25.07,
+        "first_request_ms": 19.778
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 38.474
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 30.19,
+        "first_request_ms": 23.673
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 28.82,
+        "first_request_ms": 14.037
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.07,
+        "first_request_ms": 17.066
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 30.59,
+        "first_request_ms": 56.458
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 38.25,
+        "first_request_ms": 36.428
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 69.668
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 60.63,
+        "first_request_ms": 45.573
+      }
+    ],
+    "process_wall_s": 4.995
+  },
+  {
+    "mode": "adaptive_graph",
+    "cache": "cold",
+    "import_s": 2.237,
+    "cuda_init_s": 0.081,
+    "model_load_s": 0.177,
+    "build_all_12_workloads_s": 0.769,
+    "time_to_ready_s": 3.263,
+    "graphs": 8,
+    "steady_B16_64_64_median_ms": 56.306,
+    "peak_allocated_mib": 461.0,
+    "peak_reserved_mib": 770.0,
+    "process_device_used_mib_excl_context": 658.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 167.08,
+        "first_request_ms": 8.542
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 11.472
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 22.79,
+        "first_request_ms": 37.262
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 23.07,
+        "first_request_ms": 19.768
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 39.493
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 23.13,
+        "first_request_ms": 21.367
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 24.67,
+        "first_request_ms": 14.58
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 16.196
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 26.4,
+        "first_request_ms": 56.946
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 37.3,
+        "first_request_ms": 36.87
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 69.4
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 60.76,
+        "first_request_ms": 46.263
+      }
+    ],
+    "process_wall_s": 4.908
+  },
+  {
+    "mode": "adaptive_graph",
+    "cache": "warm",
+    "import_s": 2.228,
+    "cuda_init_s": 0.089,
+    "model_load_s": 0.197,
+    "build_all_12_workloads_s": 0.761,
+    "time_to_ready_s": 3.276,
+    "graphs": 8,
+    "steady_B16_64_64_median_ms": 55.759,
+    "peak_allocated_mib": 461.0,
+    "peak_reserved_mib": 770.0,
+    "process_device_used_mib_excl_context": 658.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 164.95,
+        "first_request_ms": 11.183
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 10.395
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 23.66,
+        "first_request_ms": 35.228
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 24.61,
+        "first_request_ms": 19.774
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 38.392
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 23.84,
+        "first_request_ms": 20.677
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 23.34,
+        "first_request_ms": 15.452
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 16.836
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 25.77,
+        "first_request_ms": 54.482
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 38.77,
+        "first_request_ms": 37.802
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 69.366
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 55.15,
+        "first_request_ms": 45.147
+      }
+    ],
+    "process_wall_s": 4.757
+  },
+  {
+    "mode": "adaptive_graph",
+    "cache": "cold",
+    "import_s": 2.183,
+    "cuda_init_s": 0.086,
+    "model_load_s": 0.175,
+    "build_all_12_workloads_s": 0.76,
+    "time_to_ready_s": 3.205,
+    "graphs": 8,
+    "steady_B16_64_64_median_ms": 56.23,
+    "peak_allocated_mib": 461.0,
+    "peak_reserved_mib": 770.0,
+    "process_device_used_mib_excl_context": 658.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 167.6,
+        "first_request_ms": 9.165
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 12.155
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 22.01,
+        "first_request_ms": 34.939
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 24.09,
+        "first_request_ms": 20.188
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 38.129
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 23.38,
+        "first_request_ms": 21.162
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 22.89,
+        "first_request_ms": 12.789
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 16.123
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 24.54,
+        "first_request_ms": 54.313
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 41.21,
+        "first_request_ms": 36.707
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 68.875
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 55.71,
+        "first_request_ms": 46.959
+      }
+    ],
+    "process_wall_s": 4.659
+  },
+  {
+    "mode": "adaptive_graph",
+    "cache": "warm",
+    "import_s": 2.302,
+    "cuda_init_s": 0.086,
+    "model_load_s": 0.179,
+    "build_all_12_workloads_s": 0.757,
+    "time_to_ready_s": 3.324,
+    "graphs": 8,
+    "steady_B16_64_64_median_ms": 54.344,
+    "peak_allocated_mib": 461.0,
+    "peak_reserved_mib": 770.0,
+    "process_device_used_mib_excl_context": 658.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 158.81,
+        "first_request_ms": 11.322
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 9.687
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 21.63,
+        "first_request_ms": 35.47
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 25.39,
+        "first_request_ms": 22.044
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 38.686
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 25.62,
+        "first_request_ms": 21.313
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 24.67,
+        "first_request_ms": 15.01
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 16.548
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 25.34,
+        "first_request_ms": 55.83
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 38.93,
+        "first_request_ms": 37.763
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 68.145
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 55.67,
+        "first_request_ms": 44.559
+      }
+    ],
+    "process_wall_s": 4.757
+  },
+  {
+    "mode": "compiled_adaptive_graph",
+    "cache": "prime",
+    "import_s": 2.274,
+    "cuda_init_s": 0.076,
+    "model_load_s": 0.19,
+    "build_all_12_workloads_s": 28.454,
+    "time_to_ready_s": 30.993,
+    "graphs": 8,
+    "steady_B16_64_64_median_ms": 50.892,
+    "peak_allocated_mib": 461.0,
+    "peak_reserved_mib": 794.0,
+    "process_device_used_mib_excl_context": 656.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 6715.03,
+        "first_request_ms": 9.135
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 10.686
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 2781.77,
+        "first_request_ms": 29.703
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 2886.27,
+        "first_request_ms": 17.695
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 34.526
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 2733.29,
+        "first_request_ms": 19.835
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 4448.76,
+        "first_request_ms": 13.556
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 13.477
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 2646.15,
+        "first_request_ms": 50.679
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 2987.61,
+        "first_request_ms": 34.48
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 64.47
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 2908.29,
+        "first_request_ms": 43.503
+      }
+    ],
+    "process_wall_s": 32.927
+  },
+  {
+    "mode": "compiled_adaptive_graph",
+    "cache": "cold",
+    "import_s": 2.233,
+    "cuda_init_s": 0.079,
+    "model_load_s": 0.177,
+    "build_all_12_workloads_s": 28.433,
+    "time_to_ready_s": 30.922,
+    "graphs": 8,
+    "steady_B16_64_64_median_ms": 50.874,
+    "peak_allocated_mib": 461.0,
+    "peak_reserved_mib": 794.0,
+    "process_device_used_mib_excl_context": 656.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 6569.08,
+        "first_request_ms": 8.0
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.04,
+        "first_request_ms": 10.197
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 2792.53,
+        "first_request_ms": 32.198
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 2959.7,
+        "first_request_ms": 18.796
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 35.025
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 2750.42,
+        "first_request_ms": 20.161
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 4481.98,
+        "first_request_ms": 11.433
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.07,
+        "first_request_ms": 14.585
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 2690.66,
+        "first_request_ms": 49.965
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 3018.12,
+        "first_request_ms": 34.914
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 66.431
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 2819.14,
+        "first_request_ms": 44.195
+      }
+    ],
+    "process_wall_s": 32.863
+  },
+  {
+    "mode": "compiled_adaptive_graph",
+    "cache": "warm",
+    "import_s": 2.219,
+    "cuda_init_s": 0.081,
+    "model_load_s": 0.183,
+    "build_all_12_workloads_s": 4.681,
+    "time_to_ready_s": 7.164,
+    "graphs": 8,
+    "steady_B16_64_64_median_ms": 51.05,
+    "peak_allocated_mib": 461.0,
+    "peak_reserved_mib": 770.0,
+    "process_device_used_mib_excl_context": 656.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 1908.99,
+        "first_request_ms": 9.864
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 9.425
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 310.77,
+        "first_request_ms": 32.511
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 430.71,
+        "first_request_ms": 18.478
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 35.621
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 321.83,
+        "first_request_ms": 21.683
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 333.52,
+        "first_request_ms": 12.283
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 14.513
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 331.82,
+        "first_request_ms": 51.495
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 332.34,
+        "first_request_ms": 35.234
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 64.512
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 358.52,
+        "first_request_ms": 41.984
+      }
+    ],
+    "process_wall_s": 8.765
+  },
+  {
+    "mode": "compiled_adaptive_graph",
+    "cache": "cold",
+    "import_s": 2.209,
+    "cuda_init_s": 0.079,
+    "model_load_s": 0.181,
+    "build_all_12_workloads_s": 28.442,
+    "time_to_ready_s": 30.911,
+    "graphs": 8,
+    "steady_B16_64_64_median_ms": 50.991,
+    "peak_allocated_mib": 461.0,
+    "peak_reserved_mib": 794.0,
+    "process_device_used_mib_excl_context": 656.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 6655.78,
+        "first_request_ms": 9.824
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 9.267
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 2787.12,
+        "first_request_ms": 32.51
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 2964.63,
+        "first_request_ms": 21.026
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 36.336
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 2761.67,
+        "first_request_ms": 20.669
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 4454.26,
+        "first_request_ms": 13.606
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 15.41
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 2679.72,
+        "first_request_ms": 51.35
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 2992.67,
+        "first_request_ms": 34.456
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 64.883
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 2789.82,
+        "first_request_ms": 41.781
+      }
+    ],
+    "process_wall_s": 32.853
+  },
+  {
+    "mode": "compiled_adaptive_graph",
+    "cache": "warm",
+    "import_s": 2.22,
+    "cuda_init_s": 0.08,
+    "model_load_s": 0.182,
+    "build_all_12_workloads_s": 4.664,
+    "time_to_ready_s": 7.146,
+    "graphs": 8,
+    "steady_B16_64_64_median_ms": 51.173,
+    "peak_allocated_mib": 461.0,
+    "peak_reserved_mib": 770.0,
+    "process_device_used_mib_excl_context": 656.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 1896.5,
+        "first_request_ms": 9.915
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 9.032
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 309.21,
+        "first_request_ms": 31.877
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 437.66,
+        "first_request_ms": 18.526
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 35.781
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 317.49,
+        "first_request_ms": 21.389
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 342.58,
+        "first_request_ms": 14.401
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 15.33
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 328.84,
+        "first_request_ms": 51.494
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 331.88,
+        "first_request_ms": 34.776
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 64.721
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 347.24,
+        "first_request_ms": 41.956
+      }
+    ],
+    "process_wall_s": 8.733
+  },
+  {
+    "mode": "triton_full_graph",
+    "cache": "prime",
+    "import_s": 2.227,
+    "cuda_init_s": 0.083,
+    "model_load_s": 0.179,
+    "build_all_12_workloads_s": 1.16,
+    "time_to_ready_s": 3.649,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 38.83,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 612.58,
+        "first_request_ms": 9.42
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 8.351
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 28.954
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 16.466
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 28.939
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 15.966
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 262.07,
+        "first_request_ms": 9.238
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 12.855
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 38.551
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 27.619
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 48.19
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 32.35
+      }
+    ],
+    "process_wall_s": 4.861
+  },
+  {
+    "mode": "triton_full_graph",
+    "cache": "cold",
+    "import_s": 2.26,
+    "cuda_init_s": 0.085,
+    "model_load_s": 0.178,
+    "build_all_12_workloads_s": 1.763,
+    "time_to_ready_s": 4.286,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 38.772,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 1232.6,
+        "first_request_ms": 9.274
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 8.021
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.01,
+        "first_request_ms": 29.347
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 16.338
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 28.393
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 15.521
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 245.45,
+        "first_request_ms": 9.712
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 12.474
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 39.037
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 27.423
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 48.086
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 33.353
+      }
+    ],
+    "process_wall_s": 5.508
+  },
+  {
+    "mode": "triton_full_graph",
+    "cache": "warm",
+    "import_s": 2.219,
+    "cuda_init_s": 0.077,
+    "model_load_s": 0.181,
+    "build_all_12_workloads_s": 0.692,
+    "time_to_ready_s": 3.17,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 38.901,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 378.94,
+        "first_request_ms": 7.535
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 10.117
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 26.611
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 15.368
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 29.525
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 15.575
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 32.59,
+        "first_request_ms": 10.219
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 11.113
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 39.97
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 26.273
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 48.042
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 32.496
+      }
+    ],
+    "process_wall_s": 4.389
+  },
+  {
+    "mode": "triton_full_graph",
+    "cache": "cold",
+    "import_s": 2.211,
+    "cuda_init_s": 0.081,
+    "model_load_s": 0.182,
+    "build_all_12_workloads_s": 1.771,
+    "time_to_ready_s": 4.245,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 38.729,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 1228.36,
+        "first_request_ms": 9.989
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 10.186
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 26.409
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 16.319
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 28.721
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 16.224
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 257.61,
+        "first_request_ms": 10.449
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 12.801
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 38.175
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 27.109
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 48.215
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.05,
+        "first_request_ms": 32.196
+      }
+    ],
+    "process_wall_s": 5.44
+  },
+  {
+    "mode": "triton_full_graph",
+    "cache": "warm",
+    "import_s": 2.213,
+    "cuda_init_s": 0.081,
+    "model_load_s": 0.177,
+    "build_all_12_workloads_s": 0.7,
+    "time_to_ready_s": 3.172,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 38.792,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 391.49,
+        "first_request_ms": 7.462
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 10.555
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 26.923
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 13.924
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 28.419
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 15.813
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 30.27,
+        "first_request_ms": 8.271
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 12.995
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 38.077
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 26.486
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 47.936
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 32.551
+      }
+    ],
+    "process_wall_s": 4.377
+  },
+  {
+    "mode": "compiled_triton_full_graph",
+    "cache": "prime",
+    "import_s": 2.194,
+    "cuda_init_s": 0.078,
+    "model_load_s": 0.189,
+    "build_all_12_workloads_s": 10.392,
+    "time_to_ready_s": 12.853,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 35.512,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 5981.14,
+        "first_request_ms": 6.92
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 9.575
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 24.535
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 13.74
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 27.28
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 14.168
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 4152.84,
+        "first_request_ms": 7.974
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 11.327
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 34.792
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 26.202
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 42.214
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 31.281
+      }
+    ],
+    "process_wall_s": 14.445
+  },
+  {
+    "mode": "compiled_triton_full_graph",
+    "cache": "cold",
+    "import_s": 2.204,
+    "cuda_init_s": 0.079,
+    "model_load_s": 0.175,
+    "build_all_12_workloads_s": 12.279,
+    "time_to_ready_s": 14.737,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 35.733,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 7162.05,
+        "first_request_ms": 7.665
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 9.632
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 24.776
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 15.714
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 27.426
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 14.567
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 4856.35,
+        "first_request_ms": 9.761
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 10.255
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 35.207
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 25.48
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 44.556
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 28.784
+      }
+    ],
+    "process_wall_s": 16.355
+  },
+  {
+    "mode": "compiled_triton_full_graph",
+    "cache": "warm",
+    "import_s": 2.22,
+    "cuda_init_s": 0.081,
+    "model_load_s": 0.196,
+    "build_all_12_workloads_s": 2.693,
+    "time_to_ready_s": 5.19,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 35.603,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 2024.47,
+        "first_request_ms": 8.647
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 7.491
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 26.559
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 15.325
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 24.477
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 14.15
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 412.06,
+        "first_request_ms": 7.376
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 11.3
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 34.859
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 25.665
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 42.481
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 31.073
+      }
+    ],
+    "process_wall_s": 6.509
+  },
+  {
+    "mode": "compiled_triton_full_graph",
+    "cache": "cold",
+    "import_s": 2.181,
+    "cuda_init_s": 0.087,
+    "model_load_s": 0.189,
+    "build_all_12_workloads_s": 12.262,
+    "time_to_ready_s": 14.719,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 35.274,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 7222.46,
+        "first_request_ms": 7.344
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 9.762
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 27.302
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 15.822
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 24.531
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 14.774
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 4779.02,
+        "first_request_ms": 7.535
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 12.198
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 34.834
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 25.346
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 42.471
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 31.122
+      }
+    ],
+    "process_wall_s": 16.329
+  },
+  {
+    "mode": "compiled_triton_full_graph",
+    "cache": "warm",
+    "import_s": 2.226,
+    "cuda_init_s": 0.086,
+    "model_load_s": 0.186,
+    "build_all_12_workloads_s": 2.744,
+    "time_to_ready_s": 5.241,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 35.219,
+    "peak_allocated_mib": 291.0,
+    "peak_reserved_mib": 442.0,
+    "process_device_used_mib_excl_context": 478.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 2069.54,
+        "first_request_ms": 6.922
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 8.608
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 24.316
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 13.468
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 26.327
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 14.291
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 419.85,
+        "first_request_ms": 7.25
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 12.129
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 34.881
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 25.407
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 42.474
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 30.894
+      }
+    ],
+    "process_wall_s": 6.541
+  },
+  {
+    "mode": "fp16_compiled_triton_full_graph",
+    "cache": "prime",
+    "import_s": 2.165,
+    "cuda_init_s": 0.082,
+    "model_load_s": 0.185,
+    "build_all_12_workloads_s": 12.228,
+    "time_to_ready_s": 14.659,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 24.607,
+    "peak_allocated_mib": 210.9,
+    "peak_reserved_mib": 286.0,
+    "process_device_used_mib_excl_context": 328.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 6835.94,
+        "first_request_ms": 5.706
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 6.921
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 20.057
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 10.38
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.04,
+        "first_request_ms": 20.314
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.04,
+        "first_request_ms": 10.706
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 5189.22,
+        "first_request_ms": 5.855
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 7.647
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 22.82
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 17.558
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 30.582
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 18.855
+      }
+    ],
+    "process_wall_s": 16.251
+  },
+  {
+    "mode": "fp16_compiled_triton_full_graph",
+    "cache": "cold",
+    "import_s": 2.342,
+    "cuda_init_s": 0.083,
+    "model_load_s": 0.18,
+    "build_all_12_workloads_s": 12.585,
+    "time_to_ready_s": 15.191,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 21.544,
+    "peak_allocated_mib": 210.9,
+    "peak_reserved_mib": 286.0,
+    "process_device_used_mib_excl_context": 328.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 7359.69,
+        "first_request_ms": 7.607
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 6.733
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 18.025
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 11.384
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 17.79
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 11.935
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 5033.89,
+        "first_request_ms": 5.557
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 9.328
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 21.209
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 15.023
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 26.151
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 18.484
+      }
+    ],
+    "process_wall_s": 16.714
+  },
+  {
+    "mode": "fp16_compiled_triton_full_graph",
+    "cache": "warm",
+    "import_s": 2.298,
+    "cuda_init_s": 0.082,
+    "model_load_s": 0.182,
+    "build_all_12_workloads_s": 2.907,
+    "time_to_ready_s": 5.469,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 23.982,
+    "peak_allocated_mib": 210.9,
+    "peak_reserved_mib": 286.0,
+    "process_device_used_mib_excl_context": 328.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 2174.45,
+        "first_request_ms": 5.193
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 5.687
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 16.829
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 10.753
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 17.464
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 11.414
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 543.0,
+        "first_request_ms": 7.607
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 7.49
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 24.354
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 15.692
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 25.319
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.04,
+        "first_request_ms": 17.684
+      }
+    ],
+    "process_wall_s": 6.68
+  },
+  {
+    "mode": "fp16_compiled_triton_full_graph",
+    "cache": "cold",
+    "import_s": 2.324,
+    "cuda_init_s": 0.087,
+    "model_load_s": 0.181,
+    "build_all_12_workloads_s": 12.624,
+    "time_to_ready_s": 15.215,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 22.643,
+    "peak_allocated_mib": 210.9,
+    "peak_reserved_mib": 286.0,
+    "process_device_used_mib_excl_context": 328.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 7537.49,
+        "first_request_ms": 7.213
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 5.969
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 17.011
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 11.339
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 17.498
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 8.722
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 4904.27,
+        "first_request_ms": 4.978
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 6.507
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 23.324
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 14.95
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 24.728
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 17.032
+      }
+    ],
+    "process_wall_s": 16.673
+  },
+  {
+    "mode": "fp16_compiled_triton_full_graph",
+    "cache": "warm",
+    "import_s": 2.26,
+    "cuda_init_s": 0.082,
+    "model_load_s": 0.178,
+    "build_all_12_workloads_s": 2.934,
+    "time_to_ready_s": 5.454,
+    "graphs": 2,
+    "steady_B16_64_64_median_ms": 22.14,
+    "peak_allocated_mib": 210.9,
+    "peak_reserved_mib": 286.0,
+    "process_device_used_mib_excl_context": 328.0,
+    "device_total_mib": 8187.5,
+    "workloads": [
+      {
+        "batch": 1,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 2170.61,
+        "first_request_ms": 6.803
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 5.975
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 17.102
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 11.426
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 17.789
+      },
+      {
+        "batch": 1,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.04,
+        "first_request_ms": 11.705
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 8,
+        "generated_tokens": 16,
+        "get_decoder_ms": 575.0,
+        "first_request_ms": 5.743
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 16,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 6.973
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 64,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 21.198
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.02,
+        "first_request_ms": 15.484
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 128,
+        "generated_tokens": 64,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 26.652
+      },
+      {
+        "batch": 16,
+        "prompt_tokens": 192,
+        "generated_tokens": 32,
+        "get_decoder_ms": 0.03,
+        "first_request_ms": 17.849
+      }
+    ],
+    "process_wall_s": 6.617
+  }
+]

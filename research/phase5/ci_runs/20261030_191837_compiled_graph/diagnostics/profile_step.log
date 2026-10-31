@@ -1,0 +1,35 @@
+<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\profiler\profiler.py:224: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+number of parameters: 12.19M
+
+B=1 eager: GPU kernel time per step 0.580 ms, kernels/step 119
+    0.201 ms  x6   _Z39fmha_cutlassF_f32_aligned_64x64_rf_sm80N22PyTorchMemEffAttention15AttentionKernelIfN7c
+    0.185 ms  x19  _ZN8internal5gemvx6kernelIiiffffLb0ELb1ELb1ELb0ELi6ELb0E18cublasGemvParamsExIi30cublasGemv
+    0.067 ms  x6   _ZN8internal5gemvx6kernelIiiffffLb0ELb1ELb1ELb0ELi9ELb0E18cublasGemvParamsExIi30cublasGemv
+    0.031 ms  x19  _ZN8cublasLt19splitKreduce_kernelILi32ELi16EiffffLb0EfffLb1ELb0ELb0EEEvNS_18cublasSplitKPa
+    0.026 ms  x13  _ZN2at6native53_GLOBAL__N__87a90936_20_layer_norm_kernel_cu_3ff0b71f28vectorized_layer_nor
+    0.021 ms  x12  _ZN2at6native34_scatter_gather_elementwise_kernelILi128ELi8EZNS0_36_cuda_scatter_gather_in
+
+B=1 compiled: GPU kernel time per step 0.553 ms, kernels/step 112
+    0.197 ms  x6   _Z39fmha_cutlassF_f32_aligned_64x64_rf_sm80N22PyTorchMemEffAttention15AttentionKernelIfN7c
+    0.183 ms  x19  _ZN8internal5gemvx6kernelIiiffffLb0ELb1ELb1ELb0ELi6ELb0E18cublasGemvParamsExIi30cublasGemv
+    0.065 ms  x6   _ZN8internal5gemvx6kernelIiiffffLb0ELb1ELb1ELb0ELi9ELb0E18cublasGemvParamsExIi30cublasGemv
+    0.031 ms  x19  _ZN8cublasLt19splitKreduce_kernelILi32ELi16EiffffLb0EfffLb1ELb0ELb0EEEvNS_18cublasSplitKPa
+    0.020 ms  x12  triton_poi_fused__unsafe_view_expand_scatter_split_transpose_view_4
+    0.017 ms  x12  triton_poi_fused_copy__6
+
+B=16 eager: GPU kernel time per step 1.048 ms, kernels/step 112
+    0.628 ms  x6   _Z39fmha_cutlassF_f32_aligned_64x64_rf_sm80N22PyTorchMemEffAttention15AttentionKernelIfN7c
+    0.210 ms  x19  _ZN7cutlass7Kernel2I50cutlass_80_tensorop_s1688gemm_64x64_16x6_tn_align4EEvNT_6ParamsE
+    0.075 ms  x6   _ZN7cutlass7Kernel2I50cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_align4EEvNT_6ParamsE
+    0.033 ms  x12  _ZN2at6native34_scatter_gather_elementwise_kernelILi128ELi8EZNS0_36_cuda_scatter_gather_in
+    0.026 ms  x13  _ZN2at6native53_GLOBAL__N__87a90936_20_layer_norm_kernel_cu_3ff0b71f28vectorized_layer_nor
+    0.014 ms  x12  _ZN8cublasLt19splitKreduce_kernelILi32ELi16EiffffLb0EfffLb1ELb0ELb0EEEvNS_18cublasSplitKPa
+
+B=16 compiled: GPU kernel time per step 1.788 ms, kernels/step 105
+    0.764 ms  x6   _Z39fmha_cutlassF_f32_aligned_64x64_rf_sm80N22PyTorchMemEffAttention15AttentionKernelIfN7c
+    0.474 ms  x12  triton_poi_fused__unsafe_view_expand_scatter_split_transpose_view_4
+    0.244 ms  x19  _ZN7cutlass7Kernel2I50cutlass_80_tensorop_s1688gemm_64x64_16x6_tn_align4EEvNT_6ParamsE
+    0.147 ms  x12  triton_poi_fused_copy__6
+    0.092 ms  x6   _ZN7cutlass7Kernel2I50cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_align4EEvNT_6ParamsE
+    0.014 ms  x12  _ZN8cublasLt19splitKreduce_kernelILi32ELi16EiffffLb0EfffLb1ELb0ELb0EEEvNS_18cublasSplitKPa

@@ -1,0 +1,10 @@
+............................<HOME>\AI-Models\nanoGPT\assistant\bench\distill_eval.py:21: ResourceWarning: unclosed file <_io.TextIOWrapper name='<HOME>\\AppData\\Local\\Temp\\tmpbcluwdsi\\data.jsonl' mode='r' encoding='utf-8'>
+  rows = [json.loads(l) for l in data.open(encoding='utf-8') if l.strip()]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+..skipping malformed line 2 of <HOME>\AppData\Local\Temp\tmpntf4cu2v\out.jsonl
+skipping malformed line 2 of <HOME>\AppData\Local\Temp\tmpntf4cu2v\out.jsonl
+.
+----------------------------------------------------------------------
+Ran 31 tests in 17.270s
+
+OK

@@ -1,0 +1,22 @@
+.DS_Store
+.idea
+.ipynb_checkpoints/
+.vscode
+__pycache__/
+*.bin
+*.pkl
+*.pt
+*.pyc
+input.txt
+env/
+venv/
+# EfficientGPT (local research)
+.venv/
+*.backup
+*.zip
+data/*/tokenizer.json
+results/
+
+# Assistant adapters and experimental checkpoints (never committed)
+out-assistant/
+*.safetensors

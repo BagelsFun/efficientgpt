@@ -1,0 +1,229 @@
+{
+ "protocol": "assistant-coding-v1",
+ "backend": "ollama:qwen3.5:4b",
+ "quant": "bf16",
+ "system": "INTERACTIVE_SYSTEM",
+ "decoding": "greedy",
+ "tool_rule": true,
+ "force_final": true,
+ "configs": {
+  "agent": {
+   "passed": "5/10",
+   "rows": [
+    {
+     "task": "moving_average",
+     "config": "agent",
+     "passed": true,
+     "reason": "ok",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file",
+      "run_unittests",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 9,
+     "seconds": 50.0,
+     "answer": "```python\ndef moving_average(xs, window):\n    \"\"\"Means of every full window of `window` consecutive values (len(xs) - window + 1 results).\"\"\"\n    if window <= 0:\n        raise ValueError('window must be positive')\n    return [sum(xs[i:i + window]) / window for i in range(len(xs) - window + 1)]\n```",
+     "passed_v1_1": true
+    },
+    {
+     "task": "median",
+     "config": "agent",
+     "passed": true,
+     "reason": "ok",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 2,
+     "seconds": 5.0,
+     "answer": "The bug is in the `median` function. For an even-length list, the median should be the mean of the two middle values, but the current implementation only returns the element at `len(s) // 2`.\n\nFor the list `[4, 1, 3, 2]`:\n- Sorted: `[1, 2, 3, 4]`\n- `len(s) // 2 = 2`, so it returns `s[2] = 3`\n- But the correct median is `(s[1] + s[2]) / 2 = (2 + 3) / 2 = 2.5`\n\nThe fix is to handle both odd and even length cases:\n\n```python\ndef median(xs):\n    \"\"\"Median of a non-empty list of numbers (mean of the two middle values for even length).\"\"\"\n    if not xs:\n        raise ValueError('empty')\n    s = sorted(xs)\n    n = len(s)\n    if n % 2 == 0:\n        return (s[n // 2 - 1] + s[n // 2]) / 2\n    else:\n        return s[n // 2]\n```",
+     "passed_v1_1": true
+    },
+    {
+     "task": "capacity_bucket",
+     "config": "agent",
+     "passed": true,
+     "reason": "ok",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file",
+      "run_unittests",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 4,
+     "seconds": 5.4,
+     "answer": "```python\ndef pick_capacity(needed, buckets=(80, 128, 192, 256)):\n    \"\"\"Smallest bucket that can hold `needed` tokens; ValueError if none can.\"\"\"\n    for b in sorted(buckets):\n        if b >= needed:\n            return b\n    raise ValueError(f'{needed} tokens exceed the largest bucket')\n```",
+     "passed_v1_1": true
+    },
+    {
+     "task": "top_k_indices",
+     "config": "agent",
+     "passed": false,
+     "reason": "FAILED (failures=2)",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file",
+      "run_unittests",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 4,
+     "seconds": 5.4,
+     "answer": "The bug is in the sorting logic. The current implementation sorts indices by values in descending order, but for ties, it should return indices in ascending order (lower index first). The current implementation returns indices in descending order for ties.\n\nThe fix is to sort by (value, index) in ascending order, then reverse. This way, for ties, the lower index comes first.\n\n```python\ndef top_k_indices(values, k):\n    \"\"\"Indices of the k largest values, largest first; ties go to the lower index.\"\"\"\n    order = sorted(range(len(values)), key=lambda i: (values[i], i))[::-1]\n    return order[:k]\n```",
+     "passed_v1_1": false
+    },
+    {
+     "task": "ring_buffer",
+     "config": "agent",
+     "passed": false,
+     "reason": "FAILED (failures=1)",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file",
+      "run_unittests",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 9,
+     "seconds": 12.0,
+     "answer": "```python\nclass RingBuffer:\n    \"\"\"Fixed-capacity buffer keeping the most recent items; items() returns them oldest first.\"\"\"\n\n    def __init__(self, capacity):\n        if capacity <= 0:\n            raise ValueError('capacity must be positive')\n        self.capacity, self.data, self.start = capacity, [], 0\n\n    def push(self, x):\n        if len(self.data) < self.capacity:\n            self.data.append(x)\n        else:\n            self.start = self.start + 1\n            self.data[self.start % self.capacity] = x\n\n    def items(self):\n        return self.data[self.start:] + self.data[:self.start]\n```",
+     "passed_v1_1": false
+    },
+    {
+     "task": "lru_cache",
+     "config": "agent",
+     "passed": true,
+     "reason": "ok",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file",
+      "run_unittests",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 9,
+     "seconds": 8.9,
+     "answer": "```python\nfrom collections import OrderedDict\n\n\nclass LRUCache:\n    \"\"\"get/put cache that evicts the least recently used key when full; get() counts as a use.\"\"\"\n\n    def __init__(self, capacity):\n        self.capacity, self.d = capacity, OrderedDict()\n\n    def get(self, key, default=None):\n        if key not in self.d:\n            return default\n        value = self.d[key]\n        self.d.move_to_end(key)\n        return value\n\n    def put(self, key, value):\n        self.d[key] = value\n        self.d.move_to_end(key)\n        if len(self.d) > self.capacity:\n            self.d.popitem(last=False)\n```",
+     "passed_v1_1": true
+    },
+    {
+     "task": "parse_config",
+     "config": "agent",
+     "passed": false,
+     "reason": "FAILED (errors=1)",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file",
+      "run_unittests",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 9,
+     "seconds": 8.1,
+     "answer": "```python\ndef parse_config(text):\n    \"\"\"Parse `key = value` lines into a dict of strings. Blank lines and lines starting with # are ignored;\n    whitespace around keys and values is stripped; a later key overrides an earlier one.\"\"\"\n    out = {}\n    for line in text.splitlines():\n        if line.startswith('#') or line.strip() == '':\n            continue\n        key, value = line.split('=', 1)\n        out[key.strip()] = value.strip()\n    return out\n```",
+     "passed_v1_1": false
+    },
+    {
+     "task": "human_bytes",
+     "config": "agent",
+     "passed": false,
+     "reason": "FAILED (failures=2)",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file",
+      "run_unittests",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 9,
+     "seconds": 9.2,
+     "answer": "```python\ndef human_bytes(n):\n    \"\"\"Format a byte count with binary units: 1023 -> '1023 B', 1024 -> '1.0 KiB', 1536 -> '1.5 KiB', up to TiB.\"\"\"\n    units = ['B', 'KiB', 'MiB', 'GiB', 'TiB']\n    value, i = float(n), 0\n    while value > 1024 and i < len(units) - 1:\n        value /= 1024\n        i += 1\n    return f'{int(value)} B' if i == 0 else f'{value:.1f} {units[i]}'\n```",
+     "passed_v1_1": false
+    },
+    {
+     "task": "chunk_windows",
+     "config": "agent",
+     "passed": false,
+     "reason": "FAILED (failures=1)",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 9,
+     "seconds": 9.2,
+     "answer": "```python\ndef chunk_windows(n_tokens, size, overlap):\n    \"\"\"(start, end) token windows of length <= size covering 0..n_tokens, consecutive windows sharing `overlap` tokens;\n    the last window ends at n_tokens. Requires 0 <= overlap < size.\"\"\"\n    if not 0 <= overlap < size:\n        raise ValueError('need 0 <= overlap < size')\n    out, start = [], 0\n    while start < n_tokens:\n        end = min(start + size, n_tokens)\n        out.append((start, end))\n        start += size - overlap\n    return out\n```",
+     "passed_v1_1": false
+    },
+    {
+     "task": "percentile",
+     "config": "agent",
+     "passed": true,
+     "reason": "ok",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file",
+      "run_unittests",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 9,
+     "seconds": 22.3,
+     "answer": "```python\ndef percentile(xs, p):\n    \"\"\"Linear-interpolation percentile (numpy's default 'linear' method) of a non-empty list, p in [0, 100].\"\"\"\n    if not xs or not 0 <= p <= 100:\n        raise ValueError('need non-empty xs and 0 <= p <= 100')\n    s = sorted(xs)\n    pos = (len(s) - 1) * p / 100\n    lo = int(pos)\n    hi = min(lo + 1, len(s) - 1)\n    return s[lo] + (s[hi] - s[lo]) * (pos - lo)\n```",
+     "passed_v1_1": true
+    }
+   ]
+  }
+ }
+}

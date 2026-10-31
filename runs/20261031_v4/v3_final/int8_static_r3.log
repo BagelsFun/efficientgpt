@@ -1,0 +1,12 @@
+W1031 16:19:32.140000 47636 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   8%|▊         | 24/311 [00:00<00:01, 235.97it/s]
+Loading weights:  15%|█▌        | 48/311 [00:00<00:01, 211.33it/s]
+Loading weights:  24%|██▍       | 75/311 [00:00<00:01, 235.74it/s]
+Loading weights:  32%|███▏      | 99/311 [00:00<00:00, 221.61it/s]
+Loading weights:  39%|███▉      | 122/311 [00:00<00:00, 199.98it/s]
+Loading weights:  46%|████▌     | 143/311 [00:00<00:00, 192.60it/s]
+Loading weights:  52%|█████▏    | 163/311 [00:00<00:00, 175.53it/s]
+Loading weights:  58%|█████▊    | 181/311 [00:00<00:00, 173.03it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 328.46it/s]

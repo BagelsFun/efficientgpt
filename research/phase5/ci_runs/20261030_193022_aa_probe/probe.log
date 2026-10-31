@@ -1,0 +1,37 @@
+number of parameters: 12.19M
+full_first B=1 192+32 full_graph -> adaptive_graph: 1.0034 [0.9973, 1.0086] AA_PASS (medians 21.913 / 21.838 ms)
+full_first B=1 192+32 compiled_full_graph -> compiled_adaptive_graph: 1.0027 [0.9952, 1.0083] AA_PASS (medians 20.276 / 20.221 ms)
+full_first B=16 192+32 full_graph -> adaptive_graph: 0.9974 [0.9886, 1.0041] AA_PASS (medians 45.424 / 45.544 ms)
+full_first B=16 192+32 compiled_full_graph -> compiled_adaptive_graph: 1.0005 [0.9905, 1.0081] AA_PASS (medians 42.960 / 42.940 ms)
+run 1 full_first rc=0
+number of parameters: 12.19M
+adaptive_first B=1 192+32 full_graph -> adaptive_graph: 0.9997 [0.9919, 1.0091] AA_PASS (medians 22.372 / 22.380 ms)
+adaptive_first B=1 192+32 compiled_full_graph -> compiled_adaptive_graph: 1.0025 [0.9946, 1.0115] AA_PASS (medians 20.684 / 20.633 ms)
+adaptive_first B=16 192+32 full_graph -> adaptive_graph: 0.9994 [0.9918, 1.0064] AA_PASS (medians 45.872 / 45.898 ms)
+adaptive_first B=16 192+32 compiled_full_graph -> compiled_adaptive_graph: 1.0023 [0.9909, 1.0105] AA_PASS (medians 43.148 / 43.048 ms)
+run 1 adaptive_first rc=0
+number of parameters: 12.19M
+full_first B=1 192+32 full_graph -> adaptive_graph: 1.0012 [0.9951, 1.0106] AA_PASS (medians 22.305 / 22.279 ms)
+full_first B=1 192+32 compiled_full_graph -> compiled_adaptive_graph: 1.0041 [0.9957, 1.0108] AA_PASS (medians 20.626 / 20.541 ms)
+full_first B=16 192+32 full_graph -> adaptive_graph: 0.9959 [0.9875, 1.0107] AA_PASS (medians 44.888 / 45.073 ms)
+full_first B=16 192+32 compiled_full_graph -> compiled_adaptive_graph: 0.9988 [0.9929, 1.0070] AA_PASS (medians 42.250 / 42.300 ms)
+run 2 full_first rc=0
+number of parameters: 12.19M
+adaptive_first B=1 192+32 full_graph -> adaptive_graph: 0.9993 [0.9941, 1.0056] AA_PASS (medians 21.785 / 21.800 ms)
+adaptive_first B=1 192+32 compiled_full_graph -> compiled_adaptive_graph: 1.0004 [0.9952, 1.0054] AA_PASS (medians 20.089 / 20.082 ms)
+adaptive_first B=16 192+32 full_graph -> adaptive_graph: 1.0039 [0.9962, 1.0117] AA_PASS (medians 45.221 / 45.046 ms)
+adaptive_first B=16 192+32 compiled_full_graph -> compiled_adaptive_graph: 1.0040 [0.9915, 1.0127] AA_PASS (medians 42.559 / 42.388 ms)
+run 2 adaptive_first rc=0
+number of parameters: 12.19M
+full_first B=1 192+32 full_graph -> adaptive_graph: 1.0008 [0.9924, 1.0096] AA_PASS (medians 22.138 / 22.120 ms)
+full_first B=1 192+32 compiled_full_graph -> compiled_adaptive_graph: 1.0000 [0.9915, 1.0101] AA_PASS (medians 20.457 / 20.458 ms)
+full_first B=16 192+32 full_graph -> adaptive_graph: 0.9968 [0.9892, 1.0038] AA_PASS (medians 45.582 / 45.727 ms)
+full_first B=16 192+32 compiled_full_graph -> compiled_adaptive_graph: 0.9977 [0.9891, 1.0046] AA_PASS (medians 42.915 / 43.015 ms)
+run 3 full_first rc=0
+number of parameters: 12.19M
+adaptive_first B=1 192+32 full_graph -> adaptive_graph: 1.0032 [0.9956, 1.0107] AA_PASS (medians 21.980 / 21.911 ms)
+adaptive_first B=1 192+32 compiled_full_graph -> compiled_adaptive_graph: 0.9977 [0.9933, 1.0034] AA_PASS (medians 20.209 / 20.256 ms)
+adaptive_first B=16 192+32 full_graph -> adaptive_graph: 1.0039 [0.9966, 1.0117] AA_PASS (medians 45.189 / 45.014 ms)
+adaptive_first B=16 192+32 compiled_full_graph -> compiled_adaptive_graph: 1.0000 [0.9905, 1.0080] AA_PASS (medians 42.280 / 42.281 ms)
+run 3 adaptive_first rc=0
+elapsed 536s

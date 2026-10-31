@@ -1,0 +1,14 @@
+number of parameters: 12.19M
+{'batch': 1, 'prompt_tokens': 32, 'budget': 128, 'config': 'T0.8_k50', 'greedy_ms': 76.042, 'sampled_ms': 81.76, 'greedy_over_sampled': 0.9301, 'ci': [0.9259, 0.9361], 'overhead_pct': 7.52}
+{'batch': 1, 'prompt_tokens': 32, 'budget': 128, 'config': 'T1.0_p0.9', 'greedy_ms': 76.042, 'sampled_ms': 83.264, 'greedy_over_sampled': 0.9133, 'ci': [0.9068, 0.918], 'overhead_pct': 9.5}
+{'batch': 1, 'prompt_tokens': 32, 'budget': 128, 'config': 'T0.8_k50_p0.95', 'greedy_ms': 76.042, 'sampled_ms': 86.109, 'greedy_over_sampled': 0.8831, 'ci': [0.8782, 0.888], 'overhead_pct': 13.24}
+{'batch': 16, 'prompt_tokens': 32, 'budget': 128, 'config': 'T0.8_k50', 'greedy_ms': 130.996, 'sampled_ms': 136.689, 'greedy_over_sampled': 0.9583, 'ci': [0.956, 0.9658], 'overhead_pct': 4.35}
+{'batch': 16, 'prompt_tokens': 32, 'budget': 128, 'config': 'T1.0_p0.9', 'greedy_ms': 130.996, 'sampled_ms': 140.865, 'greedy_over_sampled': 0.9299, 'ci': [0.927, 0.9373], 'overhead_pct': 7.53}
+{'batch': 16, 'prompt_tokens': 32, 'budget': 128, 'config': 'T0.8_k50_p0.95', 'greedy_ms': 130.996, 'sampled_ms': 143.34, 'greedy_over_sampled': 0.9139, 'ci': [0.9104, 0.9204], 'overhead_pct': 9.42}
+{'batch': 16, 'prompt_tokens': 32, 'budget': 224, 'config': 'T0.8_k50', 'greedy_ms': 267.614, 'sampled_ms': 275.911, 'greedy_over_sampled': 0.9699, 'ci': [0.9659, 0.9729], 'overhead_pct': 3.1}
+{'batch': 16, 'prompt_tokens': 32, 'budget': 224, 'config': 'T1.0_p0.9', 'greedy_ms': 267.614, 'sampled_ms': 282.736, 'greedy_over_sampled': 0.9465, 'ci': [0.9428, 0.9491], 'overhead_pct': 5.65}
+{'batch': 16, 'prompt_tokens': 32, 'budget': 224, 'config': 'T0.8_k50_p0.95', 'greedy_ms': 267.614, 'sampled_ms': 288.514, 'greedy_over_sampled': 0.9276, 'ci': [0.9227, 0.9302], 'overhead_pct': 7.81}
+greedy {'rows': 128, 'eos_share': 0.9297, 'length_p10_p50_p90': [93.7, 138.5, 213.0]}
+T0.8_k50 {'rows': 128, 'eos_share': 0.9219, 'length_p10_p50_p90': [99.0, 151.0, 209.09999999999997]}
+T1.0_p0.9 {'rows': 128, 'eos_share': 0.9062, 'length_p10_p50_p90': [88.2, 149.0, 216.39999999999998]}
+T0.8_k50_p0.95 {'rows': 128, 'eos_share': 0.9141, 'length_p10_p50_p90': [96.4, 145.5, 222.0]}

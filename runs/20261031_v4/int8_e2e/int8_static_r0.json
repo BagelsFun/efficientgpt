@@ -1,0 +1,336 @@
+{
+ "mode": "int8_static",
+ "quant": "int8",
+ "static_cache": true,
+ "load_s": 5.66,
+ "load_peak_allocated_mib": 6846.8,
+ "weights_allocated_mib": 2237.8,
+ "first_call_s": 18.34,
+ "decode_tok_s": [
+  91.61,
+  88.86,
+  88.94,
+  89.73,
+  91.54
+ ],
+ "decode_tok_s_median": 89.73232109461281,
+ "ttft_s_median": 0.0665321999695152,
+ "completion_tokens": [
+  256,
+  256,
+  256,
+  256,
+  256
+ ],
+ "torch_peak_allocated_mib": 2357.5,
+ "process_device_used_mib": 3224.0,
+ "quality": {
+  "nll_windows": [
+   4.161454677581787,
+   4.391170501708984,
+   4.442785739898682,
+   4.218932628631592,
+   3.7042713165283203,
+   3.844860553741455,
+   2.9041340351104736,
+   4.045144557952881,
+   4.12653923034668,
+   3.8205742835998535,
+   2.535409450531006,
+   3.308051109313965,
+   3.9474992752075195,
+   4.396791458129883,
+   2.84079647064209,
+   4.290060997009277,
+   2.7594592571258545,
+   2.963463068008423,
+   3.9501724243164062,
+   4.517030715942383,
+   2.5340023040771484,
+   3.207059144973755
+  ],
+  "greedy_64": [
+   "Sure! Here's a Python function that reverses a **linked list**:\n\n### \u2705 Explanation:\n- A linked list is made up of nodes, each containing a value and a reference to the next node.\n- To reverse a linked list, we can use an iterative approach, changing the `next` pointers of",
+   "A **CUDA graph** is a concept introduced in the CUDA programming model to help manage and optimize the execution of **parallel programs** on GPUs. It is a **graph-based representation** of the execution flow of a CUDA program, where each **node** represents a **kernel launch**, and **edges** represent **data",
+   "The French Revolution was caused by a combination of factors, including economic hardship, social inequality, and political instability. The absolute monarchy's corruption and inefficiency led to widespread discontent among the people. A series of poor harvests and rising prices exacerbated the crisis, pushing many to demand change.",
+   "**KV caching** is a key technique used in **transformer-based models** (like BERT, GPT, etc.) to **optimize the efficiency of attention mechanisms** during inference. It is particularly important in **large language models** (LLMs) that have a large number of parameters and a large number of",
+   "Here are three important tips for writing effective unit tests:\n\n1. **Write Tests for Each Function or Method**:  \n   Each function or method should have a corresponding test. This ensures that every part of your code is tested and helps catch bugs early.\n\n2. **Use a Testing Framework**:  \n   Use a reliable testing",
+   "The **softmax function** is a mathematical function used in **machine learning**, particularly in **classification tasks** such as **logistic regression**, **neural networks**, and **multi-class classification**. It transforms a vector of real numbers (often representing probabilities) into a vector of probabilities that sum to 1.\n\n---",
+   "\"Good morning\" in Spanish is \"Buenos d\u00edas\" and in French is \"Bonjour\".",
+   "Binary search is a **search algorithm** that efficiently finds a **target value** in a **sorted array** by repeatedly dividing the search interval in **half**. Here's a step-by-step explanation of how it works:\n\n---\n\n### \ud83d\udd0d **1. Understand the Basics**\n- **Binary search** is used on",
+   "A **GPU warp** is a group of **four threads** that are executed in **parallel** on a **single GPU core** (or a **core in a GPU**). This concept is specific to **CUDA**, the parallel computing platform developed by NVIDIA.\n\n---\n\n### \ud83d\udd0d What is a GPU Warp?\n\n-",
+   "Crimson leaves fall,  \nWinds whisper of change,  \nAutumn's gentle end.",
+   "To find the derivative of $ x^3 $, we use **differentiation rules**, specifically the **power rule**:\n\n### Power Rule:\nIf $ f(x) = x^n $, then\n$$\nf'(x) = n \\cdot x^{n - 1}\n$$\n\n### Applying the Power",
+   "TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) are two of the most fundamental protocols used for transmitting data over the internet, but they differ significantly in how they handle data transmission.\n\n---\n\n### **1. Connection-Oriented vs. Connectionless**\n\n- **TCP** is **connection-oriented**:",
+   "**Quantization in neural networks** is a technique used to reduce the **bit depth** of the **weights and activations** in a neural network, which helps in **reducing the model's size**, **computational cost**, and **memory usage**. It is commonly used in **quantized neural networks (",
+   "The planets of our solar system, in order from the Sun, are:\n\n1. **Mercury**  \n2. **Venus**  \n3. **Earth**  \n4. **Mars**  \n5. **Jupiter**  \n6. **Saturn**  \n7. **Uranus**",
+   "**Gradient Descent** is an optimization algorithm used to find the minimum of a function, typically in the context of **machine learning** and **data science**. It is used to minimize a loss function, which measures the error between predicted and actual outcomes.\n\n### Key Concepts:\n\n- **Objective Function**: A function that",
+   "A **hash map** (also known as a **dictionary** in many programming languages) is a data structure that stores **key-value pairs**. It allows for **fast lookups**, **insertions**, and **deletions** of elements based on the **key**, not the index.\n\n### Key Features of"
+  ],
+  "quality_v1": [
+   {
+    "id": "code/is_palindrome",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "code/merge_intervals",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "code/rle_encode",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "code/top_k_frequent",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "code/matmul",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "code/softmax",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "code/chunked",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "code/flatten",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "code/roman_to_int",
+    "split": "dev",
+    "passed": false
+   },
+   {
+    "id": "code/binary_search",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "code/count_params",
+    "split": "dev",
+    "passed": false
+   },
+   {
+    "id": "code/conv_out_size",
+    "split": "test",
+    "passed": false
+   },
+   {
+    "id": "code/moving_average",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "code/kv_cache_bytes",
+    "split": "test",
+    "passed": false
+   },
+   {
+    "id": "code/lru_misses",
+    "split": "dev",
+    "passed": false
+   },
+   {
+    "id": "code/parse_duration",
+    "split": "test",
+    "passed": false
+   },
+   {
+    "id": "math/00",
+    "split": "dev",
+    "passed": false
+   },
+   {
+    "id": "math/01",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "math/02",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "math/03",
+    "split": "test",
+    "passed": false
+   },
+   {
+    "id": "math/04",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "math/05",
+    "split": "test",
+    "passed": false
+   },
+   {
+    "id": "math/06",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "math/07",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "math/08",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "math/09",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "math/10",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "math/11",
+    "split": "test",
+    "passed": false
+   },
+   {
+    "id": "math/12",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "math/13",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "math/14",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "math/15",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "mcq/00",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "mcq/01",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "mcq/02",
+    "split": "dev",
+    "passed": false
+   },
+   {
+    "id": "mcq/03",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "mcq/04",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "mcq/05",
+    "split": "test",
+    "passed": false
+   },
+   {
+    "id": "mcq/06",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "mcq/07",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "mcq/08",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "mcq/09",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "mcq/10",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "mcq/11",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "mcq/12",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "mcq/13",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "mcq/14",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "mcq/15",
+    "split": "test",
+    "passed": false
+   },
+   {
+    "id": "mcq/16",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "mcq/17",
+    "split": "test",
+    "passed": true
+   },
+   {
+    "id": "mcq/18",
+    "split": "dev",
+    "passed": true
+   },
+   {
+    "id": "mcq/19",
+    "split": "test",
+    "passed": true
+   }
+  ]
+ },
+ "round": 0,
+ "gpu_util_before": 0.0,
+ "contended": false
+}

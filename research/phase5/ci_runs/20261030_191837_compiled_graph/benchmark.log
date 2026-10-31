@@ -1,0 +1,65 @@
+Round 1/6: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS rule=exact near_ties=0
+Round 1/6: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS rule=exact near_ties=0
+Round 1/6: compiled_full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS rule=near_tie<0.01 near_ties=3
+Round 1/6: compiled_adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS rule=near_tie<0.01 near_ties=3
+Round 2/6: compiled_adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS rule=near_tie<0.01 near_ties=3
+Round 2/6: compiled_full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS rule=near_tie<0.01 near_ties=3
+Round 2/6: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS rule=exact near_ties=0
+Round 2/6: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS rule=exact near_ties=0
+Round 3/6: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS rule=exact near_ties=0
+Round 3/6: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS rule=exact near_ties=0
+Round 3/6: compiled_full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS rule=near_tie<0.01 near_ties=3
+Round 3/6: compiled_adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS rule=near_tie<0.01 near_ties=3
+Round 4/6: compiled_adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS rule=near_tie<0.01 near_ties=3
+Round 4/6: compiled_full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS rule=near_tie<0.01 near_ties=3
+Round 4/6: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS rule=exact near_ties=0
+Round 4/6: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS rule=exact near_ties=0
+Round 5/6: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS rule=exact near_ties=0
+Round 5/6: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS rule=exact near_ties=0
+Round 5/6: compiled_full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS rule=near_tie<0.01 near_ties=3
+Round 5/6: compiled_adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS rule=near_tie<0.01 near_ties=3
+Round 6/6: compiled_adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS rule=near_tie<0.01 near_ties=3
+Round 6/6: compiled_full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS rule=near_tie<0.01 near_ties=3
+Round 6/6: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS rule=exact near_ties=0
+Round 6/6: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS rule=exact near_ties=0
+
+AGGREGATED ACROSS PROCESS ROUNDS (same batch, prompt, generation)
+(1, 8, 16): full_graph=12.169ms adaptive_graph=10.091ms compiled_full_graph=11.131ms compiled_adaptive_graph=9.244ms
+(1, 64, 16): full_graph=12.210ms adaptive_graph=10.068ms compiled_full_graph=11.592ms compiled_adaptive_graph=9.247ms
+(1, 64, 64): full_graph=42.502ms adaptive_graph=35.358ms compiled_full_graph=38.870ms compiled_adaptive_graph=32.310ms
+(1, 128, 32): full_graph=22.444ms adaptive_graph=20.374ms compiled_full_graph=20.495ms compiled_adaptive_graph=18.845ms
+(1, 128, 64): full_graph=42.546ms adaptive_graph=38.803ms compiled_full_graph=38.823ms compiled_adaptive_graph=35.197ms
+(1, 192, 32): full_graph=21.951ms adaptive_graph=21.929ms compiled_full_graph=20.184ms compiled_adaptive_graph=19.859ms
+(16, 8, 16): full_graph=19.827ms adaptive_graph=14.618ms compiled_full_graph=19.212ms compiled_adaptive_graph=12.963ms
+(16, 64, 16): full_graph=20.122ms adaptive_graph=15.170ms compiled_full_graph=19.425ms compiled_adaptive_graph=13.492ms
+(16, 64, 64): full_graph=77.598ms adaptive_graph=56.244ms compiled_full_graph=73.197ms compiled_adaptive_graph=50.734ms
+(16, 128, 32): full_graph=43.170ms adaptive_graph=37.519ms compiled_full_graph=39.068ms compiled_adaptive_graph=35.047ms
+(16, 128, 64): full_graph=79.212ms adaptive_graph=69.519ms compiled_full_graph=73.606ms compiled_adaptive_graph=65.248ms
+(16, 192, 32): full_graph=45.059ms adaptive_graph=45.573ms compiled_full_graph=43.215ms compiled_adaptive_graph=41.860ms
+CSVs: research\phase5\ci_runs\20261030_191837_compiled_graph\benchmark.csv, research\phase5\ci_runs\20261030_191837_compiled_graph\benchmark_memory.csv and research\phase5\ci_runs\20261030_191837_compiled_graph\benchmark_raw.csv
+LIMITATIONS: one GPU; synthetic prompts; no industrial engine comparison. PyTorch SDPA kernel selected automatically, and FP32 may not use FlashAttention. No EOS, network, serving queue or unpredictable output lengths. Initialization includes correctness validation; graph_capture_ms is separately recorded.
+benchmark rc=0 382s

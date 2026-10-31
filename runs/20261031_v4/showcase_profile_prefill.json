@@ -1,0 +1,108 @@
+{
+ "bf16": {
+  "quant": "bf16",
+  "prompt_tokens": 28,
+  "prefill_wall_ms_median": 40.01459991559386,
+  "gpu_kernel_ms": 18.486068999999937,
+  "groups_ms": {
+   "other": 2.3067050000000155,
+   "copy/cast (incl. int8->bf16 dequantisation)": 1.0122419999999694,
+   "gemm": 15.167121999999953
+  },
+  "top_kernels": [
+   {
+    "kernel": "_ZN7cutlass7Kernel2I67cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_32x1_tn_align8EEvNT_6Para",
+    "ms": 6.029,
+    "calls": 56
+   },
+   {
+    "kernel": "_ZN7cutlass7Kernel2I67cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x64_32x4_tn_align8EEvNT_6Para",
+    "ms": 3.017,
+    "calls": 28
+   },
+   {
+    "kernel": "_ZN8internal5gemvx6kernelIii13__nv_bfloat16S2_S2_fLb0ELb1ELb1ELb0ELi6ELb0E18cublasGemvParamsExIi30cu",
+    "ms": 2.408,
+    "calls": 1
+   },
+   {
+    "kernel": "_ZN7cutlass7Kernel2I67cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_64x2_tn_align8EEvNT_6Para",
+    "ms": 2.052,
+    "calls": 56
+   },
+   {
+    "kernel": "_ZN7cutlass7Kernel2I67cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_32x6_tn_align8EEvNT_6Para",
+    "ms": 1.152,
+    "calls": 56
+   },
+   {
+    "kernel": "_ZN2at6native18elementwise_kernelILi128ELi4EZNS0_22gpu_kernel_impl_nocastINS0_13BinaryFunctorIN3c108",
+    "ms": 0.444,
+    "calls": 225
+   },
+   {
+    "kernel": "_ZN2at6native27unrolled_elementwise_kernelIZZZNS0_23direct_copy_kernel_cudaERNS_18TensorIteratorBase",
+    "ms": 0.382,
+    "calls": 198
+   },
+   {
+    "kernel": "ampere_sgemm_128x128_tn",
+    "ms": 0.355,
+    "calls": 28
+   }
+  ]
+ },
+ "int8": {
+  "quant": "int8",
+  "prompt_tokens": 28,
+  "prefill_wall_ms_median": 59.56480000168085,
+  "gpu_kernel_ms": 34.89181700000019,
+  "groups_ms": {
+   "other": 4.025012000000136,
+   "copy/cast (incl. int8->bf16 dequantisation)": 22.987059000000027,
+   "gemm": 7.879746000000026
+  },
+  "top_kernels": [
+   {
+    "kernel": "_ZN2at6native27unrolled_elementwise_kernelIZZZNS0_23direct_copy_kernel_cudaERNS_18TensorIteratorBase",
+    "ms": 21.305,
+    "calls": 196
+   },
+   {
+    "kernel": "_ZN7cutlass7Kernel2I67cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_32x1_tn_align8EEvNT_6Para",
+    "ms": 3.769,
+    "calls": 56
+   },
+   {
+    "kernel": "_ZN7cutlass7Kernel2I67cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x64_32x4_tn_align8EEvNT_6Para",
+    "ms": 2.05,
+    "calls": 28
+   },
+   {
+    "kernel": "_dot16",
+    "ms": 1.261,
+    "calls": 1
+   },
+   {
+    "kernel": "_ZN7cutlass7Kernel2I67cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_64x2_tn_align8EEvNT_6Para",
+    "ms": 0.936,
+    "calls": 56
+   },
+   {
+    "kernel": "_ZN2at6native27unrolled_elementwise_kernelIZZZNS0_23direct_copy_kernel_cudaERNS_18TensorIteratorBase",
+    "ms": 0.82,
+    "calls": 394
+   },
+   {
+    "kernel": "_ZN7cutlass7Kernel2I67cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_32x6_tn_align8EEvNT_6Para",
+    "ms": 0.618,
+    "calls": 56
+   },
+   {
+    "kernel": "_ZN2at6native18elementwise_kernelILi128ELi2EZNS0_22gpu_kernel_impl_nocastINS0_13BinaryFunctorIfffNS0",
+    "ms": 0.612,
+    "calls": 310
+   }
+  ]
+ }
+}

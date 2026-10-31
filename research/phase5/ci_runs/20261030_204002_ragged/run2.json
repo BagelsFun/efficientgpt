@@ -1,0 +1,220 @@
+{
+  "checkpoint": "out-tinystories-v2\\baseline-2500.pt",
+  "seed": 2,
+  "count": 128,
+  "length_range": [
+    8,
+    128
+  ],
+  "batches": [
+    {
+      "lengths": [
+        109,
+        39,
+        21,
+        44,
+        58,
+        106,
+        62,
+        19,
+        48,
+        80,
+        106,
+        96,
+        128,
+        30,
+        114,
+        14
+      ],
+      "pmax": 128,
+      "capacity": 256
+    },
+    {
+      "lengths": [
+        75,
+        41,
+        32,
+        87,
+        44,
+        76,
+        39,
+        26,
+        98,
+        60,
+        90,
+        88,
+        122,
+        59,
+        34,
+        84
+      ],
+      "pmax": 122,
+      "capacity": 256
+    },
+    {
+      "lengths": [
+        121,
+        125,
+        113,
+        90,
+        54,
+        55,
+        12,
+        30,
+        48,
+        49,
+        78,
+        69,
+        91,
+        115,
+        114,
+        101
+      ],
+      "pmax": 125,
+      "capacity": 256
+    },
+    {
+      "lengths": [
+        126,
+        46,
+        117,
+        119,
+        35,
+        64,
+        76,
+        91,
+        92,
+        20,
+        65,
+        20,
+        123,
+        32,
+        62,
+        115
+      ],
+      "pmax": 126,
+      "capacity": 256
+    },
+    {
+      "lengths": [
+        71,
+        90,
+        68,
+        110,
+        79,
+        85,
+        62,
+        57,
+        79,
+        70,
+        102,
+        79,
+        65,
+        112,
+        33,
+        61
+      ],
+      "pmax": 112,
+      "capacity": 256
+    },
+    {
+      "lengths": [
+        66,
+        115,
+        61,
+        82,
+        17,
+        108,
+        61,
+        68,
+        19,
+        91,
+        84,
+        49,
+        101,
+        71,
+        14,
+        34
+      ],
+      "pmax": 115,
+      "capacity": 256
+    },
+    {
+      "lengths": [
+        39,
+        20,
+        68,
+        12,
+        71,
+        92,
+        78,
+        63,
+        40,
+        116,
+        46,
+        109,
+        61,
+        54,
+        91,
+        125
+      ],
+      "pmax": 125,
+      "capacity": 256
+    },
+    {
+      "lengths": [
+        103,
+        79,
+        20,
+        100,
+        103,
+        57,
+        51,
+        31,
+        126,
+        28,
+        67,
+        29,
+        103,
+        81,
+        27,
+        21
+      ],
+      "pmax": 126,
+      "capacity": 256
+    }
+  ],
+  "per_row->ragged": {
+    "ratio": 7.974,
+    "ci_low": 7.8858,
+    "ci_high": 8.0888,
+    "rounds": 8,
+    "requests_per_round": 6,
+    "per_round_min": 7.8113,
+    "per_round_max": 8.1243,
+    "baseline_median_ms": 1265.3266,
+    "candidate_median_ms": 158.6821
+  },
+  "uniform->ragged": {
+    "ratio": 0.9947,
+    "ci_low": 0.9833,
+    "ci_high": 1.0044,
+    "rounds": 8,
+    "requests_per_round": 6,
+    "per_round_min": 0.9761,
+    "per_round_max": 1.0035,
+    "baseline_median_ms": 157.8343,
+    "candidate_median_ms": 158.6821
+  },
+  "tokens_per_s": {
+    "ragged": 12906.3,
+    "per_row": 1618.6,
+    "uniform": 12975.6
+  },
+  "agreement": {
+    "rows": 128,
+    "exact_rows": 128,
+    "near_tie_rows": 0,
+    "exact_share": 1.0
+  }
+}

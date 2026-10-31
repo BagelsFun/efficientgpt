@@ -1,0 +1,14 @@
+W1030 18:52:44.453000 40916 Lib\site-packages\torch\_inductor\utils.py:1731] [0/0] Not enough SMs to use max_autotune_gemm mode
+W1030 18:53:04.415000 40916 Lib\site-packages\torch\_inductor\cudagraph_utils.py:207] [__cudagraphs] skipping cudagraphs due to mutated inputs (15 instances). Found from : 
+W1030 18:53:04.415000 40916 Lib\site-packages\torch\_inductor\cudagraph_utils.py:207] [__cudagraphs]    File "<HOME>\AI-Models\nanoGPT\research\phase4\decoder.py", line 143, in step
+W1030 18:53:04.415000 40916 Lib\site-packages\torch\_inductor\cudagraph_utils.py:207] [__cudagraphs]     self.token.copy_(logits.argmax(-1))
+W1030 18:53:04.415000 40916 Lib\site-packages\torch\_inductor\cudagraph_utils.py:207] [__cudagraphs] 
+W1030 18:53:10.731000 40916 Lib\site-packages\torch\_inductor\cudagraph_utils.py:207] [__cudagraphs] skipping cudagraphs due to mutated inputs (15 instances). Found from : 
+W1030 18:53:10.731000 40916 Lib\site-packages\torch\_inductor\cudagraph_utils.py:207] [__cudagraphs]    File "<HOME>\AI-Models\nanoGPT\research\phase4\decoder.py", line 144, in step
+W1030 18:53:10.731000 40916 Lib\site-packages\torch\_inductor\cudagraph_utils.py:207] [__cudagraphs]     self.position.add_(1)
+W1030 18:53:10.731000 40916 Lib\site-packages\torch\_inductor\cudagraph_utils.py:207] [__cudagraphs] 
+number of parameters: 12.19M
+default B=1 exact=True compile+warm=6623ms p50(64+64)=111.41ms full_graph=42.07ms
+default B=16 exact=False compile+warm=5078ms p50(64+64)=134.16ms full_graph=78.34ms
+reduce-overhead B=1 exact=True compile+warm=2555ms p50(64+64)=109.63ms full_graph=42.45ms
+reduce-overhead B=16 exact=False compile+warm=2631ms p50(64+64)=132.91ms full_graph=78.47ms

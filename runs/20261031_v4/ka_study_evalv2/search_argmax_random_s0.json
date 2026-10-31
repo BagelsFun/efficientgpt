@@ -1,0 +1,157 @@
+{
+ "task": "argmax",
+ "strategy": "random",
+ "budget": 12,
+ "evaluated": 12,
+ "unused_budget": 0,
+ "statuses": {
+  "correct": 12
+ },
+ "trace": [
+  {
+   "key": "row_chunked{\"BLOCK\": 256, \"WARPS\": 4}",
+   "family": "row_chunked",
+   "params": {
+    "BLOCK": 256,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.006187902884961127,
+   "from_history": false
+  },
+  {
+   "key": "row_chunked{\"BLOCK\": 2048, \"WARPS\": 8}",
+   "family": "row_chunked",
+   "params": {
+    "BLOCK": 2048,
+    "WARPS": 8
+   },
+   "status": "correct",
+   "score_ms": 0.0016943409986964178,
+   "from_history": false
+  },
+  {
+   "key": "split_two_stage{\"SPLITS\": 2, \"WARPS\": 2}",
+   "family": "split_two_stage",
+   "params": {
+    "SPLITS": 2,
+    "WARPS": 2
+   },
+   "status": "correct",
+   "score_ms": 0.002013703216597969,
+   "from_history": false
+  },
+  {
+   "key": "split_two_stage{\"SPLITS\": 2, \"WARPS\": 4}",
+   "family": "split_two_stage",
+   "params": {
+    "SPLITS": 2,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.0019037176163510098,
+   "from_history": false
+  },
+  {
+   "key": "row_chunked{\"BLOCK\": 512, \"WARPS\": 2}",
+   "family": "row_chunked",
+   "params": {
+    "BLOCK": 512,
+    "WARPS": 2
+   },
+   "status": "correct",
+   "score_ms": 0.0033422674042616943,
+   "from_history": false
+  },
+  {
+   "key": "row_whole{\"WARPS\": 1}",
+   "family": "row_whole",
+   "params": {
+    "WARPS": 1
+   },
+   "status": "correct",
+   "score_ms": 0.0016987396710909726,
+   "from_history": false
+  },
+  {
+   "key": "row_chunked{\"BLOCK\": 256, \"WARPS\": 1}",
+   "family": "row_chunked",
+   "params": {
+    "BLOCK": 256,
+    "WARPS": 1
+   },
+   "status": "correct",
+   "score_ms": 0.00427770097335242,
+   "from_history": false
+  },
+  {
+   "key": "split_two_stage{\"SPLITS\": 16, \"WARPS\": 1}",
+   "family": "split_two_stage",
+   "params": {
+    "SPLITS": 16,
+    "WARPS": 1
+   },
+   "status": "correct",
+   "score_ms": 0.0018190344666518235,
+   "from_history": false
+  },
+  {
+   "key": "row_chunked{\"BLOCK\": 1024, \"WARPS\": 1}",
+   "family": "row_chunked",
+   "params": {
+    "BLOCK": 1024,
+    "WARPS": 1
+   },
+   "status": "correct",
+   "score_ms": 0.00210921634223988,
+   "from_history": false
+  },
+  {
+   "key": "row_whole{\"WARPS\": 4}",
+   "family": "row_whole",
+   "params": {
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.0012154691990377818,
+   "from_history": true
+  },
+  {
+   "key": "row_chunked{\"BLOCK\": 1024, \"WARPS\": 2}",
+   "family": "row_chunked",
+   "params": {
+    "BLOCK": 1024,
+    "WARPS": 2
+   },
+   "status": "correct",
+   "score_ms": 0.002874087964418144,
+   "from_history": false
+  },
+  {
+   "key": "split_two_stage{\"SPLITS\": 8, \"WARPS\": 4}",
+   "family": "split_two_stage",
+   "params": {
+    "SPLITS": 8,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.0020208350309434517,
+   "from_history": false
+  }
+ ],
+ "best": {
+  "score_ms": 0.0012154691990377818,
+  "family": "row_whole",
+  "params": {
+   "WARPS": 4
+  }
+ },
+ "env": {
+  "torch": "2.11.0+cu128",
+  "triton": "3.7.1",
+  "gpu": "NVIDIA GeForce RTX 4060",
+  "python": "3.11.9",
+  "git": "<private-commit>+dirty"
+ },
+ "seed": 0
+}

@@ -1,0 +1,7 @@
+batch,prompt_tokens,generated_tokens,method,num_requests,p50_ms,p95_ms,min_ms,max_ms,generated_tokens_per_sec,speedup_vs_dynamic_kv,graph_capture_ms,output_tokens_equal
+1,8,64,dynamic_kv_eager,36,120.5779,129.1478,117.415,132.6093,530.78,1.0,0,True
+1,8,64,static_kv_eager,36,140.3283,156.8311,135.113,162.5765,456.07,0.8593,0,True
+1,8,64,static_kv_graph,36,42.7247,45.6793,40.0977,45.7265,1497.96,2.8222,2.6844,True
+16,128,64,dynamic_kv_eager,36,123.3056,130.6011,118.6866,131.2326,8304.57,1.0,0,True
+16,128,64,static_kv_eager,36,142.3412,150.3501,138.6898,154.8316,7193.98,0.8663,0,True
+16,128,64,static_kv_graph,36,81.0262,83.5426,78.5743,83.9803,12637.9,1.5218,5.6406,True

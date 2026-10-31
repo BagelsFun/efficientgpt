@@ -1,0 +1,28 @@
+﻿.\.venv\Scripts\python.exe : W1031 10:18:06.611000 43800 
+.venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not 
+supported in Windows or MacOs.
+At line:1 char:428
++ ... | Out-Null; .\.venv\Scripts\python.exe -m assistant.bench.static_cach ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (W1031 10:18:06....ndows or MacOs.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:   9%|▊         | 27/311 [00:00<00:01, 211.03it/s]
+Loading weights:  16%|█▌        | 49/311 [00:00<00:01, 177.09it/s]
+Loading weights:  23%|██▎       | 72/311 [00:00<00:01, 171.60it/s]
+Loading weights:  31%|███       | 96/311 [00:00<00:01, 169.55it/s]
+Loading weights:  39%|███▊      | 120/311 [00:00<00:01, 188.85it/s]
+Loading weights:  45%|████▌     | 140/311 [00:00<00:00, 181.53it/s]
+Loading weights:  51%|█████     | 159/311 [00:00<00:01, 143.19it/s]
+Loading weights:  60%|█████▉    | 186/311 [00:01<00:00, 159.83it/s]
+Loading weights:  66%|██████▌   | 206/311 [00:01<00:00, 155.17it/s]
+Loading weights:  73%|███████▎  | 226/311 [00:01<00:00, 150.43it/s]
+Loading weights:  79%|███████▉  | 246/311 [00:01<00:00, 156.42it/s]
+Loading weights:  85%|████████▍ | 264/311 [00:01<00:00, 145.85it/s]
+Loading weights:  95%|█████████▌| 296/311 [00:01<00:00, 179.74it/s]
+Loading weights: 100%|██████████| 311/311 [00:01<00:00, 174.41it/s]
+dynamic {"decode_tok_s": [26.88, 26.83, 26.83, 26.86, 26.94, 26.83, 26.78, 27.01, 26.76, 26.91], "decode_tok_s_median": 26.84903896218286, "ttft_s_median": 0.04261779994703829, "completion_tokens": [256, 256, 256, 256, 256, 256, 256, 256, 256, 256]}
+static {"decode_tok_s": [57.46, 57.7, 57.66, 57.63, 57.85, 57.55, 57.81, 57.81, 57.85, 57.55], "decode_tok_s_median": 57.67868823263156, "ttft_s_median": 0.04488105000928044, "completion_tokens": [256, 256, 256, 256, 256, 256, 256, 256, 256, 256]}
+decode speedup (static/dynamic) {'ratio': 2.148258949375155, 'ci_low': 2.14113947704818, 'ci_high': 2.1553187719452267, 'reps': 10}

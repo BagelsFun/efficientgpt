@@ -1,0 +1,24 @@
+................................................<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\jit\_script.py:365: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+..............
+----------------------------------------------------------------------
+Ran 62 tests in 42.577s
+
+OK
+number of parameters: 0.03M
+number of parameters: 0.03M
+number of parameters: 0.03M
+number of parameters: 0.03M
+number of parameters: 0.03M
+number of parameters: 0.03M
+number of parameters: 0.01M
+number of parameters: 0.01M
+number of parameters: 0.03M
+number of parameters: 0.03M
+number of parameters: 0.03M
+number of parameters: 12.19M
+number of parameters: 0.03M
+number of parameters: 12.19M
+number of parameters: 0.03M
+number of parameters: 12.19M
+number of parameters: 0.03M

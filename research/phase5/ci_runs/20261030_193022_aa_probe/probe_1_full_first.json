@@ -1,0 +1,99 @@
+{
+  "order": "full_first",
+  "blocks": 10,
+  "requests": 30,
+  "cases": {
+    "1_192_32": {
+      "addresses": {
+        "full_graph": {
+          "key0_ptr_mod_2MiB": 1586688,
+          "capacity": 256
+        },
+        "adaptive_graph": {
+          "key0_ptr_mod_2MiB": 0,
+          "capacity": 256
+        },
+        "compiled_full_graph": {
+          "key0_ptr_mod_2MiB": 0,
+          "capacity": 256
+        },
+        "compiled_adaptive_graph": {
+          "key0_ptr_mod_2MiB": 786432,
+          "capacity": 256
+        }
+      },
+      "full_graph->adaptive_graph": {
+        "ratio": 1.0034481175630987,
+        "ci_low": 0.997327053339111,
+        "ci_high": 1.0085552222754963,
+        "rounds": 10,
+        "requests_per_round": 30,
+        "per_round_min": 0.9926937955699192,
+        "per_round_max": 1.0106891451383153,
+        "baseline_median_ms": 21.913299977313727,
+        "candidate_median_ms": 21.837999986018986,
+        "verdict": "AA_PASS",
+        "classify": "INCONCLUSIVE"
+      },
+      "compiled_full_graph->compiled_adaptive_graph": {
+        "ratio": 1.002719975921,
+        "ci_low": 0.9952449308494069,
+        "ci_high": 1.0082902325958543,
+        "rounds": 10,
+        "requests_per_round": 30,
+        "per_round_min": 0.9900279441854978,
+        "per_round_max": 1.0157159478815991,
+        "baseline_median_ms": 20.275749964639544,
+        "candidate_median_ms": 20.220750011503696,
+        "verdict": "AA_PASS",
+        "classify": "INCONCLUSIVE"
+      }
+    },
+    "16_192_32": {
+      "addresses": {
+        "full_graph": {
+          "key0_ptr_mod_2MiB": 0,
+          "capacity": 256
+        },
+        "adaptive_graph": {
+          "key0_ptr_mod_2MiB": 524288,
+          "capacity": 256
+        },
+        "compiled_full_graph": {
+          "key0_ptr_mod_2MiB": 1441792,
+          "capacity": 256
+        },
+        "compiled_adaptive_graph": {
+          "key0_ptr_mod_2MiB": 0,
+          "capacity": 256
+        }
+      },
+      "full_graph->adaptive_graph": {
+        "ratio": 0.9973520376907802,
+        "ci_low": 0.9886232703101928,
+        "ci_high": 1.004130141247055,
+        "rounds": 10,
+        "requests_per_round": 30,
+        "per_round_min": 0.9740768342036809,
+        "per_round_max": 1.0074589713583388,
+        "baseline_median_ms": 45.42385000968352,
+        "candidate_median_ms": 45.544449996668845,
+        "verdict": "AA_PASS",
+        "classify": "INCONCLUSIVE"
+      },
+      "compiled_full_graph->compiled_adaptive_graph": {
+        "ratio": 1.000465761326373,
+        "ci_low": 0.9905150148353998,
+        "ci_high": 1.0080734596768317,
+        "rounds": 10,
+        "requests_per_round": 30,
+        "per_round_min": 0.98928990939918,
+        "per_round_max": 1.0105323050678494,
+        "baseline_median_ms": 42.96039999462664,
+        "candidate_median_ms": 42.94040001695976,
+        "verdict": "AA_PASS",
+        "classify": "INCONCLUSIVE"
+      }
+    }
+  }
+}

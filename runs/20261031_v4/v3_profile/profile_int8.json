@@ -1,0 +1,290 @@
+{
+ "quant": "int8",
+ "tokens": 129,
+ "wall_ms_per_token": 11.573039534927686,
+ "gpu_kernel_ms_per_token": 9.006281674418751,
+ "gap_ms_per_token": 2.5667578605089343,
+ "decode_tok_s_streamer": 91.61792604974576,
+ "kernels": [
+  {
+   "kernel": "_part",
+   "ms_total": 1001.05,
+   "calls": 25217,
+   "ms_per_token": 7.7601,
+   "share": 0.8616
+  },
+  {
+   "kernel": "_Z41fmha_cutlassF_bf16_aligned_64x128_rf_sm80N22PyTorchMemEffAttention15AttentionKernelIN7cutlass10bfloat16_tENS1_4arch4",
+   "ms_total": 40.427,
+   "calls": 3584,
+   "ms_per_token": 0.3134,
+   "share": 0.0348
+  },
+  {
+   "kernel": "_reduce",
+   "ms_total": 27.866,
+   "calls": 25217,
+   "ms_per_token": 0.216,
+   "share": 0.024
+  },
+  {
+   "kernel": "triton_poi_fused__scaled_dot_product_efficient_attention__to_copy__unsafe_view_add_cat_clone_constant_pad_nd_cos_expand_",
+   "ms_total": 22.799,
+   "calls": 7168,
+   "ms_per_token": 0.1767,
+   "share": 0.0196
+  },
+  {
+   "kernel": "_ZN2at6native27unrolled_elementwise_kernelIZZZNS0_23direct_copy_kernel_cudaERNS_18TensorIteratorBaseEENKUlvE1_clEvENKUlv",
+   "ms_total": 21.194,
+   "calls": 196,
+   "ms_per_token": 0.1643,
+   "share": 0.0182
+  },
+  {
+   "kernel": "triton_per_fused__to_copy_add_arange_cat_cos_index_copy_mean_mul_neg_pow_rsqrt_sin_slice_transpose_unsqueeze_view_2",
+   "ms_total": 5.104,
+   "calls": 3584,
+   "ms_per_token": 0.0396,
+   "share": 0.0044
+  },
+  {
+   "kernel": "triton_per_fused__scaled_dot_product_efficient_attention__to_copy__unsafe_view_add_cat_clone_constant_pad_nd_cos_expand_",
+   "ms_total": 4.17,
+   "calls": 3584,
+   "ms_per_token": 0.0323,
+   "share": 0.0036
+  },
+  {
+   "kernel": "_ZN7cutlass7Kernel2I67cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_32x1_tn_align8EEvNT_6ParamsE",
+   "ms_total": 3.731,
+   "calls": 56,
+   "ms_per_token": 0.0289,
+   "share": 0.0032
+  },
+  {
+   "kernel": "triton_poi_fused_add_copy__15",
+   "ms_total": 3.242,
+   "calls": 3584,
+   "ms_per_token": 0.0251,
+   "share": 0.0028
+  },
+  {
+   "kernel": "triton_poi_fused_int8_linear_mul_silu_7",
+   "ms_total": 2.893,
+   "calls": 3584,
+   "ms_per_token": 0.0224,
+   "share": 0.0025
+  },
+  {
+   "kernel": "triton_poi_fused_add_arange_index_copy_transpose_view_3",
+   "ms_total": 2.774,
+   "calls": 3584,
+   "ms_per_token": 0.0215,
+   "share": 0.0024
+  },
+  {
+   "kernel": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_13",
+   "ms_total": 2.711,
+   "calls": 1664,
+   "ms_per_token": 0.021,
+   "share": 0.0023
+  },
+  {
+   "kernel": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_12",
+   "ms_total": 2.373,
+   "calls": 1664,
+   "ms_per_token": 0.0184,
+   "share": 0.002
+  },
+  {
+   "kernel": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_11",
+   "ms_total": 2.284,
+   "calls": 1664,
+   "ms_per_token": 0.0177,
+   "share": 0.002
+  },
+  {
+   "kernel": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_10",
+   "ms_total": 2.18,
+   "calls": 1664,
+   "ms_per_token": 0.0169,
+   "share": 0.0019
+  },
+  {
+   "kernel": "_ZN7cutlass7Kernel2I67cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x64_32x4_tn_align8EEvNT_6ParamsE",
+   "ms_total": 2.04,
+   "calls": 28,
+   "ms_per_token": 0.0158,
+   "share": 0.0018
+  },
+  {
+   "kernel": "triton_poi_fused__scaled_dot_product_efficient_attention__to_copy__unsafe_view_add_cat_clone_constant_pad_nd_cos_expand_",
+   "ms_total": 1.436,
+   "calls": 1792,
+   "ms_per_token": 0.0111,
+   "share": 0.0012
+  },
+  {
+   "kernel": "_ZN2at6native27unrolled_elementwise_kernelIZZZNS0_23direct_copy_kernel_cudaERNS_18TensorIteratorBaseEENKUlvE1_clEvENKUlv",
+   "ms_total": 1.11,
+   "calls": 467,
+   "ms_per_token": 0.0086,
+   "share": 0.001
+  },
+  {
+   "kernel": "_ZN7cutlass7Kernel2I67cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_64x2_tn_align8EEvNT_6ParamsE",
+   "ms_total": 0.929,
+   "calls": 56,
+   "ms_per_token": 0.0072,
+   "share": 0.0008
+  },
+  {
+   "kernel": "Memcpy DtoD (Device -> Device)",
+   "ms_total": 0.775,
+   "calls": 901,
+   "ms_per_token": 0.006,
+   "share": 0.0007
+  },
+  {
+   "kernel": "_ZN2at6native13reduce_kernelILi512ELi1ENS0_8ReduceOpIfNS0_9ArgMaxOpsIfEEjxLi4ELi4EEEEEvT1_",
+   "ms_total": 0.658,
+   "calls": 129,
+   "ms_per_token": 0.0051,
+   "share": 0.0006
+  },
+  {
+   "kernel": "_ZN7cutlass7Kernel2I67cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_32x6_tn_align8EEvNT_6ParamsE",
+   "ms_total": 0.609,
+   "calls": 56,
+   "ms_per_token": 0.0047,
+   "share": 0.0005
+  },
+  {
+   "kernel": "_ZN2at6native18elementwise_kernelILi128ELi2EZNS0_22gpu_kernel_impl_nocastINS0_13BinaryFunctorIfffNS0_15binary_internal10",
+   "ms_total": 0.602,
+   "calls": 310,
+   "ms_per_token": 0.0047,
+   "share": 0.0005
+  },
+  {
+   "kernel": "_ZN50_GLOBAL__N__2530b397_17_RangeFactories_cu_4cc9e74429elementwise_kernel_with_indexIiZZZN2at6native15arange_cuda_outE",
+   "ms_total": 0.55,
+   "calls": 669,
+   "ms_per_token": 0.0043,
+   "share": 0.0005
+  },
+  {
+   "kernel": "_ZN2at6native18elementwise_kernelILi128ELi4EZNS0_22gpu_kernel_impl_nocastINS0_13BinaryFunctorIN3c108BFloat16ES5_S5_NS0_1",
+   "ms_total": 0.439,
+   "calls": 225,
+   "ms_per_token": 0.0034,
+   "share": 0.0004
+  },
+  {
+   "kernel": "_ZN2at6native40_GLOBAL__N__0b46c3ea_8_Shape_cu_85d9f36c35CatArrayBatchedCopy_alignedK_contigINS1_10OpaqueTypeILj8EEEjLi2",
+   "ms_total": 0.414,
+   "calls": 258,
+   "ms_per_token": 0.0032,
+   "share": 0.0004
+  },
+  {
+   "kernel": "_ZN2at6native29vectorized_elementwise_kernelILi4EZNS0_25bfloat16_copy_kernel_cudaERNS_18TensorIteratorBaseEEUlfE_St5arra",
+   "ms_total": 0.403,
+   "calls": 367,
+   "ms_per_token": 0.0031,
+   "share": 0.0003
+  },
+  {
+   "kernel": "ampere_sgemm_128x128_tn",
+   "ms_total": 0.35,
+   "calls": 28,
+   "ms_per_token": 0.0027,
+   "share": 0.0003
+  },
+  {
+   "kernel": "_ZN2at6native29vectorized_elementwise_kernelILi2ENS0_15CUDAFunctor_addIxEESt5arrayIPcLy3EEEEviT0_T1_",
+   "ms_total": 0.344,
+   "calls": 321,
+   "ms_per_token": 0.0027,
+   "share": 0.0003
+  },
+  {
+   "kernel": "_ZN2at6native29vectorized_elementwise_kernelILi4ENS0_11FillFunctorIbEESt5arrayIPcLy1EEEEviT0_T1_",
+   "ms_total": 0.341,
+   "calls": 416,
+   "ms_per_token": 0.0026,
+   "share": 0.0003
+  },
+  {
+   "kernel": "_ZN2at6native13reduce_kernelILi512ELi1ENS0_8ReduceOpIfNS0_7MeanOpsIffffEEjfLi4ELi4EEEEEvT1_",
+   "ms_total": 0.334,
+   "calls": 113,
+   "ms_per_token": 0.0026,
+   "share": 0.0003
+  },
+  {
+   "kernel": "_ZN2at6native29vectorized_elementwise_kernelILi2ENS0_21CUDAFunctorOnSelf_addIxEESt5arrayIPcLy2EEEEviT0_T1_",
+   "ms_total": 0.298,
+   "calls": 286,
+   "ms_per_token": 0.0023,
+   "share": 0.0003
+  },
+  {
+   "kernel": "_ZN2at6native29vectorized_elementwise_kernelILi2ENS0_13BinaryFunctorIxxxNS0_15binary_internal10MulFunctorIxEEEESt5arrayI",
+   "ms_total": 0.292,
+   "calls": 258,
+   "ms_per_token": 0.0023,
+   "share": 0.0003
+  },
+  {
+   "kernel": "_ZN2at6native29vectorized_elementwise_kernelILi4ENS0_13BinaryFunctorIbbbNS0_16BitwiseOrFunctorIbEEEESt5arrayIPcLy3EEEEvi",
+   "ms_total": 0.256,
+   "calls": 258,
+   "ms_per_token": 0.002,
+   "share": 0.0002
+  },
+  {
+   "kernel": "_ZN2at6native13reduce_kernelILi512ELi1ENS0_8ReduceOpIbNS0_14func_wrapper_tIbZZZNS0_14or_kernel_cudaERNS_14TensorIterator",
+   "ms_total": 0.239,
+   "calls": 132,
+   "ms_per_token": 0.0019,
+   "share": 0.0002
+  },
+  {
+   "kernel": "_ZN2at6native13reduce_kernelILi512ELi1ENS0_8ReduceOpIxNS0_14func_wrapper_tIxNS0_13MaxNanFunctorIxEEEEjxLi4ELi4EEEEEvT1_",
+   "ms_total": 0.229,
+   "calls": 129,
+   "ms_per_token": 0.0018,
+   "share": 0.0002
+  },
+  {
+   "kernel": "triton_red_fused__to_copy_add_embedding_mean_mul_pow_rsqrt_0",
+   "ms_total": 0.203,
+   "calls": 128,
+   "ms_per_token": 0.0016,
+   "share": 0.0002
+  },
+  {
+   "kernel": "Memcpy DtoH (Device -> Pageable)",
+   "ms_total": 0.194,
+   "calls": 130,
+   "ms_per_token": 0.0015,
+   "share": 0.0002
+  },
+  {
+   "kernel": "triton_red_fused__to_copy_add_embedding_mean_mul_pow_rsqrt_8",
+   "ms_total": 0.19,
+   "calls": 128,
+   "ms_per_token": 0.0015,
+   "share": 0.0002
+  },
+  {
+   "kernel": "_ZN2at6native27unrolled_elementwise_kernelINS0_13BinaryFunctorIxxxNS0_17BitwiseAndFunctorIxEEEESt5arrayIPcLy3EELi4E23Tri",
+   "ms_total": 0.189,
+   "calls": 129,
+   "ms_per_token": 0.0015,
+   "share": 0.0002
+  }
+ ]
+}

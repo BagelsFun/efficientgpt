@@ -1,0 +1,17 @@
+Process 1/2: modes built in order ['compiled_triton_full_graph', 'fp16_compiled_triton_full_graph', 'bf16_compiled_triton_full_graph', 'fp16_full_graph']
+  correctness=PASS near_ties (approx modes: rows differing from fp32)={'compiled_triton_full_graph': 0, 'fp16_compiled_triton_full_graph': 0, 'bf16_compiled_triton_full_graph': 1, 'fp16_full_graph': 0}
+Process 2/2: modes built in order ['fp16_compiled_triton_full_graph', 'bf16_compiled_triton_full_graph', 'fp16_full_graph', 'compiled_triton_full_graph']
+  correctness=PASS near_ties (approx modes: rows differing from fp32)={'fp16_compiled_triton_full_graph': 0, 'bf16_compiled_triton_full_graph': 1, 'fp16_full_graph': 0, 'compiled_triton_full_graph': 0}
+ 1   8 16 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.336 [1.213, 1.504] WIN
+ 1   8 16 compiled_triton_full_graph -> bf16_compiled_triton_full_graph 1.379 [1.214, 1.543] WIN
+ 1   8 16 fp16_compiled_triton_full_graph -> bf16_compiled_triton_full_graph 1.032 [0.892, 1.117] INCONCLUSIVE
+ 1   8 16 compiled_triton_full_graph -> fp16_full_graph         1.104 [0.980, 1.205] INCONCLUSIVE
+ 1  64 32 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.461 [1.268, 1.589] WIN
+ 1  64 32 compiled_triton_full_graph -> bf16_compiled_triton_full_graph 1.458 [1.294, 1.617] WIN
+ 1  64 32 fp16_compiled_triton_full_graph -> bf16_compiled_triton_full_graph 0.998 [0.891, 1.212] INCONCLUSIVE
+ 1  64 32 compiled_triton_full_graph -> fp16_full_graph         1.017 [0.921, 1.107] INCONCLUSIVE
+ 1 128 32 compiled_triton_full_graph -> fp16_compiled_triton_full_graph 1.417 [1.300, 1.636] WIN
+ 1 128 32 compiled_triton_full_graph -> bf16_compiled_triton_full_graph 1.453 [1.347, 1.592] WIN
+ 1 128 32 fp16_compiled_triton_full_graph -> bf16_compiled_triton_full_graph 1.025 [0.850, 1.143] INCONCLUSIVE
+ 1 128 32 compiled_triton_full_graph -> fp16_full_graph         1.051 [1.000, 1.116] WIN
+Wrote results\precision\smoke\benchmark_raw.csv, results\precision\smoke\CI_REPORT.md and results\precision\smoke\CI_REPORT.json

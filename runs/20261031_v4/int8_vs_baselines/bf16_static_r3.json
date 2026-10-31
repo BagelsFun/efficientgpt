@@ -1,0 +1,30 @@
+{
+ "mode": "bf16_static",
+ "quant": "bf16",
+ "static_cache": true,
+ "load_s": 7.01,
+ "load_peak_allocated_mib": 3282.3,
+ "weights_allocated_mib": 3282.3,
+ "first_call_s": 6.41,
+ "decode_tok_s": [
+  59.45,
+  59.04,
+  59.11,
+  59.16,
+  58.81
+ ],
+ "decode_tok_s_median": 59.111934290373306,
+ "ttft_s_median": 0.045534900040365756,
+ "completion_tokens": [
+  256,
+  256,
+  256,
+  256,
+  256
+ ],
+ "torch_peak_allocated_mib": 3345.8,
+ "process_device_used_mib": 3426.0,
+ "round": 3,
+ "gpu_util_before": 0.0,
+ "contended": false
+}

@@ -1,0 +1,34 @@
+﻿bf16_static   r0 decode 59.2 tok/s  ttft 46 ms  peak 3350 MiB  util 1.0
+int8_static   r0 decode 92.2 tok/s  ttft 68 ms  peak 2357 MiB  util 0.0
+torchao_int8_static r0 decode 82.4 tok/s  ttft 68 ms  peak 2875 MiB  util 1.0
+llamacpp_q8   r0 decode 109.3 tok/s  ttft 38 ms  peak 2300 MiB  util 0.0
+llamacpp_q8   r1 decode 109.8 tok/s  ttft 39 ms  peak 2300 MiB  util 0.0
+torchao_int8_static r1 decode 82.7 tok/s  ttft 68 ms  peak 2875 MiB  util 0.0
+int8_static   r1 decode 90.9 tok/s  ttft 67 ms  peak 2358 MiB  util 0.0
+bf16_static   r1 decode 58.9 tok/s  ttft 46 ms  peak 3346 MiB  util 0.0
+bf16_static   r2 decode 59.3 tok/s  ttft 45 ms  peak 3350 MiB  util 0.0
+int8_static   r2 decode 91.4 tok/s  ttft 66 ms  peak 2358 MiB  util 0.0
+torchao_int8_static r2 decode 83.0 tok/s  ttft 67 ms  peak 2875 MiB  util 0.0
+llamacpp_q8   r2 decode 109.5 tok/s  ttft 42 ms  peak 2300 MiB  util 0.0
+llamacpp_q8   r3 decode 110.1 tok/s  ttft 29 ms  peak 2300 MiB  util 0.0
+torchao_int8_static r3 decode 82.9 tok/s  ttft 68 ms  peak 2875 MiB  util 0.0
+int8_static   r3 decode 91.2 tok/s  ttft 67 ms  peak 2358 MiB  util 0.0
+bf16_static   r3 decode 59.1 tok/s  ttft 46 ms  peak 3346 MiB  util 0.0
+.\.venv\Scripts\python.exe : Traceback (most recent call last):
+At line:1 char:407
++ ... v,noheader; .\.venv\Scripts\python.exe -m research.realmodel.bench_in ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<HOME>\AI-Models\nanoGPT\research\realmodel\bench_int8.py", line 256, in <module>
+    main()
+  File "<HOME>\AI-Models\nanoGPT\research\realmodel\bench_int8.py", line 205, in main
+    (args.out / 'summary.json').write_text(json.dumps(summarise(runs), indent=1), encoding='utf-8')
+                                                      ^^^^^^^^^^^^^^^
+  File "<HOME>\AI-Models\nanoGPT\research\realmodel\bench_int8.py", line 233, in summarise
+    d = [a - b for a, b in zip(q['nll_windows'], ref['nll_windows'])]
+                               ~^^^^^^^^^^^^^^^
+KeyError: 'nll_windows'

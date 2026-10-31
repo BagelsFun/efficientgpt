@@ -1,0 +1,19 @@
+{
+ "mode": "int8_static",
+ "quant": "int8",
+ "static_cache": true,
+ "load_s": 5.89,
+ "first_call_s": 20.85,
+ "decode_tok_s": [
+  88.88,
+  88.17
+ ],
+ "decode_tok_s_median": 88.52445151086793,
+ "ttft_s_median": 0.06588449998525903,
+ "completion_tokens": [
+  256,
+  256
+ ],
+ "torch_peak_allocated_mib": 6846.8,
+ "process_device_used_mib": 3206.0
+}

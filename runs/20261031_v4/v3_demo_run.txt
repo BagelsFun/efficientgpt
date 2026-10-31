@@ -1,0 +1,19 @@
+Loading Qwen/Qwen3-1.7B -> weight-only int8 + CUDA-graph decoder ...
+W1031 16:22:47.761000 14368 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   6%|▌         | 18/311 [00:00<00:01, 179.22it/s]Loading weights:  12%|█▏        | 36/311 [00:00<00:02, 109.12it/s]Loading weights:  17%|█▋        | 53/311 [00:00<00:02, 128.67it/s]Loading weights:  22%|██▏       | 68/311 [00:00<00:02, 120.37it/s]Loading weights:  30%|██▉       | 92/311 [00:00<00:01, 153.12it/s]Loading weights:  35%|███▌      | 109/311 [00:00<00:01, 149.81it/s]Loading weights:  40%|████      | 125/311 [00:00<00:01, 138.17it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 337.84it/s]
+loaded in 6.1 s; capturing the decode graph on the first request ...
+
+> Explain in three short paragraphs why LLM decoding on a GPU is memory-bandwidth bound.
+
+LLM decoding on a GPU is memory-bandwidth bound because the vast amount of data required for decoding—such as token sequences, attention weights, and model parameters—exceeds the GPU's memory capacity. GPUs, while powerful in parallelism, have limited memory, which can lead to frequent memory accesses and data transfers, slowing down the decoding process.
+
+The high memory bandwidth requirements of LLM decoding further exacerbate this issue. Decoding often involves large matrix operations, such as attention mechanisms, which require continuous data flow between memory and the GPU's memory interface. This constant data movement can bottleneck the GPU, especially when the data size exceeds the available memory.
+
+Additionally, the need for frequent memory accesses during decoding, such as loading and storing token sequences or attention weights, increases the overall latency. This
+
+[int8 + graph] 160 tokens, TTFT 55 ms, decode 122.1 tok/s, GPU memory 3.35 GiB peak (incl. load)
+
+Checking against bf16 (Hugging Face generate, static cache) ...
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   6%|▋         | 20/311 [00:00<00:01, 193.88it/s]Loading weights:  13%|█▎        | 40/311 [00:00<00:01, 193.44it/s]Loading weights:  21%|██        | 66/311 [00:00<00:01, 223.21it/s]Loading weights:  29%|██▊       | 89/311 [00:00<00:00, 222.27it/s]Loading weights:  36%|███▌      | 112/311 [00:00<00:00, 212.81it/s]Loading weights:  43%|████▎     | 134/311 [00:00<00:00, 189.37it/s]Loading weights:  51%|█████     | 158/311 [00:00<00:00, 203.78it/s]Loading weights:  58%|█████▊    | 179/311 [00:00<00:00, 170.32it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 328.61it/s]
+W1031 16:23:09.099000 14368 .venv\Lib\site-packages\torch\_inductor\utils.py:1731] [1/0] Not enough SMs to use max_autotune_gemm mode
+[bf16 generate] decode 7.9 tok/s; first 46 of 160 tokens identical to int8 (diverges later; int8 is approximate)

@@ -1,0 +1,4 @@
+max |err| vs fp64 (ours, sdpa): 1.703310453526896e-05 7.104294835458269e-05
+cases: 40  ours<=2*sdpa+1e-6 in 40
+worst ours case: (1.703310453526896e-05, 3.923368013269979e-05, 16, 256, 8.0, [169, 238, 121])
+non-contiguous q max err vs fp64: 1.5562154098702763e-07

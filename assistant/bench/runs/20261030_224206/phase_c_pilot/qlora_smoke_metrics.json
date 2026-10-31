@@ -1,0 +1,59 @@
+{
+  "model": "Qwen/Qwen3-1.7B",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "data": "results\\assistant\\data\\distill_v1.jsonl",
+  "train_examples": 9,
+  "val_examples": 2,
+  "trainable_params": 17432576,
+  "args": {
+    "data": "results\\assistant\\data\\distill_v1.jsonl",
+    "out": "out-assistant\\SMOKE-qlora-v1data-20261031_003959",
+    "epochs": "2.0",
+    "lr": "0.0002",
+    "rank": "16",
+    "alpha": "32",
+    "accum": "2",
+    "max_len": "1024",
+    "val_frac": "0.2",
+    "seed": "0",
+    "max_steps": "5"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "train_loss": 0.3396,
+      "lr": 0.00016,
+      "elapsed_s": 1.1
+    },
+    {
+      "step": 2,
+      "train_loss": 0.9617,
+      "lr": 0.00012,
+      "elapsed_s": 2.3
+    },
+    {
+      "step": 3,
+      "train_loss": 0.8796,
+      "lr": 8e-05,
+      "elapsed_s": 3.2
+    },
+    {
+      "step": 4,
+      "train_loss": 0.9794,
+      "lr": 3.999999999999999e-05,
+      "elapsed_s": 5.1
+    },
+    {
+      "step": 5,
+      "train_loss": 0.7305,
+      "lr": 0.0,
+      "elapsed_s": 7.0,
+      "val_loss": 0.4044
+    }
+  ],
+  "val_loss_before": 0.6433886140584946,
+  "val_loss_after": 0.40435680747032166,
+  "peak_allocated_mib": 3435.7,
+  "peak_reserved_mib": 3816.0,
+  "train_seconds": 7.6
+}

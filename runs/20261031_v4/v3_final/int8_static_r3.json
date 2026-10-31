@@ -1,0 +1,31 @@
+{
+ "mode": "int8_static",
+ "quant": "int8",
+ "static_cache": true,
+ "load_s": 5.31,
+ "max_autotune": false,
+ "load_peak_allocated_mib": 3426.3,
+ "weights_allocated_mib": 2237.8,
+ "first_call_s": 5.94,
+ "decode_tok_s": [
+  98.8,
+  101.96,
+  100.22,
+  100.62,
+  100.68
+ ],
+ "decode_tok_s_median": 100.61666176327984,
+ "ttft_s_median": 0.06413309997878969,
+ "completion_tokens": [
+  256,
+  256,
+  256,
+  256,
+  256
+ ],
+ "torch_peak_allocated_mib": 2307.2,
+ "process_device_used_mib": 2398.0,
+ "round": 3,
+ "gpu_util_before": 0.0,
+ "contended": false
+}

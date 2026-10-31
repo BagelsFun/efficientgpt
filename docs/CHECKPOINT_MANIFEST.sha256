@@ -1,0 +1,8 @@
+# SHA-256 of original checkpoints (read-only reference, 2026-10-30). Verify: sha256sum -c docs/CHECKPOINT_MANIFEST.sha256
+b022e2f04d03aaf1225092c0a874f1494ca332925e1529482d725df90ea83ac8 *out-efficientgpt-small/ckpt-2400.pt
+d371ae8308f1622f19332dbd6f0ec1822e5f9f55f9a33959904adb95199194cf *out-efficientgpt-small/ckpt.pt
+c5bcb79dbc25d6ee603739db1d8c98bdda2caa016c6bbc6bf2a037f5fe9e5b36 *out-shakespeare-char/ckpt-1000.pt
+00040ad27ddb8073ac363efd8e4926db9110bc4d6ef6217409a14008958340f5 *out-shakespeare-char/ckpt.pt
+bf569ccbb92288909bb5cead7ff8df9be351b32909abcca2963cb1e0d53279ab *out-tinystories-head3/ckpt.pt
+c37c1d3410bc96f76e554619290b3a7ec70181d72a8213ca2f0c69c8094ea3a0 *out-tinystories-v2/baseline-2500.pt
+c37c1d3410bc96f76e554619290b3a7ec70181d72a8213ca2f0c69c8094ea3a0 *out-tinystories-v2/ckpt.pt

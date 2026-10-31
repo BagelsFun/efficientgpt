@@ -1,0 +1,15 @@
+W1031 13:34:39.748000 8088 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:  10%|█         | 32/311 [00:00<00:00, 303.81it/s]
+Loading weights:  24%|██▍       | 74/311 [00:00<00:00, 336.53it/s]
+Loading weights:  35%|███▍      | 108/311 [00:00<00:00, 310.77it/s]
+Loading weights:  45%|████▌     | 140/311 [00:00<00:00, 297.20it/s]
+Loading weights:  55%|█████▍    | 170/311 [00:00<00:00, 265.96it/s]
+Loading weights:  67%|██████▋   | 207/311 [00:00<00:00, 267.83it/s]
+Loading weights:  76%|███████▌  | 237/311 [00:00<00:00, 246.55it/s]
+Loading weights:  84%|████████▍ | 262/311 [00:01<00:00, 224.97it/s]
+Loading weights:  92%|█████████▏| 285/311 [00:01<00:00, 212.68it/s]
+Loading weights:  99%|█████████▊| 307/311 [00:01<00:00, 212.97it/s]
+Loading weights: 100%|██████████| 311/311 [00:01<00:00, 249.83it/s]
+W1031 13:36:36.529000 8088 .venv\Lib\site-packages\torch\_inductor\cudagraph_utils.py:343] [__cudagraphs] CUDAGraph supports dynamic shapes by recording a new graph for each distinct input size. Recording too many CUDAGraphs may lead to extra overhead. We have observed 9 distinct sizes. Please consider the following options for better performance: a) padding inputs to a few fixed number of shapes; or b) set torch._inductor.config.triton.cudagraph_skip_dynamic_graphs=True. Set torch._inductor.config.triton.cudagraph_dynamic_shape_warn_limit=None to silence this warning.

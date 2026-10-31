@@ -1,0 +1,35 @@
+﻿.\.venv\Scripts\python.exe : <HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\jit\_script.py:365: 
+DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+At line:1 char:333
++ ... NG='utf-8'; .\.venv\Scripts\python.exe -m unittest research.phase5.te ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (<HOME>\...`torch.export`.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+..............................................
+----------------------------------------------------------------------
+Ran 46 tests in 193.541s
+
+OK
+number of parameters: 0.03M
+number of parameters: 0.03M
+number of parameters: 0.41M
+number of parameters: 0.41M
+number of parameters: 12.19M
+number of parameters: 0.03M
+number of parameters: 12.19M
+number of parameters: 0.03M
+number of parameters: 12.19M
+number of parameters: 0.03M
+number of parameters: 12.19M
+number of parameters: 0.03M
+number of parameters: 12.19M
+number of parameters: 0.41M
+number of parameters: 12.19M
+number of parameters: 0.41M
+number of parameters: 12.19M
+number of parameters: 0.41M
+number of parameters: 12.19M
+number of parameters: 0.40M
+number of parameters: 12.19M

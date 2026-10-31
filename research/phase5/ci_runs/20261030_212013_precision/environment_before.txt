@@ -1,0 +1,4 @@
+commit <private-commit> + uncommitted: low-precision kernel support, precision_study.py
+NVIDIA GeForce RTX 4060, 617.14, 47, 2820 MHz, 2512 MiB
+speed cmd: python -m research.phase5.benchmark_inprocess --processes 3 --blocks 6 --requests 12 --modes adaptive_graph compiled_triton_full_graph fp16_triton_full_graph fp16_compiled_triton_full_graph bf16_compiled_triton_full_graph
+46, 2805 MHz, 2555 MiB

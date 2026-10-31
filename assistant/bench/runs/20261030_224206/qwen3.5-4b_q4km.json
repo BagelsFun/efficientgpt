@@ -1,0 +1,96 @@
+{
+  "backend": "ollama:qwen3.5:4b",
+  "quant": "na",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "think": false,
+  "protocol": "assistant-quality-v1",
+  "decoding": "greedy (temperature 0)",
+  "gpu_used_before_load_mib": 2993.0,
+  "ollama_options": {
+    "presence_penalty": 0.0
+  },
+  "speed": {
+    "short": {
+      "prompt_tokens": 28,
+      "completion_tokens": [
+        256,
+        256,
+        256
+      ],
+      "ttft_s_median": 0.08472959999926388,
+      "decode_tok_s_median": 50.32481127212866,
+      "decode_tok_s_all": [
+        50.28,
+        50.32,
+        50.47
+      ],
+      "prompt_tok_s_median": 548.2026783616571,
+      "total_s_median": 5.175767999957316,
+      "timing_source": "client ttft + ollama server counts"
+    },
+    "medium": {
+      "prompt_tokens": 677,
+      "completion_tokens": [
+        256,
+        256,
+        256
+      ],
+      "ttft_s_median": 0.0686112999683246,
+      "decode_tok_s_median": 50.18233240816192,
+      "decode_tok_s_all": [
+        50.06,
+        50.18,
+        50.21
+      ],
+      "prompt_tok_s_median": 13501.11678366305,
+      "total_s_median": 5.1697682000231,
+      "timing_source": "client ttft + ollama server counts"
+    },
+    "long": {
+      "prompt_tokens": 2194,
+      "completion_tokens": [
+        256,
+        256,
+        256
+      ],
+      "ttft_s_median": 0.07185239996761084,
+      "decode_tok_s_median": 49.765141578911866,
+      "decode_tok_s_all": [
+        49.97,
+        49.77,
+        49.39
+      ],
+      "prompt_tok_s_median": 44851.48312447615,
+      "total_s_median": 5.215535799972713,
+      "timing_source": "client ttft + ollama server counts"
+    }
+  },
+  "quality_limits": {
+    "code": 768,
+    "math": 512,
+    "mcq": 48
+  },
+  "quality": {
+    "dev/code": "7/8",
+    "dev/math": "8/8",
+    "dev/mcq": "10/10",
+    "dev/all": "25/26",
+    "test/code": "6/8",
+    "test/math": "6/8",
+    "test/mcq": "9/10",
+    "test/all": "21/26",
+    "all/code": "13/16",
+    "all/math": "14/16",
+    "all/mcq": "19/20",
+    "all/all": "46/52"
+  },
+  "gpu_used_after_mib": 6985.0,
+  "ollama_ps": [
+    {
+      "name": "qwen3.5:4b",
+      "size": 3364911840,
+      "size_vram": 3364911840,
+      "context_length": 8192
+    }
+  ]
+}

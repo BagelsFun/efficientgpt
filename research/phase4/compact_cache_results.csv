@@ -1,0 +1,5 @@
+mode,batch,prompt_tokens,generated_tokens,cache_capacity,trials,request_variants,p50_ms,p95_ms,min_ms,max_ms,graph_capture_ms,peak_allocated_mib,peak_reserved_mib,incremental_peak_allocated_mib,incremental_peak_reserved_mib,correctness
+full,1,8,64,256,6,4,39.5172,40.2885,38.8389,40.3444,2.7757,78.328,116.0,31.432,50.0,PASS
+compact,1,8,64,72,6,4,32.8251,33.7401,32.1441,33.8183,2.5481,75.092,114.0,28.196,48.0,PASS
+full,16,128,64,256,6,4,74.3803,75.266,73.3117,75.6983,4.5835,251.953,360.0,204.996,294.0,PASS
+compact,16,128,64,192,6,4,64.9469,66.0847,63.641,66.3293,4.1223,233.522,332.0,186.566,266.0,PASS

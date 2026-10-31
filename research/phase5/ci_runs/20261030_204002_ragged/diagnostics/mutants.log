@@ -1,0 +1,8 @@
+number of parameters: 0.03M
+prefill_reads_last_padded_slot: KILLED by ['test_pad_values_never_read', 'test_prefill_matches_batch_one', 'test_rows_match_batch_one_reference']
+number of parameters: 0.03M
+finish_ignores_lengths: KILLED by ['test_rows_match_batch_one_reference', 'test_uniform_lengths_equal_existing_decoder']
+number of parameters: 0.03M
+shared_position_embedding: KILLED by ['test_rows_match_batch_one_reference']
+number of parameters: 0.03M
+mask_uses_max_position: KILLED by ['test_pad_values_never_read', 'test_rows_match_batch_one_reference']

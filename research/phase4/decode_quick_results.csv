@@ -1,0 +1,4 @@
+batch,prompt_tokens,generated_tokens,method,num_requests,p50_ms,p95_ms,min_ms,max_ms,generated_tokens_per_sec,speedup_vs_dynamic_kv,graph_capture_ms,output_tokens_equal
+1,8,16,dynamic_kv_eager,16,29.7268,33.1896,28.795,33.1896,538.24,1.0,0,True
+1,8,16,static_kv_eager,16,34.9104,37.5107,34.044,37.5107,458.32,0.8515,0,True
+1,8,16,static_kv_graph,16,11.7254,12.6491,10.0985,12.6491,1364.56,2.5353,3.2178,True

@@ -1,0 +1,9 @@
+{
+ "qwen35_4b_default|model_only|10": {"verdict": "unsupported", "note": "says it cannot read the file, then asserts a wrong value (1 call per graph) from 'standard patterns'"},
+ "qwen35_4b_default|model_only|14": {"verdict": "unsupported", "note": "right value (16) but a general-knowledge guess presented as the file's default; model_only cannot see the file (lucky guess)"},
+ "qwen3_1.7b_nf4_default|model_only|4": {"verdict": "unsupported", "note": "false claim: 'I don't see any function that implements inverse-CDF sampling' (sample_from exists)"},
+ "qwen3_1.7b_nf4_default|model_only|12": {"verdict": "unsupported", "note": "false claim: 'SINGLE_PASS_MIN_PROGRAMS is not defined in the file'"},
+ "qwen3_1.7b_nf4_default|model_only|15": {"verdict": "unsupported", "note": "false claim: num_ctx 'not explicitly defined' in backends.py (default 8192 is)"},
+ "qwen3_1.7b_nf4_calibrated|model_only|19": {"verdict": "unsupported", "note": "fabricated 'simulated check' code instead of abstaining"},
+ "qwen3_1.7b_nf4_calibrated|rag_tools|11": {"verdict": "abstained", "note": "says the default is not in the provided context (can be true of the retrieved excerpts); no fabricated value"}
+}

@@ -1,0 +1,12 @@
+W1030 19:15:17.244000 8012 Lib\site-packages\torch\_inductor\utils.py:1731] [0/0] Not enough SMs to use max_autotune_gemm mode
+<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\profiler\profiler.py:224: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+number of parameters: 12.19M
+eager index_copy_ variant bit-identical to scatter_ step: True
+B=16 compiled index_copy_: GPU kernel time per step 0.995 ms
+    0.664 ms  x6   _Z39fmha_cutlassF_f32_aligned_64x64_rf_sm80N22PyTorchMemEffAttention15AttentionKernelIfN7c
+    0.205 ms  x19  _ZN7cutlass7Kernel2I50cutlass_80_tensorop_s1688gemm_64x64_16x6_tn_align4EEvNT_6ParamsE
+    0.073 ms  x6   _ZN7cutlass7Kernel2I50cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_align4EEvNT_6ParamsE
+    0.014 ms  x12  _ZN8cublasLt19splitKreduce_kernelILi32ELi16EiffffLb0EfffLb1ELb0ELb0EEEvNS_18cublasSplitKPa
+    0.006 ms  x6   triton_poi_fused__unsafe_view_gelu_5
+    0.005 ms  x6   triton_poi_fused__unsafe_view_index_copy_split_transpose_view_2

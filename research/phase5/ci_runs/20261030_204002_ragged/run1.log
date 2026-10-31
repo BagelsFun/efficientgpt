@@ -1,0 +1,5 @@
+number of parameters: 12.19M
+per_row -> ragged: 1264.69 ms / 158.87 ms = 7.960 [7.865, 8.061]
+uniform -> ragged: 157.75 ms / 158.87 ms = 0.993 [0.983, 1.000]
+tokens/s (generated, median request): {'ragged': 12890.7, 'per_row': 1619.4, 'uniform': 12982.6}
+agreement vs per-row decoding: {'rows': 128, 'exact_rows': 123, 'near_tie_rows': 5, 'exact_share': 0.9609}

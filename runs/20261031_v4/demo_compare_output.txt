@@ -1,0 +1,27 @@
+Comparing ['int8_graph', 'llamacpp_q8', 'bf16_static'] for 1 round(s); each mode loads in its own process (about 1-2 min each).
+int8_graph    r0 decode 117.3 tok/s  ttft 52 ms  peak 2342 MiB  util 0.0
+llamacpp_q8   r0 decode 115.6 tok/s  ttft 27 ms  peak 2300 MiB  util 0.0
+bf16_static   r0 decode 63.0 tok/s  ttft 45 ms  peak 3346 MiB  util 0.0
+# R1 end-to-end: Qwen3-1.7B batch-1 decode on RTX 4060 (analysis)
+
+| Mode | Rounds | Decode tok/s (median of round medians) | vs HF bf16 + static cache [95% CI over rounds] | paired per-round min-max | TTFT ms | Serving peak MiB (torch; Ollama: size_vram) | Device used MiB | Weights MiB | Load peak MiB |
+|---|---|---|---|---|---|---|---|---|---|
+| bf16_static | 1 | 63.0 | 1.000 [1.000, 1.000] | 1.000-1.000 | 45 | 3346 | 3416 | 3282.3 | 3282.3 |
+| int8_graph | 1 | 117.3 | 1.860 [1.860, 1.860] | 1.860-1.860 | 52 | 2342 | 2474 | 2237.8 | 3426.3 |
+| llamacpp_q8 | 1 | 115.6 | 1.834 [1.834, 1.834] | 1.834-1.834 | 27 | 2300 | 2421 | None | None |
+
+| EfficientGPT int8_graph vs | ratio of round medians [95% CI, round bootstrap] | paired per-round min-max |
+|---|---|---|
+| bf16_static | 1.860 [1.860, 1.860] | 1.860-1.860 |
+| llamacpp_q8 | 1.014 [1.014, 1.014] | 1.014-1.014 |
+
+| Quality vs bf16_static | ΔNLL [95% CI] (relative) | greedy common prefix, mean tokens of 64 | exact 64-token matches | quality v1 |
+|---|---|---|---|---|
+
+| Mode | inter-token latency p50 / p95 ms | end-to-end request s (256 tok) | peak reserved MiB | load s | first call s (compile/capture) |
+|---|---|---|---|---|---|
+| bf16_static | 15.74 / 16.38 | 4.09 | 3378.0 | 4.62 | 5.46 |
+| int8_graph | 8.49 / 8.55 | 2.23 | 2424.0 | 5.16 | 5.3 |
+| llamacpp_q8 | 8.58 / 9.15 | 2.23 | - | - | 2.32 |
+
+Raw per-process results and REPORT.md: runs\20261031_v4\demo_compare

@@ -1,0 +1,10 @@
+W1030 19:15:48.541000 28604 Lib\site-packages\torch\_inductor\utils.py:1731] [0/0] Not enough SMs to use max_autotune_gemm mode
+number of parameters: 12.19M
+full B=1 64+64: compiled-graph 39.38ms  eager-graph 42.88ms
+full B=16 64+64: compiled-graph 73.11ms  eager-graph 79.08ms
+full B=16 128+64: compiled-graph 75.13ms  eager-graph 80.41ms
+full: graphs=2 sequences=172 failures=0 near_ties=1 init=10.0s
+adaptive B=1 64+64: compiled-graph 33.23ms  eager-graph 35.93ms
+adaptive B=16 64+64: compiled-graph 51.26ms  eager-graph 56.14ms
+adaptive B=16 128+64: compiled-graph 64.72ms  eager-graph 69.60ms
+adaptive: graphs=8 sequences=172 failures=0 near_ties=0 init=20.6s

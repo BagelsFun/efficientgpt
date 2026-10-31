@@ -1,0 +1,4 @@
+commit <private-commit> + uncommitted P2 changes (CompiledGraphDecoder, step_index_copy, new modes)
+triton-windows 3.7.1.post27, torch 2.11.0+cu128
+cmd: python -m research.phase5.benchmark_review --all --rounds 6 --trials 5 --variants 3 --modes full_graph adaptive_graph compiled_full_graph compiled_adaptive_graph
+NVIDIA GeForce RTX 4060, 617.14, 47, 2805 MHz, 2481 MiB, 8 %

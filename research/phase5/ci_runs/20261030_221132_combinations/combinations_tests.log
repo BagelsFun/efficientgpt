@@ -1,0 +1,261 @@
+test_fresh_vs_reused (research.phase5.test_gpu_combinations.TestStateAcrossLengths.test_fresh_vs_reused) ... <HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\jit\_script.py:365: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Traceback (most recent call last):
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 994, in identify_mutated_tensors
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module, ordered_tensor_names = generate_ttir(
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                                         ^^^^^^^^^^^^^^
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 517, in generate_ttir
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module = src.make_ir(target, options, codegen_fns, module_map, context)
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\compiler.py", line 80, in make_ir
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return ast_to_ttir(self.fn, self, context=context, options=options, codegen_fns=codegen_fns,
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1651, in ast_to_ttir
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     generator.visit(fn.parse())
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1556, in visit
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ret = super().visit(node)
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]           ^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 418, in visit
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return visitor(node)
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 508, in visit_Module
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ast.NodeVisitor.generic_visit(self, node)
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 426, in generic_visit
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     self.visit(item)
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1564, in visit
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     raise CompilationError(self.jit_fn.src, self.cur_node, repr(e)) from None
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] triton.compiler.errors.CompilationError: at 1:0:
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] def _split_kernel(Q, K, V, POS, M_OUT, L_OUT, ACC_OUT,
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] ^
+W1030 22:08:35.754000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] IndexError('Function argument index out of range')
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Traceback (most recent call last):
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 994, in identify_mutated_tensors
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module, ordered_tensor_names = generate_ttir(
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                                         ^^^^^^^^^^^^^^
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 517, in generate_ttir
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module = src.make_ir(target, options, codegen_fns, module_map, context)
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\compiler.py", line 80, in make_ir
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return ast_to_ttir(self.fn, self, context=context, options=options, codegen_fns=codegen_fns,
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1651, in ast_to_ttir
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     generator.visit(fn.parse())
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1556, in visit
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ret = super().visit(node)
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]           ^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 418, in visit
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return visitor(node)
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 508, in visit_Module
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ast.NodeVisitor.generic_visit(self, node)
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 426, in generic_visit
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     self.visit(item)
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1564, in visit
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     raise CompilationError(self.jit_fn.src, self.cur_node, repr(e)) from None
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] triton.compiler.errors.CompilationError: at 1:0:
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] def _combine_kernel(M_IN, L_IN, ACC_IN, OUT, so_b, so_h, so_d, H,
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] ^
+W1030 22:08:35.770000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] IndexError('Function argument index out of range')
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Traceback (most recent call last):
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 994, in identify_mutated_tensors
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module, ordered_tensor_names = generate_ttir(
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                                         ^^^^^^^^^^^^^^
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 517, in generate_ttir
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module = src.make_ir(target, options, codegen_fns, module_map, context)
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\compiler.py", line 80, in make_ir
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return ast_to_ttir(self.fn, self, context=context, options=options, codegen_fns=codegen_fns,
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1651, in ast_to_ttir
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     generator.visit(fn.parse())
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1556, in visit
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ret = super().visit(node)
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]           ^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 418, in visit
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return visitor(node)
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 508, in visit_Module
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ast.NodeVisitor.generic_visit(self, node)
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 426, in generic_visit
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     self.visit(item)
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1564, in visit
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     raise CompilationError(self.jit_fn.src, self.cur_node, repr(e)) from None
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] triton.compiler.errors.CompilationError: at 1:0:
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] def _split_kernel(Q, K, V, POS, M_OUT, L_OUT, ACC_OUT,
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] ^
+W1030 22:08:35.791000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] IndexError('Function argument index out of range')
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Traceback (most recent call last):
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 994, in identify_mutated_tensors
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module, ordered_tensor_names = generate_ttir(
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                                         ^^^^^^^^^^^^^^
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 517, in generate_ttir
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module = src.make_ir(target, options, codegen_fns, module_map, context)
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\compiler.py", line 80, in make_ir
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return ast_to_ttir(self.fn, self, context=context, options=options, codegen_fns=codegen_fns,
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1651, in ast_to_ttir
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     generator.visit(fn.parse())
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1556, in visit
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ret = super().visit(node)
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]           ^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 418, in visit
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return visitor(node)
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 508, in visit_Module
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ast.NodeVisitor.generic_visit(self, node)
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 426, in generic_visit
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     self.visit(item)
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1564, in visit
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     raise CompilationError(self.jit_fn.src, self.cur_node, repr(e)) from None
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] triton.compiler.errors.CompilationError: at 1:0:
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] def _combine_kernel(M_IN, L_IN, ACC_IN, OUT, so_b, so_h, so_d, H,
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] ^
+W1030 22:08:35.797000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] IndexError('Function argument index out of range')
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Traceback (most recent call last):
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 994, in identify_mutated_tensors
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module, ordered_tensor_names = generate_ttir(
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                                         ^^^^^^^^^^^^^^
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 517, in generate_ttir
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module = src.make_ir(target, options, codegen_fns, module_map, context)
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\compiler.py", line 80, in make_ir
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return ast_to_ttir(self.fn, self, context=context, options=options, codegen_fns=codegen_fns,
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1651, in ast_to_ttir
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     generator.visit(fn.parse())
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1556, in visit
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ret = super().visit(node)
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]           ^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 418, in visit
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return visitor(node)
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 508, in visit_Module
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ast.NodeVisitor.generic_visit(self, node)
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 426, in generic_visit
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     self.visit(item)
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1564, in visit
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     raise CompilationError(self.jit_fn.src, self.cur_node, repr(e)) from None
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] triton.compiler.errors.CompilationError: at 1:0:
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] def _split_kernel(Q, K, V, POS, M_OUT, L_OUT, ACC_OUT,
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] ^
+W1030 22:08:35.854000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] IndexError('Function argument index out of range')
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Traceback (most recent call last):
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 994, in identify_mutated_tensors
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module, ordered_tensor_names = generate_ttir(
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                                         ^^^^^^^^^^^^^^
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 517, in generate_ttir
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module = src.make_ir(target, options, codegen_fns, module_map, context)
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\compiler.py", line 80, in make_ir
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return ast_to_ttir(self.fn, self, context=context, options=options, codegen_fns=codegen_fns,
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1651, in ast_to_ttir
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     generator.visit(fn.parse())
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1556, in visit
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ret = super().visit(node)
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]           ^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 418, in visit
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return visitor(node)
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 508, in visit_Module
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ast.NodeVisitor.generic_visit(self, node)
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 426, in generic_visit
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     self.visit(item)
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1564, in visit
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     raise CompilationError(self.jit_fn.src, self.cur_node, repr(e)) from None
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] triton.compiler.errors.CompilationError: at 1:0:
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] def _combine_kernel(M_IN, L_IN, ACC_IN, OUT, so_b, so_h, so_d, H,
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] ^
+W1030 22:08:35.867000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] IndexError('Function argument index out of range')
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Traceback (most recent call last):
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 994, in identify_mutated_tensors
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module, ordered_tensor_names = generate_ttir(
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                                         ^^^^^^^^^^^^^^
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 517, in generate_ttir
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module = src.make_ir(target, options, codegen_fns, module_map, context)
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\compiler.py", line 80, in make_ir
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return ast_to_ttir(self.fn, self, context=context, options=options, codegen_fns=codegen_fns,
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1651, in ast_to_ttir
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     generator.visit(fn.parse())
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1556, in visit
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ret = super().visit(node)
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]           ^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 418, in visit
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return visitor(node)
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 508, in visit_Module
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ast.NodeVisitor.generic_visit(self, node)
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 426, in generic_visit
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     self.visit(item)
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1564, in visit
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     raise CompilationError(self.jit_fn.src, self.cur_node, repr(e)) from None
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] triton.compiler.errors.CompilationError: at 1:0:
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] def _split_kernel(Q, K, V, POS, M_OUT, L_OUT, ACC_OUT,
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] ^
+W1030 22:08:35.901000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] IndexError('Function argument index out of range')
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] Traceback (most recent call last):
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 994, in identify_mutated_tensors
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module, ordered_tensor_names = generate_ttir(
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                                         ^^^^^^^^^^^^^^
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py", line 517, in generate_ttir
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ttir_module = src.make_ir(target, options, codegen_fns, module_map, context)
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\compiler.py", line 80, in make_ir
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return ast_to_ttir(self.fn, self, context=context, options=options, codegen_fns=codegen_fns,
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1651, in ast_to_ttir
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     generator.visit(fn.parse())
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1556, in visit
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ret = super().visit(node)
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]           ^^^^^^^^^^^^^^^^^^^
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 418, in visit
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     return visitor(node)
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]            ^^^^^^^^^^^^^
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 508, in visit_Module
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     ast.NodeVisitor.generic_visit(self, node)
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 426, in generic_visit
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     self.visit(item)
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]   File "<HOME>\AI-Models\nanoGPT\.venv\Lib\site-packages\triton\compiler\code_generator.py", line 1564, in visit
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0]     raise CompilationError(self.jit_fn.src, self.cur_node, repr(e)) from None
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] triton.compiler.errors.CompilationError: at 1:0:
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] def _combine_kernel(M_IN, L_IN, ACC_IN, OUT, so_b, so_h, so_d, H,
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] ^
+W1030 22:08:35.912000 24828 .venv\Lib\site-packages\torch\_higher_order_ops\triton_kernel_wrap.py:1026] [0/0] IndexError('Function argument index out of range')
+ok
+test_ragged_eos_lengths_match_per_row (research.phase5.test_gpu_combinations.TestStateAcrossLengths.test_ragged_eos_lengths_match_per_row)
+Ragged + EOS: wherever a ragged row equals per-row decoding, EOS lengths equal the feed-pad reference. ... ok
+test_tiny_model (research.phase5.test_gpu_combinations.TestTritonRagged.test_tiny_model) ... ok
+test_trained_checkpoint (research.phase5.test_gpu_combinations.TestTritonRagged.test_trained_checkpoint) ... ok
+test_chi_square_vs_enumerated_distribution (research.phase5.test_gpu_combinations.TestTritonSampling.test_chi_square_vs_enumerated_distribution) ... FAIL
+test_tv_within_precision_noise_floor (research.phase5.test_gpu_combinations.TestTritonSampling.test_tv_within_precision_noise_floor)
+Teacher-forced: TV(exact, triton) median and p99 <= those of TV(exact TF32, exact IEEE) on the same states. ... ok
+
+======================================================================
+FAIL: test_chi_square_vs_enumerated_distribution (research.phase5.test_gpu_combinations.TestTritonSampling.test_chi_square_vs_enumerated_distribution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<HOME>\AI-Models\nanoGPT\research\phase5\test_gpu_combinations.py", line 108, in test_chi_square_vs_enumerated_distribution
+    self.assertGreater(p, 1e-3, (cfg, stat, df))
+AssertionError: nan not greater than 0.001 : (SamplingConfig(temperature=1.3, top_k=None, top_p=0.8), 0.0, 0)
+
+----------------------------------------------------------------------
+Ran 6 tests in 27.997s
+
+FAILED (failures=1)
+number of parameters: 0.41M
+number of parameters: 12.19M
+number of parameters: 0.41M
+number of parameters: 12.19M
+number of parameters: 0.40M
+number of parameters: 12.19M

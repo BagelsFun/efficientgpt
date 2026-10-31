@@ -1,0 +1,53 @@
+Round 1/6: prefix_sdpa_eager
+  graphs=0 setup_peak_alloc=267.698MiB steady_peak_alloc=266.753MiB steady_peak_reserved=336.0MiB correctness=PASS
+Round 1/6: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS
+Round 1/6: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS
+Round 2/6: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS
+Round 2/6: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS
+Round 2/6: prefix_sdpa_eager
+  graphs=0 setup_peak_alloc=267.698MiB steady_peak_alloc=266.753MiB steady_peak_reserved=336.0MiB correctness=PASS
+Round 3/6: prefix_sdpa_eager
+  graphs=0 setup_peak_alloc=267.698MiB steady_peak_alloc=266.753MiB steady_peak_reserved=336.0MiB correctness=PASS
+Round 3/6: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS
+Round 3/6: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS
+Round 4/6: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS
+Round 4/6: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS
+Round 4/6: prefix_sdpa_eager
+  graphs=0 setup_peak_alloc=267.698MiB steady_peak_alloc=266.753MiB steady_peak_reserved=336.0MiB correctness=PASS
+Round 5/6: prefix_sdpa_eager
+  graphs=0 setup_peak_alloc=267.698MiB steady_peak_alloc=266.753MiB steady_peak_reserved=336.0MiB correctness=PASS
+Round 5/6: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS
+Round 5/6: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS
+Round 6/6: adaptive_graph
+  graphs=8 setup_peak_alloc=461.643MiB steady_peak_alloc=460.698MiB steady_peak_reserved=648.0MiB correctness=PASS
+Round 6/6: full_graph
+  graphs=2 setup_peak_alloc=292.109MiB steady_peak_alloc=291.164MiB steady_peak_reserved=402.0MiB correctness=PASS
+Round 6/6: prefix_sdpa_eager
+  graphs=0 setup_peak_alloc=267.698MiB steady_peak_alloc=266.753MiB steady_peak_reserved=336.0MiB correctness=PASS
+
+AGGREGATED ACROSS PROCESS ROUNDS (same batch, prompt, generation)
+(1, 8, 16): SDPA prefix eager=32.486ms full graph=11.990ms adaptive graph=10.206ms; adaptive/eager speedup=3.183x
+(1, 64, 16): SDPA prefix eager=33.036ms full graph=12.151ms adaptive graph=9.917ms; adaptive/eager speedup=3.331x
+(1, 64, 64): SDPA prefix eager=129.678ms full graph=42.147ms adaptive graph=34.950ms; adaptive/eager speedup=3.710x
+(1, 128, 32): SDPA prefix eager=66.801ms full graph=21.979ms adaptive graph=20.244ms; adaptive/eager speedup=3.300x
+(1, 128, 64): SDPA prefix eager=129.543ms full graph=41.706ms adaptive graph=37.877ms; adaptive/eager speedup=3.420x
+(1, 192, 32): SDPA prefix eager=65.064ms full graph=21.517ms adaptive graph=22.007ms; adaptive/eager speedup=2.957x
+(16, 8, 16): SDPA prefix eager=33.444ms full graph=19.993ms adaptive graph=14.526ms; adaptive/eager speedup=2.302x
+(16, 64, 16): SDPA prefix eager=32.529ms full graph=20.302ms adaptive graph=15.115ms; adaptive/eager speedup=2.152x
+(16, 64, 64): SDPA prefix eager=131.736ms full graph=77.015ms adaptive graph=55.026ms; adaptive/eager speedup=2.394x
+(16, 128, 32): SDPA prefix eager=65.871ms full graph=42.157ms adaptive graph=36.589ms; adaptive/eager speedup=1.800x
+(16, 128, 64): SDPA prefix eager=132.268ms full graph=78.404ms adaptive graph=68.637ms; adaptive/eager speedup=1.927x
+(16, 192, 32): SDPA prefix eager=66.588ms full graph=45.170ms adaptive graph=45.650ms; adaptive/eager speedup=1.459x
+CSVs: research\phase5\ci_runs\20261030_184148\benchmark.csv, research\phase5\ci_runs\20261030_184148\benchmark_memory.csv and research\phase5\ci_runs\20261030_184148\benchmark_raw.csv
+LIMITATIONS: one GPU; synthetic prompts; no industrial engine comparison. PyTorch SDPA kernel selected automatically, and FP32 may not use FlashAttention. No EOS, network, serving queue or unpredictable output lengths. Initialization includes correctness validation; graph_capture_ms is separately recorded.
+benchmark rc=0 304s

@@ -1,0 +1,62 @@
+{
+ "bf16_static": {
+  "decode_tok_s_median": 58.51,
+  "per_round_medians": [
+   57.435777678996764,
+   58.51329690577787,
+   58.73850288804953
+  ],
+  "ttft_ms_median": 48.09029994066805,
+  "peak_mib": 3346.0,
+  "load_s": 6.93,
+  "first_call_s": 7.2,
+  "any_contended": false,
+  "speedup_vs_bf16_static": {
+   "ratio": 1.0,
+   "ci": [
+    0.9925360474978795,
+    1.0075200820372587
+   ]
+  }
+ },
+ "int8_graph": {
+  "decode_tok_s_median": 111.1,
+  "per_round_medians": [
+   115.57610040230105,
+   110.55002278405398,
+   111.1012160793026
+  ],
+  "ttft_ms_median": 55.57900003623217,
+  "peak_mib": 2342.4,
+  "load_s": 5.43,
+  "first_call_s": 5.85,
+  "any_contended": false,
+  "speedup_vs_bf16_static": {
+   "ratio": 1.8988207144077935,
+   "ci": [
+    1.8819844226210634,
+    1.9705932638057788
+   ]
+  }
+ },
+ "llamacpp_q8": {
+  "decode_tok_s_median": 107.75,
+  "per_round_medians": [
+   107.92720677743517,
+   107.45661239370462,
+   109.18409040977005
+  ],
+  "ttft_ms_median": 28.91340001951903,
+  "peak_mib": 2300.3,
+  "load_s": null,
+  "first_call_s": 4.57,
+  "any_contended": false,
+  "speedup_vs_bf16_static": {
+   "ratio": 1.841565544351393,
+   "ci": [
+    1.8278201865988124,
+    1.8687403862587593
+   ]
+  }
+ }
+}

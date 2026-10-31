@@ -1,0 +1,2291 @@
+{
+ "env": {
+  "torch": "2.11.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 4060"
+ },
+ "position_mode": "shared",
+ "rows": [
+  {
+   "batch": 1,
+   "cap": 32,
+   "programs": 6,
+   "position": [
+    4
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 964.0
+   },
+   "max_abs_diff": 0.0,
+   "split_us": 2.1964800357818604,
+   "single_us": 1.6604799777269363,
+   "speedup_single": 1.3227982663113258,
+   "ci": [
+    1.3200000179100495,
+    1.3271604766381122
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 1,
+   "cap": 32,
+   "programs": 6,
+   "position": [
+    12
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1006.0
+   },
+   "max_abs_diff": 0.0,
+   "split_us": 2.232320010662079,
+   "single_us": 1.6742399334907532,
+   "speedup_single": 1.3333333926683621,
+   "ci": [
+    1.3320910061684104,
+    1.334672622759783
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 1,
+   "cap": 32,
+   "programs": 6,
+   "position": [
+    20
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1006.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.2572000324726105,
+   "single_us": 1.6998399794101715,
+   "speedup_single": 1.327889718922741,
+   "ci": [
+    1.3071507991163305,
+    1.3433734828861146
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 1,
+   "cap": 32,
+   "programs": 6,
+   "position": [
+    28
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1005.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.257920056581497,
+   "single_us": 1.730560064315796,
+   "speedup_single": 1.3047337120160585,
+   "ci": [
+    1.303528573563257,
+    1.3195265513029903
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 1,
+   "cap": 64,
+   "programs": 6,
+   "position": [
+    8
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 991.0
+   },
+   "max_abs_diff": 0.0,
+   "split_us": 2.247679978609085,
+   "single_us": 1.664000004529953,
+   "speedup_single": 1.3507692142368775,
+   "ci": [
+    1.327161088541459,
+    1.3515488994059661
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 1,
+   "cap": 64,
+   "programs": 6,
+   "position": [
+    24
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 991.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.303999960422516,
+   "single_us": 1.7100800573825836,
+   "speedup_single": 1.347305320868413,
+   "ci": [
+    1.3296437416331854,
+    1.35519277378717
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 1,
+   "cap": 64,
+   "programs": 6,
+   "position": [
+    40
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 991.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.313680052757263,
+   "single_us": 1.7957599461078644,
+   "speedup_single": 1.2884127735290791,
+   "ci": [
+    1.285014736474096,
+    1.3103571888293175
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 1,
+   "cap": 64,
+   "programs": 6,
+   "position": [
+    56
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 991.0
+   },
+   "max_abs_diff": 8.940696716308594e-08,
+   "split_us": 2.319359928369522,
+   "single_us": 1.8986399471759796,
+   "speedup_single": 1.2215901871333306,
+   "ci": [
+    1.2210242147790504,
+    1.2222596618435255
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 1,
+   "cap": 128,
+   "programs": 6,
+   "position": [
+    16
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 991.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 2.370000034570694,
+   "single_us": 1.7201600223779678,
+   "speedup_single": 1.3777788134468911,
+   "ci": [
+    1.343245684453478,
+    1.402746202082529
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 1,
+   "cap": 128,
+   "programs": 6,
+   "position": [
+    48
+   ],
+   "gpu_before": {
+    "util_pct": 2.0,
+    "mem_used_mib": 992.0
+   },
+   "max_abs_diff": 1.4901161193847656e-07,
+   "split_us": 2.3705600202083588,
+   "single_us": 1.8585599958896637,
+   "speedup_single": 1.2754821073578573,
+   "ci": [
+    1.2552551285498286,
+    1.2892562367785025
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 1,
+   "cap": 128,
+   "programs": 6,
+   "position": [
+    80
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 993.0
+   },
+   "max_abs_diff": 8.940696716308594e-08,
+   "split_us": 2.4994399398565292,
+   "single_us": 2.7903999388217926,
+   "speedup_single": 0.8957282090938845,
+   "ci": [
+    0.8838968457519015,
+    0.9165175475033231
+   ],
+   "class": "SLOWER"
+  },
+  {
+   "batch": 1,
+   "cap": 128,
+   "programs": 6,
+   "position": [
+    112
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 993.0
+   },
+   "max_abs_diff": 5.960464477539063e-08,
+   "split_us": 2.5088000297546387,
+   "single_us": 2.9235200583934784,
+   "speedup_single": 0.858143600743162,
+   "ci": [
+    0.8533847803258464,
+    0.8625109472415206
+   ],
+   "class": "SLOWER"
+  },
+  {
+   "batch": 1,
+   "cap": 256,
+   "programs": 6,
+   "position": [
+    32
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1018.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.6391199231147766,
+   "single_us": 1.7759200185537338,
+   "speedup_single": 1.4860578717188015,
+   "ci": [
+    1.4727794329481303,
+    1.501083865382498
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 1,
+   "cap": 256,
+   "programs": 6,
+   "position": [
+    96
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1017.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.690560072660446,
+   "single_us": 2.8431999683380123,
+   "speedup_single": 0.9463140484744759,
+   "ci": [
+    0.9406475518705126,
+    0.9606250042332846
+   ],
+   "class": "SLOWER"
+  },
+  {
+   "batch": 1,
+   "cap": 256,
+   "programs": 6,
+   "position": [
+    160
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1007.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.7484001219272614,
+   "single_us": 3.850240111351013,
+   "speedup_single": 0.7138256426721589,
+   "ci": [
+    0.70474696810273,
+    0.7168003245294579
+   ],
+   "class": "SLOWER"
+  },
+  {
+   "batch": 1,
+   "cap": 256,
+   "programs": 6,
+   "position": [
+    224
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 990.0
+   },
+   "max_abs_diff": 8.940696716308594e-08,
+   "split_us": 2.887679934501648,
+   "single_us": 4.904960095882416,
+   "speedup_single": 0.5887264887079875,
+   "ci": [
+    0.5836886131406668,
+    0.5970619484052903
+   ],
+   "class": "SLOWER"
+  },
+  {
+   "batch": 2,
+   "cap": 32,
+   "programs": 12,
+   "position": [
+    4
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 990.0
+   },
+   "max_abs_diff": 0.0,
+   "split_us": 2.2060000151395798,
+   "single_us": 1.663839966058731,
+   "speedup_single": 1.3258486754378824,
+   "ci": [
+    1.324903879003288,
+    1.3274301467760734
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 2,
+   "cap": 32,
+   "programs": 12,
+   "position": [
+    12
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 991.0
+   },
+   "max_abs_diff": 0.0,
+   "split_us": 2.252800017595291,
+   "single_us": 1.6844800114631653,
+   "speedup_single": 1.3373860195814817,
+   "ci": [
+    1.3323839601651473,
+    1.3488433306285024
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 2,
+   "cap": 32,
+   "programs": 12,
+   "position": [
+    20
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 991.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 2.3080000281333923,
+   "single_us": 1.7151999473571777,
+   "speedup_single": 1.3456157293437514,
+   "ci": [
+    1.319648046787351,
+    1.3660448379707177
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 2,
+   "cap": 32,
+   "programs": 12,
+   "position": [
+    28
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 991.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.3085600137710576,
+   "single_us": 1.7527200281620023,
+   "speedup_single": 1.3171299332911368,
+   "ci": [
+    1.2963727609336944,
+    1.324947363037897
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 2,
+   "cap": 64,
+   "programs": 12,
+   "position": [
+    8
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 989.0
+   },
+   "max_abs_diff": 0.0,
+   "split_us": 2.252800017595291,
+   "single_us": 1.664000004529953,
+   "speedup_single": 1.3538461607346346,
+   "ci": [
+    1.3333333039355257,
+    1.3542066942163546
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 2,
+   "cap": 64,
+   "programs": 12,
+   "position": [
+    24
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1106.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.309119999408722,
+   "single_us": 1.7203199863433838,
+   "speedup_single": 1.3422619150736363,
+   "ci": [
+    1.3421689300669595,
+    1.3444010466291874
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 2,
+   "cap": 64,
+   "programs": 12,
+   "position": [
+    40
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1105.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.391040027141571,
+   "single_us": 1.812479943037033,
+   "speedup_single": 1.3192090959832028,
+   "ci": [
+    1.3008356771780407,
+    1.3347458146182956
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 2,
+   "cap": 64,
+   "programs": 12,
+   "position": [
+    56
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1054.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.447360008955002,
+   "single_us": 1.9251200556755066,
+   "speedup_single": 1.2712765636303374,
+   "ci": [
+    1.2684301889992418,
+    1.2718579895110147
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 2,
+   "cap": 128,
+   "programs": 12,
+   "position": [
+    16
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 992.0
+   },
+   "max_abs_diff": 3.5762786865234375e-07,
+   "split_us": 2.5948800146579742,
+   "single_us": 1.6998399794101715,
+   "speedup_single": 1.526543701812669,
+   "ci": [
+    1.502501365512653,
+    1.545180760649657
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 2,
+   "cap": 128,
+   "programs": 12,
+   "position": [
+    48
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 976.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.6009601354599,
+   "single_us": 1.9200000166893005,
+   "speedup_single": 1.3546667254434688,
+   "ci": [
+    1.3343183453571512,
+    1.370666691915856
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 2,
+   "cap": 128,
+   "programs": 12,
+   "position": [
+    80
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1138.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.672640085220337,
+   "single_us": 2.830639928579331,
+   "speedup_single": 0.9441822883356653,
+   "ci": [
+    0.9422136839071914,
+    0.9565876202902113
+   ],
+   "class": "SLOWER"
+  },
+  {
+   "batch": 2,
+   "cap": 128,
+   "programs": 12,
+   "position": [
+    112
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1157.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.8620800375938416,
+   "single_us": 2.9839199781417842,
+   "speedup_single": 0.9591678257324388,
+   "ci": [
+    0.9507308320791952,
+    0.969072129892294
+   ],
+   "class": "SLOWER"
+  },
+  {
+   "batch": 2,
+   "cap": 256,
+   "programs": 12,
+   "position": [
+    32
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1164.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 2.7187201380729675,
+   "single_us": 1.812479943037033,
+   "speedup_single": 1.5000001233213194,
+   "ci": [
+    1.4965651840299259,
+    1.5106686445679582
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 2,
+   "cap": 256,
+   "programs": 12,
+   "position": [
+    96
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1171.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.877439856529236,
+   "single_us": 2.877439856529236,
+   "speedup_single": 1.0,
+   "ci": [
+    0.9911815908574347,
+    1.0088412469863033
+   ],
+   "class": "INCONCLUSIVE"
+  },
+  {
+   "batch": 2,
+   "cap": 256,
+   "programs": 12,
+   "position": [
+    160
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1164.0
+   },
+   "max_abs_diff": 8.940696716308594e-08,
+   "split_us": 3.217920064926148,
+   "single_us": 3.9337600767612453,
+   "speedup_single": 0.8180265196995783,
+   "ci": [
+    0.8145266090171746,
+    0.8242187061831996
+   ],
+   "class": "SLOWER"
+  },
+  {
+   "batch": 2,
+   "cap": 256,
+   "programs": 12,
+   "position": [
+    224
+   ],
+   "gpu_before": {
+    "util_pct": 2.0,
+    "mem_used_mib": 1175.0
+   },
+   "max_abs_diff": 5.960464477539063e-08,
+   "split_us": 3.404799997806549,
+   "single_us": 4.971520006656647,
+   "speedup_single": 0.6848609667159484,
+   "ci": [
+    0.6773408694868989,
+    0.687235297187601
+   ],
+   "class": "SLOWER"
+  },
+  {
+   "batch": 4,
+   "cap": 32,
+   "programs": 24,
+   "position": [
+    4
+   ],
+   "gpu_before": {
+    "util_pct": 4.0,
+    "mem_used_mib": 1191.0
+   },
+   "max_abs_diff": 0.0,
+   "split_us": 2.2604800015687943,
+   "single_us": 1.6783999651670456,
+   "speedup_single": 1.3468065112500263,
+   "ci": [
+    1.313050122347292,
+    1.3542145018251754
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 32,
+   "programs": 24,
+   "position": [
+    12
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1192.0
+   },
+   "max_abs_diff": 0.0,
+   "split_us": 2.309119999408722,
+   "single_us": 1.7100800573825836,
+   "speedup_single": 1.350299355541879,
+   "ci": [
+    1.3475256689804802,
+    1.3526384669148275
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 32,
+   "programs": 24,
+   "position": [
+    20
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1192.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.385919988155365,
+   "single_us": 1.775519996881485,
+   "speedup_single": 1.3437866046825626,
+   "ci": [
+    1.323863619451545,
+    1.3609104755204393
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 32,
+   "programs": 24,
+   "position": [
+    28
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1182.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 2.4877599626779556,
+   "single_us": 1.8723200261592865,
+   "speedup_single": 1.3287044564604313,
+   "ci": [
+    1.3144857845439988,
+    1.3492187157676305
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 64,
+   "programs": 24,
+   "position": [
+    8
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1153.0
+   },
+   "max_abs_diff": 0.0,
+   "split_us": 2.467840015888214,
+   "single_us": 1.6896000504493713,
+   "speedup_single": 1.4606060263977025,
+   "ci": [
+    1.456193414040339,
+    1.4766571852857386
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 64,
+   "programs": 24,
+   "position": [
+    24
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1174.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 2.5992000102996826,
+   "single_us": 1.807360053062439,
+   "speedup_single": 1.4381196518621338,
+   "ci": [
+    1.4323217944653275,
+    1.4550282348370698
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 64,
+   "programs": 24,
+   "position": [
+    40
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1166.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 2.6521599292755127,
+   "single_us": 1.9660800695419312,
+   "speedup_single": 1.348958249647192,
+   "ci": [
+    1.348958249647192,
+    1.3563679538795252
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 64,
+   "programs": 24,
+   "position": [
+    56
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1138.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 2.810879945755005,
+   "single_us": 2.1196800470352173,
+   "speedup_single": 1.3260869015050476,
+   "ci": [
+    1.3069052730087063,
+    1.3330691492936486
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 128,
+   "programs": 24,
+   "position": [
+    16
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1140.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 2.6468800008296967,
+   "single_us": 1.802240014076233,
+   "speedup_single": 1.4686612105804329,
+   "ci": [
+    1.4545454395124844,
+    1.4897335187814906
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 128,
+   "programs": 24,
+   "position": [
+    48
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1140.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 2.882160097360611,
+   "single_us": 2.0582400262355804,
+   "speedup_single": 1.4003032010955203,
+   "ci": [
+    1.392110537126865,
+    1.4253777779863024
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 128,
+   "programs": 24,
+   "position": [
+    80
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1140.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 3.184640109539032,
+   "single_us": 3.001919984817505,
+   "speedup_single": 1.060867753186511,
+   "ci": [
+    1.0597662993476005,
+    1.0631400173411156
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 128,
+   "programs": 24,
+   "position": [
+    112
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1140.0
+   },
+   "max_abs_diff": 8.940696716308594e-08,
+   "split_us": 3.381520062685013,
+   "single_us": 3.2153600454330444,
+   "speedup_single": 1.051676955272233,
+   "ci": [
+    1.0426540781179927,
+    1.0557324905704517
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 256,
+   "programs": 24,
+   "position": [
+    32
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1154.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 2.821120023727417,
+   "single_us": 1.884160041809082,
+   "speedup_single": 1.497282588064393,
+   "ci": [
+    1.4891892246920362,
+    1.5130774263103683
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 256,
+   "programs": 24,
+   "position": [
+    96
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1148.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 3.466240018606186,
+   "single_us": 3.0924800038337708,
+   "speedup_single": 1.1208609317793685,
+   "ci": [
+    1.1125827712455312,
+    1.1256984798838083
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 4,
+   "cap": 256,
+   "programs": 24,
+   "position": [
+    160
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1148.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 3.977600038051605,
+   "single_us": 4.24440011382103,
+   "speedup_single": 0.9371406868780716,
+   "ci": [
+    0.9336549944277928,
+    0.9453883567157655
+   ],
+   "class": "SLOWER"
+  },
+  {
+   "batch": 4,
+   "cap": 256,
+   "programs": 24,
+   "position": [
+    224
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1145.0
+   },
+   "max_abs_diff": 8.940696716308594e-08,
+   "split_us": 4.58952009677887,
+   "single_us": 5.347280204296112,
+   "speedup_single": 0.8582905554662269,
+   "ci": [
+    0.854950831972976,
+    0.8686388653879108
+   ],
+   "class": "SLOWER"
+  },
+  {
+   "batch": 8,
+   "cap": 32,
+   "programs": 48,
+   "position": [
+    4
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1175.0
+   },
+   "max_abs_diff": 4.76837158203125e-07,
+   "split_us": 2.687999904155731,
+   "single_us": 1.812479943037033,
+   "speedup_single": 1.4830508411870515,
+   "ci": [
+    1.4686617096429133,
+    1.5000001233213194
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 32,
+   "programs": 48,
+   "position": [
+    12
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1161.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 2.7955201268196106,
+   "single_us": 1.8892800062894821,
+   "speedup_single": 1.4796748589479707,
+   "ci": [
+    1.4731872544186386,
+    1.505713774596359
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 32,
+   "programs": 48,
+   "position": [
+    20
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1207.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 3.0003198981285095,
+   "single_us": 1.9828000664710996,
+   "speedup_single": 1.513173188191559,
+   "ci": [
+    1.4778809420198908,
+    1.541388772019508
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 32,
+   "programs": 48,
+   "position": [
+    28
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1202.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 3.0873599648475647,
+   "single_us": 2.1222399920225143,
+   "speedup_single": 1.4547647657441807,
+   "ci": [
+    1.4337647739224655,
+    1.4660194407939073
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 64,
+   "programs": 48,
+   "position": [
+    8
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1169.0
+   },
+   "max_abs_diff": 3.5762786865234375e-07,
+   "split_us": 2.7289599180221558,
+   "single_us": 1.807360053062439,
+   "speedup_single": 1.5099149244767989,
+   "ci": [
+    1.5070820417993651,
+    1.5215159101629114
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 64,
+   "programs": 48,
+   "position": [
+    24
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1129.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 3.066879957914353,
+   "single_us": 2.027519941329956,
+   "speedup_single": 1.5126262856396995,
+   "ci": [
+    1.4943266138521238,
+    1.5202020276257093
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 64,
+   "programs": 48,
+   "position": [
+    40
+   ],
+   "gpu_before": {
+    "util_pct": 3.0,
+    "mem_used_mib": 1166.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 3.9680001139640804,
+   "single_us": 2.2980000078678127,
+   "speedup_single": 1.7267189296686594,
+   "ci": [
+    1.7185398852074782,
+    1.7609216471074927
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 64,
+   "programs": 48,
+   "position": [
+    56
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1139.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 4.228319972753525,
+   "single_us": 2.664880007505417,
+   "speedup_single": 1.5866830629689919,
+   "ci": [
+    1.549054286852565,
+    1.5923077233058547
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 128,
+   "programs": 48,
+   "position": [
+    16
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1170.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 3.2204800844192505,
+   "single_us": 1.950719952583313,
+   "speedup_single": 1.6509187185758831,
+   "ci": [
+    1.629533722706394,
+    1.656167740993686
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 128,
+   "programs": 48,
+   "position": [
+    48
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1166.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 4.46368008852005,
+   "single_us": 2.3874399811029434,
+   "speedup_single": 1.8696512263558267,
+   "ci": [
+    1.8388241895931834,
+    1.8735193305959748
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 128,
+   "programs": 48,
+   "position": [
+    80
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1132.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 5.0811198353767395,
+   "single_us": 3.6951200664043427,
+   "speedup_single": 1.3750892377148354,
+   "ci": [
+    1.3584433635108752,
+    1.3849153342946872
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 128,
+   "programs": 48,
+   "position": [
+    112
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1175.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 5.478399991989136,
+   "single_us": 4.202720075845718,
+   "speedup_single": 1.303536731716949,
+   "ci": [
+    1.294937485660305,
+    1.3124809361041032
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 256,
+   "programs": 48,
+   "position": [
+    32
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1170.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 4.3775999546051025,
+   "single_us": 2.1805600076913834,
+   "speedup_single": 2.007557663702997,
+   "ci": [
+    2.0039551707298537,
+    2.0357142807646547
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 256,
+   "programs": 48,
+   "position": [
+    96
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1170.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 6.026239991188049,
+   "single_us": 3.8707199692726135,
+   "speedup_single": 1.5568783169608886,
+   "ci": [
+    1.545268033240805,
+    1.5586144605539536
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 256,
+   "programs": 48,
+   "position": [
+    160
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1301.0
+   },
+   "max_abs_diff": 2.980232238769531e-07,
+   "split_us": 6.742080152034759,
+   "single_us": 5.467920005321503,
+   "speedup_single": 1.233024650227731,
+   "ci": [
+    1.2244208172243791,
+    1.2437637969268798
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 8,
+   "cap": 256,
+   "programs": 48,
+   "position": [
+    224
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1396.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 7.69536018371582,
+   "single_us": 6.973440051078796,
+   "speedup_single": 1.103524247336914,
+   "ci": [
+    1.0986841920508932,
+    1.1079294817184782
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 32,
+   "programs": 96,
+   "position": [
+    4
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1338.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 3.184640109539032,
+   "single_us": 2.1954400092363358,
+   "speedup_single": 1.4505703167206017,
+   "ci": [
+    1.4498834761343167,
+    1.4532710801492292
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 32,
+   "programs": 96,
+   "position": [
+    12
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1308.0
+   },
+   "max_abs_diff": 3.5762786865234375e-07,
+   "split_us": 3.3324800431728363,
+   "single_us": 2.2366400063037872,
+   "speedup_single": 1.48994922463182,
+   "ci": [
+    1.4874141586868672,
+    1.4930475889011876
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 32,
+   "programs": 96,
+   "position": [
+    20
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1259.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 3.537920117378235,
+   "single_us": 2.396160066127777,
+   "speedup_single": 1.476495734734264,
+   "ci": [
+    1.4727824478090388,
+    1.4871794520992632
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 32,
+   "programs": 96,
+   "position": [
+    28
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1235.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 3.916800022125244,
+   "single_us": 2.6367200911045074,
+   "speedup_single": 1.4854819195026947,
+   "ci": [
+    1.4700995295122892,
+    1.5023615700345279
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 64,
+   "programs": 96,
+   "position": [
+    8
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1243.0
+   },
+   "max_abs_diff": 3.5762786865234375e-07,
+   "split_us": 3.2748800516128536,
+   "single_us": 2.2015999257564545,
+   "speedup_single": 1.48750007360562,
+   "ci": [
+    1.4679636428830678,
+    1.499818371786827
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 64,
+   "programs": 96,
+   "position": [
+    24
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1243.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 3.7939199805259705,
+   "single_us": 2.510479986667633,
+   "speedup_single": 1.5112329119030155,
+   "ci": [
+    1.5027890086940754,
+    1.5314425047269817
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 64,
+   "programs": 96,
+   "position": [
+    40
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1243.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 5.079039931297302,
+   "single_us": 2.959359884262085,
+   "speedup_single": 1.7162630196846633,
+   "ci": [
+    1.7042736265653011,
+    1.7262042914427849
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 64,
+   "programs": 96,
+   "position": [
+    56
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1243.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 5.38351982831955,
+   "single_us": 3.619840145111084,
+   "speedup_single": 1.4872258476912226,
+   "ci": [
+    1.4761235366026038,
+    1.4957506759838497
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 128,
+   "programs": 96,
+   "position": [
+    16
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1271.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 4.019199907779694,
+   "single_us": 2.324479967355728,
+   "speedup_single": 1.7290748744769084,
+   "ci": [
+    1.7253339443428655,
+    1.7422564097501423
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 128,
+   "programs": 96,
+   "position": [
+    48
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1260.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 6.03087991476059,
+   "single_us": 3.2630400359630585,
+   "speedup_single": 1.8482396318439982,
+   "ci": [
+    1.8314263233000447,
+    1.8508633877204865
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 128,
+   "programs": 96,
+   "position": [
+    80
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1261.0
+   },
+   "max_abs_diff": 1.4901161193847656e-07,
+   "split_us": 6.852559745311737,
+   "single_us": 5.234479904174805,
+   "speedup_single": 1.3091195058073333,
+   "ci": [
+    1.307762899542177,
+    1.32195202025049
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 128,
+   "programs": 96,
+   "position": [
+    112
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1256.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 7.934400141239165,
+   "single_us": 5.937599837779999,
+   "speedup_single": 1.336297554232915,
+   "ci": [
+    1.324185212578765,
+    1.3433860326119602
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 256,
+   "programs": 96,
+   "position": [
+    32
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1275.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 6.025440096855163,
+   "single_us": 2.6931199431419373,
+   "speedup_single": 2.237345615518915,
+   "ci": [
+    2.213815895287477,
+    2.2452472503242644
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 256,
+   "programs": 96,
+   "position": [
+    96
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1275.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 8.156160116195679,
+   "single_us": 5.375999808311462,
+   "speedup_single": 1.5171429328524162,
+   "ci": [
+    1.5064222111348358,
+    1.5185892193636532
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 256,
+   "programs": 96,
+   "position": [
+    160
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1275.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 10.790079832077026,
+   "single_us": 8.120319843292236,
+   "speedup_single": 1.3287752256446077,
+   "ci": [
+    1.3251658271470608,
+    1.3335439546175847
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 16,
+   "cap": 256,
+   "programs": 96,
+   "position": [
+    224
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1267.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 14.603999853134155,
+   "single_us": 11.55072033405304,
+   "speedup_single": 1.264336719336858,
+   "ci": [
+    1.197713417180542,
+    1.382016951288668
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 32,
+   "programs": 192,
+   "position": [
+    4
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1267.0
+   },
+   "max_abs_diff": 3.5762786865234375e-07,
+   "split_us": 4.408319890499115,
+   "single_us": 3.5225600004196167,
+   "speedup_single": 1.2514534571374185,
+   "ci": [
+    1.2424242475147722,
+    1.2598110789145285
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 32,
+   "programs": 192,
+   "position": [
+    12
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1247.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 4.58407998085022,
+   "single_us": 3.723759949207306,
+   "speedup_single": 1.2310353093050628,
+   "ci": [
+    1.2211970472030238,
+    1.2343225669506808
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 32,
+   "programs": 192,
+   "position": [
+    20
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1247.0
+   },
+   "max_abs_diff": 3.5762786865234375e-07,
+   "split_us": 4.9402400851249695,
+   "single_us": 3.850240111351013,
+   "speedup_single": 1.283099220373424,
+   "ci": [
+    1.2749794220770216,
+    1.2838849518451392
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 32,
+   "programs": 192,
+   "position": [
+    28
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1247.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 5.406000018119812,
+   "single_us": 4.2529600858688354,
+   "speedup_single": 1.2711146845892447,
+   "ci": [
+    1.2652506806437473,
+    1.2795181752023996
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 64,
+   "programs": 192,
+   "position": [
+    8
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1247.0
+   },
+   "max_abs_diff": 4.76837158203125e-07,
+   "split_us": 4.515840113162994,
+   "single_us": 3.624959886074066,
+   "speedup_single": 1.2457627822341992,
+   "ci": [
+    1.2384366204335264,
+    1.2480588556604977
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 64,
+   "programs": 192,
+   "position": [
+    24
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1247.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 5.227519869804382,
+   "single_us": 4.164320081472398,
+   "speedup_single": 1.2553117357770598,
+   "ci": [
+    1.2397950469441643,
+    1.2568610936138107
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 64,
+   "programs": 192,
+   "position": [
+    40
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1247.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 7.607359886169434,
+   "single_us": 4.898319989442825,
+   "speedup_single": 1.5530549050624103,
+   "ci": [
+    1.5504837401654814,
+    1.560661769763626
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 64,
+   "programs": 192,
+   "position": [
+    56
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1247.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 7.925359904766083,
+   "single_us": 6.286239922046661,
+   "speedup_single": 1.2607472834389943,
+   "ci": [
+    1.2520259709948482,
+    1.2672666401437016
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 128,
+   "programs": 192,
+   "position": [
+    16
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1342.0
+   },
+   "max_abs_diff": 4.76837158203125e-07,
+   "split_us": 5.088399946689606,
+   "single_us": 3.891119956970215,
+   "speedup_single": 1.3076954714733702,
+   "ci": [
+    1.295764260402589,
+    1.3166543343934167
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 128,
+   "programs": 192,
+   "position": [
+    48
+   ],
+   "gpu_before": {
+    "util_pct": 1.0,
+    "mem_used_mib": 1321.0
+   },
+   "max_abs_diff": 4.172325134277344e-07,
+   "split_us": 8.327680230140684,
+   "single_us": 5.539839863777161,
+   "speedup_single": 1.5032348289689959,
+   "ci": [
+    1.488051433315475,
+    1.512494402730623
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 128,
+   "programs": 192,
+   "position": [
+    80
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1315.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 10.56160032749176,
+   "single_us": 9.676799774169922,
+   "speedup_single": 1.0914352444992834,
+   "ci": [
+    1.0874066985586006,
+    1.0943795535688547
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 128,
+   "programs": 192,
+   "position": [
+    112
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1309.0
+   },
+   "max_abs_diff": 2.384185791015625e-07,
+   "split_us": 13.37287962436676,
+   "single_us": 11.332960128784181,
+   "speedup_single": 1.1799988239966945,
+   "ci": [
+    1.1781785794137376,
+    1.18366172490422
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 256,
+   "programs": 192,
+   "position": [
+    32
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1321.0
+   },
+   "max_abs_diff": 4.76837158203125e-07,
+   "split_us": 8.370479941368103,
+   "single_us": 4.439040124416351,
+   "speedup_single": 1.8856508854982834,
+   "ci": [
+    1.8757408697656617,
+    1.88793661037977
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 256,
+   "programs": 192,
+   "position": [
+    96
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1280.0
+   },
+   "max_abs_diff": 1.7881393432617188e-07,
+   "split_us": 13.475840091705322,
+   "single_us": 10.22976040840149,
+   "speedup_single": 1.3173172736907792,
+   "ci": [
+    1.3128342670061204,
+    1.3221442815057702
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 256,
+   "programs": 192,
+   "position": [
+    160
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1267.0
+   },
+   "max_abs_diff": 1.1920928955078125e-07,
+   "split_us": 18.552160263061523,
+   "single_us": 15.789439678192137,
+   "speedup_single": 1.1749726805495933,
+   "ci": [
+    1.1722375163678516,
+    1.1773138338111362
+   ],
+   "class": "WIN"
+  },
+  {
+   "batch": 32,
+   "cap": 256,
+   "programs": 192,
+   "position": [
+    224
+   ],
+   "gpu_before": {
+    "util_pct": 0.0,
+    "mem_used_mib": 1259.0
+   },
+   "max_abs_diff": 8.940696716308594e-08,
+   "split_us": 23.736319541931152,
+   "single_us": 21.910799741744995,
+   "speedup_single": 1.0833159821504887,
+   "ci": [
+    1.0783992131176097,
+    1.0863844879562266
+   ],
+   "class": "WIN"
+  }
+ ],
+ "summary": {
+  "1x32": {
+   "split_us": 8.943920135498047,
+   "single_us": 6.765119954943657,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.322063791191495
+  },
+  "1x64": {
+   "split_us": 9.184719920158386,
+   "single_us": 7.068479955196381,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.2993910965831141
+  },
+  "1x128": {
+   "split_us": 9.74880002439022,
+   "single_us": 9.292640015482903,
+   "classes": [
+    "WIN",
+    "WIN",
+    "SLOWER",
+    "SLOWER"
+   ],
+   "speedup_single": 1.0490883116258984
+  },
+  "1x256": {
+   "split_us": 10.965760052204132,
+   "single_us": 13.374320194125175,
+   "classes": [
+    "WIN",
+    "SLOWER",
+    "SLOWER",
+    "SLOWER"
+   ],
+   "speedup_single": 0.8199115837693918
+  },
+  "2x32": {
+   "split_us": 9.07536007463932,
+   "single_us": 6.816239953041077,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.3314320119540881
+  },
+  "2x64": {
+   "split_us": 9.400320053100586,
+   "single_us": 7.1219199895858765,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.319913740514683
+  },
+  "2x128": {
+   "split_us": 10.730560272932053,
+   "single_us": 9.434399902820587,
+   "classes": [
+    "WIN",
+    "WIN",
+    "SLOWER",
+    "SLOWER"
+   ],
+   "speedup_single": 1.1373866259075953
+  },
+  "2x256": {
+   "split_us": 12.2188800573349,
+   "single_us": 13.595199882984161,
+   "classes": [
+    "WIN",
+    "INCONCLUSIVE",
+    "SLOWER",
+    "SLOWER"
+   ],
+   "speedup_single": 0.8987642816953452
+  },
+  "4x32": {
+   "split_us": 9.443279951810837,
+   "single_us": 7.036320045590401,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.3420765244652078
+  },
+  "4x64": {
+   "split_us": 10.530079901218414,
+   "single_us": 7.582720220088959,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.388694241061538
+  },
+  "4x128": {
+   "split_us": 12.095200270414352,
+   "single_us": 10.077760070562363,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.2001873616484513
+  },
+  "4x256": {
+   "split_us": 14.854480177164078,
+   "single_us": 14.568320363759995,
+   "classes": [
+    "WIN",
+    "WIN",
+    "SLOWER",
+    "SLOWER"
+   ],
+   "speedup_single": 1.019642608499737
+  },
+  "8x32": {
+   "split_us": 11.571199893951416,
+   "single_us": 7.806800007820129,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.4821949944100603
+  },
+  "8x64": {
+   "split_us": 13.992159962654114,
+   "single_us": 8.797760009765625,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.5904230107575836
+  },
+  "8x128": {
+   "split_us": 18.243680000305176,
+   "single_us": 12.236000075936317,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.4909839724652945
+  },
+  "8x256": {
+   "split_us": 24.84128028154373,
+   "single_us": 18.492640033364296,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.343306322770857
+  },
+  "16x32": {
+   "split_us": 13.971840292215347,
+   "single_us": 9.464960172772408,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.4761647209470314
+  },
+  "16x64": {
+   "split_us": 17.531359791755676,
+   "single_us": 11.291279941797256,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.5526459251850924
+  },
+  "16x128": {
+   "split_us": 24.837039709091187,
+   "single_us": 16.75959974527359,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.4819590018010742
+  },
+  "16x256": {
+   "split_us": 39.575679898262024,
+   "single_us": 27.740159928798676,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.4266565153136053
+  },
+  "32x32": {
+   "split_us": 19.338639974594116,
+   "single_us": 15.349520146846771,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.2598856374390845
+  },
+  "32x64": {
+   "split_us": 25.276079773902893,
+   "single_us": 18.97383987903595,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.3321541625230136
+  },
+  "32x128": {
+   "split_us": 37.35056012868881,
+   "single_us": 30.440719723701477,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.226993332211106
+  },
+  "32x256": {
+   "split_us": 64.1347998380661,
+   "single_us": 52.369039952754974,
+   "classes": [
+    "WIN",
+    "WIN",
+    "WIN",
+    "WIN"
+   ],
+   "speedup_single": 1.2246701466348375
+  }
+ }
+}

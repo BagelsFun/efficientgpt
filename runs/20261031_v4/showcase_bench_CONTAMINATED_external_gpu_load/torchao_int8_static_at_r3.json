@@ -1,0 +1,36 @@
+{
+ "mode": "torchao_int8_static_at",
+ "quant": "torchao_int8",
+ "static_cache": true,
+ "load_s": 8.02,
+ "max_autotune": true,
+ "load_peak_allocated_mib": 4911.7,
+ "weights_allocated_mib": 2238.5,
+ "first_call_s": 255.74,
+ "decode_tok_s": [
+  60.76,
+  60.03,
+  60.6,
+  61.22,
+  61.12
+ ],
+ "decode_tok_s_median": 60.764818894863055,
+ "ttft_s_median": 0.08819320006296039,
+ "completion_tokens": [
+  256,
+  256,
+  256,
+  256,
+  256
+ ],
+ "torch_peak_allocated_mib": 2875.5,
+ "torch_peak_reserved_mib": 3360.0,
+ "itl_ms_p50": 16.562200034968555,
+ "itl_ms_p95": 17.653499962761998,
+ "itl_samples": 1275,
+ "e2e_s_median": 4.2847004000796005,
+ "process_device_used_mib": 3434.0,
+ "round": 3,
+ "gpu_util_before": 25.0,
+ "contended": true
+}

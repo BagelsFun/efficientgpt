@@ -1,0 +1,61 @@
+ 1   8 16        full_graph -> adaptive_graph 1.185 [1.142, 1.262] WIN
+ 1   8 16        full_graph -> compiled_full_graph 1.048 [1.012, 1.112] INCONCLUSIVE
+ 1   8 16    adaptive_graph -> compiled_adaptive_graph 1.078 [1.002, 1.130] WIN
+ 1   8 16        full_graph -> compiled_adaptive_graph 1.278 [1.212, 1.349] WIN
+ 1   8 16 compiled_full_graph -> compiled_adaptive_graph 1.219 [1.135, 1.284] WIN
+ 1  64 16        full_graph -> adaptive_graph 1.197 [1.157, 1.254] WIN
+ 1  64 16        full_graph -> compiled_full_graph 1.064 [1.018, 1.117] WIN
+ 1  64 16    adaptive_graph -> compiled_adaptive_graph 1.102 [1.035, 1.153] WIN
+ 1  64 16        full_graph -> compiled_adaptive_graph 1.320 [1.254, 1.379] WIN
+ 1  64 16 compiled_full_graph -> compiled_adaptive_graph 1.241 [1.177, 1.301] WIN
+ 1  64 64        full_graph -> adaptive_graph 1.206 [1.186, 1.228] WIN
+ 1  64 64        full_graph -> compiled_full_graph 1.094 [1.070, 1.111] WIN
+ 1  64 64    adaptive_graph -> compiled_adaptive_graph 1.092 [1.055, 1.115] WIN
+ 1  64 64        full_graph -> compiled_adaptive_graph 1.317 [1.286, 1.345] WIN
+ 1  64 64 compiled_full_graph -> compiled_adaptive_graph 1.205 [1.184, 1.219] WIN
+ 1 128 32        full_graph -> adaptive_graph 1.099 [1.062, 1.140] WIN
+ 1 128 32        full_graph -> compiled_full_graph 1.096 [1.076, 1.142] WIN
+ 1 128 32    adaptive_graph -> compiled_adaptive_graph 1.082 [1.048, 1.129] WIN
+ 1 128 32        full_graph -> compiled_adaptive_graph 1.189 [1.171, 1.215] WIN
+ 1 128 32 compiled_full_graph -> compiled_adaptive_graph 1.084 [1.053, 1.105] WIN
+ 1 128 64        full_graph -> adaptive_graph 1.102 [1.079, 1.124] WIN
+ 1 128 64        full_graph -> compiled_full_graph 1.101 [1.080, 1.134] WIN
+ 1 128 64    adaptive_graph -> compiled_adaptive_graph 1.100 [1.074, 1.120] WIN
+ 1 128 64        full_graph -> compiled_adaptive_graph 1.212 [1.193, 1.229] WIN
+ 1 128 64 compiled_full_graph -> compiled_adaptive_graph 1.101 [1.065, 1.126] WIN
+ 1 192 32        full_graph -> adaptive_graph 0.997 [0.960, 1.020] AA_PASS
+ 1 192 32        full_graph -> compiled_full_graph 1.078 [1.040, 1.110] WIN
+ 1 192 32    adaptive_graph -> compiled_adaptive_graph 1.099 [1.075, 1.128] WIN
+ 1 192 32        full_graph -> compiled_adaptive_graph 1.096 [1.054, 1.127] WIN
+ 1 192 32 compiled_full_graph -> compiled_adaptive_graph 1.017 [0.976, 1.053] AA_PASS
+16   8 16        full_graph -> adaptive_graph 1.363 [1.326, 1.419] WIN
+16   8 16        full_graph -> compiled_full_graph 1.033 [1.009, 1.082] INCONCLUSIVE
+16   8 16    adaptive_graph -> compiled_adaptive_graph 1.125 [1.095, 1.179] WIN
+16   8 16        full_graph -> compiled_adaptive_graph 1.533 [1.488, 1.597] WIN
+16   8 16 compiled_full_graph -> compiled_adaptive_graph 1.484 [1.438, 1.542] WIN
+16  64 16        full_graph -> adaptive_graph 1.339 [1.310, 1.370] WIN
+16  64 16        full_graph -> compiled_full_graph 1.040 [1.002, 1.083] INCONCLUSIVE
+16  64 16    adaptive_graph -> compiled_adaptive_graph 1.120 [1.074, 1.153] WIN
+16  64 16        full_graph -> compiled_adaptive_graph 1.499 [1.458, 1.542] WIN
+16  64 16 compiled_full_graph -> compiled_adaptive_graph 1.442 [1.397, 1.484] WIN
+16  64 64        full_graph -> adaptive_graph 1.379 [1.355, 1.401] WIN
+16  64 64        full_graph -> compiled_full_graph 1.062 [1.040, 1.071] WIN
+16  64 64    adaptive_graph -> compiled_adaptive_graph 1.106 [1.089, 1.122] WIN
+16  64 64        full_graph -> compiled_adaptive_graph 1.525 [1.499, 1.542] WIN
+16  64 64 compiled_full_graph -> compiled_adaptive_graph 1.437 [1.427, 1.450] WIN
+16 128 32        full_graph -> adaptive_graph 1.153 [1.139, 1.196] WIN
+16 128 32        full_graph -> compiled_full_graph 1.098 [1.071, 1.147] WIN
+16 128 32    adaptive_graph -> compiled_adaptive_graph 1.069 [1.037, 1.083] WIN
+16 128 32        full_graph -> compiled_adaptive_graph 1.233 [1.221, 1.257] WIN
+16 128 32 compiled_full_graph -> compiled_adaptive_graph 1.123 [1.083, 1.156] WIN
+16 128 64        full_graph -> adaptive_graph 1.149 [1.124, 1.172] WIN
+16 128 64        full_graph -> compiled_full_graph 1.080 [1.053, 1.117] WIN
+16 128 64    adaptive_graph -> compiled_adaptive_graph 1.066 [1.043, 1.094] WIN
+16 128 64        full_graph -> compiled_adaptive_graph 1.225 [1.199, 1.255] WIN
+16 128 64 compiled_full_graph -> compiled_adaptive_graph 1.134 [1.109, 1.159] WIN
+16 192 32        full_graph -> adaptive_graph 0.986 [0.963, 1.017] AA_PASS
+16 192 32        full_graph -> compiled_full_graph 1.045 [1.023, 1.071] INCONCLUSIVE
+16 192 32    adaptive_graph -> compiled_adaptive_graph 1.098 [1.061, 1.122] WIN
+16 192 32        full_graph -> compiled_adaptive_graph 1.083 [1.052, 1.114] WIN
+16 192 32 compiled_full_graph -> compiled_adaptive_graph 1.037 [1.010, 1.051] AA_FAIL
+Wrote research\phase5\ci_runs\20261030_191837_compiled_graph\CI_REPORT.md and research\phase5\ci_runs\20261030_191837_compiled_graph\CI_REPORT.json

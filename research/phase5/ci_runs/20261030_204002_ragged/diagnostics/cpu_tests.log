@@ -1,0 +1,11 @@
+test_pad_values_never_read (research.phase5.test_ragged.TestRaggedCPU.test_pad_values_never_read) ... ok
+test_prefill_matches_batch_one (research.phase5.test_ragged.TestRaggedCPU.test_prefill_matches_batch_one) ... ok
+test_rows_match_batch_one_reference (research.phase5.test_ragged.TestRaggedCPU.test_rows_match_batch_one_reference) ... ok
+test_uniform_lengths_equal_existing_decoder (research.phase5.test_ragged.TestRaggedCPU.test_uniform_lengths_equal_existing_decoder) ... ok
+test_validation (research.phase5.test_ragged.TestRaggedCPU.test_validation) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.363s
+
+OK
+number of parameters: 0.03M

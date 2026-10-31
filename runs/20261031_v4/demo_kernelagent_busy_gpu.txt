@@ -1,0 +1,13 @@
+1. Task int8_gemv: y = x @ (W_int8 * s).T, shapes (M, K, N)
+   dev (search):      [(1, 2048, 6144), (1, 6144, 2048), (1, 2048, 1024), (4, 2048, 6144)]
+   held-out (final):  [(1, 2048, 2048), (1, 2048, 151936), (4, 6144, 2048), (2, 2048, 1024), (8, 2048, 6144)]
+
+2. Safety screen on an unsafe candidate -> ['import os']
+
+3. Correctness (fp64 truth, edge cases, isolated subprocess)
+   default dot16 candidate: correct (16/16 cases)
+   mutated candidate (scale dropped): incorrect (error 5.77e+05 > bound 179)
+
+4. Search: strategy=local, budget=6 (CUDA-graph timing, contention-checked) ...
+   stopped: GPU busy before timing ({'util_pct': 21.0, 'mem_used_mib': 1864.0}); refusing to search on contended timings
+   Close other GPU programs and re-run; timings on a busy GPU are not meaningful.

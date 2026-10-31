@@ -1,0 +1,73 @@
+ 1   8 16        full_graph -> adaptive_graph 1.271 [1.194, 1.314] WIN
+ 1   8 16 prefix_sdpa_eager -> full_graph     2.747 [2.665, 2.862] WIN
+ 1   8 16 prefix_sdpa_eager -> adaptive_graph 3.492 [3.302, 3.618] WIN
+ 1   8 16   compiled_static -> full_graph     2.294 [2.230, 2.388] WIN
+ 1   8 16   compiled_static -> adaptive_graph 2.915 [2.775, 2.984] WIN
+ 1   8 16 prefix_sdpa_eager -> compiled_static 1.198 [1.167, 1.236] WIN
+ 1  64 16        full_graph -> adaptive_graph 1.229 [1.123, 1.318] WIN
+ 1  64 16 prefix_sdpa_eager -> full_graph     2.763 [2.646, 2.896] WIN
+ 1  64 16 prefix_sdpa_eager -> adaptive_graph 3.396 [3.202, 3.551] WIN
+ 1  64 16   compiled_static -> full_graph     2.343 [2.230, 2.469] WIN
+ 1  64 16   compiled_static -> adaptive_graph 2.879 [2.698, 3.036] WIN
+ 1  64 16 prefix_sdpa_eager -> compiled_static 1.180 [1.156, 1.207] WIN
+ 1  64 64        full_graph -> adaptive_graph 1.200 [1.172, 1.230] WIN
+ 1  64 64 prefix_sdpa_eager -> full_graph     3.130 [3.074, 3.182] WIN
+ 1  64 64 prefix_sdpa_eager -> adaptive_graph 3.755 [3.647, 3.856] WIN
+ 1  64 64   compiled_static -> full_graph     2.584 [2.539, 2.624] WIN
+ 1  64 64   compiled_static -> adaptive_graph 3.100 [3.032, 3.174] WIN
+ 1  64 64 prefix_sdpa_eager -> compiled_static 1.211 [1.196, 1.225] WIN
+ 1 128 32        full_graph -> adaptive_graph 1.070 [1.053, 1.090] WIN
+ 1 128 32 prefix_sdpa_eager -> full_graph     3.013 [2.954, 3.063] WIN
+ 1 128 32 prefix_sdpa_eager -> adaptive_graph 3.223 [3.172, 3.269] WIN
+ 1 128 32   compiled_static -> full_graph     2.480 [2.418, 2.542] WIN
+ 1 128 32   compiled_static -> adaptive_graph 2.653 [2.593, 2.706] WIN
+ 1 128 32 prefix_sdpa_eager -> compiled_static 1.215 [1.184, 1.249] WIN
+ 1 128 64        full_graph -> adaptive_graph 1.068 [1.044, 1.095] WIN
+ 1 128 64 prefix_sdpa_eager -> full_graph     3.178 [3.127, 3.246] WIN
+ 1 128 64 prefix_sdpa_eager -> adaptive_graph 3.395 [3.358, 3.447] WIN
+ 1 128 64   compiled_static -> full_graph     2.605 [2.556, 2.682] WIN
+ 1 128 64   compiled_static -> adaptive_graph 2.783 [2.750, 2.843] WIN
+ 1 128 64 prefix_sdpa_eager -> compiled_static 1.220 [1.191, 1.236] WIN
+ 1 192 32        full_graph -> adaptive_graph 0.981 [0.950, 1.020] AA_PASS
+ 1 192 32 prefix_sdpa_eager -> full_graph     3.046 [2.959, 3.186] WIN
+ 1 192 32 prefix_sdpa_eager -> adaptive_graph 2.987 [2.925, 3.110] WIN
+ 1 192 32   compiled_static -> full_graph     2.549 [2.465, 2.660] WIN
+ 1 192 32   compiled_static -> adaptive_graph 2.499 [2.422, 2.592] WIN
+ 1 192 32 prefix_sdpa_eager -> compiled_static 1.195 [1.166, 1.233] WIN
+16   8 16        full_graph -> adaptive_graph 1.340 [1.288, 1.355] WIN
+16   8 16 prefix_sdpa_eager -> full_graph     1.705 [1.671, 1.789] WIN
+16   8 16 prefix_sdpa_eager -> adaptive_graph 2.285 [2.236, 2.344] WIN
+16   8 16   compiled_static -> full_graph     1.647 [1.612, 1.732] WIN
+16   8 16   compiled_static -> adaptive_graph 2.207 [2.148, 2.255] WIN
+16   8 16 prefix_sdpa_eager -> compiled_static 1.035 [1.013, 1.066] INCONCLUSIVE
+16  64 16        full_graph -> adaptive_graph 1.345 [1.319, 1.367] WIN
+16  64 16 prefix_sdpa_eager -> full_graph     1.673 [1.601, 1.738] WIN
+16  64 16 prefix_sdpa_eager -> adaptive_graph 2.251 [2.156, 2.341] WIN
+16  64 16   compiled_static -> full_graph     1.630 [1.590, 1.660] WIN
+16  64 16   compiled_static -> adaptive_graph 2.193 [2.130, 2.241] WIN
+16  64 16 prefix_sdpa_eager -> compiled_static 1.026 [0.977, 1.065] INCONCLUSIVE
+16  64 64        full_graph -> adaptive_graph 1.415 [1.361, 1.459] WIN
+16  64 64 prefix_sdpa_eager -> full_graph     1.718 [1.691, 1.760] WIN
+16  64 64 prefix_sdpa_eager -> adaptive_graph 2.431 [2.377, 2.497] WIN
+16  64 64   compiled_static -> full_graph     1.700 [1.664, 1.743] WIN
+16  64 64   compiled_static -> adaptive_graph 2.405 [2.353, 2.472] WIN
+16  64 64 prefix_sdpa_eager -> compiled_static 1.011 [0.999, 1.025] INCONCLUSIVE
+16 128 32        full_graph -> adaptive_graph 1.148 [1.122, 1.186] WIN
+16 128 32 prefix_sdpa_eager -> full_graph     1.589 [1.567, 1.619] WIN
+16 128 32 prefix_sdpa_eager -> adaptive_graph 1.824 [1.792, 1.886] WIN
+16 128 32   compiled_static -> full_graph     1.621 [1.576, 1.651] WIN
+16 128 32   compiled_static -> adaptive_graph 1.862 [1.819, 1.909] WIN
+16 128 32 prefix_sdpa_eager -> compiled_static 0.980 [0.963, 1.015] INCONCLUSIVE
+16 128 64        full_graph -> adaptive_graph 1.141 [1.094, 1.187] WIN
+16 128 64 prefix_sdpa_eager -> full_graph     1.693 [1.667, 1.754] WIN
+16 128 64 prefix_sdpa_eager -> adaptive_graph 1.932 [1.899, 1.991] WIN
+16 128 64   compiled_static -> full_graph     1.684 [1.663, 1.744] WIN
+16 128 64   compiled_static -> adaptive_graph 1.922 [1.884, 1.987] WIN
+16 128 64 prefix_sdpa_eager -> compiled_static 1.005 [0.995, 1.015] INCONCLUSIVE
+16 192 32        full_graph -> adaptive_graph 0.988 [0.956, 1.007] AA_PASS
+16 192 32 prefix_sdpa_eager -> full_graph     1.505 [1.484, 1.561] WIN
+16 192 32 prefix_sdpa_eager -> adaptive_graph 1.487 [1.466, 1.516] WIN
+16 192 32   compiled_static -> full_graph     1.587 [1.552, 1.643] WIN
+16 192 32   compiled_static -> adaptive_graph 1.568 [1.548, 1.585] WIN
+16 192 32 prefix_sdpa_eager -> compiled_static 0.948 [0.935, 0.974] SLOWER
+Wrote research\phase5\ci_runs\20261030_185752_inductor\CI_REPORT.md and research\phase5\ci_runs\20261030_185752_inductor\CI_REPORT.json

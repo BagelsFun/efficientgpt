@@ -1,0 +1,16 @@
+2026-10-31T11:46:57 idle check before search_int8_gemv_single_shot_s0.json: {'util_pct': 1.0, 'mem_used_mib': 895.0}
+2026-10-31T11:47:53 search_int8_gemv_single_shot_s0.json: rc=0 {"task": "int8_gemv", "strategy": "single_shot", "evaluated": 2, "statuses": {"correct": 2}, "best": {"score_ms": 0.014195249999771755, "family": "dot16_splitk", "params": {"BLOCK_N": 64, "BLOCK_K": 128, "SPLITK": 4, "WARPS": 4}}} 
+2026-10-31T11:47:53 idle check before search_int8_gemv_random_s0.json: {'util_pct': 1.0, 'mem_used_mib': 865.0}
+2026-10-31T11:52:41 search_int8_gemv_random_s0.json: rc=0 {"task": "int8_gemv", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.014195249999771755, "family": "dot16_splitk", "params": {"BLOCK_K": 128, "BLOCK_N": 64, "SPLITK": 4, "WARPS": 4}}} 
+2026-10-31T11:52:41 idle check before search_int8_gemv_random_s1.json: {'util_pct': 0.0, 'mem_used_mib': 858.0}
+2026-10-31T11:56:39 search_int8_gemv_random_s1.json: rc=0 {"task": "int8_gemv", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.015336988163331457, "family": "dot16", "params": {"BLOCK_K": 256, "BLOCK_N": 32, "WARPS": 4}}} 
+2026-10-31T11:56:39 idle check before search_int8_gemv_local_s0.json: {'util_pct': 0.0, 'mem_used_mib': 855.0}
+2026-10-31T12:00:06 search_int8_gemv_local_s0.json: rc=0 {"task": "int8_gemv", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.013795518519171598, "family": "dot16_splitk", "params": {"BLOCK_N": 64, "BLOCK_K": 64, "SPLITK": 8, "WARPS": 4}}} 
+2026-10-31T12:00:06 idle check before search_int8_gemv_local_s1.json: {'util_pct': 0.0, 'mem_used_mib': 855.0}
+2026-10-31T12:00:33 search_int8_gemv_local_s1.json: rc=0 {"task": "int8_gemv", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.013795518519171598, "family": "dot16_splitk", "params": {"BLOCK_N": 64, "BLOCK_K": 64, "SPLITK": 8, "WARPS": 4}}} 
+2026-10-31T12:00:34 idle check before search_int8_gemv_local_meta_s0.json: {'util_pct': 0.0, 'mem_used_mib': 855.0}
+2026-10-31T12:01:01 search_int8_gemv_local_meta_s0.json: rc=0 {"task": "int8_gemv", "strategy": "local_meta", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.013795518519171598, "family": "dot16_splitk", "params": {"BLOCK_N": 64, "BLOCK_K": 64, "SPLITK": 8, "WARPS": 4}}} 
+2026-10-31T12:01:04 heldout_int8_gemv.json: crash
+2026-10-31T12:01:04 done
+2026-10-31T12:05:01 heldout_int8_gemv.json: correct
+2026-10-31T12:05:01 done

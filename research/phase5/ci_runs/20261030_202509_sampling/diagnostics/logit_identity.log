@@ -1,0 +1,3 @@
+number of parameters: 12.19M
+tf32: bit-identical steps 100/100, max |logit diff| 0.000e+00
+ieee: bit-identical steps 100/100, max |logit diff| 0.000e+00

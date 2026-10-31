@@ -1,0 +1,42 @@
+{
+ "mode": "llamacpp_q8",
+ "quant": "ollama qwen3:1.7b-q8_0",
+ "static_cache": null,
+ "load_s": null,
+ "first_call_s": 2.33,
+ "decode_tok_s": [
+  116.2,
+  116.1,
+  116.13,
+  116.02,
+  116.05
+ ],
+ "decode_tok_s_median": 116.09841047648928,
+ "server_eval_tok_s": [
+  116.65,
+  116.55,
+  116.58,
+  116.47,
+  116.5
+ ],
+ "ttft_s_median": 0.035802099970169365,
+ "completion_tokens": [
+  256,
+  256,
+  256,
+  256,
+  256
+ ],
+ "ollama_size_vram_mib": 2300.3,
+ "itl_ms_p50": 8.569899946451187,
+ "itl_ms_p95": 8.856000029481947,
+ "itl_samples": 1255,
+ "e2e_s_median": 2.2303591000381857,
+ "torch_peak_allocated_mib": 2300.3,
+ "gpu_used_delta_mib": 2422.0,
+ "weights_allocated_mib": null,
+ "load_peak_allocated_mib": null,
+ "round": 2,
+ "gpu_util_before": 0.0,
+ "contended": false
+}

@@ -1,0 +1,15 @@
+﻿== Task 1: What default num_ctx does OllamaBackend use in assistant/backends.py?
+   tool: read_file({'path': 'assistant/backends.py', 'start_line': 50, 'end_line': 70})
+   answer: The default `num_ctx` that `OllamaBackend` uses is **8192**.
+
+This is visible in line 59 of `assistant/backends.py`:
+```python
+def __init__(self, model, host='http://127.0.0.1:11434', num_ctx=8192, keep_alive='10m', options=None):
+```
+   verdict: correct  (3.7 s)
+
+== Task 2: fix the bug in research/tasklib/median.py (visible + hidden tests)
+   tools: ['read_file', 'read_file']
+   verdict: PASS (ok)  (8.0 s)
+
+Demo: 2/2 tasks passed

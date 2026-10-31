@@ -1,0 +1,119 @@
+{
+ "speed": [
+  {
+   "mode": "bf16_static",
+   "rounds": 1,
+   "tok_s_round_medians": [
+    63.04
+   ],
+   "tok_s": 63.04,
+   "ratio": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "paired_min_max": [
+    1.0,
+    1.0
+   ],
+   "ttft_ms": 44.699099962599576,
+   "serving_peak_mib": 3346.0,
+   "device_used_mib": 3416.0,
+   "weights_mib": 3282.3,
+   "load_peak_mib": 3282.3,
+   "first_call_s": 5.46,
+   "contended": false,
+   "itl_ms_p50": 15.742599964141846,
+   "itl_ms_p95": 16.384599963203073,
+   "e2e_s": 4.089389499975368,
+   "reserved_mib": 3378.0,
+   "load_s": 4.62,
+   "all_256_tokens": true
+  },
+  {
+   "mode": "int8_graph",
+   "rounds": 1,
+   "tok_s_round_medians": [
+    117.27
+   ],
+   "tok_s": 117.27,
+   "ratio": 1.860247461928934,
+   "ci": [
+    1.860247461928934,
+    1.860247461928934
+   ],
+   "paired_min_max": [
+    1.860247461928934,
+    1.860247461928934
+   ],
+   "ttft_ms": 52.19850002322346,
+   "serving_peak_mib": 2342.4,
+   "device_used_mib": 2474.0,
+   "weights_mib": 2237.8,
+   "load_peak_mib": 3426.3,
+   "first_call_s": 5.3,
+   "contended": false,
+   "itl_ms_p50": 8.492899942211807,
+   "itl_ms_p95": 8.551600039936602,
+   "e2e_s": 2.2266488999594003,
+   "reserved_mib": 2424.0,
+   "load_s": 5.16,
+   "all_256_tokens": true
+  },
+  {
+   "mode": "llamacpp_q8",
+   "rounds": 1,
+   "tok_s_round_medians": [
+    115.62
+   ],
+   "tok_s": 115.62,
+   "ratio": 1.8340736040609138,
+   "ci": [
+    1.8340736040609138,
+    1.8340736040609138
+   ],
+   "paired_min_max": [
+    1.8340736040609138,
+    1.8340736040609138
+   ],
+   "ttft_ms": 27.311299927532673,
+   "serving_peak_mib": 2300.3,
+   "device_used_mib": 2421.0,
+   "weights_mib": null,
+   "load_peak_mib": null,
+   "first_call_s": 2.32,
+   "contended": false,
+   "itl_ms_p50": 8.582599926739931,
+   "itl_ms_p95": 9.147300035692751,
+   "e2e_s": 2.2330370999407023,
+   "reserved_mib": null,
+   "load_s": null,
+   "all_256_tokens": true
+  }
+ ],
+ "quality": {},
+ "pairs": {
+  "bf16_static": {
+   "ratio": 1.860247461928934,
+   "ci": [
+    1.860247461928934,
+    1.860247461928934
+   ],
+   "paired": [
+    1.860247461928934,
+    1.860247461928934
+   ]
+  },
+  "llamacpp_q8": {
+   "ratio": 1.0142708873897248,
+   "ci": [
+    1.0142708873897248,
+    1.0142708873897248
+   ],
+   "paired": [
+    1.0142708873897248,
+    1.0142708873897248
+   ]
+  }
+ }
+}

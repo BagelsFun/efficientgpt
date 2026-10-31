@@ -1,0 +1,66 @@
+{
+  "model": "Qwen/Qwen3-1.7B",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "quant": "bf16",
+  "first_call_s": {
+    "dynamic": 3.29,
+    "static": 23.4
+  },
+  "steady": {
+    "dynamic": {
+      "decode_tok_s": [
+        22.23,
+        22.57,
+        22.63,
+        22.74
+      ],
+      "decode_tok_s_median": 22.599332612135303,
+      "ttft_s_median": 0.05134460004046559,
+      "completion_tokens": [
+        256,
+        256,
+        256,
+        256
+      ]
+    },
+    "static": {
+      "decode_tok_s": [
+        19.36,
+        34.32,
+        33.85,
+        34.29
+      ],
+      "decode_tok_s_median": 34.06957262328094,
+      "ttft_s_median": 0.07206400000723079,
+      "completion_tokens": [
+        256,
+        256,
+        256,
+        256
+      ]
+    }
+  },
+  "equivalence": {
+    "identical_responses": "40/52",
+    "differing_items": [
+      "code/matmul",
+      "code/roman_to_int",
+      "code/count_params",
+      "code/kv_cache_bytes",
+      "code/parse_duration",
+      "math/01",
+      "math/03",
+      "math/04",
+      "math/05",
+      "math/11",
+      "mcq/14",
+      "mcq/15"
+    ],
+    "quality_v1.1": {
+      "dynamic": "39/52",
+      "static": "39/52"
+    },
+    "seconds": 429.3
+  },
+  "torch_peak_allocated_mib": 3409.9
+}

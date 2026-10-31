@@ -1,0 +1,104 @@
+{
+  "qwen3-1.7b_bf16": {
+    "v1": {
+      "dev/code": "5/8",
+      "dev/math": "7/8",
+      "dev/mcq": "9/10",
+      "dev/all": "21/26",
+      "test/code": "4/8",
+      "test/math": "5/8",
+      "test/mcq": "8/10",
+      "test/all": "17/26",
+      "all/code": "9/16",
+      "all/math": "12/16",
+      "all/mcq": "17/20",
+      "all/all": "38/52"
+    },
+    "v1_changed_items": null,
+    "v1.1": {
+      "dev/code": "5/8",
+      "dev/math": "7/8",
+      "dev/mcq": "9/10",
+      "dev/all": "21/26",
+      "test/code": "5/8",
+      "test/math": "5/8",
+      "test/mcq": "8/10",
+      "test/all": "18/26",
+      "all/code": "10/16",
+      "all/math": "12/16",
+      "all/mcq": "17/20",
+      "all/all": "39/52"
+    },
+    "v1.1_changed_items": [
+      "code/softmax"
+    ]
+  },
+  "qwen3-1.7b_nf4": {
+    "v1": {
+      "dev/code": "4/8",
+      "dev/math": "6/8",
+      "dev/mcq": "9/10",
+      "dev/all": "19/26",
+      "test/code": "3/8",
+      "test/math": "5/8",
+      "test/mcq": "8/10",
+      "test/all": "16/26",
+      "all/code": "7/16",
+      "all/math": "11/16",
+      "all/mcq": "17/20",
+      "all/all": "35/52"
+    },
+    "v1_changed_items": null,
+    "v1.1": {
+      "dev/code": "4/8",
+      "dev/math": "6/8",
+      "dev/mcq": "9/10",
+      "dev/all": "19/26",
+      "test/code": "4/8",
+      "test/math": "5/8",
+      "test/mcq": "8/10",
+      "test/all": "17/26",
+      "all/code": "8/16",
+      "all/math": "11/16",
+      "all/mcq": "17/20",
+      "all/all": "36/52"
+    },
+    "v1.1_changed_items": [
+      "code/softmax"
+    ]
+  },
+  "qwen3.5-4b_q4km": {
+    "v1": {
+      "dev/code": "7/8",
+      "dev/math": "8/8",
+      "dev/mcq": "10/10",
+      "dev/all": "25/26",
+      "test/code": "6/8",
+      "test/math": "6/8",
+      "test/mcq": "9/10",
+      "test/all": "21/26",
+      "all/code": "13/16",
+      "all/math": "14/16",
+      "all/mcq": "19/20",
+      "all/all": "46/52"
+    },
+    "v1_changed_items": null,
+    "v1.1": {
+      "dev/code": "7/8",
+      "dev/math": "8/8",
+      "dev/mcq": "10/10",
+      "dev/all": "25/26",
+      "test/code": "7/8",
+      "test/math": "6/8",
+      "test/mcq": "9/10",
+      "test/all": "22/26",
+      "all/code": "14/16",
+      "all/math": "14/16",
+      "all/mcq": "19/20",
+      "all/all": "47/52"
+    },
+    "v1.1_changed_items": [
+      "code/softmax"
+    ]
+  }
+}

@@ -1,0 +1,481 @@
+{
+ "protocol": "assistant-agent-v1.2",
+ "backend": "hf:Qwen/Qwen3-1.7B",
+ "quant": "nf4",
+ "system": "calibrated",
+ "configs": {
+  "model_only": {
+   "score": "0/20",
+   "correct": 0,
+   "abstained": 16,
+   "rows": [
+    {
+     "question": "What is the value of NEAR_TIE_LOGIT_MARGIN in research/phase5/benchmark_review.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not have access to the file `research/phase5/benchmark_review.py` and cannot read its contents. I cannot determine the value of `NEAR_TIE_LOGIT_MARGIN` unless I have access to the file or a tool that can analyze it.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 4.58,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "Which permission level does the run_unittests tool have in assistant/tools.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not have access to the `assistant/tools.py` file or the context in which it is used. Therefore, I cannot determine the permission level of the `run_unittests` tool in that file. If you have access to the file or more context, please provide it so I can assist further.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 5.58,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is the default eos_id of EOSDecoder in research/phase5/eos.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not have access to the file `research/phase5/eos.py` and cannot read it directly. I recommend checking the file or consulting the documentation for `EOSDecoder` to determine its default `eos_id`.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 3.95,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What string is PROTOCOL set to in research/kernelagent/tasks.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not see any mention of a \"PROTOCOL\" variable in the provided file \"research/kernelagent/tasks.py\". I cannot determine its value without examining the file contents. Please provide the file contents or specify the context in which this variable is used.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 4.56,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "Which function in research/phase5/sampling.py implements inverse-CDF sampling from probabilities and uniforms?",
+     "passed": false,
+     "verdict": "unsupported",
+     "answer": "I will check the file research/phase5/sampling.py to find the function that implements inverse-CDF sampling from probabilities and uniforms.\n\nI will read the file research/phase5/sampling.py to find the function that implements inverse-CDF sampling from probabilities and uniforms.\n\nI will read the file research/phase5/sampling.py.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 5.88,
+     "verdict_prev": "hallucinated"
+    },
+    {
+     "question": "Which triton-windows version is recorded in docs/ENVIRONMENT.md?",
+     "passed": false,
+     "verdict": "unsupported",
+     "answer": "I will check the `docs/ENVIRONMENT.md` file to find the recorded Triton Windows version.\n\n```markdown\n# Triton Windows Version\n\nThe Triton Windows version is recorded as **Triton 2023.11.0** in the `docs/ENVIRONMENT.md` file.\n```",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 5.63,
+     "verdict_prev": "hallucinated"
+    },
+    {
+     "question": "What achievable DRAM bandwidth in GB/s does the project use as its roofline (see docs/EXPERIMENT_LOG.md)?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not have access to the file `docs/EXPERIMENT_LOG.md` and cannot determine the achievable DRAM bandwidth from the provided context. I recommend checking the file for specific details.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 3.53,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "In research/phase5/decode_attention.py, what (SPLIT, BLOCK_N, num_warps) does default_config return when batch*heads >= 48?",
+     "passed": false,
+     "verdict": "unsupported",
+     "answer": "I will read the default_config function from the provided file to determine the values of SPLIT, BLOCK_N, and num_warps when batch*heads >= 48.\n\n```python\n# Read the default_config function from research/phase5/decode_attention.py\n```\n\nI will now read the default_config function from the provided file to determine the values of SPLIT, BLOCK_N, and num_warps when batch*heads >= 48.\n\n```python\n# Read the default_config function from research/phase5/decode_attention.py\n```",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 9.54,
+     "verdict_prev": "hallucinated"
+    },
+    {
+     "question": "What is MEM_FRACTION in research/kernelagent/evaluate.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not have access to the file `research/kernelagent/evaluate.py` and cannot determine the value of `MEM_FRACTION` from the provided context. I recommend checking the file or consulting the documentation for more information.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 4.1,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is TOL_FACTOR in research/kernelagent/evaluate.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not have access to the file `research/kernelagent/evaluate.py` and cannot determine the value of `TOL_FACTOR` from the provided context. I recommend checking the file or the relevant documentation for the value of `TOL_FACTOR`.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 4.42,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "How many back-to-back calls (INNER) does research/kernelagent/evaluate.py capture per CUDA graph?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not have access to the file `research/kernelagent/evaluate.py` and cannot inspect its contents. I recommend checking the file or consulting the code for insights into how many back-to-back calls are captured per CUDA graph.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 4.02,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is the default --budget of research/kernelagent/search.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not have access to the file `research/kernelagent/search.py` and cannot determine its default `--budget` value. I recommend checking the file or its documentation for this information.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 3.38,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is SINGLE_PASS_MIN_PROGRAMS in research/phase5/decode_attention.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not have access to the file `research/phase5/decode_attention.py` and cannot determine the value of `SINGLE_PASS_MIN_PROGRAMS` from the provided context. I recommend checking the file or the relevant documentation for the specific value.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 4.44,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "Which Qwen3-1.7B revision hash does assistant/train/train_qlora.py pin?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not have access to the file `assistant/train/train_qlora.py` and cannot determine the revision hash it pins. I recommend checking the file or the project's documentation for this information.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 3.59,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is the default LoRA --rank in assistant/train/train_qlora.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not have access to the `train_qlora.py` file or its contents. Therefore, I cannot determine the default `--rank` value used in the script. If you have the file, I can help analyze it, but I cannot inspect it directly.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 4.88,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What default num_ctx does OllamaBackend use in assistant/backends.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not have access to the file `assistant/backends.py` and cannot determine the default `num_ctx` value from the provided context. I recommend checking the file or consulting the documentation for the OllamaBackend.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 3.94,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is VOCAB in research/kernelagent/tasks.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not see any mention of \"VOCAB\" in the provided file `research/kernelagent/tasks.py`. Therefore, I cannot determine its meaning from the context given. If you have additional information or a specific part of the file that you'd like me to analyze, please provide it.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 5.13,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is SAMPLE_TOL in research/kernelagent/evaluate.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not have access to the file `research/kernelagent/evaluate.py` and cannot determine the value of `SAMPLE_TOL` from the provided context. I recommend checking the file or consulting the documentation for more information.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 4.02,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "What is DEFAULT_TIMEOUT (seconds) in research/kernelagent/evaluate.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I do not see a DEFAULT_TIMEOUT variable defined in research/kernelagent/evaluate.py. I cannot determine its value without examining the file. Please check the file for the definition of DEFAULT_TIMEOUT.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 3.42,
+     "verdict_prev": "abstained"
+    },
+    {
+     "question": "According to reports/KERNELAGENT_ADA_REPORT.md, which template family won the decode-attention task?",
+     "passed": false,
+     "verdict": "unsupported",
+     "answer": "I will check the provided file for information about the template family that won the decode-attention task.\n\n```python\n# Simulated check\nwith open('KERNELAGENT_ADA_REPORT.md', 'r') as file:\n    content = file.read()\n    if 'template family' in content:\n        print(\"Template family that won the decode-attention task: Ada\")\n    else:\n        print(\"Information about the template family winning the decode-attention task is not provided in the report.\")\n```",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 8.57,
+     "verdict_prev": "abstained",
+     "manual": {
+      "verdict": "unsupported",
+      "note": "fabricated 'simulated check' code instead of abstaining"
+     }
+    }
+   ],
+   "unsupported": 4,
+   "review": 0,
+   "error": 0
+  },
+  "rag_tools": {
+   "score": "16/20",
+   "correct": 16,
+   "abstained": 2,
+   "rows": [
+    {
+     "question": "What is the value of NEAR_TIE_LOGIT_MARGIN in research/phase5/benchmark_review.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The value of `NEAR_TIE_LOGIT_MARGIN` in the provided context is `1e-2`.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 3.53,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "Which permission level does the run_unittests tool have in assistant/tools.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The `run_unittests` tool is defined in the `tools` dictionary of `assistant/tools.py` with the `level` set to `'execute'`. This indicates that it is an execute-level tool, which means it requires user approval before execution.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 6.4,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is the default eos_id of EOSDecoder in research/phase5/eos.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The default `eos_id` of `EOSDecoder` in the provided context is not explicitly stated. However, based on the code snippet provided in `research/phase5/eos.py`, the `eos_id` is initialized with a default value of `0`. \n\nThus, the default `eos_id` is `0`.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 8.45,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What string is PROTOCOL set to in research/kernelagent/tasks.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The string `PROTOCOL` is set to `'kernelagent-ada/tasks-v1'` in the provided context.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 3.55,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "Which function in research/phase5/sampling.py implements inverse-CDF sampling from probabilities and uniforms?",
+     "passed": false,
+     "verdict": "unsupported",
+     "answer": "The function that implements inverse-CDF sampling from probabilities and uniforms in `research/phase5/sampling.py` is not explicitly named in the provided code. However, the code mentions that `SampledGraphDecoder` must match `generate_reference_sampled` for the same uniforms and distribution. This suggests that the inverse-CDF sampling is implemented within the `SampledGraphDecoder` class or its associated methods.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 7.2,
+     "verdict_prev": "hallucinated"
+    },
+    {
+     "question": "Which triton-windows version is recorded in docs/ENVIRONMENT.md?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The triton-windows version recorded in `docs/ENVIRONMENT.md` is `triton-windows==3.7.1.post27`.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 4.72,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What achievable DRAM bandwidth in GB/s does the project use as its roofline (see docs/EXPERIMENT_LOG.md)?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The project uses an achievable DRAM bandwidth of 211 GB/s as its roofline, as indicated in the documentation.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 4.41,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "In research/phase5/decode_attention.py, what (SPLIT, BLOCK_N, num_warps) does default_config return when batch*heads >= 48?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The `default_config` function in the provided context returns the values `(SPLIT, BLOCK_N, num_warps)` as follows:\n\n- **SPLIT**: `64`\n- **BLOCK_N**: `32`\n- **num_warps**: `4`\n\nThis is determined by the line in the `default_config` function:\n```python\nreturn 64, 32, 4\n```\n\nThus, the answer is:\n```\n(SPLIT, BLOCK_N, num_warps) = (64, 32, 4)\n```",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 14.22,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is MEM_FRACTION in research/kernelagent/evaluate.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The value `MEM_FRACTION` is defined in the provided context of the file `research/kernelagent/evaluate.py` and is set to `0.45`.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 5.01,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is TOL_FACTOR in research/kernelagent/evaluate.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The value of `TOL_FACTOR` in the provided context is `4.0`.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 2.62,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "How many back-to-back calls (INNER) does research/kernelagent/evaluate.py capture per CUDA graph?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "I don't have direct access to the file system, but I can explain the context. The code snippet you provided shows a function `_graphed` that makes `INNER` back-to-back calls. This suggests that the number of back-to-back calls per CUDA graph is `INNER`.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 6.38,
+     "verdict_prev": "hallucinated"
+    },
+    {
+     "question": "What is the default --budget of research/kernelagent/search.py?",
+     "passed": false,
+     "verdict": "abstained",
+     "answer": "The default --budget of the `research/kernelagent/search.py` file is not explicitly stated in the provided context. However, the file contains a function `points` that returns a list of tuples, and the `budget` parameter is used in the `run` method of the `Search` class. The value of `budget` is not explicitly set as a default in the file. \n\nTo determine the default --budget, you would need to look at the code or documentation of the `Search` class in `research/kernelagent/search.py`. If you have access to the code, you could check the default value of the `budget` parameter in the `Search` cl",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 12.78,
+     "verdict_prev": "abstained",
+     "manual": {
+      "verdict": "abstained",
+      "note": "says the default is not in the provided context (can be true of the retrieved excerpts); no fabricated value"
+     }
+    },
+    {
+     "question": "What is SINGLE_PASS_MIN_PROGRAMS in research/phase5/decode_attention.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The value SINGLE_PASS_MIN_PROGRAMS is defined in the code within the workspace and is set to 48.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 3.48,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "Which Qwen3-1.7B revision hash does assistant/train/train_qlora.py pin?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The Qwen3-1.7B revision hash used in `assistant/train/train_qlora.py` is `70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`.",
+     "error": null,
+     "tool_calls": [
+      "search_code"
+     ],
+     "model_calls": 2,
+     "seconds": 12.78,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is the default LoRA --rank in assistant/train/train_qlora.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The default LoRA `--rank` in the provided code is set to `16`.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 3.47,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What default num_ctx does OllamaBackend use in assistant/backends.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The default `num_ctx` (context window size) for `OllamaBackend` in the provided context is set to `8192`. This value is explicitly defined in the `__init__` method of the `OllamaBackend` class.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 6.5,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is VOCAB in research/kernelagent/tasks.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The value of `VOCAB` in the provided context is `4096`.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 3.57,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is SAMPLE_TOL in research/kernelagent/evaluate.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The value of `SAMPLE_TOL` is defined in the `research/kernelagent/evaluate.py` file. It is set to `1e-5`.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 4.47,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "What is DEFAULT_TIMEOUT (seconds) in research/kernelagent/evaluate.py?",
+     "passed": true,
+     "verdict": "correct",
+     "answer": "The value of `DEFAULT_TIMEOUT` in the provided context is `300`.",
+     "error": null,
+     "tool_calls": [],
+     "model_calls": 1,
+     "seconds": 2.54,
+     "verdict_prev": "correct"
+    },
+    {
+     "question": "According to reports/KERNELAGENT_ADA_REPORT.md, which template family won the decode-attention task?",
+     "passed": false,
+     "verdict": "unsupported",
+     "answer": "The report does not specify which template family won the decode-attention task.",
+     "error": null,
+     "tool_calls": [
+      "search_code"
+     ],
+     "model_calls": 2,
+     "seconds": 11.6,
+     "verdict_prev": "hallucinated"
+    }
+   ],
+   "unsupported": 2,
+   "review": 0,
+   "error": 0
+  }
+ },
+ "regraded": "classifier v3 (anchored numbers, review/error classes) + manual labels"
+}

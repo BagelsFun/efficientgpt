@@ -1,0 +1,657 @@
+{
+  "summary": {
+    "requests": 80,
+    "kept": 18,
+    "teacher": "qwen3.5:4b",
+    "seed": 1,
+    "outcomes": {
+      "duplicate or held-out name": 1,
+      "kept": 18,
+      "solution failed its tests": 47,
+      "unparseable (format, or no docstring/body)": 14
+    },
+    "seconds": 1002.8
+  },
+  "log": [
+    {
+      "k": 0,
+      "topic": "string processing",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "word_reverser",
+      "teacher_tokens": 181
+    },
+    {
+      "k": 1,
+      "topic": "parsing and validation",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "validate_iso_year",
+      "teacher_tokens": 216
+    },
+    {
+      "k": 2,
+      "topic": "lists and dictionaries",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "deduplicate_by_key",
+      "teacher_tokens": 340
+    },
+    {
+      "k": 3,
+      "topic": "sorting and searching",
+      "difficulty": "easy",
+      "status": "kept",
+      "name": "find_unique_max",
+      "teacher_tokens": 229
+    },
+    {
+      "k": 4,
+      "topic": "math and number theory",
+      "difficulty": "hard",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 5,
+      "topic": "numerics with floats (stability, rounding)",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "detect_floating_point_instability",
+      "teacher_tokens": 310
+    },
+    {
+      "k": 6,
+      "topic": "dates and durations (pure arithmetic, no datetime import needed)",
+      "difficulty": "hard",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 7,
+      "topic": "matrix and vector math on nested lists",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "matrix_vector_dot_product_nested",
+      "teacher_tokens": 519
+    },
+    {
+      "k": 8,
+      "topic": "GPU performance arithmetic (bandwidth, FLOPs, occupancy, memory sizes)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "gpu_mem_utilization",
+      "teacher_tokens": 643
+    },
+    {
+      "k": 9,
+      "topic": "transformer shape and memory arithmetic (parameters, KV cache, activations)",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "memory_budget_check",
+      "teacher_tokens": 774
+    },
+    {
+      "k": 10,
+      "topic": "bit manipulation",
+      "difficulty": "hard",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 275
+    },
+    {
+      "k": 11,
+      "topic": "simple algorithms on graphs given as adjacency dicts",
+      "difficulty": "easy",
+      "status": "solution failed its tests: KeyError: 2",
+      "name": "cycle_detecter",
+      "teacher_tokens": 461
+    },
+    {
+      "k": 12,
+      "topic": "statistics (mean, median, percentiles, variance)",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "calculate_sample_statistics",
+      "teacher_tokens": 781
+    },
+    {
+      "k": 13,
+      "topic": "PyTorch tensor operations (the function receives and returns torch tensors; import torch inside the function)",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "tensor_permutation_inversion",
+      "teacher_tokens": 490
+    },
+    {
+      "k": 14,
+      "topic": "string processing",
+      "difficulty": "easy",
+      "status": "solution failed its tests: NameError: name 'reverse_vol_in_words' is not defined. Did you mean: 'reverse_vo",
+      "name": "reverse_vowels_in_words",
+      "teacher_tokens": 271
+    },
+    {
+      "k": 15,
+      "topic": "parsing and validation",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "parse_iso_date_with_leap_check",
+      "teacher_tokens": 613
+    },
+    {
+      "k": 16,
+      "topic": "lists and dictionaries",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "group_consecutive_pairs",
+      "teacher_tokens": 355
+    },
+    {
+      "k": 17,
+      "topic": "sorting and searching",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "rotate_array_cyclic",
+      "teacher_tokens": 250
+    },
+    {
+      "k": 18,
+      "topic": "math and number theory",
+      "difficulty": "easy",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 19,
+      "topic": "numerics with floats (stability, rounding)",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "safe_subtraction",
+      "teacher_tokens": 395
+    },
+    {
+      "k": 20,
+      "topic": "dates and durations (pure arithmetic, no datetime import needed)",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "leap_year_gap",
+      "teacher_tokens": 664
+    },
+    {
+      "k": 21,
+      "topic": "matrix and vector math on nested lists",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "nested_matrix_vector_mult",
+      "teacher_tokens": 453
+    },
+    {
+      "k": 22,
+      "topic": "GPU performance arithmetic (bandwidth, FLOPs, occupancy, memory sizes)",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "gpu_perf_metrics_calculator",
+      "teacher_tokens": 772
+    },
+    {
+      "k": 23,
+      "topic": "transformer shape and memory arithmetic (parameters, KV cache, activations)",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "transform_memory_usage",
+      "teacher_tokens": 369
+    },
+    {
+      "k": 24,
+      "topic": "bit manipulation",
+      "difficulty": "hard",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 161
+    },
+    {
+      "k": 25,
+      "topic": "simple algorithms on graphs given as adjacency dicts",
+      "difficulty": "medium",
+      "status": "solution failed its tests: NameError: cannot access free variable 'parent' where it is not associated with ",
+      "name": "cycle_detector",
+      "teacher_tokens": 349
+    },
+    {
+      "k": 26,
+      "topic": "statistics (mean, median, percentiles, variance)",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "robust_statistician",
+      "teacher_tokens": 550
+    },
+    {
+      "k": 27,
+      "topic": "PyTorch tensor operations (the function receives and returns torch tensors; import torch inside the function)",
+      "difficulty": "easy",
+      "status": "solution failed its tests: RuntimeError: Boolean value of Tensor with more than one value is ambiguous",
+      "name": "tensor_sum_difference",
+      "teacher_tokens": 423
+    },
+    {
+      "k": 28,
+      "topic": "string processing",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "vowel_swap_distance",
+      "teacher_tokens": 242
+    },
+    {
+      "k": 29,
+      "topic": "parsing and validation",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "validate_iso8601_duration",
+      "teacher_tokens": 755
+    },
+    {
+      "k": 30,
+      "topic": "lists and dictionaries",
+      "difficulty": "hard",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 31,
+      "topic": "sorting and searching",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "stable_partition_by_sign",
+      "teacher_tokens": 295
+    },
+    {
+      "k": 32,
+      "topic": "math and number theory",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "find_primitive_root_modular",
+      "teacher_tokens": 473
+    },
+    {
+      "k": 33,
+      "topic": "numerics with floats (stability, rounding)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "stable_subsequence_sum",
+      "teacher_tokens": 458
+    },
+    {
+      "k": 34,
+      "topic": "dates and durations (pure arithmetic, no datetime import needed)",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "count_leap_weeks",
+      "teacher_tokens": 600
+    },
+    {
+      "k": 35,
+      "topic": "matrix and vector math on nested lists",
+      "difficulty": "hard",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 36,
+      "topic": "GPU performance arithmetic (bandwidth, FLOPs, occupancy, memory sizes)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "estimate_gpu_throughput",
+      "teacher_tokens": 629
+    },
+    {
+      "k": 37,
+      "topic": "transformer shape and memory arithmetic (parameters, KV cache, activations)",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "transformer_shape_memory_calc",
+      "teacher_tokens": 477
+    },
+    {
+      "k": 38,
+      "topic": "bit manipulation",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "next_bit_clearer",
+      "teacher_tokens": 189
+    },
+    {
+      "k": 39,
+      "topic": "simple algorithms on graphs given as adjacency dicts",
+      "difficulty": "easy",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 40,
+      "topic": "statistics (mean, median, percentiles, variance)",
+      "difficulty": "medium",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 41,
+      "topic": "PyTorch tensor operations (the function receives and returns torch tensors; import torch inside the function)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AttributeError: 'tuple' object has no attribute 'tolist'",
+      "name": "scatter_gather_pair",
+      "teacher_tokens": 617
+    },
+    {
+      "k": 42,
+      "topic": "string processing",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "count_vowel_runs",
+      "teacher_tokens": 232
+    },
+    {
+      "k": 43,
+      "topic": "parsing and validation",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "validate_iso_date",
+      "teacher_tokens": 668
+    },
+    {
+      "k": 44,
+      "topic": "lists and dictionaries",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "unique_subsequence_reconstruct",
+      "teacher_tokens": 489
+    },
+    {
+      "k": 45,
+      "topic": "sorting and searching",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "stable_median_rotation",
+      "teacher_tokens": 283
+    },
+    {
+      "k": 46,
+      "topic": "math and number theory",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "find_multiplicative_perfect_square",
+      "teacher_tokens": 217
+    },
+    {
+      "k": 47,
+      "topic": "numerics with floats (stability, rounding)",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "stable_floating_point_addition",
+      "teacher_tokens": 429
+    },
+    {
+      "k": 48,
+      "topic": "dates and durations (pure arithmetic, no datetime import needed)",
+      "difficulty": "hard",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 860
+    },
+    {
+      "k": 49,
+      "topic": "matrix and vector math on nested lists",
+      "difficulty": "hard",
+      "status": "solution failed its tests: ValueError: All vectors must be lists of floats.",
+      "name": "nested_vector_dot_product_chain",
+      "teacher_tokens": 490
+    },
+    {
+      "k": 50,
+      "topic": "GPU performance arithmetic (bandwidth, FLOPs, occupancy, memory sizes)",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "gpu_performance_estimator",
+      "teacher_tokens": 578
+    },
+    {
+      "k": 51,
+      "topic": "transformer shape and memory arithmetic (parameters, KV cache, activations)",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "transformer_shape_and_memory_calculator",
+      "teacher_tokens": 725
+    },
+    {
+      "k": 52,
+      "topic": "bit manipulation",
+      "difficulty": "medium",
+      "status": "solution failed its tests: TypeError: object of type 'int' has no len()",
+      "name": "bit_xor_rotation",
+      "teacher_tokens": 333
+    },
+    {
+      "k": 53,
+      "topic": "simple algorithms on graphs given as adjacency dicts",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "find_cycle_in_directed_graph",
+      "teacher_tokens": 542
+    },
+    {
+      "k": 54,
+      "topic": "statistics (mean, median, percentiles, variance)",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "compute_sample_summary",
+      "teacher_tokens": 744
+    },
+    {
+      "k": 55,
+      "topic": "PyTorch tensor operations (the function receives and returns torch tensors; import torch inside the function)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: RuntimeError: shape '[1, 3]' is invalid for input of size 9",
+      "name": "tensor_cross_product_matrix",
+      "teacher_tokens": 706
+    },
+    {
+      "k": 56,
+      "topic": "string processing",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "unique_char_run_length",
+      "teacher_tokens": 757
+    },
+    {
+      "k": 57,
+      "topic": "parsing and validation",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "parse_and_validate_iso_time",
+      "teacher_tokens": 527
+    },
+    {
+      "k": 58,
+      "topic": "lists and dictionaries",
+      "difficulty": "easy",
+      "status": "kept",
+      "name": "unique_key_value_pairs",
+      "teacher_tokens": 285
+    },
+    {
+      "k": 59,
+      "topic": "sorting and searching",
+      "difficulty": "hard",
+      "status": "duplicate or held-out name",
+      "name": "find_unique_max",
+      "teacher_tokens": 215
+    },
+    {
+      "k": 60,
+      "topic": "math and number theory",
+      "difficulty": "easy",
+      "status": "kept",
+      "name": "prime_factorization_counts",
+      "teacher_tokens": 323
+    },
+    {
+      "k": 61,
+      "topic": "numerics with floats (stability, rounding)",
+      "difficulty": "medium",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 367
+    },
+    {
+      "k": 62,
+      "topic": "dates and durations (pure arithmetic, no datetime import needed)",
+      "difficulty": "hard",
+      "status": "kept",
+      "name": "date_interval_overlap",
+      "teacher_tokens": 216
+    },
+    {
+      "k": 63,
+      "topic": "matrix and vector math on nested lists",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "matrix_vector_dot_product_nested",
+      "teacher_tokens": 449
+    },
+    {
+      "k": 64,
+      "topic": "GPU performance arithmetic (bandwidth, FLOPs, occupancy, memory sizes)",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "gpu_perf_metrics_calculator",
+      "teacher_tokens": 690
+    },
+    {
+      "k": 65,
+      "topic": "transformer shape and memory arithmetic (parameters, KV cache, activations)",
+      "difficulty": "easy",
+      "status": "solution failed its tests: AssertionError",
+      "name": "transformer_memory_overhead",
+      "teacher_tokens": 489
+    },
+    {
+      "k": 66,
+      "topic": "bit manipulation",
+      "difficulty": "hard",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 120
+    },
+    {
+      "k": 67,
+      "topic": "simple algorithms on graphs given as adjacency dicts",
+      "difficulty": "easy",
+      "status": "kept",
+      "name": "graph_longest_path",
+      "teacher_tokens": 350
+    },
+    {
+      "k": 68,
+      "topic": "statistics (mean, median, percentiles, variance)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "robust_stat_computer",
+      "teacher_tokens": 440
+    },
+    {
+      "k": 69,
+      "topic": "PyTorch tensor operations (the function receives and returns torch tensors; import torch inside the function)",
+      "difficulty": "hard",
+      "status": "kept",
+      "name": "tensor_fibonacci_sequence",
+      "teacher_tokens": 326
+    },
+    {
+      "k": 70,
+      "topic": "string processing",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "clean_coded_text",
+      "teacher_tokens": 294
+    },
+    {
+      "k": 71,
+      "topic": "parsing and validation",
+      "difficulty": "medium",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 434
+    },
+    {
+      "k": 72,
+      "topic": "lists and dictionaries",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "collect_unique_by_key",
+      "teacher_tokens": 268
+    },
+    {
+      "k": 73,
+      "topic": "sorting and searching",
+      "difficulty": "easy",
+      "status": "kept",
+      "name": "sorted_min_max_finder",
+      "teacher_tokens": 260
+    },
+    {
+      "k": 74,
+      "topic": "math and number theory",
+      "difficulty": "medium",
+      "status": "unparseable (format, or no docstring/body)",
+      "name": null,
+      "teacher_tokens": 900
+    },
+    {
+      "k": 75,
+      "topic": "numerics with floats (stability, rounding)",
+      "difficulty": "medium",
+      "status": "kept",
+      "name": "stable_sum_near_miss",
+      "teacher_tokens": 275
+    },
+    {
+      "k": 76,
+      "topic": "dates and durations (pure arithmetic, no datetime import needed)",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "leap_year_duration_delta",
+      "teacher_tokens": 459
+    },
+    {
+      "k": 77,
+      "topic": "matrix and vector math on nested lists",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "vector_dot_product_nested",
+      "teacher_tokens": 363
+    },
+    {
+      "k": 78,
+      "topic": "GPU performance arithmetic (bandwidth, FLOPs, occupancy, memory sizes)",
+      "difficulty": "medium",
+      "status": "solution failed its tests: AssertionError",
+      "name": "gpu_bandwidth_utilization",
+      "teacher_tokens": 518
+    },
+    {
+      "k": 79,
+      "topic": "transformer shape and memory arithmetic (parameters, KV cache, activations)",
+      "difficulty": "hard",
+      "status": "solution failed its tests: AssertionError",
+      "name": "kv_activation_memory_profile",
+      "teacher_tokens": 762
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+2026-10-31T08:58:42 waiting for pid 47584
+2026-10-31T09:10:44 idle check before search_decode_attention_single_shot_s0.json: {'util_pct': 0.0, 'mem_used_mib': 980.0}
+2026-10-31T09:10:58 search_decode_attention_single_shot_s0.json: rc=0 {"task": "decode_attention", "strategy": "single_shot", "evaluated": 2, "statuses": {"correct": 2}, "best": {"score_ms": 0.009471456357554388, "family": "split_k", "params": {"SPLIT": 32, "BLOCK_N": 16, "WARPS": 2}}} 
+2026-10-31T09:10:58 idle check before search_decode_attention_random_s0.json: {'util_pct': 1.0, 'mem_used_mib': 986.0}
+2026-10-31T09:12:13 search_decode_attention_random_s0.json: rc=0 {"task": "decode_attention", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.009236488378097908, "family": "split_k", "params": {"BLOCK_N": 16, "SPLIT": 16, "WARPS": 1}}} 
+2026-10-31T09:12:13 idle check before search_decode_attention_random_s1.json: {'util_pct': 0.0, 'mem_used_mib': 1120.0}
+2026-10-31T09:13:12 search_decode_attention_random_s1.json: rc=0 {"task": "decode_attention", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.009123663642950771, "family": "split_k", "params": {"BLOCK_N": 64, "SPLIT": 64, "WARPS": 2}}} 
+2026-10-31T09:13:12 idle check before search_decode_attention_local_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1120.0}
+2026-10-31T09:13:33 search_decode_attention_local_s0.json: rc=0 {"task": "decode_attention", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.009236488378097908, "family": "split_k", "params": {"SPLIT": 16, "BLOCK_N": 16, "WARPS": 1}}} 
+2026-10-31T09:13:33 idle check before search_decode_attention_local_s1.json: {'util_pct': 0.0, 'mem_used_mib': 1138.0}
+2026-10-31T09:14:05 search_decode_attention_local_s1.json: rc=0 {"task": "decode_attention", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.008920352421607084, "family": "split_k", "params": {"SPLIT": 64, "BLOCK_N": 32, "WARPS": 2}}} 
+2026-10-31T09:14:05 idle check before search_decode_attention_local_meta_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1113.0}
+2026-10-31T09:14:19 search_decode_attention_local_meta_s0.json: rc=0 {"task": "decode_attention", "strategy": "local_meta", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.008920352421607084, "family": "split_k", "params": {"SPLIT": 64, "BLOCK_N": 32, "WARPS": 2}}} 
+2026-10-31T09:14:27 heldout_decode_attention.json: correct
+2026-10-31T09:14:27 idle check before search_add_layernorm_single_shot_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1148.0}
+2026-10-31T09:14:39 search_add_layernorm_single_shot_s0.json: rc=0 {"task": "add_layernorm", "strategy": "single_shot", "evaluated": 2, "statuses": {"correct": 2}, "best": {"score_ms": 0.00789005686839166, "family": "rows_per_program", "params": {"ROWS": 4, "WARPS": 4}}} 
+2026-10-31T09:14:39 idle check before search_add_layernorm_random_s0.json: {'util_pct': 1.0, 'mem_used_mib': 1153.0}
+2026-10-31T09:15:32 search_add_layernorm_random_s0.json: rc=0 {"task": "add_layernorm", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.0074027879412108515, "family": "row_per_program", "params": {"WARPS": 8}}} 
+2026-10-31T09:15:32 idle check before search_add_layernorm_random_s1.json: {'util_pct': 0.0, 'mem_used_mib': 1112.0}
+2026-10-31T09:16:02 search_add_layernorm_random_s1.json: rc=0 {"task": "add_layernorm", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007455992828121935, "family": "rows_per_program", "params": {"ROWS": 2, "WARPS": 2}}} 
+2026-10-31T09:16:02 idle check before search_add_layernorm_local_s0.json: {'util_pct': 1.0, 'mem_used_mib': 1145.0}
+2026-10-31T09:16:09 search_add_layernorm_local_s0.json: rc=0 {"task": "add_layernorm", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.0074027879412108515, "family": "row_per_program", "params": {"WARPS": 8}}} 
+2026-10-31T09:16:09 idle check before search_add_layernorm_local_s1.json: {'util_pct': 0.0, 'mem_used_mib': 1126.0}
+2026-10-31T09:16:16 search_add_layernorm_local_s1.json: rc=0 {"task": "add_layernorm", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.0074027879412108515, "family": "row_per_program", "params": {"WARPS": 8}}} 
+2026-10-31T09:16:16 idle check before search_add_layernorm_local_meta_s0.json: {'util_pct': 1.0, 'mem_used_mib': 1132.0}
+2026-10-31T09:16:18 search_add_layernorm_local_meta_s0.json: rc=0 {"task": "add_layernorm", "strategy": "local_meta", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.0074027879412108515, "family": "row_per_program", "params": {"WARPS": 8}}} 
+2026-10-31T09:16:25 heldout_add_layernorm.json: correct
+2026-10-31T09:16:25 idle check before search_temperature_softmax_single_shot_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1122.0}
+2026-10-31T09:16:43 search_temperature_softmax_single_shot_s0.json: rc=0 {"task": "temperature_softmax", "strategy": "single_shot", "evaluated": 3, "statuses": {"correct": 3}, "best": {"score_ms": 0.007449520831742621, "family": "online_chunked", "params": {"BLOCK": 1024, "WARPS": 4}}} 
+2026-10-31T09:16:43 idle check before search_temperature_softmax_random_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1126.0}
+2026-10-31T09:17:40 search_temperature_softmax_random_s0.json: rc=0 {"task": "temperature_softmax", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007536101586353866, "family": "split_two_stage", "params": {"SPLITS": 2, "WARPS": 2}}} 
+2026-10-31T09:17:40 idle check before search_temperature_softmax_random_s1.json: {'util_pct': 0.0, 'mem_used_mib': 1131.0}
+2026-10-31T09:18:13 search_temperature_softmax_random_s1.json: rc=0 {"task": "temperature_softmax", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007536101586353866, "family": "split_two_stage", "params": {"SPLITS": 2, "WARPS": 2}}} 
+2026-10-31T09:18:13 idle check before search_temperature_softmax_local_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1160.0}
+2026-10-31T09:18:40 search_temperature_softmax_local_s0.json: rc=0 {"task": "temperature_softmax", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007449520831742621, "family": "online_chunked", "params": {"BLOCK": 1024, "WARPS": 4}}} 
+2026-10-31T09:18:40 idle check before search_temperature_softmax_local_s1.json: {'util_pct': 0.0, 'mem_used_mib': 1164.0}
+2026-10-31T09:18:42 search_temperature_softmax_local_s1.json: rc=0 {"task": "temperature_softmax", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007449520831742621, "family": "online_chunked", "params": {"BLOCK": 1024, "WARPS": 4}}} 
+2026-10-31T09:18:42 idle check before search_temperature_softmax_local_meta_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1164.0}
+2026-10-31T09:18:43 search_temperature_softmax_local_meta_s0.json: rc=0 {"task": "temperature_softmax", "strategy": "local_meta", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007449520831742621, "family": "online_chunked", "params": {"BLOCK": 1024, "WARPS": 4}}} 
+2026-10-31T09:18:51 heldout_temperature_softmax.json: correct
+2026-10-31T09:18:51 idle check before search_topk_softmax_single_shot_s0.json: {'util_pct': 2.0, 'mem_used_mib': 1156.0}
+2026-10-31T09:19:05 search_topk_softmax_single_shot_s0.json: rc=0 {"task": "topk_softmax", "strategy": "single_shot", "evaluated": 2, "statuses": {"correct": 2}, "best": {"score_ms": 0.011960060578160894, "family": "bisect_whole_row", "params": {"WARPS": 4}}} 
+2026-10-31T09:19:05 idle check before search_topk_softmax_random_s0.json: {'util_pct': 2.0, 'mem_used_mib': 1149.0}
+2026-10-31T09:20:01 search_topk_softmax_random_s0.json: rc=0 {"task": "topk_softmax", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.011122398898764123, "family": "bisect_whole_row", "params": {"WARPS": 8}}} 
+2026-10-31T09:20:01 idle check before search_topk_softmax_random_s1.json: {'util_pct': 0.0, 'mem_used_mib': 1164.0}
+2026-10-31T09:20:13 search_topk_softmax_random_s1.json: rc=0 {"task": "topk_softmax", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.011122398898764123, "family": "bisect_whole_row", "params": {"WARPS": 8}}} 
+2026-10-31T09:20:13 idle check before search_topk_softmax_local_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1164.0}
+2026-10-31T09:20:15 search_topk_softmax_local_s0.json: rc=0 {"task": "topk_softmax", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.011122398898764123, "family": "bisect_whole_row", "params": {"WARPS": 8}}} 
+2026-10-31T09:20:15 idle check before search_topk_softmax_local_s1.json: {'util_pct': 0.0, 'mem_used_mib': 1164.0}
+2026-10-31T09:20:17 search_topk_softmax_local_s1.json: rc=0 {"task": "topk_softmax", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.011122398898764123, "family": "bisect_whole_row", "params": {"WARPS": 8}}} 
+2026-10-31T09:20:17 idle check before search_topk_softmax_local_meta_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1164.0}
+2026-10-31T09:20:19 search_topk_softmax_local_meta_s0.json: rc=0 {"task": "topk_softmax", "strategy": "local_meta", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.011122398898764123, "family": "bisect_whole_row", "params": {"WARPS": 8}}} 
+2026-10-31T09:20:27 heldout_topk_softmax.json: correct
+2026-10-31T09:20:27 idle check before search_inverse_cdf_sample_single_shot_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1163.0}
+2026-10-31T09:20:40 search_inverse_cdf_sample_single_shot_s0.json: rc=0 {"task": "inverse_cdf_sample", "strategy": "single_shot", "evaluated": 2, "statuses": {"correct": 2}, "best": {"score_ms": 0.008048717456443274, "family": "scan_chunked", "params": {"BLOCK": 1024, "WARPS": 4}}} 
+2026-10-31T09:20:40 idle check before search_inverse_cdf_sample_random_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1164.0}
+2026-10-31T09:21:37 search_inverse_cdf_sample_random_s0.json: rc=0 {"task": "inverse_cdf_sample", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007330851063341936, "family": "scan_chunked", "params": {"BLOCK": 2048, "WARPS": 1}}} 
+2026-10-31T09:21:37 idle check before search_inverse_cdf_sample_random_s1.json: {'util_pct': 0.0, 'mem_used_mib': 1133.0}
+2026-10-31T09:21:58 search_inverse_cdf_sample_random_s1.json: rc=0 {"task": "inverse_cdf_sample", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007330851063341936, "family": "scan_chunked", "params": {"BLOCK": 2048, "WARPS": 1}}} 
+2026-10-31T09:21:58 idle check before search_inverse_cdf_sample_local_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1148.0}
+2026-10-31T09:22:10 search_inverse_cdf_sample_local_s0.json: rc=0 {"task": "inverse_cdf_sample", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007330851063341936, "family": "scan_chunked", "params": {"BLOCK": 2048, "WARPS": 1}}} 
+2026-10-31T09:22:10 idle check before search_inverse_cdf_sample_local_s1.json: {'util_pct': 0.0, 'mem_used_mib': 1149.0}
+2026-10-31T09:22:12 search_inverse_cdf_sample_local_s1.json: rc=0 {"task": "inverse_cdf_sample", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007330851063341936, "family": "scan_chunked", "params": {"BLOCK": 2048, "WARPS": 1}}} 
+2026-10-31T09:22:12 idle check before search_inverse_cdf_sample_local_meta_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1149.0}
+2026-10-31T09:22:19 search_inverse_cdf_sample_local_meta_s0.json: rc=0 {"task": "inverse_cdf_sample", "strategy": "local_meta", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007423165233373465, "family": "scan_whole_row", "params": {"WARPS": 8}}} 
+2026-10-31T09:22:25 heldout_inverse_cdf_sample.json: correct
+2026-10-31T09:22:25 idle check before search_argmax_single_shot_s0.json: {'util_pct': 1.0, 'mem_used_mib': 1150.0}
+2026-10-31T09:22:40 search_argmax_single_shot_s0.json: rc=0 {"task": "argmax", "strategy": "single_shot", "evaluated": 3, "statuses": {"correct": 3}, "best": {"score_ms": 0.007520985381692394, "family": "row_whole", "params": {"WARPS": 4}}} 
+2026-10-31T09:22:40 idle check before search_argmax_random_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1150.0}
+2026-10-31T09:23:31 search_argmax_random_s0.json: rc=0 {"task": "argmax", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007308602622865123, "family": "row_chunked", "params": {"BLOCK": 2048, "WARPS": 8}}} 
+2026-10-31T09:23:32 idle check before search_argmax_random_s1.json: {'util_pct': 0.0, 'mem_used_mib': 1148.0}
+2026-10-31T09:24:04 search_argmax_random_s1.json: rc=0 {"task": "argmax", "strategy": "random", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007345183142936242, "family": "row_chunked", "params": {"BLOCK": 2048, "WARPS": 1}}} 
+2026-10-31T09:24:04 idle check before search_argmax_local_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1148.0}
+2026-10-31T09:24:31 search_argmax_local_s0.json: rc=0 {"task": "argmax", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007520985381692394, "family": "row_whole", "params": {"WARPS": 4}}} 
+2026-10-31T09:24:31 idle check before search_argmax_local_s1.json: {'util_pct': 0.0, 'mem_used_mib': 1148.0}
+2026-10-31T09:24:33 search_argmax_local_s1.json: rc=0 {"task": "argmax", "strategy": "local", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007520985381692394, "family": "row_whole", "params": {"WARPS": 4}}} 
+2026-10-31T09:24:33 idle check before search_argmax_local_meta_s0.json: {'util_pct': 0.0, 'mem_used_mib': 1148.0}
+2026-10-31T09:24:44 search_argmax_local_meta_s0.json: rc=0 {"task": "argmax", "strategy": "local_meta", "evaluated": 12, "statuses": {"correct": 12}, "best": {"score_ms": 0.007308602622865123, "family": "row_chunked", "params": {"BLOCK": 2048, "WARPS": 8}}} 
+2026-10-31T09:24:49 heldout_argmax.json: correct
+2026-10-31T09:24:49 done

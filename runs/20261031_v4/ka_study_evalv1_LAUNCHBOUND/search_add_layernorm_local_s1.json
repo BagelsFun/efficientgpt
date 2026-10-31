@@ -1,0 +1,156 @@
+{
+ "task": "add_layernorm",
+ "strategy": "local",
+ "budget": 12,
+ "evaluated": 12,
+ "unused_budget": 0,
+ "statuses": {
+  "correct": 12
+ },
+ "trace": [
+  {
+   "key": "row_per_program{\"WARPS\": 4}",
+   "family": "row_per_program",
+   "params": {
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.00806052628485442,
+   "from_history": true
+  },
+  {
+   "key": "rows_per_program{\"ROWS\": 4, \"WARPS\": 4}",
+   "family": "rows_per_program",
+   "params": {
+    "ROWS": 4,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.00789005686839166,
+   "from_history": true
+  },
+  {
+   "key": "rows_per_program{\"ROWS\": 4, \"WARPS\": 8}",
+   "family": "rows_per_program",
+   "params": {
+    "ROWS": 4,
+    "WARPS": 8
+   },
+   "status": "correct",
+   "score_ms": 0.00771353536119913,
+   "from_history": true
+  },
+  {
+   "key": "rows_per_program{\"ROWS\": 2, \"WARPS\": 8}",
+   "family": "rows_per_program",
+   "params": {
+    "ROWS": 2,
+    "WARPS": 8
+   },
+   "status": "correct",
+   "score_ms": 0.007882012684900935,
+   "from_history": true
+  },
+  {
+   "key": "rows_per_program{\"ROWS\": 8, \"WARPS\": 8}",
+   "family": "rows_per_program",
+   "params": {
+    "ROWS": 8,
+    "WARPS": 8
+   },
+   "status": "correct",
+   "score_ms": 0.008649592883704392,
+   "from_history": true
+  },
+  {
+   "key": "row_per_program{\"WARPS\": 8}",
+   "family": "row_per_program",
+   "params": {
+    "WARPS": 8
+   },
+   "status": "correct",
+   "score_ms": 0.0074027879412108515,
+   "from_history": true
+  },
+  {
+   "key": "rows_per_program{\"ROWS\": 16, \"WARPS\": 1}",
+   "family": "rows_per_program",
+   "params": {
+    "ROWS": 16,
+    "WARPS": 1
+   },
+   "status": "correct",
+   "score_ms": 0.009244012898892252,
+   "from_history": true
+  },
+  {
+   "key": "rows_per_program{\"ROWS\": 4, \"WARPS\": 1}",
+   "family": "rows_per_program",
+   "params": {
+    "ROWS": 4,
+    "WARPS": 1
+   },
+   "status": "correct",
+   "score_ms": 0.009849673161453115,
+   "from_history": false
+  },
+  {
+   "key": "rows_per_program{\"ROWS\": 2, \"WARPS\": 1}",
+   "family": "rows_per_program",
+   "params": {
+    "ROWS": 2,
+    "WARPS": 1
+   },
+   "status": "correct",
+   "score_ms": 0.009322916787147108,
+   "from_history": true
+  },
+  {
+   "key": "rows_per_program{\"ROWS\": 2, \"WARPS\": 4}",
+   "family": "rows_per_program",
+   "params": {
+    "ROWS": 2,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.007621461207291949,
+   "from_history": true
+  },
+  {
+   "key": "rows_per_program{\"ROWS\": 8, \"WARPS\": 4}",
+   "family": "rows_per_program",
+   "params": {
+    "ROWS": 8,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.008201888193704678,
+   "from_history": true
+  },
+  {
+   "key": "row_per_program{\"WARPS\": 1}",
+   "family": "row_per_program",
+   "params": {
+    "WARPS": 1
+   },
+   "status": "correct",
+   "score_ms": 0.007535590370462033,
+   "from_history": true
+  }
+ ],
+ "best": {
+  "score_ms": 0.0074027879412108515,
+  "family": "row_per_program",
+  "params": {
+   "WARPS": 8
+  }
+ },
+ "env": {
+  "torch": "2.11.0+cu128",
+  "triton": "3.7.1",
+  "gpu": "NVIDIA GeForce RTX 4060",
+  "python": "3.11.9",
+  "git": "<private-commit>"
+ },
+ "seed": 1
+}

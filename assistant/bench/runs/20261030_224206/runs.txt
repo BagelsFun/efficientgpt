@@ -1,0 +1,7 @@
+qwen3-1.7b_bf16 rc=0 347s
+qwen3.5-4b_q4km rc=0 190s
+qwen3-1.7b_nf4 rc=0 444s
+qwen3.5-4b_q4km agent rc=0 115s
+qwen3-1.7b_bf16 agent rc=0 2971s
+qwen3.5-4b_q4km agent v1.1 rc=0 138s
+qwen3-1.7b_bf16 agent v1.1 rc=0 191s

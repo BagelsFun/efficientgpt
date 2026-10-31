@@ -1,0 +1,31 @@
+{
+ "mode": "torchao_int8_static_at",
+ "quant": "torchao_int8",
+ "static_cache": true,
+ "load_s": 7.29,
+ "max_autotune": true,
+ "load_peak_allocated_mib": 4911.7,
+ "weights_allocated_mib": 2238.5,
+ "first_call_s": 271.1,
+ "decode_tok_s": [
+  86.82,
+  86.8,
+  87.07,
+  86.83,
+  87.75
+ ],
+ "decode_tok_s_median": 86.83441463511173,
+ "ttft_s_median": 0.06587309995666146,
+ "completion_tokens": [
+  256,
+  256,
+  256,
+  256,
+  256
+ ],
+ "torch_peak_allocated_mib": 2875.4,
+ "process_device_used_mib": 3432.0,
+ "round": 1,
+ "gpu_util_before": 0.0,
+ "contended": false
+}

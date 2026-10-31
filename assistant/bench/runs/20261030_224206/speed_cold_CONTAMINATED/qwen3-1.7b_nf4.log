@@ -1,0 +1,19 @@
+W1030 23:08:31.440000 46884 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<03:25,  1.51it/s]Loading weights:   1%|          | 2/311 [00:01<03:18,  1.56it/s]Loading weights:   1%|1         | 4/311 [00:01<01:26,  3.55it/s]Loading weights:   5%|5         | 17/311 [00:01<00:14, 20.33it/s]Loading weights:  11%|#1        | 35/311 [00:01<00:06, 45.83it/s]Loading weights:  15%|#5        | 48/311 [00:01<00:04, 60.74it/s]Loading weights:  20%|#9        | 61/311 [00:01<00:03, 72.57it/s]Loading weights:  26%|##6       | 81/311 [00:01<00:02, 96.43it/s]Loading weights:  30%|###       | 94/311 [00:02<00:02, 98.92it/s]Loading weights:  35%|###4      | 108/311 [00:02<00:01, 108.56it/s]Loading weights:  40%|####      | 125/311 [00:02<00:01, 118.96it/s]Loading weights:  45%|####4     | 139/311 [00:02<00:01, 113.15it/s]Loading weights:  49%|####9     | 153/311 [00:02<00:01, 119.59it/s]Loading weights:  54%|#####3    | 167/311 [00:02<00:01, 124.61it/s]Loading weights:  58%|#####8    | 181/311 [00:02<00:01, 112.76it/s]Loading weights:  62%|######2   | 193/311 [00:02<00:01, 107.98it/s]Loading weights:  67%|######6   | 208/311 [00:03<00:00, 117.57it/s]Loading weights:  71%|#######1  | 221/311 [00:03<00:00, 120.79it/s]Loading weights:  75%|#######5  | 234/311 [00:03<00:00, 123.29it/s]Loading weights:  79%|#######9  | 247/311 [00:03<00:00, 111.86it/s]Loading weights:  83%|########3 | 259/311 [00:03<00:00, 108.57it/s]Loading weights:  88%|########8 | 274/311 [00:03<00:00, 119.01it/s]Loading weights:  92%|#########2| 287/311 [00:03<00:00, 121.70it/s]Loading weights:  96%|#########6| 300/311 [00:03<00:00, 123.80it/s]Loading weights: 100%|##########| 311/311 [00:03<00:00, 79.57it/s] 
+short {"prompt_tokens": 59, "completion_tokens": [256, 256, 256], "ttft_s_median": 0.368, "decode_tok_s_median": 10.857, "decode_tok_s_all": [9.57, 10.86, 13.32], "prompt_tok_s_median": NaN, "prompt_tokens_per_ttft_s_median": 160.12, "total_s_median": 23.87, "timing_source": "client wall clock (streamer)"}
+medium {"prompt_tokens": 691, "completion_tokens": [256, 256, 256], "ttft_s_median": 0.514, "decode_tok_s_median": 11.117, "decode_tok_s_all": [10.93, 11.12, 12.01], "prompt_tok_s_median": NaN, "prompt_tokens_per_ttft_s_median": 1344.694, "total_s_median": 23.452, "timing_source": "client wall clock (streamer)"}
+long {"prompt_tokens": 2176, "completion_tokens": [256, 256, 256], "ttft_s_median": 2.178, "decode_tok_s_median": 9.577, "decode_tok_s_all": [8.44, 9.58, 21.24], "prompt_tok_s_median": NaN, "prompt_tokens_per_ttft_s_median": 999.05, "total_s_median": 28.807, "timing_source": "client wall clock (streamer)"}
+{
+ "backend": "hf:Qwen/Qwen3-1.7B",
+ "quant": "nf4",
+ "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+ "think": false,
+ "protocol": "assistant-quality-v1",
+ "decoding": "greedy (temperature 0)",
+ "gpu_used_before_load_mib": 3132.0,
+ "load_s": 9.83,
+ "gpu_used_after_mib": 5404.0,
+ "torch_peak_allocated_mib": 2323.1,
+ "torch_peak_reserved_mib": 2476.0,
+ "process_device_used_mib": 2506.0
+}

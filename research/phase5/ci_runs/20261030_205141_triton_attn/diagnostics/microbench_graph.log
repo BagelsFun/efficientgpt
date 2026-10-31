@@ -1,0 +1,15 @@
+{'flush_us': 296.7}
+{'B': 1, 'cap': 128, 'L': 16, 'sdpa_hot_us': 19.3, 'sdpa_cold_us': 20.3, 'triton_hot_us': 2.4, 'triton_cold_us': 6.5, 'speedup_hot': 8.04, 'speedup_cold': 3.12, 'triton_cold_useful_GBps': 7.6}
+{'B': 1, 'cap': 128, 'L': 64, 'sdpa_hot_us': 19.4, 'sdpa_cold_us': 16.3, 'triton_hot_us': 2.4, 'triton_cold_us': 9.6, 'speedup_hot': 8.08, 'speedup_cold': 1.7, 'triton_cold_useful_GBps': 20.5}
+{'B': 1, 'cap': 128, 'L': 128, 'sdpa_hot_us': 19.1, 'sdpa_cold_us': 17.0, 'triton_hot_us': 2.9, 'triton_cold_us': 1.3, 'speedup_hot': 6.59, 'speedup_cold': 13.08, 'triton_cold_useful_GBps': 302.5}
+{'B': 1, 'cap': 256, 'L': 16, 'sdpa_hot_us': 35.0, 'sdpa_cold_us': 33.6, 'triton_hot_us': 2.7, 'triton_cold_us': 8.3, 'speedup_hot': 12.96, 'speedup_cold': 4.05, 'triton_cold_useful_GBps': 5.9}
+{'B': 1, 'cap': 256, 'L': 64, 'sdpa_hot_us': 34.9, 'sdpa_cold_us': 31.0, 'triton_hot_us': 2.7, 'triton_cold_us': 6.3, 'speedup_hot': 12.93, 'speedup_cold': 4.92, 'triton_cold_useful_GBps': 31.2}
+{'B': 1, 'cap': 256, 'L': 128, 'sdpa_hot_us': 35.0, 'sdpa_cold_us': 45.7, 'triton_hot_us': 2.7, 'triton_cold_us': 8.8, 'speedup_hot': 12.96, 'speedup_cold': 5.19, 'triton_cold_useful_GBps': 44.7}
+{'B': 1, 'cap': 256, 'L': 256, 'sdpa_hot_us': 35.4, 'sdpa_cold_us': 41.1, 'triton_hot_us': 3.4, 'triton_cold_us': 9.3, 'speedup_hot': 10.41, 'speedup_cold': 4.42, 'triton_cold_useful_GBps': 84.6}
+{'B': 16, 'cap': 128, 'L': 16, 'sdpa_hot_us': 55.2, 'sdpa_cold_us': 75.2, 'triton_hot_us': 4.0, 'triton_cold_us': 6.5, 'speedup_hot': 13.8, 'speedup_cold': 11.57, 'triton_cold_useful_GBps': 121.0}
+{'B': 16, 'cap': 128, 'L': 64, 'sdpa_hot_us': 55.1, 'sdpa_cold_us': 58.8, 'triton_hot_us': 6.2, 'triton_cold_us': 18.1, 'speedup_hot': 8.89, 'speedup_cold': 3.25, 'triton_cold_useful_GBps': 173.8}
+{'B': 16, 'cap': 128, 'L': 128, 'sdpa_hot_us': 55.3, 'sdpa_cold_us': 48.6, 'triton_hot_us': 8.2, 'triton_cold_us': 37.5, 'speedup_hot': 6.74, 'speedup_cold': 1.3, 'triton_cold_useful_GBps': 167.8}
+{'B': 16, 'cap': 256, 'L': 16, 'sdpa_hot_us': 102.8, 'sdpa_cold_us': 130.4, 'triton_hot_us': 4.1, 'triton_cold_us': 5.8, 'speedup_hot': 25.07, 'speedup_cold': 22.48, 'triton_cold_useful_GBps': 135.6}
+{'B': 16, 'cap': 256, 'L': 64, 'sdpa_hot_us': 105.1, 'sdpa_cold_us': 133.1, 'triton_hot_us': 6.7, 'triton_cold_us': 18.1, 'speedup_hot': 15.69, 'speedup_cold': 7.35, 'triton_cold_useful_GBps': 173.8}
+{'B': 16, 'cap': 256, 'L': 128, 'sdpa_hot_us': 109.1, 'sdpa_cold_us': 140.5, 'triton_hot_us': 8.9, 'triton_cold_us': 31.8, 'speedup_hot': 12.26, 'speedup_cold': 4.42, 'triton_cold_useful_GBps': 197.8}
+{'B': 16, 'cap': 256, 'L': 256, 'sdpa_hot_us': 103.4, 'sdpa_cold_us': 112.1, 'triton_hot_us': 13.7, 'triton_cold_us': 67.2, 'speedup_hot': 7.55, 'speedup_cold': 1.67, 'triton_cold_useful_GBps': 187.2}

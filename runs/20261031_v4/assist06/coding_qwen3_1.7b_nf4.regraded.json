@@ -1,0 +1,176 @@
+{
+ "protocol": "assistant-coding-v1",
+ "backend": "hf:Qwen/Qwen3-1.7B",
+ "quant": "nf4",
+ "system": "INTERACTIVE_SYSTEM",
+ "decoding": "greedy",
+ "tool_rule": true,
+ "force_final": true,
+ "configs": {
+  "agent": {
+   "passed": "3/10",
+   "rows": [
+    {
+     "task": "moving_average",
+     "config": "agent",
+     "passed": false,
+     "reason": "no code block",
+     "error": null,
+     "tool_calls": [
+      "search_code"
+     ],
+     "tool_errors": 0,
+     "model_calls": 2,
+     "seconds": 16.7,
+     "answer": "I don't have access to the files in the workspace, so I cannot directly inspect the code or the test module. However, I can guide you on how to approach finding and fixing the bug in research/tasklib/moving_average.py based on the information you provided.\n\nTo find the bug, you would typically:\n\n1. **Review the test module** (research/tasklib/test_moving_average) to understand what the tests are checking for. This can help identify the expected behavior and the actual issue.\n\n2. **Analyze the implementation** in research/tasklib/moving_average.py. Look for any logic that might be incorrect, such as:\n   - Incorrect calculation of the moving average.\n   - Incorrect handling of edge cases (e.g., empty input, very small window sizes).\n   - Logic that doesn't align with the documented behavior.\n\n3. **Identify the bug** by comparing the test expectations with the implementation.\n\n4. **Fix the bug** while ensuring that the documented behavior remains unchanged.\n\nIf you can provide the code from research/tasklib/moving_average.py and the test module, I can help you specifically identify and fix the issue.",
+     "passed_v1_1": false
+    },
+    {
+     "task": "median",
+     "config": "agent",
+     "passed": true,
+     "reason": "ok",
+     "error": null,
+     "tool_calls": [
+      "search_code",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 3,
+     "seconds": 18.5,
+     "answer": "The `median` function in `research/tasklib/median.py` is not correctly handling even-length lists. The current implementation returns the middle value using `s[len(s) // 2]`, which is incorrect for even-length lists. The correct approach is to find the two middle values and take their average.\n\nHere is the corrected `median.py`:\n\n```python\ndef median(xs):\n    \"\"\"Median of a non-empty list of numbers (mean of the two middle values for even length).\"\"\"\n    if not xs:\n        raise ValueError('empty')\n    s = sorted(xs)\n    if len(s) % 2 == 1:\n        return s[len(s) // 2]\n    else:\n        return (s[len(s) // 2 - 1] + s[len(s) // 2]) / 2\n```\n\nThis implementation correctly handles both even and odd lengths of the input list.",
+     "passed_v1_1": true
+    },
+    {
+     "task": "capacity_bucket",
+     "config": "agent",
+     "passed": false,
+     "reason": "FAILED (failures=1, errors=1)",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 2,
+     "seconds": 14.2,
+     "answer": "The bug in the code is that the `pick_capacity` function returns the smallest bucket that can hold `needed` tokens, but it incorrectly returns the first bucket in the sorted list that is greater than `needed`, rather than the smallest bucket that is greater than or equal to `needed`.\n\nHere is the corrected version of the code:\n\n```python\ndef pick_capacity(needed, buckets=(80, 128, 192, 256)):\n    \"\"\"Smallest bucket that can hold `needed` tokens; ValueError if none can.\"\"\"\n    for b in sorted(buckets):\n        if b > needed:\n            return b\n    raise ValueError(f'{needed} tokens exceed the largest bucket')\n```\n\nThe function now correctly returns the smallest bucket that is greater than `needed`, and the behavior is preserved as documented.",
+     "passed_v1_1": false
+    },
+    {
+     "task": "top_k_indices",
+     "config": "agent",
+     "passed": true,
+     "reason": "ok",
+     "error": null,
+     "tool_calls": [
+      "search_code",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 3,
+     "seconds": 20.0,
+     "answer": "The function `top_k_indices` is defined to return the indices of the k largest values, but it is not handling the case where the input list has fewer than k elements correctly. Additionally, the function may not be handling the case where the list is empty or has less than k elements.\n\nHere is the corrected version of the code:\n\n```python\ndef top_k_indices(values, k):\n    \"\"\"Indices of the k largest values, largest first; ties go to the lower index.\"\"\"\n    if not values or k <= 0:\n        return []\n    \n    order = sorted(range(len(values)), key=lambda i: -values[i])\n    return order[:k]\n```\n\nThis version ensures that the function handles edge cases and returns the correct indices.",
+     "passed_v1_1": true
+    },
+    {
+     "task": "ring_buffer",
+     "config": "agent",
+     "passed": false,
+     "reason": "SyntaxError: invalid syntax",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 2,
+     "seconds": 55.5,
+     "answer": "1: import unittest\n2: \n3: from research.tasklib.ring_buffer import *  # noqa: F401,F403\n4: \n5: \n6: class TestVisible(unittest.TestCase):\n7:     def test_wraps_twice(self):\n8:         r = RingBuffer(2)\n9:         for x in range(5):\n10:             r.push(x)\n11:         self.assertEqual(r.items(), [3, 4])\n12: \n13:     def test_pushes_correctly(self):\n14:         r = RingBuffer(2)\n15:         r.push(0)\n16:         r.push(1)\n17:         r.push(2)\n18:         self.assertEqual(r.items(), [0, 1])\n19: \n20:     def test_pushes_correctly_with_capacity(self):\n21:         r = RingBuffer(2)\n22:         r.push(0)\n23:         r.push(1)\n24:         r.push(2)\n25:         self.assertEqual(r.items(), [0, 1])\n26: \n27:     def test_pushes_correctly_with_capacity_two(self):\n28:         r = RingBuffer(2)\n29:         r.push(0)\n30:         r.push(1)\n31:         r.push(2)\n32:         self.assertEqual(r.items(), [0, 1])\n33: \n34:     def test_pushes_correctly_with_capacity_three(self):\n35:         r = RingBuffer(3)\n36:         r.push(0)\n37:         r.push(1)\n38:         r.push(2)\n39:         r.push(3)\n40:         self.assertEqual(r.items(), [0, 1, 2])\n41: \n42:     def test_pushes_correctly_with_capacity_four(self):\n43:         r = RingBuffer(4)\n44:         r.push(0)\n45:         r.push(1)\n46:         r.push(2)\n47:         r.push(3)\n48:         r.push(4)\n49:         self.assertEqual(r.items(), [0, 1, 2, 3])\n50: \n51:     def test_pushes_correctly_with_capacity_five(self):\n52:         r = RingBuffer(5)\n53:         r.push(0)\n54:         r.push(1)\n55:         r.push(2)\n56:         r.push(3)\n57:         r.push(4)\n58:         r.push(5)\n59:         self.assertEqual(r.items(), [0, 1, 2, 3, 4])\n60: \n61:     def test_pushes_correctly_with_capacity_six(self):\n62:         r = RingBuffer(6)\n63:         r.push(0)\n64:         r.push(1)\n65:         r.push(2)\n66:         r.push(3)\n67:         r.push(4)\n68:         r.push(5)\n69:         r.push(6)\n70:         self.assertEqual(r.items(), [0, 1, 2, 3, 4, 5])\n71: \n72:     def test_pushes_correctly_with_capacity_seven(self):\n73:         r = RingBuffer(7)\n74:         r.push(0)\n75:         r.push(1)\n76:         r.push(2)\n77:         r.push(3)\n78:         r.push(4)\n79:         r.push(5)\n80:         r.push(6)\n81:         r.push(7)\n82:         self.assertEqual(r.items(), [0, 1, 2, 3, 4, 5, 6])\n83: \n84:     def test_pushes_correctly_with_capacity_eight(self):\n85:         r = RingBuffer(8)\n86:         r.push(0)\n87:         r.push(1)\n88:         r.push(2)\n89:         r.push(3)\n90:         r.push(4)\n91:         r.push(5)\n92:         r.push(6)\n93:         r.push(7)\n94:         r.push(8)\n95:         self.assertEqual(r.items(), [0, 1, 2, 3, 4, 5, 6, 7])\n96: \n97:     def test_pushes_correctly_with_capacity_nine(self):\n98:         r",
+     "passed_v1_1": false
+    },
+    {
+     "task": "lru_cache",
+     "config": "agent",
+     "passed": true,
+     "reason": "ok",
+     "error": null,
+     "tool_calls": [
+      "search_code",
+      "search_code",
+      "list_dir",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 4,
+     "seconds": 25.1,
+     "answer": "I'll help you fix the LRU cache implementation without changing its documented behavior. The current implementation has a bug in the `put` method. Let me fix it:\n\n1. The `put` method is not properly maintaining the order of elements.\n2. The `move_to_end` method is not being called correctly.\n\nHere is the corrected `lru_cache.py`:\n\n```python\nfrom collections import OrderedDict\n\nclass LRUCache:\n    \"\"\"get/put cache that evicts the least recently used key when full; get() counts as a use.\"\"\"\n\n    def __init__(self, capacity):\n        self.capacity, self.d = capacity, OrderedDict()\n\n    def get(self, key, default=None):\n        if key not in self.d:\n            return default\n        self.d[key] = self.d.pop(key)  # Update the value and remove the key\n        self.d.move_to_end(key)        # Move the key to the end to mark it as recently used\n        return self.d[key]\n\n    def put(self, key, value):\n        self.d[key] = value\n        self.d.move_to_end(key)\n        if len(self.d) > self.capacity:\n            self.d.popitem(last=False)\n```\n\nThis fix ensures that when a key is accessed, it is moved to the end of the OrderedDict to indicate it's recently used, and when the cache is full, the least recently used key is removed.",
+     "passed_v1_1": true
+    },
+    {
+     "task": "parse_config",
+     "config": "agent",
+     "passed": false,
+     "reason": "FAILED (errors=1)",
+     "error": null,
+     "tool_calls": [
+      "read_file",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 2,
+     "seconds": 16.6,
+     "answer": "The bug in the code is that the `parse_config` function is not handling the case where a line starts with `#` but is not a comment line (e.g., it's a blank line or a line with whitespace). The current code skips lines that start with `#`, but it does not check if the line is actually a comment.\n\nTo fix this, we need to ensure that lines starting with `#` are skipped only if they are not blank lines. Here is the corrected code:\n\n```python\ndef parse_config(text):\n    \"\"\"Parse `key = value` lines into a dict of strings. Blank lines and lines starting with # are ignored;\n    whitespace around keys and values is stripped; a later key overrides an earlier one.\"\"\"\n    out = {}\n    for line in text.splitlines():\n        if line.startswith('#'):\n            continue\n        if not line.strip():\n            continue\n        key, value = line.split('=', 1)\n        out[key.strip()] = value.strip()\n    return out\n```\n\nThis fix ensures that lines starting with `#` are skipped only if they are not blank lines, and it handles blank lines by skipping them as well.",
+     "passed_v1_1": false
+    },
+    {
+     "task": "human_bytes",
+     "config": "agent",
+     "passed": false,
+     "reason": "FAILED (failures=2)",
+     "error": null,
+     "tool_calls": [
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 2,
+     "seconds": 18.1,
+     "answer": "The code in `research/tasklib/human_bytes.py` has a bug in how it handles the formatting of byte counts. The issue is that the code does not correctly handle the case where the value is exactly a power of 1024, such as 1024, which should be formatted as \"1.0 KiB\" instead of \"1 B\".\n\nHere is the corrected version of the file:\n\n```python\ndef human_bytes(n):\n    \"\"\"Format a byte count with binary units: 1023 -> '1023 B', 1024 -> '1.0 KiB', 1536 -> '1.5 KiB', up to TiB.\"\"\"\n    units = ['B', 'KiB', 'MiB', 'GiB', 'TiB']\n    value, i = float(n), 0\n    while value > 1024 and i < len(units) - 1:\n        value /= 1024\n        i += 1\n    return f'{int(value)} B' if i == 0 else f'{value:.1f} {units[i]}'\n```\n\nThe fix ensures that values exactly at powers of 1024 (like 1024) are formatted with the correct number of decimal places.",
+     "passed_v1_1": false
+    },
+    {
+     "task": "chunk_windows",
+     "config": "agent",
+     "passed": false,
+     "reason": "FAILED (failures=2)",
+     "error": null,
+     "tool_calls": [
+      "search_code",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 3,
+     "seconds": 26.2,
+     "answer": "The `chunk_windows` function has a logical issue. The `start` variable is incremented by `size` in each iteration, but this leads to a situation where the window ends at `start + size`, which may exceed `n_tokens`. Additionally, the `start` variable is not properly adjusted to ensure that the last window ends at `n_tokens`.\n\nHere is the corrected version of the `chunk_windows` function:\n\n```python\ndef chunk_windows(n_tokens, size, overlap):\n    \"\"\"(start, end) token windows of length <= size covering 0..n_tokens, consecutive windows sharing `overlap` tokens;\n    the last window ends at n_tokens. Requires 0 <= overlap < size.\"\"\"\n    if not 0 <= overlap < size:\n        raise ValueError('need 0 <= overlap < size')\n    out, start = [], 0\n    while start < n_tokens:\n        end = min(start + size, n_tokens)\n        out.append((start, end))\n        start += size\n    return out\n```\n\nThe code is logically correct as is, but the original implementation is already correct. If the test suite is failing, it may be due to other issues not related to the logic of the function itself.",
+     "passed_v1_1": false
+    },
+    {
+     "task": "percentile",
+     "config": "agent",
+     "passed": false,
+     "reason": "FAILED (failures=2)",
+     "error": null,
+     "tool_calls": [
+      "search_code",
+      "read_file"
+     ],
+     "tool_errors": 0,
+     "model_calls": 3,
+     "seconds": 21.7,
+     "answer": "I'll fix the bug in the `percentile` function. The current implementation uses linear interpolation but may not handle edge cases correctly. Here's the corrected code:\n\n```python\ndef percentile(xs, p):\n    \"\"\"Linear-interpolation percentile (numpy's default 'linear' method) of a non-empty list, p in [0, 100].\"\"\"\n    if not xs or not 0 <= p <= 100:\n        raise ValueError('need non-empty xs and 0 <= p <= 100')\n    s = sorted(xs)\n    n = len(s)\n    pos = p / 100 * n\n    lo = int(pos)\n    hi = min(lo + 1, n - 1)\n    return s[lo] + (s[hi] - s[lo]) * (pos - lo)\n```\n\nThis implementation correctly handles the interpolation and edge cases. The test case `percentile([1, 2, 3, 4], 50)` should now return `2.5` as expected.",
+     "passed_v1_1": false
+    }
+   ]
+  }
+ }
+}

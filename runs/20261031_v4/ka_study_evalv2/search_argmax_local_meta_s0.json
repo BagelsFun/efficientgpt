@@ -1,0 +1,155 @@
+{
+ "task": "argmax",
+ "strategy": "local_meta",
+ "budget": 12,
+ "evaluated": 12,
+ "unused_budget": 0,
+ "statuses": {
+  "correct": 12
+ },
+ "trace": [
+  {
+   "key": "row_whole{\"WARPS\": 4}",
+   "family": "row_whole",
+   "params": {
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.0012154691990377818,
+   "from_history": true
+  },
+  {
+   "key": "row_chunked{\"BLOCK\": 1024, \"WARPS\": 4}",
+   "family": "row_chunked",
+   "params": {
+    "BLOCK": 1024,
+    "WARPS": 4
+   },
+   "status": "correct",
+   "score_ms": 0.002188618898234318,
+   "from_history": true
+  },
+  {
+   "key": "split_two_stage{\"SPLITS\": 8, \"WARPS\": 2}",
+   "family": "split_two_stage",
+   "params": {
+    "SPLITS": 8,
+    "WARPS": 2
+   },
+   "status": "correct",
+   "score_ms": 0.0019048370410282662,
+   "from_history": true
+  },
+  {
+   "key": "row_whole{\"WARPS\": 2}",
+   "family": "row_whole",
+   "params": {
+    "WARPS": 2
+   },
+   "status": "correct",
+   "score_ms": 0.001366521066176314,
+   "from_history": true
+  },
+  {
+   "key": "row_whole{\"WARPS\": 8}",
+   "family": "row_whole",
+   "params": {
+    "WARPS": 8
+   },
+   "status": "correct",
+   "score_ms": 0.0011871335761945735,
+   "from_history": true
+  },
+  {
+   "key": "row_whole{\"WARPS\": 16}",
+   "family": "row_whole",
+   "params": {
+    "WARPS": 16
+   },
+   "status": "correct",
+   "score_ms": 0.0012836737409150168,
+   "from_history": true
+  },
+  {
+   "key": "split_two_stage{\"SPLITS\": 4, \"WARPS\": 2}",
+   "family": "split_two_stage",
+   "params": {
+    "SPLITS": 4,
+    "WARPS": 2
+   },
+   "status": "correct",
+   "score_ms": 0.001885204735697827,
+   "from_history": false
+  },
+  {
+   "key": "split_two_stage{\"SPLITS\": 2, \"WARPS\": 2}",
+   "family": "split_two_stage",
+   "params": {
+    "SPLITS": 2,
+    "WARPS": 2
+   },
+   "status": "correct",
+   "score_ms": 0.002013703216597969,
+   "from_history": true
+  },
+  {
+   "key": "split_two_stage{\"SPLITS\": 4, \"WARPS\": 1}",
+   "family": "split_two_stage",
+   "params": {
+    "SPLITS": 4,
+    "WARPS": 1
+   },
+   "status": "correct",
+   "score_ms": 0.0018255151440634055,
+   "from_history": true
+  },
+  {
+   "key": "split_two_stage{\"SPLITS\": 2, \"WARPS\": 1}",
+   "family": "split_two_stage",
+   "params": {
+    "SPLITS": 2,
+    "WARPS": 1
+   },
+   "status": "correct",
+   "score_ms": 0.0020371166267159047,
+   "from_history": true
+  },
+  {
+   "key": "split_two_stage{\"SPLITS\": 8, \"WARPS\": 1}",
+   "family": "split_two_stage",
+   "params": {
+    "SPLITS": 8,
+    "WARPS": 1
+   },
+   "status": "correct",
+   "score_ms": 0.0018044350285182618,
+   "from_history": true
+  },
+  {
+   "key": "split_two_stage{\"SPLITS\": 16, \"WARPS\": 1}",
+   "family": "split_two_stage",
+   "params": {
+    "SPLITS": 16,
+    "WARPS": 1
+   },
+   "status": "correct",
+   "score_ms": 0.0018190344666518235,
+   "from_history": true
+  }
+ ],
+ "best": {
+  "score_ms": 0.0011871335761945735,
+  "family": "row_whole",
+  "params": {
+   "WARPS": 8
+  }
+ },
+ "env": {
+  "torch": "2.11.0+cu128",
+  "triton": "3.7.1",
+  "gpu": "NVIDIA GeForce RTX 4060",
+  "python": "3.11.9",
+  "git": "<private-commit>+dirty"
+ },
+ "seed": 0
+}

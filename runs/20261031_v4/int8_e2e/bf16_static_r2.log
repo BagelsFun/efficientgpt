@@ -1,0 +1,13 @@
+W1031 12:27:45.570000 34084 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]
+Loading weights:  12%|█▏        | 38/311 [00:00<00:00, 372.64it/s]
+Loading weights:  24%|██▍       | 76/311 [00:00<00:00, 302.14it/s]
+Loading weights:  35%|███▍      | 108/311 [00:00<00:00, 308.64it/s]
+Loading weights:  48%|████▊     | 148/311 [00:00<00:00, 341.45it/s]
+Loading weights:  59%|█████▉    | 183/311 [00:00<00:00, 314.54it/s]
+Loading weights:  69%|██████▉   | 216/311 [00:00<00:00, 307.54it/s]
+Loading weights:  80%|████████  | 249/311 [00:00<00:00, 310.88it/s]
+Loading weights:  90%|█████████ | 281/311 [00:00<00:00, 302.91it/s]
+Loading weights: 100%|██████████| 311/311 [00:00<00:00, 322.05it/s]
+W1031 12:27:57.933000 34084 .venv\Lib\site-packages\torch\_inductor\utils.py:1731] [0/0] Not enough SMs to use max_autotune_gemm mode

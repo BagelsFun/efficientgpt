@@ -1,0 +1,38 @@
+{
+  "ragged_triton": {
+    "rows": 64,
+    "failures_outside_near_tie": 0,
+    "identical_to_exact_ragged_engine": 62,
+    "near_ties_vs_engine": 2,
+    "identical_to_batch1": 60,
+    "near_ties_vs_batch1": 4
+  },
+  "tv_T1.0": {
+    "steps": 10176,
+    "tv_median": 0.00013196078635705627,
+    "tv_p99": 0.0004146954187373708,
+    "tv_max": 0.0009442633384892374,
+    "kept_set_changes": 0
+  },
+  "tv_T0.8_k50": {
+    "steps": 10176,
+    "tv_median": 0.00010950005548693298,
+    "tv_p99": 0.00051261932367197,
+    "tv_max": 0.0045889136381447315,
+    "kept_set_changes": 91
+  },
+  "tv_T1.0_p0.9": {
+    "steps": 10176,
+    "tv_median": 0.00011372275184839964,
+    "tv_p99": 0.0006051139971532393,
+    "tv_max": 0.02911374345421791,
+    "kept_set_changes": 218
+  },
+  "tv_T0.8_k50_p0.95": {
+    "steps": 10176,
+    "tv_median": 9.765103459358215e-05,
+    "tv_p99": 0.0005271942354738712,
+    "tv_max": 0.011355994269251823,
+    "kept_set_changes": 25
+  }
+}

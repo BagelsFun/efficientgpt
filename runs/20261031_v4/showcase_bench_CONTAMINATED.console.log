@@ -1,0 +1,16 @@
+﻿int8_graph    r0 decode 110.2 tok/s  ttft 56 ms  peak 2342 MiB  util 1.0
+llamacpp_q8   r0 decode 101.2 tok/s  ttft 30 ms  peak 2300 MiB  util 7.0
+bf16_static   r0 decode 44.0 tok/s  ttft 72 ms  peak 3346 MiB  util 2.0
+torchao_int8_static_at r0 decode 61.2 tok/s  ttft 92 ms  peak 2875 MiB  util 19.0
+torchao_int8_static_at r1 decode 59.7 tok/s  ttft 96 ms  peak 2875 MiB  util 22.0
+bf16_static   r1 decode 44.2 tok/s  ttft 65 ms  peak 3346 MiB  util 23.0
+llamacpp_q8   r1 decode 82.2 tok/s  ttft 33 ms  peak 2300 MiB  util 23.0
+int8_graph    r1 decode 86.7 tok/s  ttft 67 ms  peak 2342 MiB  util 23.0
+int8_graph    r2 decode 86.5 tok/s  ttft 68 ms  peak 2342 MiB  util 30.0
+llamacpp_q8   r2 decode 81.6 tok/s  ttft 34 ms  peak 2300 MiB  util 25.0
+bf16_static   r2 decode 44.3 tok/s  ttft 65 ms  peak 3346 MiB  util 20.0
+torchao_int8_static_at r2 decode 59.9 tok/s  ttft 94 ms  peak 2875 MiB  util 24.0
+torchao_int8_static_at r3 decode 60.8 tok/s  ttft 88 ms  peak 2876 MiB  util 25.0
+bf16_static   r3 decode 44.0 tok/s  ttft 64 ms  peak 3346 MiB  util 27.0
+llamacpp_q8   r3 decode 81.8 tok/s  ttft 42 ms  peak 2300 MiB  util 25.0
+int8_graph    r3 decode 63.6 tok/s  ttft 90 ms  peak 2342 MiB  util 25.0

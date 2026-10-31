@@ -1,0 +1,4 @@
+phase5 rc=0
+kernelagent rc=0
+assistant rc=0
+bench rc=0

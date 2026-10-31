@@ -1,0 +1,36 @@
+{
+ "mode": "int8_graph",
+ "quant": "int8",
+ "static_cache": "graph",
+ "load_s": 8.53,
+ "max_autotune": false,
+ "load_peak_allocated_mib": 3426.3,
+ "weights_allocated_mib": 2237.8,
+ "first_call_s": 6.95,
+ "decode_tok_s": [
+  86.66,
+  87.56,
+  86.45,
+  86.14,
+  87.32
+ ],
+ "decode_tok_s_median": 86.65702383596413,
+ "ttft_s_median": 0.06693219998851418,
+ "completion_tokens": [
+  256,
+  256,
+  256,
+  256,
+  256
+ ],
+ "torch_peak_allocated_mib": 2342.5,
+ "torch_peak_reserved_mib": 2424.0,
+ "itl_ms_p50": 12.461100006476045,
+ "itl_ms_p95": 13.033400056883693,
+ "itl_samples": 1275,
+ "e2e_s_median": 3.0092545999214053,
+ "process_device_used_mib": 2474.0,
+ "round": 1,
+ "gpu_util_before": 23.0,
+ "contended": true
+}
