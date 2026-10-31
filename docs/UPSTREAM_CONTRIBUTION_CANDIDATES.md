@@ -1,9 +1,12 @@
 # Upstream contribution candidates (none submitted yet)
 
-Ranked by evidence strength. Each item links to the measurement in this repository. Drafts are written so that they could be
+Ranked by evidence strength (item 1 is on hold pending Linux evidence). Each item links to the measurement in this repository. Drafts are written so that they could be
 filed after review. Nothing here has been sent.
 
-## 1. transformers: enable `DeferredStopCheck` on CUDA (strongest; measured)
+## 1. transformers: enable `DeferredStopCheck` on CUDA (measured on Windows only; needs Linux evidence)
+**Update (2026-11-01):** the upstream PR (#47975) measured CUDA on an H100 and found no gain (0.98–1.00× on three small
+models, eager decoding). The +5% here is on a consumer GPU under Windows, so it may be a Windows/WDDM effect. Measure on
+Linux before proposing anything; details in the package README.
 **Update (2026-10-31): prepared package in [`upstream/transformers-deferred-stop-cuda/`](upstream/transformers-deferred-stop-cuda/README.md).**
 - Still relevant: transformers `main` (b41ca9c) is still MPS-only.
 - The patch applies cleanly.

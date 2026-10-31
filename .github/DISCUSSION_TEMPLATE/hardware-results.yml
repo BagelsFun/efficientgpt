@@ -1,0 +1,90 @@
+title: "[Results] <GPU> / <OS>"
+labels: ["reproduction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing EfficientGPT on your machine. Results that **contradict** ours are as useful as matching ones.
+        The quickest route is `bash research/release/reproduce.sh` (see `docs/REPRODUCE_ON_ANOTHER_MACHINE.md`), which
+        produces `runs/repro_<gpu>_<date>.tar.gz` with everything asked for below. Read `env.json` and `pip_freeze.txt`
+        before attaching them.
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU
+      description: Name, memory, and compute capability (from `env.json`, or `nvidia-smi`).
+      placeholder: "RTX 3090 24 GB, sm_86"
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: OS, driver and CPU
+      placeholder: "Ubuntu 24.04, driver 580.xx, Ryzen 9 7950X"
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Python and package versions
+      description: "`python -c \"import torch, transformers; print(torch.__version__, torch.version.cuda, transformers.__version__)\"`, plus triton and torchao."
+      placeholder: "3.11.9, torch 2.11.0+cu128, CUDA 12.8, transformers 5.21.0, triton 3.7.0, torchao 0.18.0"
+    validations:
+      required: true
+  - type: textarea
+    id: commands
+    attributes:
+      label: What you ran
+      description: Exact commands, and any change from the instructions.
+      render: bash
+      placeholder: bash research/release/reproduce.sh
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Benchmark results
+      description: Paste the table from `runs/repro_<gpu>_<date>/bench/REPORT.md`. Ratios between engines on your GPU matter more than absolute tok/s.
+    validations:
+      required: false
+  - type: dropdown
+    id: contention
+    attributes:
+      label: Was the GPU idle during timing?
+      description: The harness marks a process `contended` when GPU utilisation was above 15% before it ran.
+      options:
+        - "Yes: no process flagged contended"
+        - "No: some processes flagged contended"
+        - "Not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: correctness
+    attributes:
+      label: Correctness findings
+      description: |
+        Unit test outcome (`logs/tests_*.log`), the demo's bf16 agreement line, any wrong or garbled output, crashes, or
+        tests that fail or skip unexpectedly. "Everything passed" is a useful answer.
+    validations:
+      required: true
+  - type: textarea
+    id: raw
+    attributes:
+      label: Raw files
+      description: Drag `runs/repro_<gpu>_<date>.tar.gz` here, or link to it. Without raw files a result can be discussed but not counted as a reproduction.
+    validations:
+      required: false
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback
+      description: Anything unusual (thermal throttling, clocks, other GPU programs), problems with the instructions, or comments on the method or the claims.
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before posting
+      options:
+        - label: I checked the attached files contain nothing private.
+          required: true

@@ -4,6 +4,20 @@ Goal: an independent engineer measures EfficientGPT against the same baselines o
 raw results. Expect different absolute tok/s on other GPUs. The **ratios** between engines on the same machine are what
 should be compared with `BENCHMARK_REPORT.md` §1a. Nothing here requires the private TinyStories checkpoint.
 
+## One command (Linux / WSL2)
+After the environment in §2:
+```bash
+bash research/release/reproduce.sh            # environment, tests, demo, full benchmark: about 1 hour
+bash research/release/reproduce.sh --quick    # int8 vs bf16 only: about 20 minutes
+bash research/release/reproduce.sh --dry-run  # show the commands without running them
+```
+It writes `runs/repro_<gpu>_<date>/` (environment record `env.json`, `nvidia-smi -q`, `pip freeze`, one log per step,
+`STATUS.txt`, the benchmark JSON and `REPORT.md`) and packs it as `runs/repro_<gpu>_<date>.tar.gz`. A failing step is
+recorded and the script carries on. Nothing is uploaded; read `env.json` and `pip_freeze.txt` before you share them.
+Options: `--skip-tests`, `--no-llamacpp`, and `--deferred-stop` (adds the transformers `DeferredStopCheck` measurement on
+Qwen3-1.7B and SmolLM2-135M; its run time has not been measured; see `docs/upstream/transformers-deferred-stop-cuda/`). On Windows, run the
+§3 and §4 commands directly, or the script from Git Bash.
+
 ## 0. At a glance
 
 | Experiment | Needs | Time | Command |
@@ -74,7 +88,8 @@ python -m research.realmodel.analyze_int8 --dir runs/repro_<gpu>_<date>
 - Add `--quality --quality-modes bf16_static int8_graph` for the quality rows (+15 min).
 
 ## 5. What to send back
-Open an issue on https://github.com/BagelsFun/efficientgpt using the **Reproduction report** template, and attach:
+Post in the repository's **Discussions → Hardware results** (the form asks for exactly the fields below), or open an issue
+with the **Reproduction report** template, and attach `runs/repro_<gpu>_<date>.tar.gz`, or:
 - The whole `runs/repro_<gpu>_<date>/` directory: per-process JSON, logs and `REPORT.md`.
 - `nvidia-smi -q | head -40`, `python -c "import torch, transformers; print(torch.__version__, torch.version.cuda, transformers.__version__)"`,
   OS and CPU model.

@@ -42,6 +42,7 @@ INTERNAL = [  # written for the owner (planning, career strategy); not part of a
     'reports/CAREER_AND_COMMERCIAL_VALUE.md', 'reports/PUBLIC_RELEASE_READINESS.md', 'reports/PUBLIC_RELEASE_CHECKLIST.md',
     'reports/INDUSTRY_AUDIT.md', 'docs/ROADMAP.md',  # audit of the private repository; personal priorities
     'reports/ANNOUNCEMENT_DRAFT.md', 'reports/INDUSTRY_RECOGNITION_REVIEW.md',  # drafts for the owner to post / review
+    'reports/PORTFOLIO_SUMMARY.md', 'reports/INDUSTRY_VISIBILITY_PACKAGE.md',
 ]
 _NAME = r'[^\\/\s"\'<>|:*?%]+'
 # 'users' / 'home' are assembled from pieces so that the export does not redact this file's own patterns

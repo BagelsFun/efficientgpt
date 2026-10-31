@@ -1,6 +1,7 @@
 """Should transformers' DeferredStopCheck be enabled on CUDA? Correctness and speed evidence for an upstream proposal.
 
     python -m research.realmodel.deferred_stop_cuda --out runs/<stamp>/deferred_stop_cuda.json
+    python -m research.realmodel.deferred_stop_cuda --out runs/<stamp>/deferred_stop_cuda_smollm.json --model HuggingFaceTB/SmolLM2-135M-Instruct
 
 transformers (5.21 and main as of 2026-10-31) defers the per-step stop-flag read only on MPS:
 `DeferredStopCheck.is_supported` returns False unless `device.type == "mps"`. The proposed change widens that one check to
@@ -58,6 +59,8 @@ def main():
     ap.add_argument('--reps', type=int, default=8)
     ap.add_argument('--tokens', type=int, default=256)
     ap.add_argument('--regimes', nargs='*', default=['eager_dynamic', 'compiled_static'])
+    ap.add_argument('--model', default=MODEL, help='any Hub causal LM with a chat template, e.g. HuggingFaceTB/SmolLM2-135M-Instruct')
+    ap.add_argument('--revision', default=None, help=f'Hub revision (default: {REVISION[:12]} for {MODEL}, else main)')
     args = ap.parse_args()
     import inspect
 
@@ -72,9 +75,10 @@ def main():
         return gpu_util()
 
     start_util = idle_util()
-    tok = AutoTokenizer.from_pretrained(MODEL, revision=REVISION)
+    revision = args.revision or (REVISION if args.model == MODEL else 'main')
+    tok = AutoTokenizer.from_pretrained(args.model, revision=revision)
     tok.padding_side = 'left'
-    model = AutoModelForCausalLM.from_pretrained(MODEL, revision=REVISION, dtype=torch.bfloat16).cuda().eval()
+    model = AutoModelForCausalLM.from_pretrained(args.model, revision=revision, dtype=torch.bfloat16).cuda().eval()
     original = inspect.getattr_static(gen_utils.DeferredStopCheck, 'is_supported')
     original_init = gen_utils.DeferredStopCheck.__init__
     engaged = []
@@ -106,7 +110,7 @@ def main():
                                  **extra, **kw)
         return out, bool(engaged)
 
-    res = {'model': f'{MODEL}@{REVISION}', 'torch': torch.__version__,
+    res = {'model': f'{args.model}@{revision}', 'torch': torch.__version__,
            'transformers': __import__('transformers').__version__, 'gpu': torch.cuda.get_device_name(),
            'patch': 'DeferredStopCheck.is_supported: device.type != "mps"  ->  device.type not in ("mps", "cuda")',
            'gpu_util_at_start_pct': start_util, 'regimes': {}}

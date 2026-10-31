@@ -2,3 +2,4 @@
 # reference: https://github.com/github/linguist/blob/master/docs/overrides.md#generated-code
 *.ipynb linguist-generated
 *.patch -text
+*.sh text eol=lf

@@ -29,7 +29,7 @@ while C++ engines such as llama.cpp get close to it. The questions were:
 |---|---|---|
 | Weight-only quantisation | llama.cpp (Q8_0 and k-quants), torchao int8/int4 weight-only, bitsandbytes LLM.int8, GPTQ / AWQ, TensorRT-LLM W8A16 | EfficientGPT uses plain per-channel symmetric int8, an established scheme |
 | CUDA-graph decode | vLLM, TensorRT-LLM, gpt-fast, HF static cache with torch.compile ("reduce-overhead") | EfficientGPT captures the whole step, including argmax and the token/position update, in one manual graph |
-| Avoiding per-token host sync in generation | transformers `DeferredStopCheck` (reads the stop flag one step late via pinned memory + event; enabled upstream for Apple MPS only); vLLM / TensorRT-LLM schedulers | EfficientGPT uses the same idea with a deeper bounded run-ahead; enabling transformers' own check on CUDA recovers most of the gain (+4.3%, `docs/UPSTREAM_CONTRIBUTION_CANDIDATES.md`) |
+| Avoiding per-token host sync in generation | transformers `DeferredStopCheck` (reads the stop flag one step late via pinned memory + event; enabled upstream for Apple MPS only); vLLM / TensorRT-LLM schedulers | EfficientGPT uses the same idea with a deeper bounded run-ahead; enabling transformers' own check on CUDA recovers most of the gain here (+4.3% on an RTX 4060 under Windows; upstream measured no gain on an H100; `docs/UPSTREAM_CONTRIBUTION_CANDIDATES.md`) |
 | Split-K / FlashDecoding attention | FlashAttention, FlashDecoding, FlashInfer | Phase 5 reimplemented split-K decode attention in Triton on a small model |
 | Kernel autotuning and search | Triton autotune, AutoTVM / Ansor, LLM-generated kernels (KernelBench-style) | KernelAgent-Ada is template search plus a verification protocol, not a new search algorithm |
 
@@ -59,8 +59,8 @@ bootstrap confidence intervals.
    argmax and position update sit in one manual CUDA graph. Per-token streaming survives through pinned-memory copies and
    CUDA events with bounded run-ahead, and EOS never leaks run-ahead tokens (tested). The deferred-stop idea itself is prior
    art: transformers' `DeferredStopCheck`, which is MPS-only upstream. The contribution here is the CUDA measurement:
-   forcing transformers' check on CUDA gives +4.3% with identical outputs, within 0.4% of the full graph loop. That is a
-   concrete upstream candidate.
+   forcing transformers' check on CUDA gives +4.3% with identical outputs, within 0.4% of the full graph loop. Upstream
+   measured no gain on an H100 (transformers #47975), so this is a candidate only if it also holds on Linux.
 3. **End-to-end selection overriding microbenchmarks.** KernelAgent-Ada's warm-L2 winner (split-K) added ≈ 197 reduce
    kernels per token and was slower in the model (10.32 vs 9.51 ms/step). The shipped config was chosen end to end. The
    same discipline earlier rejected a 1.1–1.6× attention-kernel win that was worth ≈ 1% end to end.
