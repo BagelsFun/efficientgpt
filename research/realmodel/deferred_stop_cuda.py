@@ -38,6 +38,8 @@ from pathlib import Path
 
 from .bench_int8 import MODEL, REVISION, gpu_util
 
+PINNED = {MODEL: REVISION, 'HuggingFaceTB/SmolLM2-135M-Instruct': '12fd25f77366fa6b3b4b768ec3050bf629380bac'}
+
 PROMPTS = ['Explain in detail how a GPU executes a matrix multiplication, step by step.',
            'Write a haiku about caches.',
            'What is 17 * 23? Answer with the number only.',
@@ -60,7 +62,7 @@ def main():
     ap.add_argument('--tokens', type=int, default=256)
     ap.add_argument('--regimes', nargs='*', default=['eager_dynamic', 'compiled_static'])
     ap.add_argument('--model', default=MODEL, help='any Hub causal LM with a chat template, e.g. HuggingFaceTB/SmolLM2-135M-Instruct')
-    ap.add_argument('--revision', default=None, help=f'Hub revision (default: {REVISION[:12]} for {MODEL}, else main)')
+    ap.add_argument('--revision', default=None, help='Hub revision (default: pinned for Qwen3-1.7B and SmolLM2-135M-Instruct, else main)')
     args = ap.parse_args()
     import inspect
 
@@ -75,9 +77,11 @@ def main():
         return gpu_util()
 
     start_util = idle_util()
-    revision = args.revision or (REVISION if args.model == MODEL else 'main')
+    revision = args.revision or PINNED.get(args.model, 'main')
     tok = AutoTokenizer.from_pretrained(args.model, revision=revision)
     tok.padding_side = 'left'
+    if tok.pad_token is None:  # the padded-batch case needs one; generate() gets eos as pad_token_id anyway
+        tok.pad_token = tok.eos_token
     model = AutoModelForCausalLM.from_pretrained(args.model, revision=revision, dtype=torch.bfloat16).cuda().eval()
     original = inspect.getattr_static(gen_utils.DeferredStopCheck, 'is_supported')
     original_init = gen_utils.DeferredStopCheck.__init__

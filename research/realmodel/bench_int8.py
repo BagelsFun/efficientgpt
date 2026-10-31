@@ -199,7 +199,7 @@ def main():
         child(args.child, args.reps, args.child_quality, args.child_out, tuple(args.quality_parts.split(',')))
         return
     args.out.mkdir(parents=True, exist_ok=True)
-    runs = []
+    runs, failed = [], []
     for r in range(args.rounds):
         order = args.modes if r % 2 == 0 else args.modes[::-1]
         for mode in order:
@@ -215,6 +215,7 @@ def main():
             (args.out / f'{mode}_r{r}.log').write_text(p.stdout[-4000:] + p.stderr[-8000:], encoding='utf-8')
             if p.returncode or not out.exists():
                 print(f'{mode} r{r}: FAILED rc={p.returncode} (see {mode}_r{r}.log)', flush=True)
+                failed.append(f'{mode}_r{r}')
                 continue
             res = json.loads(out.read_text(encoding='utf-8')) | {'round': r, 'gpu_util_before': util,
                                                                   'contended': not util <= args.busy_pct}
@@ -223,6 +224,8 @@ def main():
             print(f"{mode:13s} r{r} decode {res['decode_tok_s_median']:.1f} tok/s  ttft {res['ttft_s_median'] * 1e3:.0f} ms  "
                   f"peak {res['torch_peak_allocated_mib']:.0f} MiB  util {util}", flush=True)
     (args.out / 'summary.json').write_text(json.dumps(summarise(runs), indent=1), encoding='utf-8')
+    if failed:
+        sys.exit(f'{len(failed)} process(es) failed: {", ".join(failed)}')
 
 
 def summarise(runs):

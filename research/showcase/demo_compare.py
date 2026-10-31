@@ -30,8 +30,10 @@ def main():
     modes = ['int8_graph', 'llamacpp_q8', 'bf16_static'] + (['torchao_int8_static_at'] if args.with_torchao else [])
     print(f'Comparing {modes} for {args.rounds} round(s); each mode loads in its own process (about 1-2 min each).',
           flush=True)
-    subprocess.run([sys.executable, '-m', 'research.realmodel.bench_int8', '--out', str(args.out), '--modes', *modes,
-                    '--rounds', str(args.rounds), '--reps', '3'], check=True)
+    bench = subprocess.run([sys.executable, '-m', 'research.realmodel.bench_int8', '--out', str(args.out), '--modes', *modes,
+                            '--rounds', str(args.rounds), '--reps', '3'])
+    if bench.returncode:  # e.g. llamacpp_q8 without Ollama: compare the modes that did run
+        print('Some modes failed (see the FAILED lines above); comparing the ones that ran.', flush=True)
     subprocess.run([sys.executable, '-m', 'research.realmodel.analyze_int8', '--dir', str(args.out)], check=True)
     print(f'\nRaw per-process results and REPORT.md: {args.out}')
 

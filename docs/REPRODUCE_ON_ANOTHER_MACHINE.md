@@ -61,6 +61,8 @@ pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
 pip install "transformers==5.21.0" "torchao==0.18.0" numpy tiktoken
 ```
 - On Linux, `triton` is installed with torch. On Windows, install `triton-windows==3.7.1.post27`.
+- Python 3.11 is not packaged on every distribution (for example Ubuntu 24.04 ships 3.12). Use `uv venv --python 3.11`
+  or the deadsnakes PPA; other Python versions are untested.
 - `requirements-lock.txt` lists the exact versions of the reference machine (a Windows `pip freeze`); use it to pin
   further if results differ.
 - Optional baseline, llama.cpp via Ollama: install Ollama (tested 0.40.12), then `ollama pull qwen3:1.7b-q8_0`; the

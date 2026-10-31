@@ -141,7 +141,12 @@ def main():
     quality = quality_table(args.dir)
     (args.dir / 'analysis.json').write_text(json.dumps({'speed': speed, 'quality': quality, 'pairs': pairs}, indent=1),
                                             encoding='utf-8')
-    lines = ['# R1 end-to-end: Qwen3-1.7B batch-1 decode on RTX 4060 (analysis)', '',
+    try:
+        import torch
+        gpu = torch.cuda.get_device_name() if torch.cuda.is_available() else 'unknown GPU'
+    except Exception:
+        gpu = 'unknown GPU'
+    lines = [f'# R1 end-to-end: Qwen3-1.7B batch-1 decode on {gpu} (analysis)', '',
              '| Mode | Rounds | Decode tok/s (median of round medians) | vs HF bf16 + static cache [95% CI over rounds] | paired per-round min-max | TTFT ms | Serving peak MiB (torch; Ollama: size_vram) | Device used MiB | Weights MiB | Load peak MiB |',
              '|---|---|---|---|---|---|---|---|---|---|']
     for r in speed:

@@ -6,8 +6,8 @@ body:
       value: |
         Thanks for testing EfficientGPT on your machine. Results that **contradict** ours are as useful as matching ones.
         The quickest route is `bash research/release/reproduce.sh` (see `docs/REPRODUCE_ON_ANOTHER_MACHINE.md`), which
-        produces `runs/repro_<gpu>_<date>.tar.gz` with everything asked for below. Read `env.json` and `pip_freeze.txt`
-        before attaching them.
+        produces `runs/repro_<gpu>_<date>.tar.gz` with everything asked for below. Look through every file in it, logs
+        included, before attaching it.
   - type: input
     id: gpu
     attributes:

@@ -34,10 +34,10 @@ The drafts below are an outline of the facts, not text to paste.
   merged code enables MPS only.
 - **What we measured.** On an RTX 4060 under Windows it is a consistent +5%, in both eager and compiled static-cache
   decoding, with identical outputs.
-- **What that means.** Our result does not contradict upstream's: it is a different regime (consumer GPU, Windows WDDM
-  driver, and a compiled static-cache step that upstream did not time). The likely explanation is that WDDM makes each
-  host-device sync expensive, which the deferred check removes. An unconditional CUDA switch could therefore help Windows
-  users and cost a little on fast Linux hosts. **Without a Linux measurement that shows a gain, there is no case for the
+- **What that means.** Our result does not contradict upstream's: it is a different regime (consumer GPU and the Windows WDDM
+  driver; the PR's H100 table does not say whether a compiled static-cache step was among its runs). One hypothesis, not
+  yet tested: WDDM makes each host-device sync expensive, which the deferred check removes. If that holds, an
+  unconditional CUDA switch could help Windows users and cost a little on fast Linux hosts. **Without a Linux measurement that shows a gain, there is no case for the
   patch as written**; a narrower proposal (for example enabling it only where it measurably helps) would need maintainer
   input.
 
