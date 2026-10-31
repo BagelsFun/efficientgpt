@@ -14,6 +14,21 @@ whole decode step.
 
 Fork of [karpathy/nanoGPT](https://github.com/karpathy/nanoGPT). MIT licence.
 
+## Watch the EfficientGPT Demo
+
+[![EfficientGPT showcase on YouTube](docs/media/showcase_poster.jpg)](https://youtu.be/SKWrki4NHn4)
+
+🎬 **[Watch the EfficientGPT Showcase on YouTube](https://youtu.be/SKWrki4NHn4)**
+
+See EfficientGPT's Qwen3-1.7B inference, CUDA Graph decoding, custom Triton kernels, and KernelAgent-Ada verification workflow.
+
+**Measured performance:** 111.9 tokens/sec on an NVIDIA RTX 4060 (benchmark median of 4 fresh-process rounds) —
+approximately at parity with the tested llama.cpp Q8_0 configuration. The single demo run recorded in the video shows
+108.5 tokens/sec; that is one run, not the benchmark, and the 111.9 figure is the one compared in the table below.
+
+The video illustrates the project; reproducible benchmark evidence, source code, and limitations are documented below
+(figure sources for the video: [`docs/VIDEO.md`](docs/VIDEO.md)).
+
 | Qwen3-1.7B, batch 1, greedy, 256 new tokens | tok/s | EfficientGPT vs it [95% CI] | TTFT | GPU memory |
 |---|---|---|---|---|
 | **EfficientGPT (int8 + CUDA-graph decoder)** | **111.9** | — | 54 ms | 2474 MiB |
