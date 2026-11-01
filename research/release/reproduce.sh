@@ -45,8 +45,10 @@ step() {  # step <name> <command...>: run, log to $OUT/logs/<name>.log, record t
 echo "output: $OUT"
 
 step env "$PY" -m research.release.collect_env --out "$OUT/env.json"
-if [ "$DRY" = 0 ]; then  # without serial numbers, UUIDs or local file paths
-  nvidia-smi -q -i "$GPU_ID" 2>&1 | grep -viE 'serial number|uuid|board part number|board id' > "$OUT/nvidia_smi_q.txt"
+if [ "$DRY" = 0 ]; then  # without serial numbers, UUIDs, the list of running programs, or local file paths
+  nvidia-smi -q -i "$GPU_ID" 2>&1 | grep -viE 'serial number|uuid|board part number|board id' |
+    awk '/^    Processes/ {print "    Processes : <omitted>"; skip = 1; next} skip && /^ {0,4}[^ ]/ {skip = 0} !skip' \
+    > "$OUT/nvidia_smi_q.txt"
   "$PY" -m pip freeze --exclude-editable 2>&1 | sed -E 's#@ file://.*#@ <local file>#' > "$OUT/pip_freeze.txt"
 fi
 
@@ -83,6 +85,11 @@ fi
 
 [ "$DRY" = 1 ] && exit 0
 printf '%s\n' "${STATUS[@]}" > "$OUT/STATUS.txt"
+# logs and JSON can contain paths under your home directory (caches, venv); show them as ~
+H=${HOME:-}
+if [ ${#H} -gt 1 ]; then
+  grep -rlF -- "$H" "$OUT" 2>/dev/null | while IFS= read -r f; do sed -i "s#$H#~#g" "$f"; done
+fi
 tar -czf "$OUT.tar.gz" -C "$(dirname "$OUT")" "$(basename "$OUT")"
 echo
 cat "$OUT/STATUS.txt"
