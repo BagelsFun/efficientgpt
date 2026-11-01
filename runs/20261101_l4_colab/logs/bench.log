@@ -1,0 +1,8 @@
+int8_graph    r0 decode 107.5 tok/s  ttft 62 ms  peak 2367 MiB  util 0.0
+bf16_static   r0 decode 60.1 tok/s  ttft 46 ms  peak 3376 MiB  util 0.0
+bf16_static   r1 decode 60.0 tok/s  ttft 46 ms  peak 3374 MiB  util 0.0
+int8_graph    r1 decode 106.4 tok/s  ttft 61 ms  peak 2342 MiB  util 0.0
+int8_graph    r2 decode 106.4 tok/s  ttft 61 ms  peak 2342 MiB  util 0.0
+bf16_static   r2 decode 59.8 tok/s  ttft 47 ms  peak 3374 MiB  util 0.0
+bf16_static   r3 decode 59.5 tok/s  ttft 48 ms  peak 3346 MiB  util 0.0
+int8_graph    r3 decode 105.9 tok/s  ttft 61 ms  peak 2342 MiB  util 0.0

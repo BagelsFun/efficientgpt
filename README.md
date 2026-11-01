@@ -48,7 +48,10 @@ JSON in `runs/20261031_v4/`).
 Requirements:
 - **GPU:** NVIDIA, compute capability ≥ 8.0, ≥ 8 GB.
 - **Software:** Python 3.11; torch 2.11 (CUDA 12.8); transformers 5.21; ≈ 10 GB of disk.
-- **Tested on:** only an RTX 4060 under Windows 11. Linux and other GPUs are untested; please report results.
+- **Tested on:** an RTX 4060 under Windows 11 (all headline benchmarks), and once by the author on an NVIDIA L4 under
+  Linux (Google Colab; tests and an int8-vs-bf16 check, not llama.cpp or torchao):
+  `reports/L4_LINUX_VALIDATION_2026-11-01.md`. No independent reproduction yet; please report results. A Colab
+  notebook: `colab/EfficientGPT_Colab_Reproduction.ipynb`.
 
 ```bash
 git clone https://github.com/BagelsFun/efficientgpt && cd efficientgpt
@@ -214,10 +217,14 @@ python -m assistant.demo
   5% bar), but llama.cpp's time to first token is better (33 vs 54 ms). Batch 1 and greedy only; sampling and batching use
   the slower HF `generate()` path. vLLM and TensorRT-LLM were not run. Weight-only int8, CUDA graphs and static KV caches
   are established techniques.
-- int8 prefill is not optimised (TTFT 65 vs 45 ms) and int8 outputs diverge from bf16 more than bf16 implementations do from
-  each other (greedy common prefix 22.9 vs 42.9 tokens), without a measured quality loss on these suites.
+- int8 prefill is not optimised (V3 TTFT 54 vs 46 ms for HF bf16; 65 vs 45 ms on the V2 `generate()` path) and int8
+  outputs diverge from bf16 more than bf16 implementations do from each other (V3 greedy common prefix 18.8 vs 45.8
+  tokens; V2 22.9 vs 42.9), without a measured quality loss on these suites (`runs/20261031_v4/v3_final/`,
+  `runs/20261031_v4/int8_e2e/`).
 - Phase 5 decoder results are on a 12.19M-parameter TinyStories model, which is research scaffolding and not a general LLM.
-- One machine, one GPU (RTX 4060), Windows 11; nothing verified on other GPUs or Linux. No external users yet.
+- The headline benchmarks are from one machine, one GPU (RTX 4060), Windows 11. A single author-run check on an NVIDIA
+  L4 under Linux passed the GPU tests and measured int8 at 1.78× bf16 (vs 1.89× on the RTX 4060); llama.cpp and torchao
+  were not run there (`reports/L4_LINUX_VALIDATION_2026-11-01.md`). No independent reproduction or external users yet.
 - KernelAgent-Ada timings are warm-L2 microbenchmarks (inputs reused), not end-to-end; search spaces are small (4-20
   points), budget 12, two seeds; the profiler-guided ordering showed no benefit (inconclusive).
 - The KernelAgent-Ada attention winner is about 1% end to end at batch 16; the GEMMs, not attention, dominate that step.

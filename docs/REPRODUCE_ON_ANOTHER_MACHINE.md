@@ -25,6 +25,11 @@ Options: `--skip-tests`, `--no-llamacpp`, and `--deferred-stop` (adds the transf
 Qwen3-1.7B and SmolLM2-135M; its run time has not been measured; see `docs/upstream/transformers-deferred-stop-cuda/`). On Windows, run the
 §3 and §4 commands directly, or the script from Git Bash.
 
+**No Linux GPU at hand?** [`colab/EfficientGPT_Colab_Reproduction.ipynb`](../colab/EfficientGPT_Colab_Reproduction.ipynb)
+runs the `--quick` path on a Google Colab L4 (run once by the author) or A100 (untested) runtime; which GPUs are
+offered depends on the Colab plan, and the T4 is not supported. Its background-run and download steps (5–6) have not
+yet been tested on Colab. llama.cpp is skipped there (no Ollama).
+
 ## 0. At a glance
 
 | Experiment | Needs | Time | Command |
@@ -39,10 +44,12 @@ Qwen3-1.7B and SmolLM2-135M; its run time has not been measured; see `docs/upstr
 | Local assistant experiments | Ollama with `qwen3.5:4b` and `nomic-embed-text`; optional peft / bitsandbytes | varies | `docs/ASSISTANT.md` |
 
 **Supported:** NVIDIA GPUs with compute capability ≥ 8.0 (Ampere, Ada, Hopper, Blackwell), ≥ 8 GB, with a driver that
-supports CUDA 12.8 (Linux: driver R570 or newer; `nvidia-smi` shows "CUDA Version: 12.8" or higher). Only an RTX 4060
-(sm_89) on Windows 11 has been tested.
+supports CUDA 12.8 (Linux: driver R570 or newer; `nvidia-smi` shows "CUDA Version: 12.8" or higher). Headline
+benchmarks: only an RTX 4060 (sm_89) on Windows 11.
 
-**Untested; expected to work:** Linux, WSL2 and other sm_80+ GPUs. The kernels are plain Triton and PyTorch.
+**Checked once by the author:** Linux on an NVIDIA L4 (Google Colab, Python 3.13, Triton 3.6.0): GPU tests pass and
+the `--quick` benchmark runs (`reports/L4_LINUX_VALIDATION_2026-11-01.md`). **Untested:** WSL2 and other sm_80+ GPUs;
+llama.cpp and torchao on Linux. The kernels are plain Triton and PyTorch.
 
 **Not supported:**
 - **Turing and older (sm_75 and below: T4, RTX 20xx, GTX):** the int8 kernel uses bf16 `tl.dot`.

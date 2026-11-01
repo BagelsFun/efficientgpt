@@ -1,0 +1,28 @@
+test_attention_mask_mutation_rejected (research.kernelagent.test_evaluate.TestEvaluator.test_attention_mask_mutation_rejected) ... ok
+test_default_is_correct (research.kernelagent.test_evaluate.TestEvaluator.test_default_is_correct) ... ok
+test_history_dedup (research.kernelagent.test_evaluate.TestEvaluator.test_history_dedup) ... ok
+test_import_error_and_timeout (research.kernelagent.test_evaluate.TestEvaluator.test_import_error_and_timeout) ... ok
+test_index_mutation_rejected (research.kernelagent.test_evaluate.TestEvaluator.test_index_mutation_rejected) ... ok
+test_input_mutation_rejected (research.kernelagent.test_evaluate.TestEvaluator.test_input_mutation_rejected) ... ok
+test_int8_gemv_mutations_rejected (research.kernelagent.test_evaluate.TestEvaluator.test_int8_gemv_mutations_rejected) ... ok
+test_reference_smuggling_rejected (research.kernelagent.test_evaluate.TestEvaluator.test_reference_smuggling_rejected) ... ok
+test_sample_offbyone_rejected (research.kernelagent.test_evaluate.TestEvaluator.test_sample_offbyone_rejected) ... ok
+test_screen_bypasses_from_review (research.kernelagent.test_evaluate.TestEvaluator.test_screen_bypasses_from_review) ... ok
+test_screen_rejects_host_access (research.kernelagent.test_evaluate.TestEvaluator.test_screen_rejects_host_access) ... ok
+test_small_float_error_rejected (research.kernelagent.test_evaluate.TestEvaluator.test_small_float_error_rejected) ... ok
+test_tie_break_mutation_rejected (research.kernelagent.test_evaluate.TestEvaluator.test_tie_break_mutation_rejected) ... ok
+test_budget_and_no_duplicates (research.kernelagent.test_search.TestSearch.test_budget_and_no_duplicates) ... ok
+test_history_reuse_costs_no_evaluation (research.kernelagent.test_search.TestSearch.test_history_reuse_costs_no_evaluation) ... ok
+test_incorrect_never_incumbent (research.kernelagent.test_search.TestSearch.test_incorrect_never_incumbent) ... ok
+test_load_cache_rules (research.kernelagent.test_search.TestSearch.test_load_cache_rules) ... ok
+test_local_beats_single_shot_on_smooth_landscape (research.kernelagent.test_search.TestSearch.test_local_beats_single_shot_on_smooth_landscape) ... ok
+test_local_spends_full_budget (research.kernelagent.test_search.TestSearch.test_local_spends_full_budget) ... ok
+test_meta_order (research.kernelagent.test_search.TestSearch.test_meta_order) ... ok
+test_neighbours_one_step (research.kernelagent.test_search.TestSearch.test_neighbours_one_step) ... ok
+test_score_inf_for_failures (research.kernelagent.test_search.TestSearch.test_score_inf_for_failures) ... ok
+test_single_shot_is_family_defaults (research.kernelagent.test_search.TestSearch.test_single_shot_is_family_defaults) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 72.736s
+
+OK

@@ -1,0 +1,36 @@
+{
+ "mode": "bf16_static",
+ "quant": "bf16",
+ "static_cache": true,
+ "load_s": 6.49,
+ "max_autotune": false,
+ "load_peak_allocated_mib": 3282.3,
+ "weights_allocated_mib": 3282.3,
+ "first_call_s": 35.85,
+ "decode_tok_s": [
+  60.11,
+  60.06,
+  60.12,
+  59.96,
+  59.58
+ ],
+ "decode_tok_s_median": 60.05754139890647,
+ "ttft_s_median": 0.04634775700003502,
+ "completion_tokens": [
+  256,
+  256,
+  256,
+  256,
+  256
+ ],
+ "torch_peak_allocated_mib": 3375.9,
+ "torch_peak_reserved_mib": 3424.0,
+ "itl_ms_p50": 16.504914999927678,
+ "itl_ms_p95": 16.932115000031445,
+ "itl_samples": 1275,
+ "e2e_s_median": 4.291401685999972,
+ "process_device_used_mib": 3496.0,
+ "round": 0,
+ "gpu_util_before": 0.0,
+ "contended": false
+}

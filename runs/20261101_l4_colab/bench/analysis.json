@@ -1,0 +1,84 @@
+{
+ "speed": [
+  {
+   "mode": "bf16_static",
+   "rounds": 4,
+   "tok_s_round_medians": [
+    60.06,
+    59.98,
+    59.75,
+    59.51
+   ],
+   "tok_s": 59.864999999999995,
+   "ratio": 1.0,
+   "ci": [
+    0.9934062265253317,
+    1.006637539909259
+   ],
+   "paired_min_max": [
+    1.0,
+    1.0
+   ],
+   "ttft_ms": 46.6142654999544,
+   "serving_peak_mib": 3375.9,
+   "device_used_mib": 3496.0,
+   "weights_mib": 3282.3,
+   "load_peak_mib": 3282.3,
+   "first_call_s": 35.85,
+   "contended": false,
+   "itl_ms_p50": 16.55906199994206,
+   "itl_ms_p95": 16.960593499959487,
+   "e2e_s": 4.306524624500071,
+   "reserved_mib": 3424.0,
+   "load_s": 6.49,
+   "all_256_tokens": true
+  },
+  {
+   "mode": "int8_graph",
+   "rounds": 4,
+   "tok_s_round_medians": [
+    107.46,
+    106.4,
+    106.36,
+    105.85
+   ],
+   "tok_s": 106.38,
+   "ratio": 1.7769982460536207,
+   "ci": [
+    1.7666500166500163,
+    1.796840867081163
+   ],
+   "paired_min_max": [
+    1.7739246415471825,
+    1.7892107892107891
+   ],
+   "ttft_ms": 60.99654150000333,
+   "serving_peak_mib": 2366.9,
+   "device_used_mib": 2502.0,
+   "weights_mib": 2237.8,
+   "load_peak_mib": 3426.3,
+   "first_call_s": 11.34,
+   "contended": false,
+   "itl_ms_p50": 9.402674500051944,
+   "itl_ms_p95": 9.46425649988214,
+   "e2e_s": 2.458027384999923,
+   "reserved_mib": 2500.0,
+   "load_s": 6.88,
+   "all_256_tokens": true
+  }
+ ],
+ "quality": {},
+ "pairs": {
+  "bf16_static": {
+   "ratio": 1.7769982460536207,
+   "ci": [
+    1.766964360237042,
+    1.796840867081163
+   ],
+   "paired": [
+    1.7739246415471825,
+    1.7892107892107891
+   ]
+  }
+ }
+}

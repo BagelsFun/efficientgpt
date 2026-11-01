@@ -1,0 +1,44 @@
+nohup: ignoring input
+output: runs/repro_NVIDIA_L4_20261101_043259
+== env: /usr/bin/python3 -m research.release.collect_env --out runs/repro_NVIDIA_L4_20261101_043259/env.json
+   ok
+== tests_realmodel: /usr/bin/python3 -m unittest -v research.realmodel.test_int8_linear research.realmodel.test_fast_decode
+   ok
+== tests_kernelagent: /usr/bin/python3 -m unittest -v research.kernelagent.test_evaluate research.kernelagent.test_search
+   ok
+== demo: /usr/bin/python3 -m research.realmodel.demo --tokens 128
+   ok
+== bench: /usr/bin/python3 -m research.realmodel.bench_int8 --out runs/repro_NVIDIA_L4_20261101_043259/bench --modes int8_graph bf16_static --rounds 4 --reps 5
+   ok
+== analyze: /usr/bin/python3 -m research.realmodel.analyze_int8 --dir runs/repro_NVIDIA_L4_20261101_043259/bench
+   ok
+
+env rc=0
+tests_realmodel rc=0
+tests_kernelagent rc=0
+demo rc=0
+bench rc=0
+analyze rc=0
+
+# R1 end-to-end: Qwen3-1.7B batch-1 decode on NVIDIA L4 (analysis)
+
+| Mode | Rounds | Decode tok/s (median of round medians) | vs HF bf16 + static cache [95% CI over rounds] | paired per-round min-max | TTFT ms | Serving peak MiB (torch; Ollama: size_vram) | Device used MiB | Weights MiB | Load peak MiB |
+|---|---|---|---|---|---|---|---|---|---|
+| bf16_static | 4 | 59.9 | 1.000 [0.993, 1.007] | 1.000-1.000 | 47 | 3376 | 3496 | 3282.3 | 3282.3 |
+| int8_graph | 4 | 106.4 | 1.777 [1.767, 1.797] | 1.774-1.789 | 61 | 2367 | 2502 | 2237.8 | 3426.3 |
+
+| EfficientGPT int8_graph vs | ratio of round medians [95% CI, round bootstrap] | paired per-round min-max |
+|---|---|---|
+| bf16_static | 1.777 [1.767, 1.797] | 1.774-1.789 |
+
+| Quality vs bf16_static | ΔNLL [95% CI] (relative) | greedy common prefix, mean tokens of 64 | exact 64-token matches | quality v1 |
+|---|---|---|---|---|
+
+| Mode | inter-token latency p50 / p95 ms | end-to-end request s (256 tok) | peak reserved MiB | load s | first call s (compile/capture) |
+|---|---|---|---|---|---|
+| bf16_static | 16.56 / 16.96 | 4.31 | 3424.0 | 6.49 | 35.85 |
+| int8_graph | 9.40 / 9.46 | 2.46 | 2500.0 | 6.88 | 11.34 |
+
+Done. Attach runs/repro_NVIDIA_L4_20261101_043259.tar.gz to a reproduction report (Discussions > Hardware results, or the issue template).
+Look through every file first, logs included: they hold your hardware, package versions and cache paths, which may
+contain your user name. Nothing was uploaded.

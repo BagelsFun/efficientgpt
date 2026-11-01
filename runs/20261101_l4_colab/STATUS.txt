@@ -1,0 +1,6 @@
+env rc=0
+tests_realmodel rc=0
+tests_kernelagent rc=0
+demo rc=0
+bench rc=0
+analyze rc=0

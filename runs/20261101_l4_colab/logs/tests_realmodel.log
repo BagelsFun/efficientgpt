@@ -1,0 +1,16 @@
+test_compile_and_cuda_graph (research.realmodel.test_int8_linear.TestInt8Linear.test_compile_and_cuda_graph) ... ok
+test_decode_prefill_and_splitk (research.realmodel.test_int8_linear.TestInt8Linear.test_decode_prefill_and_splitk) ... ok
+test_more_than_16_rows_refused_by_kernel (research.realmodel.test_int8_linear.TestInt8Linear.test_more_than_16_rows_refused_by_kernel) ... ok
+test_quantize_roundtrip_and_model_surgery (research.realmodel.test_int8_linear.TestInt8Linear.test_quantize_roundtrip_and_model_surgery) ... /content/efficientgpt/research/realmodel/test_int8_linear.py:60: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  self.assertLess(float((net(x).float() - ref).abs().max()), 0.05 * float(ref.abs().max()) + 1e-2)
+ok
+test_eos_stops_exactly_and_never_leaks_lookahead_tokens (research.realmodel.test_fast_decode.TestGraphGreedyDecoder.test_eos_stops_exactly_and_never_leaks_lookahead_tokens) ... W1101 04:33:28.933000 2335 torch/_inductor/utils.py:1731] [1/0] Not enough SMs to use max_autotune_gemm mode
+ok
+test_guards (research.realmodel.test_fast_decode.TestGraphGreedyDecoder.test_guards) ... ok
+test_matches_hf_generate_bf16_and_int8 (research.realmodel.test_fast_decode.TestGraphGreedyDecoder.test_matches_hf_generate_bf16_and_int8) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 40.310s
+
+OK

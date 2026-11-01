@@ -1,0 +1,20 @@
+Loading Qwen/Qwen3-1.7B -> weight-only int8 + CUDA-graph decoder ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:11<00:11, 11.33s/it]Fetching 2 files: 100%|██████████| 2/2 [00:15<00:00,  7.24s/it]Fetching 2 files: 100%|██████████| 2/2 [00:15<00:00,  7.86s/it]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 5920.37it/s]
+loaded in 28.9 s; capturing the decode graph on the first request ...
+
+> Explain in three short paragraphs why LLM decoding on a GPU is memory-bandwidth bound.
+
+LLM decoding on a GPU is memory-bandwidth bound because the vast amount of data required for decoding—such as token sequences, attention weights, and model parameters—exceeds the GPU's memory capacity. GPUs, while powerful in parallelism, have limited memory, which can lead to frequent memory accesses and data transfers, slowing down the decoding process.
+
+The high memory bandwidth requirements of LLM decoding, especially when dealing with large models and long sequences, can outpace the GPU's ability to process data efficiently. This results in bottlenecks, where the GPU spends more time waiting for memory to be available than actually performing computations.
+
+To
+
+[int8 + graph] 128 tokens, TTFT 63 ms, decode 113.3 tok/s, GPU memory 3.35 GiB peak (incl. load)
+
+Checking against bf16 (Hugging Face generate, static cache) ...
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 5728.92it/s]
+W1101 04:36:34.542000 3374 torch/_inductor/utils.py:1731] [1/0] Not enough SMs to use max_autotune_gemm mode
+[bf16 reference] first 46 of 128 tokens identical to int8 (diverges later; int8 is approximate)
