@@ -45,8 +45,8 @@ step() {  # step <name> <command...>: run, log to $OUT/logs/<name>.log, record t
 echo "output: $OUT"
 
 step env "$PY" -m research.release.collect_env --out "$OUT/env.json"
-if [ "$DRY" = 0 ]; then  # without serial numbers, UUIDs, the list of running programs, or local file paths
-  nvidia-smi -q -i "$GPU_ID" 2>&1 | grep -viE 'serial number|uuid|board part number|board id' |
+if [ "$DRY" = 0 ]; then  # without serial numbers, UUIDs, per-device IDs (PDI), the list of running programs, or local file paths
+  nvidia-smi -q -i "$GPU_ID" 2>&1 | grep -viE 'serial number|uuid|guid|gpu pdi|host id|clique ?id|board part number|board id' |
     awk '/^    Processes/ {print "    Processes : <omitted>"; skip = 1; next} skip && /^ {0,4}[^ ]/ {skip = 0} !skip' \
     > "$OUT/nvidia_smi_q.txt"
   "$PY" -m pip freeze --exclude-editable 2>&1 | sed -E 's#@ file://.*#@ <local file>#' > "$OUT/pip_freeze.txt"
