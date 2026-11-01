@@ -28,7 +28,7 @@ body:
     attributes:
       label: Python and package versions
       description: "`python -c \"import torch, transformers; print(torch.__version__, torch.version.cuda, transformers.__version__)\"`, plus triton and torchao."
-      placeholder: "3.11.9, torch 2.11.0+cu128, CUDA 12.8, transformers 5.21.0, triton 3.7.0, torchao 0.18.0"
+      placeholder: "3.11.9, torch 2.11.0+cu128, CUDA 12.8, transformers 5.21.0, triton 3.6.0, torchao 0.18.0"
     validations:
       required: true
   - type: textarea

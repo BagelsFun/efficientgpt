@@ -5,15 +5,22 @@ raw results. Expect different absolute tok/s on other GPUs. The **ratios** betwe
 should be compared with `BENCHMARK_REPORT.md` §1a. Nothing here requires the private TinyStories checkpoint.
 
 ## One command (Linux / WSL2)
-After the environment in §2:
+After the environment and the checks in §2:
 ```bash
-bash research/release/reproduce.sh            # environment, tests, demo, full benchmark: about 1 hour
-bash research/release/reproduce.sh --quick    # int8 vs bf16 only: about 20 minutes
+bash research/release/reproduce.sh            # environment, tests, demo, full benchmark: about 1-1.5 hours (estimate: §3 + §4)
+bash research/release/reproduce.sh --quick    # int8 vs bf16 only: shorter (one informal run: about 14 min on a busy RTX 4060)
 bash research/release/reproduce.sh --dry-run  # show the commands without running them
 ```
 It writes `runs/repro_<gpu>_<date>/` (environment record `env.json`, `nvidia-smi -q`, `pip freeze`, one log per step,
 `STATUS.txt`, the benchmark JSON and `REPORT.md`) and packs it as `runs/repro_<gpu>_<date>.tar.gz`. A failing step is
-recorded and the script carries on. Nothing is uploaded; read `env.json` and `pip_freeze.txt` before you share them.
+recorded, the script carries on, and it exits with status 1 at the end. Nothing is uploaded.
+
+**Privacy before sharing:** the script removes GPU serial numbers and UUIDs, the list of running programs, local
+`file://` paths in `pip freeze`, and paths under your home directory (shown as `~`). It cannot catch everything: open the
+archive and look through every file, logs included, for user names, host names or paths (including WSL paths such
+as `/mnt/c/Users/<name>`) before you attach it.
+
+If something goes wrong, see [`docs/TROUBLESHOOTING.md`](TROUBLESHOOTING.md).
 Options: `--skip-tests`, `--no-llamacpp`, and `--deferred-stop` (adds the transformers `DeferredStopCheck` measurement on
 Qwen3-1.7B and SmolLM2-135M; its run time has not been measured; see `docs/upstream/transformers-deferred-stop-cuda/`). On Windows, run the
 §3 and §4 commands directly, or the script from Git Bash.
@@ -22,7 +29,7 @@ Qwen3-1.7B and SmolLM2-135M; its run time has not been measured; see `docs/upstr
 
 | Experiment | Needs | Time | Command |
 |---|---|---|---|
-| CPU tests (109 of 156) | Python 3.11, torch, transformers, numpy, tiktoken; no GPU | minutes | §3 with `CUDA_VISIBLE_DEVICES=-1` (GPU tests skip) |
+| CPU tests (109 of 156) | Python 3.11, torch, transformers, numpy, tiktoken; no GPU | minutes | the four `python -m unittest` commands in `REPRODUCE.md` §1, each prefixed with `CUDA_VISIBLE_DEVICES=-1` (reference environment: 156 run, the 47 GPU tests skip; a minimal environment may lack packages some assistant tests need) |
 | GPU tests for the real-model path (int8 kernel, graph decoder, KernelAgent-Ada evaluator) | CUDA GPU (sm_80+) | ≈ 5 min (§3) | §3 |
 | Demo 1: Qwen3-1.7B int8 + graph decoder | GPU ≥ 8 GB; Qwen3-1.7B from the Hugging Face Hub (≈ 4 GB, downloaded once) | ≈ 1 min | `python -m research.realmodel.demo` |
 | Demo 3: KernelAgent-Ada | CUDA GPU | ≈ 3 min | `python -m research.showcase.demo_kernelagent` |
@@ -32,7 +39,8 @@ Qwen3-1.7B and SmolLM2-135M; its run time has not been measured; see `docs/upstr
 | Local assistant experiments | Ollama with `qwen3.5:4b` and `nomic-embed-text`; optional peft / bitsandbytes | varies | `docs/ASSISTANT.md` |
 
 **Supported:** NVIDIA GPUs with compute capability ≥ 8.0 (Ampere, Ada, Hopper, Blackwell), ≥ 8 GB, with a driver that
-supports CUDA 12.8. Only an RTX 4060 (sm_89) on Windows 11 has been tested.
+supports CUDA 12.8 (Linux: driver R570 or newer; `nvidia-smi` shows "CUDA Version: 12.8" or higher). Only an RTX 4060
+(sm_89) on Windows 11 has been tested.
 
 **Untested; expected to work:** Linux, WSL2 and other sm_80+ GPUs. The kernels are plain Triton and PyTorch.
 
@@ -42,13 +50,15 @@ supports CUDA 12.8. Only an RTX 4060 (sm_89) on Windows 11 has been tested.
 - **CPU-only:** tests only, no inference demos.
 - **Multi-GPU:** batch-1 decode on one GPU only.
 
-**Environment drift:** results are pinned to torch 2.11.0, transformers 5.21.0, triton 3.7 and torchao 0.18.0. Other
+**Environment drift:** results were measured with torch 2.11.0, transformers 5.21.0, torchao 0.18.0 and Triton 3.7.1
+(`triton-windows`, the reference machine). On Linux, torch 2.11.0 installs Triton 3.6.0 instead; that combination is
+untested, and Triton versions can change kernel speed, so please report the Triton version with your results. Other
 versions may change both speed and the behaviour of the `generate()` baselines. `requirements-lock.txt` is a Windows
 `pip freeze`, a reference only; it is not installable on Linux as is.
 
 ## 1. Requirements
 - NVIDIA GPU with ≥ 8 GB, compute capability ≥ 8.0 (the int8 kernel uses bf16 tensor-core `tl.dot`); driver supporting CUDA
-  12.8. Developed on an RTX 4060 (sm_89).
+  12.8 (Linux: R570 or newer). Developed on an RTX 4060 (sm_89).
 - Python 3.11, git, about 10 GB of disk (model cache plus Ollama model).
 - Idle GPU: no other GPU programs (browsers with hardware acceleration, games, overlays). The harness records utilisation
   before every process and flags anything above 15% as `contended`.
@@ -60,17 +70,27 @@ python3.11 -m venv .venv && source .venv/bin/activate            # Windows: .ven
 pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
 pip install "transformers==5.21.0" "torchao==0.18.0" numpy tiktoken
 ```
-- On Linux, `triton` is installed with torch. On Windows, install `triton-windows==3.7.1.post27`.
+- On Linux, `triton` is installed with torch (3.6.0 for torch 2.11.0). On Windows, install `triton-windows==3.7.1.post27`.
 - Python 3.11 is not packaged on every distribution (for example Ubuntu 24.04 ships 3.12). Use `uv venv --python 3.11`
   or the deadsnakes PPA; other Python versions are untested.
 - `requirements-lock.txt` lists the exact versions of the reference machine (a Windows `pip freeze`); use it to pin
   further if results differ.
 - Optional baseline, llama.cpp via Ollama: install Ollama (tested 0.40.12), then `ollama pull qwen3:1.7b-q8_0`; the
-  reference digest is 29b6a7a420a4.
+  reference digest is 29b6a7a420a4. While a model is loaded, `ollama ps` should show it at 100% GPU; a partly-CPU model
+  makes the llama.cpp baseline meaningless.
 
-The model downloads on first use. Pin the revision: `Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e` (≈ 4 GB).
+The model (≈ 4 GB) downloads on first use. Nothing to do for the revision: the code pins
+`Qwen/Qwen3-1.7B@70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`.
 
-## 3. Sanity checks (≈ 5 min)
+Before an hour-long run, check that PyTorch sees the GPU:
+```bash
+nvidia-smi --query-gpu=name,compute_cap,memory.total --format=csv   # compute_cap ≥ 8.0, memory ≥ 8 GB
+python -c "import torch; print(torch.__version__, torch.cuda.is_available(), torch.cuda.get_device_capability())"
+# expected: 2.11.0+cu128 True (8, x) or higher
+bash research/release/reproduce.sh --dry-run
+```
+
+## 3. Sanity checks (≈ 5 min; problems: [`TROUBLESHOOTING.md`](TROUBLESHOOTING.md))
 ```bash
 python -m unittest research.realmodel.test_int8_linear research.realmodel.test_fast_decode research.kernelagent.test_search
 python -m research.realmodel.demo --tokens 128
@@ -93,8 +113,10 @@ python -m research.realmodel.analyze_int8 --dir runs/repro_<gpu>_<date>
 Post in the repository's **Discussions → Hardware results** (the form asks for exactly the fields below), or open an issue
 with the **Reproduction report** template, and attach `runs/repro_<gpu>_<date>.tar.gz`, or:
 - The whole `runs/repro_<gpu>_<date>/` directory: per-process JSON, logs and `REPORT.md`.
-- `nvidia-smi -q | head -40`, `python -c "import torch, transformers; print(torch.__version__, torch.version.cuda, transformers.__version__)"`,
+- `nvidia-smi --query-gpu=name,compute_cap,driver_version,memory.total --format=csv` (not the full `nvidia-smi -q`, which
+  contains the GPU's serial number and UUID), `python -c "import torch, transformers; print(torch.__version__, torch.version.cuda, transformers.__version__)"`,
   OS and CPU model.
+- Check everything for user names, host names and paths before posting (see "Privacy before sharing" above).
 - Any process flagged `contended: true`, and anything unusual (thermal throttling, other GPU users).
 
 ## 6. Interpreting results
